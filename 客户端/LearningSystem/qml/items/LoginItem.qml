@@ -1,6 +1,7 @@
 import QtQuick 2.0
 import Felgo 3.0
 import "../pages"
+import  "./toast"
 
 Item {
     //    id: root
@@ -10,7 +11,7 @@ Item {
     property int administrator: 0
     property int chaoxingUser: 1
     Row {
-    anchors.horizontalCenter: parent.horizontalCenter
+        anchors.horizontalCenter: parent.horizontalCenter
         RoundedImage {
             id: roundedImage
             width: dp(100)
@@ -25,10 +26,11 @@ Item {
                 anchors.fill:parent
                 onClicked:{
                     console.log("clicked!!")
-//                    dialogtitle = "学习通登陆"
-//                    loginDialog.open()
+                    //                    dialogtitle = "学习通登陆"
+                    //                    loginDialog.open()
                     //测试用
-                     rootStack.push(adminComponent)
+                    toast.show("登陆成功！！",10000)
+//                    rootStack.push(adminComponent)
                 }
                 onPressAndHold: {
                     console.log("hold")
@@ -110,10 +112,12 @@ Item {
         target: qm
         onLoginSucceeded:{
             console.log("登陆成功！！")
+
             if(dialogtitle === "管理员登陆"){
                 rootStack.push(adminComponent)
                 //                rootStack
             }
+
         }
         onLoginFailed:{
             console.log("登陆失败！！")
@@ -123,7 +127,9 @@ Item {
         id:adminComponent
         AdministratorPage{  }
     }
-
+    Toast {
+        id:toast
+    }
 
 
 }

@@ -43,8 +43,19 @@ bool TcpClient::toLogin(QStringList *list)
     QScopedPointer<QTcpSocket> p(new QTcpSocket());
     p->connectToHost(this->m_host,this->port());
     p->waitForConnected();
-    p->write(list->at(0).toUtf8()+"#"+passwordCryptographicHash(list->at(1).toUtf8())+"#0");
+    QByteArray byte;
+    QDataStream stream(&byte,QIODevice::WriteOnly);
+
+    stream << login;
+    stream << list->at(0).toUtf8();
+    //    qInfo() << passwordCryptographicHash(list->at(1).toUtf8());
+    stream << passwordCryptographicHash(list->at(1).toUtf8());
+    qInfo() << byte;
+    p->write(byte);
+    //    p->write(list->at(0).toUtf8()+"#"+passwordCryptographicHash(list->at(1).toUtf8())+"#0");
     p->waitForBytesWritten();
+
+
     p->waitForReadyRead();
     QString data = QString(p->readAll()).simplified();
     qInfo() << data;
@@ -54,9 +65,34 @@ bool TcpClient::toLogin(QStringList *list)
         if(ok){
             m_date = temp;
             qInfo() << "登陆成功!";
+            p->close();
             return true;
         }
     }
+    p->close();
+    return false;
+}
+
+bool TcpClient::insertQuestion(QStringList *list, qint32 type)
+{
+    QScopedPointer<QTcpSocket> p(new QTcpSocket());
+    p->connectToHost(this->m_host,this->port());
+    p->waitForConnected();
+    QByteArray byte;
+    QDataStream stream(&byte,QIODevice::WriteOnly);
+    stream << type;
+    foreach(QString s,*list){
+        stream << s;
+    }
+    stream << m_date;
+    p->write(byte);
+    p->waitForBytesWritten();
+    p->waitForReadyRead();
+    if(QString(p->readAll()).contains("ok")){
+         p->close();
+        return true;
+    }
+    p->close();
     return false;
 }
 

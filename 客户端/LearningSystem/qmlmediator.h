@@ -20,7 +20,12 @@ signals:
     void loginFailed();
 
 public slots:
-    void login(QString username,QString password, int usertype);
+    void tologin(QString username,QString password, int usertype);
+    void sendChoiceQuestion(QString question,QString option1,QString option2,QString option3,QString option4,QString answer);
+private:
+    enum m_task{
+        login,insertC,insertT,insertF,getQuestions
+    };
 };
 
 #endif // QMLMEDIATOR_H

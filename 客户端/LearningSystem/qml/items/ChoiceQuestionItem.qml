@@ -89,10 +89,14 @@ Item {
                 console.log(isEmpty())
                 if(!isEmpty()){
                     rootStack.pop()
+                    qm.sendChoiceQuestion(questionInput.text.trim(),optiton1Input.text.trim(),optiton2Input.text.trim()
+                                          ,optiton3Input.text.trim(),optiton4Input.text.trim(),answerComboBox.currentText.trim())
                 }
             }
         }
     }
+
+
     //        state:
 }
 

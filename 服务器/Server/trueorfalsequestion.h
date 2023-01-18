@@ -4,7 +4,7 @@
 #include "interface/iQuestion.h"
 #include <QObject>
 
-class TrueOrFalseQuestion : public QObject, public iQuestion
+class TrueOrFalseQuestion : public iQuestion
 {
     Q_OBJECT
 public:

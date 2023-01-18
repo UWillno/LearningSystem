@@ -3,14 +3,14 @@
 
 #include <QObject>
 
-class iQuestion{
-
+class iQuestion :public QObject{
+    Q_OBJECT
 public:
     qint64 id;
     QString question;
     QString answer;
-//    QString point;
-//    QString anlysis;
+    //    QString point;
+    //    QString anlysis;
     virtual ~iQuestion(){};
 };
 

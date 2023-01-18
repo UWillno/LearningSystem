@@ -8,6 +8,8 @@
 #include <QFuture>
 #include <QFutureWatcher>
 #include <QDateTime>
+#include "questionfactory.h"
+#include "interface/iQuestion.h"
 
 class TcpServer : public QTcpServer
 {
@@ -32,9 +34,10 @@ private:
     void sendQuestions();
     void toLogin(QStringList *list,QTcpSocket *s);
     enum m_task{
-        login,insert,getQuestions
+        login,insertC,insertT,insertF,getQuestions
     };
     qint64 m_date;
+    QuestionFactory factory;
 };
 
 #endif // TCPSERVER_H

@@ -6,6 +6,9 @@
 #include <QSqlQuery>
 #include <QCryptographicHash>
 #include <QDebug>
+#include "interface/iQuestion.h"
+#include "choicequestion.h"
+#include "trueorfalsequestion.h"
 
 class SqlOperator : public QObject
 {
@@ -21,14 +24,16 @@ public:
                  QString username="",
                  QString password="");
 
+    bool commitDB(QSqlQuery *query);
 signals:
 
 public slots:
+    bool insertQuestion(iQuestion * question);
 
 private:
     QSqlDatabase m_db;
 
-    QSqlQuery m_query;
+//    QSqlQuery m_query;
 };
 
 #endif // SQLOPERATOR_H

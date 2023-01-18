@@ -17,7 +17,7 @@ signals:
 
     // iQuestionFactory interface
 public:
-    iQuestion *createChoiceQuestion();
+    ChoiceQuestion *createChoiceQuestion();
     iQuestion *createTrueOrFalseQuestion();
     iQuestion *createFillInTheBlanksQuestion();
 

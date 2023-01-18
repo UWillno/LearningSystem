@@ -4,7 +4,7 @@
 #include "interface/iQuestion.h"
 #include <QObject>
 
-class FillInTheBlanksQuestion : public QObject, public iQuestion
+class FillInTheBlanksQuestion : public iQuestion
 {
     Q_OBJECT
 public:

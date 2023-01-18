@@ -6,7 +6,7 @@ QuestionFactory::QuestionFactory(QObject *parent)
 
 }
 
-iQuestion *QuestionFactory::createChoiceQuestion()
+ChoiceQuestion *QuestionFactory::createChoiceQuestion()
 {
     return new ChoiceQuestion();
 }

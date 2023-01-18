@@ -1,6 +1,10 @@
 #ifndef IQUESTIONFACTORY_H
 #define IQUESTIONFACTORY_H
 #include "iQuestion.h"
+//#include "../choicequestion.h"
+//#include "../fillintheblanksquestion.h"
+//#include "../trueorfalsequestion.h"
+
 class iQuestionFactory{
 public:
     virtual iQuestion* createChoiceQuestion() = 0;

@@ -66,6 +66,8 @@ DISTFILES += \
     qml/items/FillInTheBlanksQuestionItem.qml \
     qml/items/LoginItem.qml \
     qml/items/TrueOrFalseQuestionItem.qml \
+    qml/items/toast/Toast.qml \
+    qml/items/toast/ToastManager.qml \
     qml/pages/AdministratorPage.qml \
     qml/pages/IndexPage.qml \
     qml/pages/QuestionPage.qml
