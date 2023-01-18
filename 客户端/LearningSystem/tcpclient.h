@@ -4,17 +4,13 @@
 #include <QObject>
 #include <QTcpSocket>
 #include <QAbstractSocket>
-#include <QtConcurrent>
-#include <QFuture>
+
 #include <QCryptographicHash>
 class TcpClient : public QObject
 {
     Q_OBJECT
 public:
     explicit TcpClient(QObject *parent = nullptr);
-    enum task{
-        login,insert
-    };
 
     QString host() const;
     void setHost(const QString &newHost);
@@ -22,12 +18,14 @@ public:
     quint16 port() const;
     void setPort(quint16 newPort);
 
+    void init(QString host,quint16 port);
+
 signals:
 
 
 public slots:
-    void toLogin(QStringList *list);
-    void handle_task(int t);
+    bool toLogin(QStringList *list);
+
 
 private:
     QString m_host;

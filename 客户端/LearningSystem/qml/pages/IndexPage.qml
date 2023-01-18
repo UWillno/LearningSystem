@@ -6,14 +6,10 @@ Page {
     id: indexPage
     title: "Index"
     Column {
-
-//        anchors.top: parent.top
-
-//        anchors.topMargin: dp(20)
-
+        anchors.horizontalCenter: parent.horizontalCenter
         LoginItem {
             id:logitem
-//            anchors.centerIn: parent
+
         }
 
     }

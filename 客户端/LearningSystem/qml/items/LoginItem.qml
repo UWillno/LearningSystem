@@ -1,21 +1,22 @@
 import QtQuick 2.0
 import Felgo 3.0
-
+import "../pages"
 
 Item {
-    id: root
-//    anchors.verticalCenter: parent
-    property  string dialogtitle: "学习通登陆"
+    //    id: root
+    //    anchors.verticalCenter: parent
+    property string dialogtitle: "学习通登陆"
     property string currentstatus: "游客模式"
-//    HttpNetworkActivityIndicator
+    property int administrator: 0
+    property int chaoxingUser: 1
     Row {
-
+    anchors.horizontalCenter: parent.horizontalCenter
         RoundedImage {
             id: roundedImage
             width: dp(100)
             height: dp(100)
             fillMode: Image.PreserveAspectCrop
-            source: "http://q1.qlogo.cn/g?b=qq&nk=44910244&s=640"
+            source: userImageResource.available ? userImageResource.storagePath :"http://q1.qlogo.cn/g?b=qq&nk=44910244&s=640"
             radius: width/2
 
 
@@ -24,9 +25,10 @@ Item {
                 anchors.fill:parent
                 onClicked:{
                     console.log("clicked!!")
-                    dialogtitle = "学习通登陆"
-                    loginDialog.open()
-
+//                    dialogtitle = "学习通登陆"
+//                    loginDialog.open()
+                    //测试用
+                     rootStack.push(adminComponent)
                 }
                 onPressAndHold: {
                     console.log("hold")
@@ -40,12 +42,28 @@ Item {
         Column {
             AppText {
                 id: currentStatus
-                width: 200
-//                fontSize: 14
+                width: contentWidth
+                //                fontSize: 14
                 text: "当前状态：" + currentstatus
             }
         }
     }
+
+    DownloadableResource {
+        id: userImageResource
+        headerParameters: ({
+                               "User-Agent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Mobile Safari/537.36 Edg/109.0.1518.52",
+                               "content-type":"application/x-www-form-urlencoded"
+                           })
+        extractAsPackage: false
+        source: "http://p.ananas.chaoxing.com/star3/80_80c/09d05f59e53250e3e680aa96881d4b9d.png"
+        Component.onCompleted: {
+            download()
+
+        }
+    }
+
+
     Dialog {
         id: loginDialog
         title:dialogtitle
@@ -60,7 +78,8 @@ Item {
         }
 
         onAccepted: {
-            console.log(usernameInput.text.trim()+"#"+passwordInput.text.trim())
+            //            console.log(usernameInput.text.trim()+"#"+passwordInput.text.trim())
+            qm.login(usernameInput.text.trim(),passwordInput.text.trim(),administrator)
             close()
         }
 
@@ -79,16 +98,34 @@ Item {
                 id: passwordInput
                 width: dp(200)
                 placeholderText: "密码"
+                echoMode: AppTextInput.Password
                 //                width: parent.width
             }
         }
         //        state:
     }
 
-
-
+    //}
+    Connections {
+        target: qm
+        onLoginSucceeded:{
+            console.log("登陆成功！！")
+            if(dialogtitle === "管理员登陆"){
+                rootStack.push(adminComponent)
+                //                rootStack
+            }
+        }
+        onLoginFailed:{
+            console.log("登陆失败！！")
+        }
+    }
+    Component {
+        id:adminComponent
+        AdministratorPage{  }
+    }
 
 
 
 }
+
 

@@ -2,6 +2,7 @@ import Felgo 3.0
 import QtQuick 2.0
 import "pages"
 App {
+//    property NavigationStack rootStack: rootStack
     // You get free licenseKeys from https://felgo.com/licenseKey
     // With a licenseKey you can:
     //  * Publish your games & apps for the app stores
@@ -10,11 +11,13 @@ App {
     //licenseKey: "<generate one from https://felgo.com/licenseKey>"
 
     NavigationStack {
+        id:rootStack
         anchors.fill: parent
         IndexPage {
           id: indexPage
-          anchors.horizontalCenter: parent.horizontalCenter
+//          anchors.horizontalCenter: parent.horizontalCenter
         }
 
     }
+
 }

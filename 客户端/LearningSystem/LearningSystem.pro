@@ -62,10 +62,15 @@ macx {
 }
 
 DISTFILES += \
+    qml/items/ChoiceQuestionItem.qml \
+    qml/items/FillInTheBlanksQuestionItem.qml \
     qml/items/LoginItem.qml \
-    qml/pages/IndexPage.qml
+    qml/items/TrueOrFalseQuestionItem.qml \
+    qml/pages/AdministratorPage.qml \
+    qml/pages/IndexPage.qml \
+    qml/pages/QuestionPage.qml
 
 HEADERS += \
-    ../../服务器/Server/singleton.h \
     qmlmediator.h \
+    singleton.h \
     tcpclient.h
