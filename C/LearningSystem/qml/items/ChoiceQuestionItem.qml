@@ -24,13 +24,16 @@ Rectangle{
 
     Column {
         id: column
-        anchors.verticalCenter: parent.verticalCenter
-        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.fill: parent
+        anchors.leftMargin: dp(20)
+        anchors.topMargin: dp(10)
+        spacing: dp(10)
 
         //        AppTextInput {
         AppTextEdit {
             id:questionInput
             width: dp(200)
+
             wrapMode: AppTextEdit.WrapAnywhere
             placeholderText: "题目"
             //            RegExpValidator:
@@ -85,6 +88,7 @@ Rectangle{
         }
 
         Row{
+            anchors.horizontalCenter: parent.horizontalCenter
             spacing: dp(20)
             AppText{
                 id:apptext
@@ -97,6 +101,7 @@ Rectangle{
                 height: apptext.height
             }
         }
+
         AppButton {
             id: btnsubmit
             text: "提交"
@@ -127,6 +132,6 @@ Rectangle{
 
 /*##^##
 Designer {
-    D{i:0;autoSize:true;height:480;width:640}
+    D{i:0;autoSize:true;formeditorZoom:0.66;height:480;width:640}D{i:1}
 }
 ##^##*/

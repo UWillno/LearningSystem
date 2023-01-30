@@ -1,4 +1,4 @@
-import QtQuick 2.0
+﻿import QtQuick 2.0
 import Felgo 3.0
 
 //Component {
@@ -21,6 +21,7 @@ Rectangle {
     width: parent.width
     height: deleteBtn.height
     property var currentObject: ;
+    property string text: blankInput.text
 
     signal deleteThis(var obj)
 

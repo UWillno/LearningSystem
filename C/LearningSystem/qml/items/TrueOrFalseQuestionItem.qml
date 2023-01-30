@@ -1,4 +1,4 @@
-import QtQuick 2.0
+﻿import QtQuick 2.0
 import Felgo 3.0
 import QtQuick.Controls 2.5
 //Item {
@@ -14,8 +14,10 @@ Rectangle {
     }
     Column {
         id: column
-        anchors.verticalCenter: parent.verticalCenter
-        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.fill: parent
+        anchors.leftMargin: dp(20)
+        anchors.topMargin: dp(10)
+        spacing: dp(10)
 
         //        AppTextInput {
         //            id:questionInput

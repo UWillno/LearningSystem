@@ -1,10 +1,15 @@
-import QtQuick 2.0
+﻿import QtQuick 2.0
 import Felgo 3.0
 import "../pages"
 import  "./toast"
 
-Item {
+Rectangle {
     id: root
+    anchors.horizontalCenter: parent.horizontalCenter
+    color: "#FFFFF5"
+    implicitWidth: parent.width - dp(20)
+    implicitHeight: roundedImage.height + dp(20)
+    radius: dp(20)
     //    anchors.verticalCenter: parent
     property string dialogtitle: "学习通登陆"
     property string currentstatus: "游客模式"
@@ -13,7 +18,8 @@ Item {
     property int  times: 0
 
     Row {
-        anchors.horizontalCenter: parent.horizontalCenter
+//        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.centerIn: parent
         RoundedImage {
             id: roundedImage
             width: dp(100)

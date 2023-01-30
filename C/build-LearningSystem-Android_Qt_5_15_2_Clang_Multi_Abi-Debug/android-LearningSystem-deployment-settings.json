@@ -7,7 +7,7 @@
    "toolchain-prefix": "llvm",
    "tool-prefix": "llvm",
    "ndk-host": "windows-x86_64",
-   "architectures": {"armeabi-v7a":"arm-linux-androideabi", "arm64-v8a":"aarch64-linux-android"},
+   "architectures": {"armeabi-v7a":"arm-linux-androideabi"},
    "android-package-source-directory": "D:/OneDrive/BYSJ/C/LearningSystem/android",
    "android-min-sdk-version": "21",
    "android-target-sdk-version": "28",

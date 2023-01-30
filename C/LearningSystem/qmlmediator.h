@@ -1,4 +1,4 @@
-#ifndef QMLMEDIATOR_H
+﻿#ifndef QMLMEDIATOR_H
 #define QMLMEDIATOR_H
 
 #include <QObject>
@@ -24,6 +24,7 @@ public slots:
     void tologin(QString username,QString password, int usertype);
     void sendChoiceQuestion(QString question,QString option1,QString option2,QString option3,QString option4,QString answer);
     void sendTrueOrFalseQuestion(QString question,bool answer);
+    void sendFillInTheBlanksQuestion(QString question,QString answer);
 
 private:
     enum m_task{

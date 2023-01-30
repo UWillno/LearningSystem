@@ -1,4 +1,4 @@
-import QtQuick 2.0
+﻿import QtQuick 2.0
 import Felgo 3.0
 import QtQuick.Controls 2.5
 
@@ -11,6 +11,9 @@ Rectangle {
         for(var i=0;i < blankcount;i++){
             blanks[i].destroy()
         }
+        blanks = []
+        blankcount = 0
+
     }
     function isEmpty(){
         if(questionInput.text.trim() === "" && blankcount!=0 )
@@ -19,9 +22,10 @@ Rectangle {
     }
     Column {
         id: column
-        anchors.verticalCenter: parent.verticalCenter
-        anchors.horizontalCenter: parent.horizontalCenter
-        spacing: 10
+        anchors.fill: parent
+        anchors.leftMargin: dp(20)
+        anchors.topMargin: dp(10)
+        spacing: dp(10)
 
         //        AppTextInput {
         //            id:questionInput
@@ -70,6 +74,7 @@ Rectangle {
                         blankcount++;
                         createblank();
                         questionInput.text += "____"
+                        questionInput.cursorPosition = questionInput.text.length
                     }else{
                         toastManager.show("填空题至多5个空",1000);
                     }
@@ -81,8 +86,9 @@ Rectangle {
                 onClicked: {
                     console.log(isEmpty())
                     if(!isEmpty()){
-                        toastManager.show("提交成功！",1000)
+                        adminLogic.insertFillInTheBlanksQuestion(questionInput.text.trim(),adminLogic.blanksToAnswer(blanks))
                         clear()
+                        toastManager.show("提交成功！",1000)
                     }else{
                         toastManager.show("数据异常！",1000)
                     }
@@ -119,6 +125,18 @@ Rectangle {
                 break
             }
         }
+        //        console.log(questionInput.text.lastIndexOf("____"))
+        var index = questionInput.text.lastIndexOf("____")
+        var text = questionInput.text
+        console.log(text.length)
+        if(index != -1){
+            questionInput.text = text.substring(0,index) + text.substring(index+4,text.length)
+            questionInput.cursorPosition = questionInput.text.length
+        }
+
+        console.log(index)
+        //        questionInput.text = questionInput.text.splice(index,4)
+        questionInput.text.replace()
         blank.destroy()
         blankcount--
     }

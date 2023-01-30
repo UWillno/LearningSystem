@@ -6,6 +6,7 @@ import "logic"
 App {
     id:main
     dpScale: 1
+//    property int name: value
     //    property NavigationStack rootStack: rootStack
     // You get free licenseKeys from https://felgo.com/licenseKey
     // With a licenseKey you can:

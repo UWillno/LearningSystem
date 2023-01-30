@@ -84,3 +84,28 @@ void QmlMediator::sendTrueOrFalseQuestion(QString question, bool answer)
         qInfo() << "插入失败";
     }
 }
+
+void QmlMediator::sendFillInTheBlanksQuestion(QString question, QString answer)
+{
+    QStringList list;
+     list.append(question);
+     list.append(answer);
+     //    QVariant a = QString::number(answer);
+
+     //    qInfo() << answer << QString::number(answer) << a << a.toBool();
+
+     //    bool answertobool = false;
+     //    if(answer != 0) answertobool = true;
+     //    qInfo() << QString::number(answertobool);
+     //    list.append(QString::number(answertobool));
+
+     QFuture<bool> future = QtConcurrent::run(&Singleton<TcpClient>::GetInstance(),&TcpClient::insertQuestion,&list,insertF);
+     if(future.result()){
+         //        emit loginSucceeded();
+         qInfo() << "插入成功";
+     }else{
+         //        emit loginFailed();
+         qInfo() << "插入失败";
+     }
+
+}
