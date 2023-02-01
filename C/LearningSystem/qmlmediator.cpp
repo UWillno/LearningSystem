@@ -88,24 +88,54 @@ void QmlMediator::sendTrueOrFalseQuestion(QString question, bool answer)
 void QmlMediator::sendFillInTheBlanksQuestion(QString question, QString answer)
 {
     QStringList list;
-     list.append(question);
-     list.append(answer);
-     //    QVariant a = QString::number(answer);
+    list.append(question);
+    list.append(answer);
+    //    QVariant a = QString::number(answer);
 
-     //    qInfo() << answer << QString::number(answer) << a << a.toBool();
+    //    qInfo() << answer << QString::number(answer) << a << a.toBool();
 
-     //    bool answertobool = false;
-     //    if(answer != 0) answertobool = true;
-     //    qInfo() << QString::number(answertobool);
-     //    list.append(QString::number(answertobool));
+    //    bool answertobool = false;
+    //    if(answer != 0) answertobool = true;
+    //    qInfo() << QString::number(answertobool);
+    //    list.append(QString::number(answertobool));
 
-     QFuture<bool> future = QtConcurrent::run(&Singleton<TcpClient>::GetInstance(),&TcpClient::insertQuestion,&list,insertF);
-     if(future.result()){
-         //        emit loginSucceeded();
-         qInfo() << "插入成功";
-     }else{
-         //        emit loginFailed();
-         qInfo() << "插入失败";
-     }
+    QFuture<bool> future = QtConcurrent::run(&Singleton<TcpClient>::GetInstance(),&TcpClient::insertQuestion,&list,insertF);
+    if(future.result()){
+        //        emit loginSucceeded();
+        qInfo() << "插入成功";
+    }else{
+        //        emit loginFailed();
+        qInfo() << "插入失败";
+    }
 
 }
+
+void QmlMediator::getQuestionsByTcp()
+{
+    QFuture<QList<QJsonArray>> future = QtConcurrent::run(&Singleton<TcpClient>::GetInstance(),&TcpClient::getQuestionsJson);
+
+    m_tcpQuestions = future.result();
+    qInfo() << m_tcpQuestions;
+
+}
+
+const QList<QJsonArray> &QmlMediator::tcpQuestions() const
+{
+    return m_tcpQuestions;
+}
+
+void QmlMediator::setTcpQuestions(const QList<QJsonArray> &newTcpQuestions)
+{
+    if (m_tcpQuestions == newTcpQuestions)
+        return;
+    m_tcpQuestions = newTcpQuestions;
+    emit tcpQuestionsChanged();
+}
+
+void QmlMediator::resetTcpQuestions()
+{
+    setTcpQuestions({}); // TODO: Adapt to use your actual default value
+}
+
+
+

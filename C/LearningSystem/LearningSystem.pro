@@ -65,8 +65,10 @@ DISTFILES += \
     qml/items/BlankComponent.qml \
     qml/items/ChoiceQuestionItem.qml \
     qml/items/FillInTheBlanksQuestionItem.qml \
+    qml/items/InsertSwipeView.qml \
     qml/items/LoginItem.qml \
     qml/items/ProgressBar.qml \
+    qml/items/SelectSwipeView.qml \
     qml/items/TrueOrFalseQuestionItem.qml \
     qml/items/toast/Toast.qml \
     qml/items/toast/ToastManager.qml \

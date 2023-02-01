@@ -25,6 +25,7 @@ Rectangle {
         anchors.fill: parent
         anchors.leftMargin: dp(20)
         anchors.topMargin: dp(10)
+        anchors.rightMargin: dp(20)
         spacing: dp(10)
 
         //        AppTextInput {
@@ -35,7 +36,7 @@ Rectangle {
         //        }
         AppTextEdit {
             id:questionInput
-            width: dp(200)
+            width: parent.width
             wrapMode: AppTextEdit.WrapAnywhere
             placeholderText: "题目"
             onTextChanged: {

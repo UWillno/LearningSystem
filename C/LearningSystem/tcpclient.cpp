@@ -101,6 +101,67 @@ bool TcpClient::insertQuestion(QStringList *list, qint32 type)
     return false;
 }
 
+QByteArray TcpClient::getQuestionsBytes()
+{
+    QByteArray data;
+    QScopedPointer<QTcpSocket> p(new QTcpSocket());
+    p->connectToHost(this->m_host,this->port());
+    if(p->waitForConnected()){
+        QByteArray byte;
+        QDataStream stream(&byte,QIODevice::WriteOnly);
+        stream << getQuestions << m_date;
+        p->write(byte);
+        if(p->waitForBytesWritten()){
+            if(p->waitForReadyRead()){
+                data = p->readAll();
+            }else{
+                qInfo() << "读取失败";}
+        }else{
+            qInfo() << "写入失败";
+        }
+    }else{
+        qInfo() << "连接失败";
+    }
+    p->close();
+    return data;
+}
+
+QList<QJsonArray> TcpClient::getQuestionsJson()
+{
+    QList<QJsonArray> list;
+    QByteArray data;
+    QScopedPointer<QTcpSocket> p(new QTcpSocket());
+    p->connectToHost(this->m_host,this->port());
+    if(p->waitForConnected()){
+        QByteArray byte;
+        QDataStream stream(&byte,QIODevice::WriteOnly);
+        stream << getQuestions << m_date;
+        p->write(byte);
+        if(p->waitForBytesWritten()){
+            if(p->waitForReadyRead()){
+                data = p->readAll();
+                QDataStream questionsStream(&data,QIODevice::ReadOnly);
+                QJsonArray c,t,f;
+                questionsStream >> c;
+                questionsStream >> t;
+                questionsStream >> f;
+                list.append(c);
+                list.append(t);
+                list.append(f);
+
+            }else{
+                qInfo() << "读取失败";}
+        }else{
+            qInfo() << "写入失败";
+        }
+    }else{
+        qInfo() << "连接失败";
+    }
+//    qInfo() << list;
+    p->close();
+    return list;
+}
+
 
 
 QByteArray TcpClient::passwordCryptographicHash(QByteArray password)

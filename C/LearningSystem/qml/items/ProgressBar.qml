@@ -1,4 +1,4 @@
-import QtQuick 2.0
+﻿import QtQuick 2.0
 import Felgo 3.0
 import QtQuick.Controls 2.15
 
@@ -10,6 +10,7 @@ Rectangle {
         y: 361
         text: qsTr("Button")
     }
+
 
 }
 

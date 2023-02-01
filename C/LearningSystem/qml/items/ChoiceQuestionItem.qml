@@ -26,13 +26,14 @@ Rectangle{
         id: column
         anchors.fill: parent
         anchors.leftMargin: dp(20)
+        anchors.rightMargin: dp(20)
         anchors.topMargin: dp(10)
         spacing: dp(10)
 
         //        AppTextInput {
         AppTextEdit {
             id:questionInput
-            width: dp(200)
+            width: parent.width
 
             wrapMode: AppTextEdit.WrapAnywhere
             placeholderText: "题目"

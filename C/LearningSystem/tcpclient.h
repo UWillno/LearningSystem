@@ -1,4 +1,4 @@
-#ifndef TCPCLIENT_H
+﻿#ifndef TCPCLIENT_H
 #define TCPCLIENT_H
 
 #include <QObject>
@@ -6,6 +6,7 @@
 #include <QAbstractSocket>
 #include <QDataStream>
 #include <QCryptographicHash>
+#include <QJsonArray>
 class TcpClient : public QObject
 {
     Q_OBJECT
@@ -20,12 +21,18 @@ public:
 
     void init(QString host,quint16 port);
 
+//    #warning //deprecated, use getQuestionsJson()
+    QByteArray getQuestionsBytes();
+
+    QList<QJsonArray> getQuestionsJson();
+
 signals:
 
 
 public slots:
     bool toLogin(QStringList *list);
     bool insertQuestion(QStringList *list,qint32 type);
+
 
 private:
     QString m_host;

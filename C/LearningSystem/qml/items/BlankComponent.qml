@@ -20,6 +20,8 @@ Rectangle {
 //    implicitHeight: deleteBtn.height
     width: parent.width
     height: deleteBtn.height
+    anchors.horizontalCenter: parent.horizontalCenter
+
     property var currentObject: ;
     property string text: blankInput.text
 
