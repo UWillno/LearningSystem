@@ -8,7 +8,8 @@ QuickControls2.SwipeView {
     property string listData
     currentIndex: 0
     orientation: Qt.Horizontal
-
+    property var selectQuestion
+    property var selectType
     Rectangle {
         AppListView {
             id:choiceView
@@ -18,6 +19,7 @@ QuickControls2.SwipeView {
             delegate: SimpleRow { text : index+1 + "." + modelData.question
                 onSelected: {
                     console.log(modelData.id)
+                    viewDetail(0,modelData)
                 }
             }
         }
@@ -45,6 +47,13 @@ QuickControls2.SwipeView {
                 }
             }
         }
+    }
+    function viewDetail(type,question){
+        var component = Qt.createComponent("ModifyQuestionPage.qml")
+        selectQuestion = question
+        selectType=type
+        rootStack.push(component)
+
     }
 
     Component.onCompleted: {

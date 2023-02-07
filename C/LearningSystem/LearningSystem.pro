@@ -67,7 +67,7 @@ DISTFILES += \
     qml/items/FillInTheBlanksQuestionItem.qml \
     qml/items/InsertSwipeView.qml \
     qml/items/LoginItem.qml \
-    qml/items/ProgressBar.qml \
+    qml/items/ModifyQuestionPage.qml \
     qml/items/SelectSwipeView.qml \
     qml/items/TrueOrFalseQuestionItem.qml \
     qml/items/toast/Toast.qml \

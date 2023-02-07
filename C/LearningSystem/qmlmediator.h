@@ -30,15 +30,24 @@ signals:
     void tcpQuestionsChanged();
 
 public slots:
-    void tologin(QString username,QString password, int usertype);
+    // 登录
+    void tologin(QString username,QString password, const int &usertype);
+    // 添加题目
     void sendChoiceQuestion(QString question,QString option1,QString option2,QString option3,QString option4,QString answer);
     void sendTrueOrFalseQuestion(QString question,bool answer);
     void sendFillInTheBlanksQuestion(QString question,QString answer);
+
+    // 获取题目
     void getQuestionsByTcp();
+
+    // 修改题目
+    void modifyQuestion(QJsonObject json, int type);
+    // 测试
+    void testModel(QJsonObject a);
 
 private:
     enum m_task{
-        login,insertC,insertT,insertF,getQuestions
+        login,insertC,insertT,insertF,getQuestions,modifyC,modifyT,modifyF,deleteC,deleteT,deleteF
     };
     QList<QJsonArray> m_tcpQuestions;
 

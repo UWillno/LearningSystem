@@ -5,6 +5,7 @@ import QtQuick.Controls 2.5
 import QtQuick.Layouts 1.3
 Rectangle{
     id: rectangle
+    property var model
     function clear(){
         questionInput.text=""
         optiton1Input.text=""
@@ -104,7 +105,7 @@ Rectangle{
         }
 
         AppButton {
-            id: btnsubmit
+            id: btnSubmit
             text: "提交"
             anchors.horizontalCenter: parent.horizontalCenter
             //            anchors.bottom: parent.bottom
@@ -124,8 +125,59 @@ Rectangle{
                 }
             }
         }
+        Grid {
+            id: gridModify
+            columns: 2
+            rows: 1
+            visible: false
+            //            spacing:
+            anchors.horizontalCenter: parent.horizontalCenter
+            AppButton {
+                id: btnSave
+                text: "保存"
+                //            anchors.horizontalCenter: parent.horizontalCenter
+                //            anchors.bottom: parent.bottom
+                //                visible: false
+
+                onClicked: {
+                    console.log(isEmpty())
+                    qm.testModel(model)
+                }
+            }
+            AppButton {
+                id: btnDelete
+
+                text: "删除"
+                //                visible: false
+                //            anchors.horizontalCenter: parent.horizontalCenter
+                //            anchors.bottom: parent.bottom
+                onClicked: {
+                    console.log(isEmpty())
+                }
+            }
+        }
     }
 
+    Component.onCompleted: {
+        //        model =
+        if(model){
+            questionInput.text = model.question
+            optiton1Input.text = model.option1
+            optiton2Input.text = model.option2
+            optiton3Input.text = model.option3
+            optiton4Input.text = model.option4
+            if(model.answer === 'B')
+                answerComboBox.model = ['B','A','C','D']
+            else if(model.answer === 'C')
+                answerComboBox.model = ['C','A','B','D']
+            else if(model.answer === 'D')
+                answerComboBox.model = ['D','A','B','C']
+
+            btnSubmit.visible = false
+            gridModify.visible = true
+        }
+
+    }
 
     //        state:
 }

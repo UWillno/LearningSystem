@@ -119,6 +119,11 @@ void QmlMediator::getQuestionsByTcp()
 
 }
 
+void QmlMediator::testModel(QJsonObject a)
+{
+    qInfo() << a;
+}
+
 const QList<QJsonArray> &QmlMediator::tcpQuestions() const
 {
     return m_tcpQuestions;
