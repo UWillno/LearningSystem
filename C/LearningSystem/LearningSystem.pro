@@ -70,6 +70,11 @@ DISTFILES += \
     qml/items/ModifyQuestionPage.qml \
     qml/items/SelectSwipeView.qml \
     qml/items/TrueOrFalseQuestionItem.qml \
+    qml/items/loader/LoaderItem.qml \
+    qml/items/loaders/LoaderPopup.qml \
+    qml/items/loading/LoadingItem.qml \
+    qml/items/template/ModifyButtons.qml \
+    qml/items/template/UWAppTextEdit.qml \
     qml/items/toast/Toast.qml \
     qml/items/toast/ToastManager.qml \
     qml/logic/AdminLogic.qml \

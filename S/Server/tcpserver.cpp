@@ -5,8 +5,11 @@
 
 TcpServer::TcpServer(QObject *parent): QTcpServer(parent)
 {
-//    Singleton<SqlOperator>::GetInstance().connect("192.168.1.14",3306,"learning","root","123456");
-    Singleton<SqlOperator>::GetInstance().connect("192.168.1.3",3306,"learning","root","123456");
+//    Singleton<SqlOperator>::GetInstance().connect("192.168.1.9",3306,"learning","root","123456");
+//    Singleton<SqlOperator>::GetInstance().connect("192.168.1.3",3306,"learning","root","123456");
+//    Singleton<SqlOperator>::GetInstance().connect("101.43.173.108",3306,"learning","root","44910244");
+//    Singleton<SqlOperator>::GetInstance().connect("www.uwillno.icu",3306,"learning","root","44910244");
+    Singleton<SqlOperator>::GetInstance().connect("127.0.0.1",3306,"learning","root","UW1224222099");
 
 }
 
@@ -213,6 +216,19 @@ void TcpServer::handleClient(qintptr handle)
         //        if(date != m_date){return;}
         //        sendQuestions(p.data());
         sendQuestionsJson(p.data());
+        break;
+    }
+
+    case deleteQ: {
+        qint64 id;
+        qint32 type;
+        stream  >> id >> type >> date;
+        qInfo() << id << type ;
+        //        if(date != m_date){return;}
+        if(Singleton<SqlOperator>::GetInstance().deleteQuestion(id,type)){
+            p->write("ok");
+            p->waitForBytesWritten();
+        }
         break;
     }
     default:

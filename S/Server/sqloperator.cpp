@@ -44,6 +44,8 @@ bool SqlOperator::connect(QString hostname,int port,QString databasename,QString
     m_db.setDatabaseName(databasename);
     m_db.setUserName(username);
     m_db.setPassword(password);
+    //自动重连
+    m_db.setConnectOptions("MYSQL_OPT_RECONNECT=1");
     if(!m_db.open()){
         qInfo() << "数据库未开启";
         return false;
@@ -115,15 +117,90 @@ bool SqlOperator::insertQuestion(iQuestion * question)
     return false;
 }
 
-QList<iQuestion*> SqlOperator::selectAllQuestion()
+//QList<iQuestion*> SqlOperator::selectAllQuestion()
+void SqlOperator::selectAllQuestion()
 {
+    qInfo() <<"test!!!!";
 
     //    QStringList sqls;
     //    QList<iQuestion *> questionlist;
     //    sqls.append("SELECT * FROM `choice_questions`;");
     //    sqls.append("SELECT * FROM `torf_questions`;");
     //    sqls.append("SELECT * FROM `fill_in_the_blanks_questions`;");
+    QSqlTableModel *model = new QSqlTableModel(this,m_db);
+    //    model.database();
+    model->setTable("choice_questions");
 
+    qInfo()<<model->select();
+    //    foreach (QSqlTableModel a, model->data()) {
+
+    //    }
+    qInfo() << model;
+    for(int i=0;i<model->rowCount(); i++){
+        for(int j=0;j<model->columnCount(); j++){
+            qInfo() << model->index(i,j).data();
+        }
+    }
+    //    qInfo() << model->data();
+    model->deleteLater();
+    //   for(i)
+    //    return
+    //    qInfo() << model.record(1).value("question").toString();
+}
+
+bool SqlOperator::modifyQuestion(iQuestion *question)
+{
+    if(!question) return false;
+    ChoiceQuestion *cq = qobject_cast<ChoiceQuestion*>(question);
+    if(cq){
+
+
+    }
+    TrueOrFalseQuestion *tq = qobject_cast<TrueOrFalseQuestion*>(question);
+    if(tq){
+
+    }
+    FillInTheBlanksQuestion *fq = qobject_cast<FillInTheBlanksQuestion*>(question);
+    if(fq){
+
+    }
+    return false;
+}
+
+bool SqlOperator::deleteQuestion(qint64 &id, qint32 &type)
+{
+    QSqlQuery query = QSqlQuery(m_db);
+//    QString sql;
+    qInfo() << id << type;
+    switch (type) {
+    case choice:
+    {
+        query.prepare("DELETE FROM choice_questions WHERE id = :id;");
+        query.bindValue(":id",id);
+        query.exec();
+        return commitDB(&query);
+        break;
+    }
+    case trueOrFalse:
+    {
+        query.prepare("DELETE FROM torf_questions WHERE id = :id;");
+        query.bindValue(":id",id);
+        query.exec();
+        return commitDB(&query);
+        break;
+    }
+    case fill:{
+        query.prepare("DELETE FROM fill_in_the_blanks_questions WHERE id = :id;");
+        query.bindValue(":id",id);
+        query.exec();
+        return commitDB(&query);
+        break;
+    }
+    default:
+        break;
+    }
+
+    return false;
 }
 
 QList<QSharedPointer<ChoiceQuestion>> SqlOperator::selectAllCQuestion()

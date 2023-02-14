@@ -8,10 +8,18 @@
 #include "singleton.h"
 #include "sqloperator.h"
 #include "tcpserver.h"
+void test(){
+//    Singleton<SqlOperator>::GetInstance().selectAllQuestion();
+    qint64 id;
+
+    id=33;
+    int type=0;
+    Singleton<SqlOperator>::GetInstance().deleteQuestion(id,type);
+}
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
-//    Singleton<SqlOperator>::GetInstance().login("UWillno","44910244");
+    //    Singleton<SqlOperator>::GetInstance().login("UWillno","44910244");
 
     TcpServer server;
 
@@ -21,11 +29,12 @@ int main(int argc, char *argv[])
     }
     else
     {
+//        qInfo() <<
         qInfo() << "服务启动!";
     }
-//    QTcpSocket s;
-//    server.sendQuestionsJson(&s);
-//    qInfo() << Singleton<SqlOperator>::GetInstance().selectAllTQuestion();
+    //        QTcpSocket s;
+    //        server.sendQuestionsJson(&s);
+//        test();
 
 
     return a.exec();

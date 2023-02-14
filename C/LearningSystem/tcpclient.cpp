@@ -77,14 +77,14 @@ bool TcpClient::insertQuestion(QStringList *list, qint32 type)
 {
     QScopedPointer<QTcpSocket> p(new QTcpSocket());
     p->connectToHost(this->m_host,this->port());
+    QByteArray byte;
+    QDataStream stream(&byte,QIODevice::WriteOnly);
+    stream << type;
+    foreach(QString s,*list){
+        stream << s;
+    }
+    stream << m_date;
     if(p->waitForConnected()){
-        QByteArray byte;
-        QDataStream stream(&byte,QIODevice::WriteOnly);
-        stream << type;
-        foreach(QString s,*list){
-            stream << s;
-        }
-        stream << m_date;
         p->write(byte);
         if(p->waitForBytesWritten()){
             if(p->waitForReadyRead()){
@@ -101,15 +101,43 @@ bool TcpClient::insertQuestion(QStringList *list, qint32 type)
     return false;
 }
 
+bool TcpClient::deleteQuestion(qint64 &id, qint32 &type)
+{
+    //    QByteArray data;
+//    qInfo() << "TCP开始删除";
+    QScopedPointer<QTcpSocket> p(new QTcpSocket());
+    QByteArray byte;
+    QDataStream stream(&byte,QIODevice::WriteOnly);
+    stream << deleteQ << id << type << m_date;
+    p->connectToHost(this->m_host,this->port());
+    if(p->waitForConnected()){
+        p->write(byte);
+        if(p->waitForBytesWritten()){
+            if(p->waitForReadyRead()){
+                if(QString(p->readAll()).contains("ok")){
+                    p->close();
+                    return true;
+                }
+            }
+        }
+    }else{
+        qInfo() << "连接服务器失败！";
+    }
+    p->close();
+    return false;
+}
+
+
+// 弃用
 QByteArray TcpClient::getQuestionsBytes()
 {
     QByteArray data;
     QScopedPointer<QTcpSocket> p(new QTcpSocket());
+    QByteArray byte;
+    QDataStream stream(&byte,QIODevice::WriteOnly);
+    stream << getQuestions << m_date;
     p->connectToHost(this->m_host,this->port());
     if(p->waitForConnected()){
-        QByteArray byte;
-        QDataStream stream(&byte,QIODevice::WriteOnly);
-        stream << getQuestions << m_date;
         p->write(byte);
         if(p->waitForBytesWritten()){
             if(p->waitForReadyRead()){
@@ -131,17 +159,20 @@ QList<QJsonArray> TcpClient::getQuestionsJson()
     QList<QJsonArray> list;
     QByteArray data;
     QScopedPointer<QTcpSocket> p(new QTcpSocket());
+    QByteArray byte;
+    QDataStream stream(&byte,QIODevice::WriteOnly);
+    QDataStream questionsStream(&data,QIODevice::ReadOnly);
+    QJsonArray c,t,f;
+
     p->connectToHost(this->m_host,this->port());
     if(p->waitForConnected()){
-        QByteArray byte;
-        QDataStream stream(&byte,QIODevice::WriteOnly);
+
         stream << getQuestions << m_date;
         p->write(byte);
         if(p->waitForBytesWritten()){
             if(p->waitForReadyRead()){
                 data = p->readAll();
-                QDataStream questionsStream(&data,QIODevice::ReadOnly);
-                QJsonArray c,t,f;
+
                 questionsStream >> c;
                 questionsStream >> t;
                 questionsStream >> f;
@@ -157,7 +188,7 @@ QList<QJsonArray> TcpClient::getQuestionsJson()
     }else{
         qInfo() << "连接失败";
     }
-//    qInfo() << list;
+    //    qInfo() << list;
     p->close();
     return list;
 }

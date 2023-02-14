@@ -6,6 +6,7 @@
 #include <QSqlQuery>
 #include <QCryptographicHash>
 #include <QDebug>
+#include <QSqlTableModel>
 #include "interface/iQuestion.h"
 #include "choicequestion.h"
 #include "trueorfalsequestion.h"
@@ -25,14 +26,22 @@ public:
                  QString password="");
 
     bool commitDB(QSqlQuery *query);
+    enum question_type{choice,trueOrFalse,fill};
 signals:
 
 public slots:
     bool insertQuestion(iQuestion * question);
-    QList<iQuestion*> selectAllQuestion();
+//    QList<iQuestion*> selectAllQuestion();
+    void selectAllQuestion();
+
+    bool modifyQuestion(iQuestion * question);
+    bool deleteQuestion(qint64 &id , int &type);
+
     QList<QSharedPointer<ChoiceQuestion>> selectAllCQuestion();
     QList<QSharedPointer<TrueOrFalseQuestion>> selectAllTQuestion();
     QList<QSharedPointer<FillInTheBlanksQuestion>> selectAllFQuestion();
+
+
 
 private:
     QSqlDatabase m_db;

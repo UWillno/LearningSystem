@@ -52,11 +52,11 @@ void QmlMediator::sendChoiceQuestion(QString question, QString option1, QString 
     list.append(answer);
     QFuture<bool> future = QtConcurrent::run(&Singleton<TcpClient>::GetInstance(),&TcpClient::insertQuestion,&list,insertC);
     if(future.result()){
-        //        emit loginSucceeded();
         emit submitSucceeded();
+        //        emit submitSucceeded();
         qInfo() << "插入成功";
     }else{
-        //        emit loginFailed();
+        emit submitFailed();
         qInfo() << "插入失败";
     }
 }
@@ -77,10 +77,11 @@ void QmlMediator::sendTrueOrFalseQuestion(QString question, bool answer)
 
     QFuture<bool> future = QtConcurrent::run(&Singleton<TcpClient>::GetInstance(),&TcpClient::insertQuestion,&list,insertT);
     if(future.result()){
-        //        emit loginSucceeded();
+        emit submitSucceeded();
+        //        emit submitSucceeded();
         qInfo() << "插入成功";
     }else{
-        //        emit loginFailed();
+        emit submitFailed();
         qInfo() << "插入失败";
     }
 }
@@ -101,10 +102,11 @@ void QmlMediator::sendFillInTheBlanksQuestion(QString question, QString answer)
 
     QFuture<bool> future = QtConcurrent::run(&Singleton<TcpClient>::GetInstance(),&TcpClient::insertQuestion,&list,insertF);
     if(future.result()){
-        //        emit loginSucceeded();
+        emit submitSucceeded();
+        //        emit submitSucceeded();
         qInfo() << "插入成功";
     }else{
-        //        emit loginFailed();
+        emit submitFailed();
         qInfo() << "插入失败";
     }
 
@@ -113,9 +115,31 @@ void QmlMediator::sendFillInTheBlanksQuestion(QString question, QString answer)
 void QmlMediator::getQuestionsByTcp()
 {
     QFuture<QList<QJsonArray>> future = QtConcurrent::run(&Singleton<TcpClient>::GetInstance(),&TcpClient::getQuestionsJson);
-
     m_tcpQuestions = future.result();
+    if(m_tcpQuestions.isEmpty()){
+        emit selectFailed();
+        return;
+    }
+    emit selectSuceeded();
     qInfo() << m_tcpQuestions;
+
+}
+
+void QmlMediator::modifyQuestion(QJsonObject json, int type)
+{
+
+}
+
+void QmlMediator::deleteQuestion(qint64 id, qint32 type)
+{
+    QFuture<bool> future = QtConcurrent::run(&Singleton<TcpClient>::GetInstance(),&TcpClient::deleteQuestion,id,type);
+    if(future.result()){
+        emit deleteSuceeded();
+        // 刷新JSON
+        getQuestionsByTcp();
+        return;
+    }
+    emit  deleteFailed();
 
 }
 

@@ -22,16 +22,22 @@ public:
     void resetTcpQuestions();
     Q_PROPERTY(QList<QJsonArray> tcpQuestions READ tcpQuestions WRITE setTcpQuestions RESET resetTcpQuestions NOTIFY tcpQuestionsChanged)
 
+
 signals:
     void loginSucceeded();
     void loginFailed();
     void submitSucceeded();
-
+    void submitFailed();
+    void selectSuceeded();
+    void selectFailed();
     void tcpQuestionsChanged();
+    void deleteSuceeded();
+    void deleteFailed();
+
 
 public slots:
     // 登录
-    void tologin(QString username,QString password, const int &usertype);
+    void tologin(QString username,QString password, const int usertype);
     // 添加题目
     void sendChoiceQuestion(QString question,QString option1,QString option2,QString option3,QString option4,QString answer);
     void sendTrueOrFalseQuestion(QString question,bool answer);
@@ -42,6 +48,10 @@ public slots:
 
     // 修改题目
     void modifyQuestion(QJsonObject json, int type);
+
+    // 删除题目
+    void deleteQuestion(qint64 id,qint32 type);
+
     // 测试
     void testModel(QJsonObject a);
 

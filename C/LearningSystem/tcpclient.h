@@ -21,7 +21,7 @@ public:
 
     void init(QString host,quint16 port);
 
-//    #warning //deprecated, use getQuestionsJson()
+    //    #warning //deprecated, use getQuestionsJson()
     QByteArray getQuestionsBytes();
 
     QList<QJsonArray> getQuestionsJson();
@@ -32,7 +32,7 @@ signals:
 public slots:
     bool toLogin(QStringList *list);
     bool insertQuestion(QStringList *list,qint32 type);
-
+    bool deleteQuestion(qint64 &id,qint32 &type);
 
 private:
     QString m_host;
@@ -40,10 +40,11 @@ private:
     qint64 m_date;
     QByteArray passwordCryptographicHash(QByteArray password);
     enum m_task{
-        login,insertC,insertT,insertF,getQuestions
+        login,insertC,insertT,insertF,getQuestions,modifyQ,deleteQ
     };
 
-
+private:
+    enum question_type{choice,trueOrFalse,fill};
 };
 
 #endif // TCPCLIENT_H

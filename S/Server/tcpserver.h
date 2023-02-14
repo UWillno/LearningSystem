@@ -39,7 +39,7 @@ private:
     void sendQuestionsJson(QTcpSocket *s);
     void toLogin(QStringList *list,QTcpSocket *s);
     enum m_task{
-        login,insertC,insertT,insertF,getQuestions
+        login,insertC,insertT,insertF,getQuestions,modifyQ,deleteQ
     };
     qint64 m_date;
     QuestionFactory factory;
