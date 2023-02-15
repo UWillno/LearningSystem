@@ -34,14 +34,6 @@ Page {
 
     }
 
-    //    InsertSwipeView {
-    //        id:insertSwipeView
-    //        anchors.top: typeTabBar.bottom
-    //    }
-    //    SelectSwipeView {
-    //        id:selectSwipeView
-    //        anchors.top: typeTabBar.bottom
-    //    }
 
     Component.onCompleted: {
         var component
@@ -53,8 +45,9 @@ Page {
         }
         case 1: {
             //            loaderItem.show()
+            qm.getQuestionsByTcp()
             component = Qt.createComponent("../items/SelectSwipeView.qml").createObject(swipeRect)
-//            qm.getQuestionsByTcp()
+
             break
         }
         default:

@@ -3,6 +3,7 @@ import Felgo 3.0
 import QtQuick.Controls 2.0 as QuickControls2
 
 QuickControls2.SwipeView {
+
     property alias selectSwipeView: selectSwipeView
     id: selectSwipeView
     anchors.fill: parent
@@ -11,13 +12,18 @@ QuickControls2.SwipeView {
     orientation: Qt.Horizontal
     property var selectQuestion
     property var selectType
+    property var choiceModel : qm.tcpQuestions[0]
+    property var trueOrFalseModel : qm.tcpQuestions[1]
+    property var fillModel : qm.tcpQuestions[2]
+    //    property var model1: qm.tcpQuestions[0]
 
     Rectangle {
         AppListView {
+//            showSearch: true
             id:choiceView
             anchors.fill: parent
-            //            model: qm.tcpQuestions[0]
-            //            model:qm.tcpQuestions[0]
+            //                        model: model1
+            model:choiceModel
             delegate: SimpleRow { text : index+1 + "." + modelData.question
                 onSelected: {
                     console.log(modelData.id)
@@ -31,6 +37,7 @@ QuickControls2.SwipeView {
             id:trueOrfalseView
             anchors.fill: parent
             //            model: qm.tcpQuestions[1]
+            model: trueOrFalseModel
             delegate: SimpleRow { text : index+1 +"." + modelData.question
                 onSelected: {
                     console.log(modelData.id)
@@ -44,6 +51,7 @@ QuickControls2.SwipeView {
             id:fillView
             anchors.fill: parent
             //            model: qm.tcpQuestions[2]
+            model: fillModel
             delegate: SimpleRow { text : index+1 +"." + modelData.question
                 onSelected: {
                     console.log(modelData)
@@ -60,15 +68,10 @@ QuickControls2.SwipeView {
 
     }
 
-    Component.onCompleted: {
-        qm.getQuestionsByTcp()
-        if(qm.tcpQuestions){
-            console.log("true")
-            update()
-        }
-    }
     function update(){
-        adminLogic.updateSelectQuestions(choiceView,trueOrfalseView,fillView)
+        choiceModel = qm.tcpQuestions[0]
+        trueOrFalseModel = qm.tcpQuestions[1]
+        fillModel = qm.tcpQuestions[2]
     }
 
     Connections {
@@ -83,6 +86,18 @@ QuickControls2.SwipeView {
             selectSwipeView.update()
             toastManager.show("删除成功！",1000)
             loaderItem.close()
+            rootStack.pop()
+        }
+
+        onUpdateSucceeded:{
+            selectSwipeView.update()
+
+            toastManager.show("保存成功！",1000)
+
+            rootStack.pop()
+        }
+        onUpdateFailed:{
+            toastManager.show("保存失败！",1000)
             rootStack.pop()
         }
     }

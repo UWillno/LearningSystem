@@ -237,6 +237,9 @@ void TcpServer::handleClient(qintptr handle)
         stream >>q->id >> q->question;
         stream >> q->option1 >> q->option2 >> q->option3 >> q->option4 >> q->answer;
         stream >> date;
+        qInfo() << q->id <<  q->option1 << q->option2 <<
+                   q->option3 << q->option4 << q->answer;
+
         //        if(date != m_date){return;}
 
         if(Singleton<SqlOperator>::GetInstance().updateQuestion(q.data())){
@@ -247,15 +250,16 @@ void TcpServer::handleClient(qintptr handle)
     }
     case updateT:{
         QScopedPointer<TrueOrFalseQuestion> q(qobject_cast<TrueOrFalseQuestion*>(factory.createTrueOrFalseQuestion()));
-        stream >> q->id >> q->question;
-        QString answer;
-        stream >> answer;
-        QVariant temp = answer;
-        q->answer = temp.toBool();
+        stream >> q->id >> q->question >>q->answer;
+        //        QString answer;
+        //        stream >> answer;
+        //        QVariant temp = answer;
+        //        q->answer = temp.toBool();
         //        bool ok;
         //        q->answer = answer.toShort(&ok);
         //        if(!ok) return;
         //        q->answer;
+        qInfo() << q->answer;
         stream >> date;
         //        if(date != m_date){return;}
         if(Singleton<SqlOperator>::GetInstance().updateQuestion(q.data())){

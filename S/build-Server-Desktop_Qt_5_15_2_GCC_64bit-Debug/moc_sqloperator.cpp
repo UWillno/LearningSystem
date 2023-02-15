@@ -38,7 +38,7 @@ QT_MOC_LITERAL(2, 27, 0), // ""
 QT_MOC_LITERAL(3, 28, 10), // "iQuestion*"
 QT_MOC_LITERAL(4, 39, 8), // "question"
 QT_MOC_LITERAL(5, 48, 17), // "selectAllQuestion"
-QT_MOC_LITERAL(6, 66, 14), // "modifyQuestion"
+QT_MOC_LITERAL(6, 66, 14), // "updateQuestion"
 QT_MOC_LITERAL(7, 81, 14), // "deleteQuestion"
 QT_MOC_LITERAL(8, 96, 7), // "qint64&"
 QT_MOC_LITERAL(9, 104, 2), // "id"
@@ -53,7 +53,7 @@ QT_MOC_LITERAL(17, 257, 47) // "QList<QSharedPointer<FillInTh..."
 
     },
     "SqlOperator\0insertQuestion\0\0iQuestion*\0"
-    "question\0selectAllQuestion\0modifyQuestion\0"
+    "question\0selectAllQuestion\0updateQuestion\0"
     "deleteQuestion\0qint64&\0id\0int&\0type\0"
     "selectAllCQuestion\0"
     "QList<QSharedPointer<ChoiceQuestion> >\0"
@@ -107,7 +107,7 @@ void SqlOperator::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         case 0: { bool _r = _t->insertQuestion((*reinterpret_cast< iQuestion*(*)>(_a[1])));
             if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
         case 1: _t->selectAllQuestion(); break;
-        case 2: { bool _r = _t->modifyQuestion((*reinterpret_cast< iQuestion*(*)>(_a[1])));
+        case 2: { bool _r = _t->updateQuestion((*reinterpret_cast< iQuestion*(*)>(_a[1])));
             if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
         case 3: { bool _r = _t->deleteQuestion((*reinterpret_cast< qint64(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2])));
             if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;

@@ -35,15 +35,28 @@ Item {
     function deleteQuestion(id,type){
         qm.deleteQuestion(id,type)
     }
-    // 更新查看列表model
-    function updateSelectQuestions(lv1,lv2,lv3){
-        lv1.model = qm.tcpQuestions[0]
-        lv2.model = qm.tcpQuestions[1]
-        lv3.model = qm.tcpQuestions[2]
+    //    // 更新查看列表model
+    //    function updateSelectQuestions(lv1,lv2,lv3){
+
+    //        lv1.model = qm.tcpQuestions[0]
+    //        lv2.model = qm.tcpQuestions[1]
+    //        lv3.model = qm.tcpQuestions[2]
+    //    }
+
+//    function updateQuestionsModel(m1,m2,m3){
+//        m1=  qm.tcpQuestions[0]
+//        m2 = qm.tcpQuestions[1]
+//        m3 = qm.tcpQuestions[2]
+//        //        qm.getQuestionsByTcp()
+//    }
+
+    //    function updateChoiceQuesiton(id,question,op1,op2,op3,op4,answer){
+
+    //    }
+
+    function updateQuestion(model,type){
+        //        console.log("asdasdasd")
+        console.log(model)
+        qm.updateQuestion(model,type)
     }
-
-    function updateChoiceQuesiton(id,question,op1,op2,op3,op4,answer){
-
-    }
-
 }

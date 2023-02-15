@@ -37,7 +37,7 @@ MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
 DISTNAME      = LearningSystem1.0.0
-DISTDIR = /run/media/uwillno/0fd60416-a52e-41d5-8f63-24fe3e94cc08/BYSJ/C/build-LearningSystem-Felgo_Desktop_Qt_5_15_2_GCC-Debug/.tmp/LearningSystem1.0.0
+DISTDIR = /run/media/uwillno/WD40PURX-78AKYY0/BYSJ/C/build-LearningSystem-Felgo_Desktop_Qt_5_15_2_GCC-Debug/.tmp/LearningSystem1.0.0
 LINK          = g++
 LFLAGS        = -Wl,-rpath,'$$ORIGIN/lib' -Wl,-rpath,'$$ORIGIN/system' -Wl,-rpath,/home/uwillno/Felgo/Felgo/gcc_64/lib -Wl,-rpath-link,/home/uwillno/Felgo/Felgo/gcc_64/lib
 LIBS          = $(SUBLIBS) -L/home/uwillno/Felgo/Felgo/gcc_64/lib -lFelgo -lz /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt5Quick.so /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt5Widgets.so /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt5Multimedia.so /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt5Gui.so /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt5Concurrent.so /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt5QmlModels.so /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt5Qml.so /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt5WebSockets.so /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt5Network.so /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt5Sql.so /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt5Bluetooth.so /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt5Core.so -lGL -lpthread   
@@ -727,7 +727,7 @@ distclean: clean
 first: $(first) copydeploymentfolders
 
 copydeploymentfolders:
-	@echo Copying application data... && $(MKDIR) "/run/media/uwillno/0fd60416-a52e-41d5-8f63-24fe3e94cc08/BYSJ/C/build-LearningSystem-Felgo_Desktop_Qt_5_15_2_GCC-Debug/" && $(COPY_DIR) "/run/media/uwillno/0fd60416-a52e-41d5-8f63-24fe3e94cc08/BYSJ/C/LearningSystem/qml" "/run/media/uwillno/0fd60416-a52e-41d5-8f63-24fe3e94cc08/BYSJ/C/build-LearningSystem-Felgo_Desktop_Qt_5_15_2_GCC-Debug/" && $(MKDIR) "/run/media/uwillno/0fd60416-a52e-41d5-8f63-24fe3e94cc08/BYSJ/C/build-LearningSystem-Felgo_Desktop_Qt_5_15_2_GCC-Debug/" && $(COPY_DIR) "/run/media/uwillno/0fd60416-a52e-41d5-8f63-24fe3e94cc08/BYSJ/C/LearningSystem/assets" "/run/media/uwillno/0fd60416-a52e-41d5-8f63-24fe3e94cc08/BYSJ/C/build-LearningSystem-Felgo_Desktop_Qt_5_15_2_GCC-Debug/"
+	@echo Copying application data... && $(MKDIR) "/run/media/uwillno/WD40PURX-78AKYY0/BYSJ/C/build-LearningSystem-Felgo_Desktop_Qt_5_15_2_GCC-Debug/" && $(COPY_DIR) "/run/media/uwillno/WD40PURX-78AKYY0/BYSJ/C/LearningSystem/qml" "/run/media/uwillno/WD40PURX-78AKYY0/BYSJ/C/build-LearningSystem-Felgo_Desktop_Qt_5_15_2_GCC-Debug/" && $(MKDIR) "/run/media/uwillno/WD40PURX-78AKYY0/BYSJ/C/build-LearningSystem-Felgo_Desktop_Qt_5_15_2_GCC-Debug/" && $(COPY_DIR) "/run/media/uwillno/WD40PURX-78AKYY0/BYSJ/C/LearningSystem/assets" "/run/media/uwillno/WD40PURX-78AKYY0/BYSJ/C/build-LearningSystem-Felgo_Desktop_Qt_5_15_2_GCC-Debug/"
 
 mocclean: compiler_moc_header_clean compiler_moc_objc_header_clean compiler_moc_source_clean
 
@@ -988,7 +988,7 @@ moc_qmlmediator.cpp: ../LearningSystem/qmlmediator.h \
 		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/QFuture \
 		moc_predefs.h \
 		/home/uwillno/Felgo/Felgo/gcc_64/bin/moc
-	/home/uwillno/Felgo/Felgo/gcc_64/bin/moc $(DEFINES) --include /run/media/uwillno/0fd60416-a52e-41d5-8f63-24fe3e94cc08/BYSJ/C/build-LearningSystem-Felgo_Desktop_Qt_5_15_2_GCC-Debug/moc_predefs.h -I/home/uwillno/Felgo/Felgo/gcc_64/mkspecs/linux-g++ -I/run/media/uwillno/0fd60416-a52e-41d5-8f63-24fe3e94cc08/BYSJ/C/LearningSystem -I/home/uwillno/Felgo/Felgo/gcc_64/include/Felgo -I/home/uwillno/Felgo/Felgo/gcc_64/include -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtQuick -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtWidgets -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtMultimedia -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtGui -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtConcurrent -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtQmlModels -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtQml -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtWebSockets -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtNetwork -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtSql -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtBluetooth -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore -I. -I/usr/include/c++/12.2.1 -I/usr/include/c++/12.2.1/x86_64-pc-linux-gnu -I/usr/include/c++/12.2.1/backward -I/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include -I/usr/local/include -I/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include-fixed -I/usr/include ../LearningSystem/qmlmediator.h -o moc_qmlmediator.cpp
+	/home/uwillno/Felgo/Felgo/gcc_64/bin/moc $(DEFINES) --include /run/media/uwillno/WD40PURX-78AKYY0/BYSJ/C/build-LearningSystem-Felgo_Desktop_Qt_5_15_2_GCC-Debug/moc_predefs.h -I/home/uwillno/Felgo/Felgo/gcc_64/mkspecs/linux-g++ -I/run/media/uwillno/WD40PURX-78AKYY0/BYSJ/C/LearningSystem -I/home/uwillno/Felgo/Felgo/gcc_64/include/Felgo -I/home/uwillno/Felgo/Felgo/gcc_64/include -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtQuick -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtWidgets -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtMultimedia -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtGui -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtConcurrent -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtQmlModels -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtQml -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtWebSockets -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtNetwork -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtSql -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtBluetooth -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore -I. -I/usr/include/c++/12.2.1 -I/usr/include/c++/12.2.1/x86_64-pc-linux-gnu -I/usr/include/c++/12.2.1/backward -I/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include -I/usr/local/include -I/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include-fixed -I/usr/include ../LearningSystem/qmlmediator.h -o moc_qmlmediator.cpp
 
 moc_tcpclient.cpp: ../LearningSystem/tcpclient.h \
 		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/QObject \
@@ -1078,7 +1078,7 @@ moc_tcpclient.cpp: ../LearningSystem/tcpclient.h \
 		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/quuid.h \
 		moc_predefs.h \
 		/home/uwillno/Felgo/Felgo/gcc_64/bin/moc
-	/home/uwillno/Felgo/Felgo/gcc_64/bin/moc $(DEFINES) --include /run/media/uwillno/0fd60416-a52e-41d5-8f63-24fe3e94cc08/BYSJ/C/build-LearningSystem-Felgo_Desktop_Qt_5_15_2_GCC-Debug/moc_predefs.h -I/home/uwillno/Felgo/Felgo/gcc_64/mkspecs/linux-g++ -I/run/media/uwillno/0fd60416-a52e-41d5-8f63-24fe3e94cc08/BYSJ/C/LearningSystem -I/home/uwillno/Felgo/Felgo/gcc_64/include/Felgo -I/home/uwillno/Felgo/Felgo/gcc_64/include -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtQuick -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtWidgets -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtMultimedia -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtGui -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtConcurrent -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtQmlModels -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtQml -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtWebSockets -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtNetwork -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtSql -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtBluetooth -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore -I. -I/usr/include/c++/12.2.1 -I/usr/include/c++/12.2.1/x86_64-pc-linux-gnu -I/usr/include/c++/12.2.1/backward -I/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include -I/usr/local/include -I/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include-fixed -I/usr/include ../LearningSystem/tcpclient.h -o moc_tcpclient.cpp
+	/home/uwillno/Felgo/Felgo/gcc_64/bin/moc $(DEFINES) --include /run/media/uwillno/WD40PURX-78AKYY0/BYSJ/C/build-LearningSystem-Felgo_Desktop_Qt_5_15_2_GCC-Debug/moc_predefs.h -I/home/uwillno/Felgo/Felgo/gcc_64/mkspecs/linux-g++ -I/run/media/uwillno/WD40PURX-78AKYY0/BYSJ/C/LearningSystem -I/home/uwillno/Felgo/Felgo/gcc_64/include/Felgo -I/home/uwillno/Felgo/Felgo/gcc_64/include -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtQuick -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtWidgets -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtMultimedia -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtGui -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtConcurrent -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtQmlModels -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtQml -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtWebSockets -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtNetwork -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtSql -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtBluetooth -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore -I. -I/usr/include/c++/12.2.1 -I/usr/include/c++/12.2.1/x86_64-pc-linux-gnu -I/usr/include/c++/12.2.1/backward -I/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include -I/usr/local/include -I/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include-fixed -I/usr/include ../LearningSystem/tcpclient.h -o moc_tcpclient.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -1718,21 +1718,21 @@ moc_tcpclient.o: moc_tcpclient.cpp
 ####### Install
 
 install_itemqmlFolder: first FORCE
-	@test -d $(INSTALL_ROOT)/run/media/uwillno/0fd60416-a52e-41d5-8f63-24fe3e94cc08/BYSJ/C/build-LearningSystem-Felgo_Desktop_Qt_5_15_2_GCC-Debug || mkdir -p $(INSTALL_ROOT)/run/media/uwillno/0fd60416-a52e-41d5-8f63-24fe3e94cc08/BYSJ/C/build-LearningSystem-Felgo_Desktop_Qt_5_15_2_GCC-Debug
-	$(QINSTALL) /run/media/uwillno/0fd60416-a52e-41d5-8f63-24fe3e94cc08/BYSJ/C/LearningSystem/qml $(INSTALL_ROOT)/run/media/uwillno/0fd60416-a52e-41d5-8f63-24fe3e94cc08/BYSJ/C/build-LearningSystem-Felgo_Desktop_Qt_5_15_2_GCC-Debug/qml
+	@test -d $(INSTALL_ROOT)/run/media/uwillno/WD40PURX-78AKYY0/BYSJ/C/build-LearningSystem-Felgo_Desktop_Qt_5_15_2_GCC-Debug || mkdir -p $(INSTALL_ROOT)/run/media/uwillno/WD40PURX-78AKYY0/BYSJ/C/build-LearningSystem-Felgo_Desktop_Qt_5_15_2_GCC-Debug
+	$(QINSTALL) /run/media/uwillno/WD40PURX-78AKYY0/BYSJ/C/LearningSystem/qml $(INSTALL_ROOT)/run/media/uwillno/WD40PURX-78AKYY0/BYSJ/C/build-LearningSystem-Felgo_Desktop_Qt_5_15_2_GCC-Debug/qml
 
 uninstall_itemqmlFolder: FORCE
-	-$(DEL_FILE) -r $(INSTALL_ROOT)/run/media/uwillno/0fd60416-a52e-41d5-8f63-24fe3e94cc08/BYSJ/C/build-LearningSystem-Felgo_Desktop_Qt_5_15_2_GCC-Debug/qml
-	-$(DEL_DIR) $(INSTALL_ROOT)/run/media/uwillno/0fd60416-a52e-41d5-8f63-24fe3e94cc08/BYSJ/C/build-LearningSystem-Felgo_Desktop_Qt_5_15_2_GCC-Debug/ 
+	-$(DEL_FILE) -r $(INSTALL_ROOT)/run/media/uwillno/WD40PURX-78AKYY0/BYSJ/C/build-LearningSystem-Felgo_Desktop_Qt_5_15_2_GCC-Debug/qml
+	-$(DEL_DIR) $(INSTALL_ROOT)/run/media/uwillno/WD40PURX-78AKYY0/BYSJ/C/build-LearningSystem-Felgo_Desktop_Qt_5_15_2_GCC-Debug/ 
 
 
 install_itemassetsFolder: first FORCE
-	@test -d $(INSTALL_ROOT)/run/media/uwillno/0fd60416-a52e-41d5-8f63-24fe3e94cc08/BYSJ/C/build-LearningSystem-Felgo_Desktop_Qt_5_15_2_GCC-Debug || mkdir -p $(INSTALL_ROOT)/run/media/uwillno/0fd60416-a52e-41d5-8f63-24fe3e94cc08/BYSJ/C/build-LearningSystem-Felgo_Desktop_Qt_5_15_2_GCC-Debug
-	$(QINSTALL) /run/media/uwillno/0fd60416-a52e-41d5-8f63-24fe3e94cc08/BYSJ/C/LearningSystem/assets $(INSTALL_ROOT)/run/media/uwillno/0fd60416-a52e-41d5-8f63-24fe3e94cc08/BYSJ/C/build-LearningSystem-Felgo_Desktop_Qt_5_15_2_GCC-Debug/assets
+	@test -d $(INSTALL_ROOT)/run/media/uwillno/WD40PURX-78AKYY0/BYSJ/C/build-LearningSystem-Felgo_Desktop_Qt_5_15_2_GCC-Debug || mkdir -p $(INSTALL_ROOT)/run/media/uwillno/WD40PURX-78AKYY0/BYSJ/C/build-LearningSystem-Felgo_Desktop_Qt_5_15_2_GCC-Debug
+	$(QINSTALL) /run/media/uwillno/WD40PURX-78AKYY0/BYSJ/C/LearningSystem/assets $(INSTALL_ROOT)/run/media/uwillno/WD40PURX-78AKYY0/BYSJ/C/build-LearningSystem-Felgo_Desktop_Qt_5_15_2_GCC-Debug/assets
 
 uninstall_itemassetsFolder: FORCE
-	-$(DEL_FILE) -r $(INSTALL_ROOT)/run/media/uwillno/0fd60416-a52e-41d5-8f63-24fe3e94cc08/BYSJ/C/build-LearningSystem-Felgo_Desktop_Qt_5_15_2_GCC-Debug/assets
-	-$(DEL_DIR) $(INSTALL_ROOT)/run/media/uwillno/0fd60416-a52e-41d5-8f63-24fe3e94cc08/BYSJ/C/build-LearningSystem-Felgo_Desktop_Qt_5_15_2_GCC-Debug/ 
+	-$(DEL_FILE) -r $(INSTALL_ROOT)/run/media/uwillno/WD40PURX-78AKYY0/BYSJ/C/build-LearningSystem-Felgo_Desktop_Qt_5_15_2_GCC-Debug/assets
+	-$(DEL_DIR) $(INSTALL_ROOT)/run/media/uwillno/WD40PURX-78AKYY0/BYSJ/C/build-LearningSystem-Felgo_Desktop_Qt_5_15_2_GCC-Debug/ 
 
 
 install: install_itemqmlFolder install_itemassetsFolder  FORCE

@@ -5,6 +5,8 @@ import Felgo 3.0
 Rectangle {
     property alias text: appTextEdit.text
     property alias  placeholderText: appTextEdit.placeholderText
+    property alias appTextEdit: appTextEdit
+    //    property alias  cursorPosition
     width: parent.width
     height: dp(100)
     AppFlickable {
@@ -25,13 +27,13 @@ Rectangle {
             flickable: flick
             cursorInViewBottomPadding: dp(25)
             cursorInViewTopPadding: dp(25)
-            cursorPosition: text.length
-//            cursorPosition
+            //            cursorPosition: text.length
+            //            cursorPosition
         }
     }
     ScrollIndicator {
         flickable: flick
     }
-//    border.
+    //    border.
 
 }

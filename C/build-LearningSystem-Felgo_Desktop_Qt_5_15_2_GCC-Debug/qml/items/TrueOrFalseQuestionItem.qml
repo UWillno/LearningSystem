@@ -8,6 +8,8 @@ Rectangle {
     id: root
     property var model
     property int type : 1
+    property alias question: questionInput.text
+    property alias answer: btnTrue.checked
     function isEmpty(){
         if(questionInput.text.trim() === "")
             return true

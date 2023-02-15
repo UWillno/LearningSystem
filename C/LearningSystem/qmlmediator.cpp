@@ -117,18 +117,28 @@ void QmlMediator::getQuestionsByTcp()
     QFuture<QList<QJsonArray>> future = QtConcurrent::run(&Singleton<TcpClient>::GetInstance(),&TcpClient::getQuestionsJson);
     m_tcpQuestions = future.result();
     if(m_tcpQuestions.isEmpty()){
-        emit selectFailed();
+//        emit selectFailed();
         return;
     }
-    emit selectSuceeded();
+//    emit selectSuceeded();
     qInfo() << m_tcpQuestions;
 
 }
 
-void QmlMediator::modifyQuestion(QJsonObject json, int type)
+void QmlMediator::updateQuestion(QJsonObject json, qint32 type)
 {
+    qInfo() << json << type;
+    QFuture<bool> future = QtConcurrent::run(&Singleton<TcpClient>::GetInstance(),&TcpClient::updateQuestion,json,type);
+    if(future.result()){
+        getQuestionsByTcp();
+        emit updateSucceeded();
+        // 刷新JSON
+        return;
+    }
+    emit  updateFailed();
 
 }
+
 
 void QmlMediator::deleteQuestion(qint64 id, qint32 type)
 {

@@ -9,6 +9,8 @@ Rectangle {
     property var model
     property int type : 2
     property var blanks : new Array
+    property alias question: questionInput.text
+
     function clear(){
         questionInput.text=""
         for(var i=0;i < blankcount;i++){
@@ -31,6 +33,7 @@ Rectangle {
         spacing: dp(10)
         UWAppTextEdit {
             id:questionInput
+            appTextEdit.cursorPosition: text.length
             placeholderText: "题目"
 
         }
@@ -97,7 +100,7 @@ Rectangle {
 
         console.log(index)
         //        questionInput.text = questionInput.text.splice(index,4)
-        questionInput.text.replace()
+//        questionInput.text.replace()
         blank.destroy()
         blankcount--
     }

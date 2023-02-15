@@ -104,7 +104,7 @@ bool TcpClient::insertQuestion(QStringList *list, qint32 type)
 bool TcpClient::deleteQuestion(qint64 &id, qint32 &type)
 {
     //    QByteArray data;
-//    qInfo() << "TCP开始删除";
+    //    qInfo() << "TCP开始删除";
     QScopedPointer<QTcpSocket> p(new QTcpSocket());
     QByteArray byte;
     QDataStream stream(&byte,QIODevice::WriteOnly);
@@ -125,6 +125,68 @@ bool TcpClient::deleteQuestion(qint64 &id, qint32 &type)
     }
     p->close();
     return false;
+}
+
+bool TcpClient::updateQuestion(QJsonObject &json, qint32 &type)
+{
+    QScopedPointer<QTcpSocket> p(new QTcpSocket());
+    QByteArray byte;
+    QDataStream stream(&byte,QIODevice::WriteOnly);
+    switch (type) {
+    case choice:{
+        stream << updateC;
+        stream << QString::number(json["id"].toDouble()).toLongLong();
+        stream << json["question"].toString() << json["option1"].toString()
+                <<json["option2"].toString() << json["option3"].toString()
+                << json["option4"].toString() << json["answer"].toString();
+
+        break;
+    }
+    case trueOrFalse:{
+        stream << updateT;
+        stream << QString::number(json["id"].toDouble()).toLongLong();
+        stream << json["question"].toString();
+        qInfo() << "bool?" <<  json["answer"].toBool();
+        stream <<  json["answer"].toBool();
+        //        stream << m_date;
+        break;
+    }
+    case fill:{
+        stream << updateF;
+        stream << QString::number(json["id"].toDouble()).toLongLong();
+        stream << json["question"].toString();
+        stream <<  json["answer"].toString();
+        break;
+    }
+    default:
+    {
+        qInfo() << "未知类型题目";
+        return false;
+        break;
+    }
+
+    }
+
+    p->connectToHost(this->m_host,this->port());
+    stream << m_date;
+    if(p->waitForConnected()){
+        p->write(byte);
+        if(p->waitForBytesWritten()){
+            if(p->waitForReadyRead()){
+                if(QString(p->readAll()).contains("ok")){
+                    p->close();
+                    return true;
+                }
+            }
+        }
+    }else{
+        qInfo() << "连接服务器失败！";
+    }
+    p->close();
+    return false;
+
+    //    stream << updateC << json["id"].toInt() << 1
+
 }
 
 

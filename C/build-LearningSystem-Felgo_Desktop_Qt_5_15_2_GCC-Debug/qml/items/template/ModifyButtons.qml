@@ -19,28 +19,39 @@ Grid {
             if(!isEmpty()){
                 switch(type){
                 case 0:{
-                    //                    console.log(model)
-                    console.log(question === model.question)
-                    console.log(option1 === model.option1)
-                    console.log(option2 === model.option2)
-                    console.log(option3 === model.option3)
-                    console.log(option4 === model.option4)
-                    console.log(answer === model.answer)
 
-                    if(question === model.question && option1 === model.option1 &&  option2 === model.option2
-                            &&  option3 === model.option3 && option4 === model.option4 && answer === model.answer)
+                    if(!(question.trim() === model.question && option1.trim() === model.option1 &&  option2.trim() === model.option2
+                         &&  option3.trim() === model.option3 && option4.trim() === model.option4 && answer === model.answer))
                     {
-
+                        model.question = question.trim()
+                        model.option1 = option1.trim()
+                        model.option2 = option2.trim()
+                        model.option3 = option3.trim()
+                        model.option4 = option4.trim()
+                        model.answer = answer
+                        adminLogic.updateQuestion(model,0)
+                    }
+                    break;
+                }
+                case 1:{
+                    if(!(question.trim() === model.question && answer === model.answer)){
+                        model.question = question.trim()
+                        model.answer = answer
+                        adminLogic.updateQuestion(model,1)
+                    }
+                    break;
+                }
+                case 2:{
+                    if(!(adminLogic.blanksToAnswer(blanks) === model.answer && question.trim() === model.question))
+                    {
+                        model.question = question.trim()
+                        model.answer = adminLogic.blanksToAnswer(blanks);
+                        adminLogic.updateQuestion(model,2)
                     }
                     break;
                 }
                 }
             }
-
-            //            qm.testModel(model)
-
-
-
         }
     }
     AppButton {

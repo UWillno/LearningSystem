@@ -154,9 +154,9 @@ bool SqlOperator::updateQuestion(iQuestion *question)
     QSqlQuery query = QSqlQuery(m_db);
     ChoiceQuestion *cq = qobject_cast<ChoiceQuestion*>(question);
     if(cq){
-        query.prepare("UPDATE choice_questions SET question = ':question',"
-                      "option1 = ':option1',option2 = ':option2',option3 = ':option3',"
-                      "option4 = ':option4',answer = ':answer' WHERE id = :id;");
+        query.prepare("UPDATE choice_questions SET question = :question,"
+                      "option1 = :option1,option2 = :option2,option3 = :option3,"
+                      "option4 = :option4,answer = :answer WHERE id = :id;");
 
         query.bindValue(":id",cq->id);
         query.bindValue(":question",cq->question);
@@ -170,7 +170,7 @@ bool SqlOperator::updateQuestion(iQuestion *question)
     }
     TrueOrFalseQuestion *tq = qobject_cast<TrueOrFalseQuestion*>(question);
     if(tq){
-        query.prepare("UPDATE torf_questions SET question = ':question', answer = :answer WHERE id = :id;");
+        query.prepare("UPDATE torf_questions SET question = :question, answer = :answer WHERE id = :id;");
         if(tq->answer){
             query.bindValue(":answer",1);
         }else{
@@ -184,7 +184,7 @@ bool SqlOperator::updateQuestion(iQuestion *question)
     }
     FillInTheBlanksQuestion *fq = qobject_cast<FillInTheBlanksQuestion*>(question);
     if(fq){
-        query.prepare("UPDATE fill_in_the_blanks_questions SET question = ':question', answer = ':answer' WHERE id = :id;");
+        query.prepare("UPDATE fill_in_the_blanks_questions SET question = :question, answer = :answer WHERE id = :id;");
         query.bindValue(":id",fq->id);
         query.bindValue(":question",fq->question);
         query.bindValue(":answer",fq->answer);
