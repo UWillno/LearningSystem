@@ -46,8 +46,30 @@ Page {
           var obj =  component.createObject(parent,{state: index})
         }
         rootStack.push(obj)
-    }
 
+    }
+    Connections {
+        id: connection
+        target: qm
+        onSubmitSucceeded:{
+            toastManager.show("插入成功！",1000)
+            loaderItem.close()
+        }
+        onSubmitFailed:{
+            toastManager.show("插入失败！",1000)
+            loaderItem.close()
+        }
+        onSelectSuceeded:{
+            selectSwipeView.update()
+            toastManager.show("查看成功！",1000)
+            loaderItem.close()
+        }
+        onSelectFailed:{
+            toastManager.show("查看失败！",1000)
+            loaderItem.close()
+        }
+
+    }
 //    Component {
 
 //        QuestionPage {

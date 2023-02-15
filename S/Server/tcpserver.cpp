@@ -5,10 +5,10 @@
 
 TcpServer::TcpServer(QObject *parent): QTcpServer(parent)
 {
-//    Singleton<SqlOperator>::GetInstance().connect("192.168.1.9",3306,"learning","root","123456");
-//    Singleton<SqlOperator>::GetInstance().connect("192.168.1.3",3306,"learning","root","123456");
-//    Singleton<SqlOperator>::GetInstance().connect("101.43.173.108",3306,"learning","root","44910244");
-//    Singleton<SqlOperator>::GetInstance().connect("www.uwillno.icu",3306,"learning","root","44910244");
+    //    Singleton<SqlOperator>::GetInstance().connect("192.168.1.9",3306,"learning","root","123456");
+    //    Singleton<SqlOperator>::GetInstance().connect("192.168.1.3",3306,"learning","root","123456");
+    //    Singleton<SqlOperator>::GetInstance().connect("101.43.173.108",3306,"learning","root","44910244");
+    //    Singleton<SqlOperator>::GetInstance().connect("www.uwillno.icu",3306,"learning","root","44910244");
     Singleton<SqlOperator>::GetInstance().connect("127.0.0.1",3306,"learning","root","UW1224222099");
 
 }
@@ -182,7 +182,8 @@ void TcpServer::handleClient(qintptr handle)
         break;
     }
     case insertT:
-    {   QScopedPointer<TrueOrFalseQuestion> q(qobject_cast<TrueOrFalseQuestion*>(factory.createTrueOrFalseQuestion()));
+    {
+        QScopedPointer<TrueOrFalseQuestion> q(qobject_cast<TrueOrFalseQuestion*>(factory.createTrueOrFalseQuestion()));
         stream >> q->question;
         QString answer;
         stream >> answer;
@@ -231,6 +232,51 @@ void TcpServer::handleClient(qintptr handle)
         }
         break;
     }
+    case updateC:{
+        QScopedPointer<ChoiceQuestion> q(qobject_cast<ChoiceQuestion*>(factory.createChoiceQuestion()));
+        stream >>q->id >> q->question;
+        stream >> q->option1 >> q->option2 >> q->option3 >> q->option4 >> q->answer;
+        stream >> date;
+        //        if(date != m_date){return;}
+
+        if(Singleton<SqlOperator>::GetInstance().updateQuestion(q.data())){
+            p->write("ok");
+            p->waitForBytesWritten();
+        }
+        break;
+    }
+    case updateT:{
+        QScopedPointer<TrueOrFalseQuestion> q(qobject_cast<TrueOrFalseQuestion*>(factory.createTrueOrFalseQuestion()));
+        stream >> q->id >> q->question;
+        QString answer;
+        stream >> answer;
+        QVariant temp = answer;
+        q->answer = temp.toBool();
+        //        bool ok;
+        //        q->answer = answer.toShort(&ok);
+        //        if(!ok) return;
+        //        q->answer;
+        stream >> date;
+        //        if(date != m_date){return;}
+        if(Singleton<SqlOperator>::GetInstance().updateQuestion(q.data())){
+            p->write("ok");
+            p->waitForBytesWritten();
+        }
+        break;
+        //        break;
+    }
+    case updateF:{
+        QScopedPointer<FillInTheBlanksQuestion> q(qobject_cast<FillInTheBlanksQuestion*>(factory.createFillInTheBlanksQuestion()));
+        stream >> q->id >> q->question >> q->answer >> date;
+        //        if(date != m_date){return;}
+        if(Singleton<SqlOperator>::GetInstance().updateQuestion(q.data())){
+            p->write("ok");
+            p->waitForBytesWritten();
+        }
+        break;
+        //        break;
+    }
+
     default:
         break;
     }

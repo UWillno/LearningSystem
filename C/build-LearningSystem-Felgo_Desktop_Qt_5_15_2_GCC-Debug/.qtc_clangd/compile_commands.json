@@ -7,7 +7,7 @@
         "-I",
         "/home/uwillno/Felgo/Tools/QtCreator/share/qtcreator/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/tmp/QtCreator-mrbagU/clang-uiheader-zroRLK",
+        "/tmp/QtCreator-riRyPU/clang-uiheader-PXCaIs",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -35,7 +35,7 @@
         "-DQT_BLUETOOTH_LIB",
         "-DQT_CORE_LIB",
         "-I",
-        "/run/media/uwillno/0fd60416-a52e-41d5-8f63-24fe3e94cc08/BYSJ/C/LearningSystem",
+        "/run/media/uwillno/WD40PURX-78AKYY0/BYSJ/C/LearningSystem",
         "-I",
         "/home/uwillno/Felgo/Felgo/gcc_64/include/Felgo",
         "-I",
@@ -92,10 +92,10 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/home/uwillno/4T/BYSJ/C/LearningSystem/main.cpp"
+        "/home/uwillno/BYSJ/C/LearningSystem/main.cpp"
     ],
     "directory": "/home/uwillno/BYSJ/C/build-LearningSystem-Felgo_Desktop_Qt_5_15_2_GCC-Debug/.qtc_clangd",
-    "file": "/home/uwillno/4T/BYSJ/C/LearningSystem/main.cpp"
+    "file": "/home/uwillno/BYSJ/C/LearningSystem/main.cpp"
 },
 {
     "arguments": [
@@ -105,7 +105,7 @@
         "-I",
         "/home/uwillno/Felgo/Tools/QtCreator/share/qtcreator/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/tmp/QtCreator-mrbagU/clang-uiheader-zroRLK",
+        "/tmp/QtCreator-riRyPU/clang-uiheader-PXCaIs",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -133,7 +133,7 @@
         "-DQT_BLUETOOTH_LIB",
         "-DQT_CORE_LIB",
         "-I",
-        "/run/media/uwillno/0fd60416-a52e-41d5-8f63-24fe3e94cc08/BYSJ/C/LearningSystem",
+        "/run/media/uwillno/WD40PURX-78AKYY0/BYSJ/C/LearningSystem",
         "-I",
         "/home/uwillno/Felgo/Felgo/gcc_64/include/Felgo",
         "-I",
@@ -190,10 +190,10 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/home/uwillno/4T/BYSJ/C/LearningSystem/qmlmediator.cpp"
+        "/home/uwillno/BYSJ/C/LearningSystem/qmlmediator.cpp"
     ],
     "directory": "/home/uwillno/BYSJ/C/build-LearningSystem-Felgo_Desktop_Qt_5_15_2_GCC-Debug/.qtc_clangd",
-    "file": "/home/uwillno/4T/BYSJ/C/LearningSystem/qmlmediator.cpp"
+    "file": "/home/uwillno/BYSJ/C/LearningSystem/qmlmediator.cpp"
 },
 {
     "arguments": [
@@ -203,7 +203,7 @@
         "-I",
         "/home/uwillno/Felgo/Tools/QtCreator/share/qtcreator/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/tmp/QtCreator-mrbagU/clang-uiheader-zroRLK",
+        "/tmp/QtCreator-riRyPU/clang-uiheader-PXCaIs",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -231,7 +231,7 @@
         "-DQT_BLUETOOTH_LIB",
         "-DQT_CORE_LIB",
         "-I",
-        "/run/media/uwillno/0fd60416-a52e-41d5-8f63-24fe3e94cc08/BYSJ/C/LearningSystem",
+        "/run/media/uwillno/WD40PURX-78AKYY0/BYSJ/C/LearningSystem",
         "-I",
         "/home/uwillno/Felgo/Felgo/gcc_64/include/Felgo",
         "-I",
@@ -288,10 +288,10 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/home/uwillno/4T/BYSJ/C/LearningSystem/tcpclient.cpp"
+        "/home/uwillno/BYSJ/C/LearningSystem/tcpclient.cpp"
     ],
     "directory": "/home/uwillno/BYSJ/C/build-LearningSystem-Felgo_Desktop_Qt_5_15_2_GCC-Debug/.qtc_clangd",
-    "file": "/home/uwillno/4T/BYSJ/C/LearningSystem/tcpclient.cpp"
+    "file": "/home/uwillno/BYSJ/C/LearningSystem/tcpclient.cpp"
 },
 {
     "arguments": [
@@ -301,7 +301,7 @@
         "-I",
         "/home/uwillno/Felgo/Tools/QtCreator/share/qtcreator/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/tmp/QtCreator-mrbagU/clang-uiheader-zroRLK",
+        "/tmp/QtCreator-riRyPU/clang-uiheader-PXCaIs",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -329,7 +329,7 @@
         "-DQT_BLUETOOTH_LIB",
         "-DQT_CORE_LIB",
         "-I",
-        "/run/media/uwillno/0fd60416-a52e-41d5-8f63-24fe3e94cc08/BYSJ/C/LearningSystem",
+        "/run/media/uwillno/WD40PURX-78AKYY0/BYSJ/C/LearningSystem",
         "-I",
         "/home/uwillno/Felgo/Felgo/gcc_64/include/Felgo",
         "-I",
@@ -386,10 +386,10 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/home/uwillno/4T/BYSJ/C/LearningSystem/qmlmediator.h"
+        "/home/uwillno/BYSJ/C/LearningSystem/qmlmediator.h"
     ],
     "directory": "/home/uwillno/BYSJ/C/build-LearningSystem-Felgo_Desktop_Qt_5_15_2_GCC-Debug/.qtc_clangd",
-    "file": "/home/uwillno/4T/BYSJ/C/LearningSystem/qmlmediator.h"
+    "file": "/home/uwillno/BYSJ/C/LearningSystem/qmlmediator.h"
 },
 {
     "arguments": [
@@ -399,7 +399,7 @@
         "-I",
         "/home/uwillno/Felgo/Tools/QtCreator/share/qtcreator/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/tmp/QtCreator-mrbagU/clang-uiheader-zroRLK",
+        "/tmp/QtCreator-riRyPU/clang-uiheader-PXCaIs",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -427,7 +427,7 @@
         "-DQT_BLUETOOTH_LIB",
         "-DQT_CORE_LIB",
         "-I",
-        "/run/media/uwillno/0fd60416-a52e-41d5-8f63-24fe3e94cc08/BYSJ/C/LearningSystem",
+        "/run/media/uwillno/WD40PURX-78AKYY0/BYSJ/C/LearningSystem",
         "-I",
         "/home/uwillno/Felgo/Felgo/gcc_64/include/Felgo",
         "-I",
@@ -484,10 +484,10 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/home/uwillno/4T/BYSJ/C/LearningSystem/singleton.h"
+        "/home/uwillno/BYSJ/C/LearningSystem/singleton.h"
     ],
     "directory": "/home/uwillno/BYSJ/C/build-LearningSystem-Felgo_Desktop_Qt_5_15_2_GCC-Debug/.qtc_clangd",
-    "file": "/home/uwillno/4T/BYSJ/C/LearningSystem/singleton.h"
+    "file": "/home/uwillno/BYSJ/C/LearningSystem/singleton.h"
 },
 {
     "arguments": [
@@ -497,7 +497,7 @@
         "-I",
         "/home/uwillno/Felgo/Tools/QtCreator/share/qtcreator/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/tmp/QtCreator-mrbagU/clang-uiheader-zroRLK",
+        "/tmp/QtCreator-riRyPU/clang-uiheader-PXCaIs",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -525,7 +525,7 @@
         "-DQT_BLUETOOTH_LIB",
         "-DQT_CORE_LIB",
         "-I",
-        "/run/media/uwillno/0fd60416-a52e-41d5-8f63-24fe3e94cc08/BYSJ/C/LearningSystem",
+        "/run/media/uwillno/WD40PURX-78AKYY0/BYSJ/C/LearningSystem",
         "-I",
         "/home/uwillno/Felgo/Felgo/gcc_64/include/Felgo",
         "-I",
@@ -582,9 +582,9 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/home/uwillno/4T/BYSJ/C/LearningSystem/tcpclient.h"
+        "/home/uwillno/BYSJ/C/LearningSystem/tcpclient.h"
     ],
     "directory": "/home/uwillno/BYSJ/C/build-LearningSystem-Felgo_Desktop_Qt_5_15_2_GCC-Debug/.qtc_clangd",
-    "file": "/home/uwillno/4T/BYSJ/C/LearningSystem/tcpclient.h"
+    "file": "/home/uwillno/BYSJ/C/LearningSystem/tcpclient.h"
 }
 ]

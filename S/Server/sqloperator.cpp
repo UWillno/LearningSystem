@@ -148,21 +148,48 @@ void SqlOperator::selectAllQuestion()
     //    qInfo() << model.record(1).value("question").toString();
 }
 
-bool SqlOperator::modifyQuestion(iQuestion *question)
+bool SqlOperator::updateQuestion(iQuestion *question)
 {
     if(!question) return false;
+    QSqlQuery query = QSqlQuery(m_db);
     ChoiceQuestion *cq = qobject_cast<ChoiceQuestion*>(question);
     if(cq){
+        query.prepare("UPDATE choice_questions SET question = ':question',"
+                      "option1 = ':option1',option2 = ':option2',option3 = ':option3',"
+                      "option4 = ':option4',answer = ':answer' WHERE id = :id;");
 
-
+        query.bindValue(":id",cq->id);
+        query.bindValue(":question",cq->question);
+        query.bindValue(":option1",cq->option1);
+        query.bindValue(":option2",cq->option2);
+        query.bindValue(":option3",cq->option3);
+        query.bindValue(":option4",cq->option4);
+        query.bindValue(":answer",cq->answer);
+        query.exec();
+        return commitDB(&query);
     }
     TrueOrFalseQuestion *tq = qobject_cast<TrueOrFalseQuestion*>(question);
     if(tq){
+        query.prepare("UPDATE torf_questions SET question = ':question', answer = :answer WHERE id = :id;");
+        if(tq->answer){
+            query.bindValue(":answer",1);
+        }else{
+            query.bindValue(":answer",0);
+        }
+        query.bindValue(":id",tq->id);
+        query.bindValue(":question",tq->question);
 
+        query.exec();
+        return commitDB(&query);
     }
     FillInTheBlanksQuestion *fq = qobject_cast<FillInTheBlanksQuestion*>(question);
     if(fq){
-
+        query.prepare("UPDATE fill_in_the_blanks_questions SET question = ':question', answer = ':answer' WHERE id = :id;");
+        query.bindValue(":id",fq->id);
+        query.bindValue(":question",fq->question);
+        query.bindValue(":answer",fq->answer);
+        query.exec();
+        return commitDB(&query);
     }
     return false;
 }
@@ -170,7 +197,7 @@ bool SqlOperator::modifyQuestion(iQuestion *question)
 bool SqlOperator::deleteQuestion(qint64 &id, qint32 &type)
 {
     QSqlQuery query = QSqlQuery(m_db);
-//    QString sql;
+    //    QString sql;
     qInfo() << id << type;
     switch (type) {
     case choice:

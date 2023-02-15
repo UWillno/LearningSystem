@@ -35,10 +35,15 @@ Item {
     function deleteQuestion(id,type){
         qm.deleteQuestion(id,type)
     }
+    // 更新查看列表model
     function updateSelectQuestions(lv1,lv2,lv3){
         lv1.model = qm.tcpQuestions[0]
         lv2.model = qm.tcpQuestions[1]
         lv3.model = qm.tcpQuestions[2]
+    }
+
+    function updateChoiceQuesiton(id,question,op1,op2,op3,op4,answer){
+
     }
 
 }

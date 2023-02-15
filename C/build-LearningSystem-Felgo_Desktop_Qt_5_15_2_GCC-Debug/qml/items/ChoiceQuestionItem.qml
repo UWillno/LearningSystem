@@ -11,16 +11,23 @@ Rectangle{
     id: root
     property var model
     property int type : 0
+    property alias question: questionInput.text
+    property alias option1: option1Input.text
+    property alias option2: option2Input.text
+    property alias option3: option3Input.text
+    property alias option4: option4Input.text
+    property alias answer: answerComboBox.currentText
+
     function clear(){
         questionInput.text=""
-        optiton1Input.text=""
-        optiton2Input.text=""
-        optiton3Input.text=""
-        optiton4Input.text=""
+        option1Input.text=""
+        option2Input.text=""
+        option3Input.text=""
+        option4Input.text=""
     }
 
     function isEmpty(){
-        if(questionInput.text.trim() === "" || optiton1Input.text.trim() === "" || optiton2Input.text.trim() === "")
+        if(questionInput.text.trim() === "" || option1Input.text.trim() === "" || option2Input.text.trim() === "")
             return true
         return false
     }
@@ -38,22 +45,22 @@ Rectangle{
             placeholderText: "题目"
         }
         AppTextInput {
-            id: optiton1Input
+            id: option1Input
             width: dp(200)
             placeholderText: "选项A"
         }
         AppTextInput {
-            id: optiton2Input
+            id: option2Input
             width: dp(200)
             placeholderText: "选项B"
         }
         AppTextInput {
-            id: optiton3Input
+            id: option3Input
             width: dp(200)
             placeholderText: "选项C"
         }
         AppTextInput {
-            id: optiton4Input
+            id: option4Input
             width: dp(200)
             placeholderText: "选项D"
         }
@@ -83,11 +90,11 @@ Rectangle{
 
                 if(!isEmpty()){
                     //                    rootStack.pop()
-                    //                    qm.sendChoiceQuestion(questionInput.text.trim(),optiton1Input.text.trim(),optiton2Input.text.trim()
-                    //                                          ,optiton3Input.text.trim(),optiton4Input.text.trim(),answerComboBox.currentText.trim())
+                    //                    qm.sendChoiceQuestion(questionInput.text.trim(),option1Input.text.trim(),option2Input.text.trim()
+                    //                                          ,option3Input.text.trim(),option4Input.text.trim(),answerComboBox.currentText.trim())
                     loaderItem.show()
-                    adminLogic.insertChoiceQuestion( questionInput.text.trim(),optiton1Input.text.trim(),optiton2Input.text.trim()
-                                                    ,optiton3Input.text.trim(),optiton4Input.text.trim(),answerComboBox.currentText.trim())
+                    adminLogic.insertChoiceQuestion( questionInput.text.trim(),option1Input.text.trim(),option2Input.text.trim()
+                                                    ,option3Input.text.trim(),option4Input.text.trim(),answerComboBox.currentText.trim())
 
                     clear()
 
@@ -106,10 +113,10 @@ Rectangle{
         //        model =
         if(model){
             questionInput.text = model.question
-            optiton1Input.text = model.option1
-            optiton2Input.text = model.option2
-            optiton3Input.text = model.option3
-            optiton4Input.text = model.option4
+            option1Input.text = model.option1
+            option2Input.text = model.option2
+            option3Input.text = model.option3
+            option4Input.text = model.option4
             if(model.answer === 'B')
                 answerComboBox.model = ['B','A','C','D']
             else if(model.answer === 'C')

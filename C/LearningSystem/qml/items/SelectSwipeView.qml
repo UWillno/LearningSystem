@@ -65,16 +65,28 @@ QuickControls2.SwipeView {
         if(qm.tcpQuestions){
             console.log("true")
             update()
-//            choiceView.model = qm.tcpQuestions[0]
-//            trueOrfalseView.model = qm.tcpQuestions[1]
-//            fillView.model = qm.tcpQuestions[2]
         }
-        //        console.log(qm.tcpQuestions)
-
-        //        console.log(qm.tcpQuestions)
     }
     function update(){
         adminLogic.updateSelectQuestions(choiceView,trueOrfalseView,fillView)
     }
+
+    Connections {
+        id:con
+        target: qm
+
+        onDeleteFailed:{
+            toastManager.show("删除失败！",1000)
+            loaderItem.close()
+        }
+        onDeleteSuceeded:{
+            selectSwipeView.update()
+            toastManager.show("删除成功！",1000)
+            loaderItem.close()
+            rootStack.pop()
+        }
+    }
+
+
 
 }

@@ -16,8 +16,31 @@ Grid {
         //                visible: false
 
         onClicked: {
-            console.log(isEmpty())
-            qm.testModel(model)
+            if(!isEmpty()){
+                switch(type){
+                case 0:{
+                    //                    console.log(model)
+                    console.log(question === model.question)
+                    console.log(option1 === model.option1)
+                    console.log(option2 === model.option2)
+                    console.log(option3 === model.option3)
+                    console.log(option4 === model.option4)
+                    console.log(answer === model.answer)
+
+                    if(question === model.question && option1 === model.option1 &&  option2 === model.option2
+                            &&  option3 === model.option3 && option4 === model.option4 && answer === model.answer)
+                    {
+
+                    }
+                    break;
+                }
+                }
+            }
+
+            //            qm.testModel(model)
+
+
+
         }
     }
     AppButton {
