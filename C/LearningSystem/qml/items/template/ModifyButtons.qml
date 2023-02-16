@@ -68,4 +68,30 @@ Grid {
         //            anchors.horizontalCenter: parent.horizontalCenter
         //            anchors.bottom: parent.bottom
     }
+
+    Connections {
+        id:con
+        target: qm
+
+
+//        onDeleteFailed:{
+//            toastManager.show("删除失败！",1000)
+//            loaderItem.close()
+//        }
+        onDeleteSuceeded:{
+            selectSwipeView.update()
+            toastManager.show("删除成功！",1000)
+            loaderItem.close()
+            rootStack.pop()
+        }
+
+        onUpdateSucceeded:{
+            selectSwipeView.update()
+
+            toastManager.show("保存成功！",1000)
+
+            rootStack.pop()
+        }
+
+    }
 }

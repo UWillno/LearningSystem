@@ -6,11 +6,16 @@
 #include <QSqlQuery>
 #include <QCryptographicHash>
 #include <QDebug>
+#include <QFile>
+#include <QDir>
+#include <QJsonArray>
+#include <QJsonObject>
 #include <QSqlTableModel>
 #include "interface/iQuestion.h"
 #include "choicequestion.h"
 #include "trueorfalsequestion.h"
 #include "fillintheblanksquestion.h"
+#include <QJsonDocument>
 class SqlOperator : public QObject
 {
     Q_OBJECT
@@ -41,6 +46,7 @@ public slots:
     QList<QSharedPointer<TrueOrFalseQuestion>> selectAllTQuestion();
     QList<QSharedPointer<FillInTheBlanksQuestion>> selectAllFQuestion();
 
+    void commitQuestions();
 
 
 private:

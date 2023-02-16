@@ -23,8 +23,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_QmlMediator_t {
-    QByteArrayData data[36];
-    char stringdata0[432];
+    QByteArrayData data[37];
+    char stringdata0[447];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -67,8 +67,9 @@ QT_MOC_LITERAL(30, 371, 14), // "deleteQuestion"
 QT_MOC_LITERAL(31, 386, 2), // "id"
 QT_MOC_LITERAL(32, 389, 9), // "testModel"
 QT_MOC_LITERAL(33, 399, 1), // "a"
-QT_MOC_LITERAL(34, 401, 12), // "tcpQuestions"
-QT_MOC_LITERAL(35, 414, 17) // "QList<QJsonArray>"
+QT_MOC_LITERAL(34, 401, 14), // "commitQuestons"
+QT_MOC_LITERAL(35, 416, 12), // "tcpQuestions"
+QT_MOC_LITERAL(36, 429, 17) // "QList<QJsonArray>"
 
     },
     "QmlMediator\0loginSucceeded\0\0loginFailed\0"
@@ -83,7 +84,8 @@ QT_MOC_LITERAL(35, 414, 17) // "QList<QJsonArray>"
     "sendFillInTheBlanksQuestion\0"
     "getQuestionsByTcp\0updateQuestion\0json\0"
     "type\0deleteQuestion\0id\0testModel\0a\0"
-    "tcpQuestions\0QList<QJsonArray>"
+    "commitQuestons\0tcpQuestions\0"
+    "QList<QJsonArray>"
 };
 #undef QT_MOC_LITERAL
 
@@ -93,35 +95,36 @@ static const uint qt_meta_data_QmlMediator[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-      19,   14, // methods
-       1,  164, // properties
+      20,   14, // methods
+       1,  170, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
       11,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    0,  109,    2, 0x06 /* Public */,
-       3,    0,  110,    2, 0x06 /* Public */,
-       4,    0,  111,    2, 0x06 /* Public */,
-       5,    0,  112,    2, 0x06 /* Public */,
-       6,    0,  113,    2, 0x06 /* Public */,
-       7,    0,  114,    2, 0x06 /* Public */,
-       8,    0,  115,    2, 0x06 /* Public */,
-       9,    0,  116,    2, 0x06 /* Public */,
-      10,    0,  117,    2, 0x06 /* Public */,
-      11,    0,  118,    2, 0x06 /* Public */,
-      12,    0,  119,    2, 0x06 /* Public */,
+       1,    0,  114,    2, 0x06 /* Public */,
+       3,    0,  115,    2, 0x06 /* Public */,
+       4,    0,  116,    2, 0x06 /* Public */,
+       5,    0,  117,    2, 0x06 /* Public */,
+       6,    0,  118,    2, 0x06 /* Public */,
+       7,    0,  119,    2, 0x06 /* Public */,
+       8,    0,  120,    2, 0x06 /* Public */,
+       9,    0,  121,    2, 0x06 /* Public */,
+      10,    0,  122,    2, 0x06 /* Public */,
+      11,    0,  123,    2, 0x06 /* Public */,
+      12,    0,  124,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-      13,    3,  120,    2, 0x0a /* Public */,
-      17,    6,  127,    2, 0x0a /* Public */,
-      24,    2,  140,    2, 0x0a /* Public */,
-      25,    2,  145,    2, 0x0a /* Public */,
-      26,    0,  150,    2, 0x0a /* Public */,
-      27,    2,  151,    2, 0x0a /* Public */,
-      30,    2,  156,    2, 0x0a /* Public */,
-      32,    1,  161,    2, 0x0a /* Public */,
+      13,    3,  125,    2, 0x0a /* Public */,
+      17,    6,  132,    2, 0x0a /* Public */,
+      24,    2,  145,    2, 0x0a /* Public */,
+      25,    2,  150,    2, 0x0a /* Public */,
+      26,    0,  155,    2, 0x0a /* Public */,
+      27,    2,  156,    2, 0x0a /* Public */,
+      30,    2,  161,    2, 0x0a /* Public */,
+      32,    1,  166,    2, 0x0a /* Public */,
+      34,    0,  169,    2, 0x0a /* Public */,
 
  // signals: parameters
     QMetaType::Void,
@@ -145,9 +148,10 @@ static const uint qt_meta_data_QmlMediator[] = {
     QMetaType::Void, QMetaType::QJsonObject, QMetaType::Int,   28,   29,
     QMetaType::Void, QMetaType::LongLong, QMetaType::Int,   31,   29,
     QMetaType::Void, QMetaType::QJsonObject,   33,
+    QMetaType::Void,
 
  // properties: name, type, flags
-      34, 0x80000000 | 35, 0x0049510f,
+      35, 0x80000000 | 36, 0x0049510f,
 
  // properties: notify_signal_id
        6,
@@ -180,6 +184,7 @@ void QmlMediator::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         case 16: _t->updateQuestion((*reinterpret_cast< QJsonObject(*)>(_a[1])),(*reinterpret_cast< qint32(*)>(_a[2]))); break;
         case 17: _t->deleteQuestion((*reinterpret_cast< qint64(*)>(_a[1])),(*reinterpret_cast< qint32(*)>(_a[2]))); break;
         case 18: _t->testModel((*reinterpret_cast< QJsonObject(*)>(_a[1]))); break;
+        case 19: _t->commitQuestons(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -326,13 +331,13 @@ int QmlMediator::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 19)
+        if (_id < 20)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 19;
+        _id -= 20;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 19)
+        if (_id < 20)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 19;
+        _id -= 20;
     }
 #ifndef QT_NO_PROPERTIES
     else if (_c == QMetaObject::ReadProperty || _c == QMetaObject::WriteProperty

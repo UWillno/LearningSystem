@@ -18,14 +18,17 @@ Rectangle {
     property int  times: 0
 
     Row {
-//        anchors.horizontalCenter: parent.horizontalCenter
+        //        anchors.horizontalCenter: parent.horizontalCenter
         anchors.centerIn: parent
         RoundedImage {
             id: roundedImage
             width: dp(100)
             height: dp(100)
             fillMode: Image.PreserveAspectCrop
-            source: userImageResource.available ? userImageResource.storagePath :"http://q1.qlogo.cn/g?b=qq&nk=44910244&s=640"
+//                        source: userImageResource.available ? userImageResource.storagePath :"http://q1.qlogo.cn/g?b=qq&nk=44910244&s=640"
+//            source: "http://192.168.1.12/fromtwitter14.jpg"
+            source: "http://photo.chaoxing.com/p/239158049_80"
+//            source:"/srv/http/arch.png"
             radius: width/2
 
 
@@ -34,20 +37,22 @@ Rectangle {
                 anchors.fill:parent
                 onClicked:{
                     console.log("clicked!!")
-                    dialogtitle = "学习通登陆"
-                    //                    loginDialog.open()
+                    dialogtitle = "用户登陆"
+                    loginDialog.open()
+
                     //测试用
-//                    loaderItem.show();
-//                     adminLogic.loading(rootStack)
-//                    toastManager.show("登陆成功!",1000)
+                    //                    loaderItem.show();
+                    //                     adminLogic.loading(rootStack)
+                    //                    toastManager.show("登陆成功!",1000)
 
                     //                    loginDialog.open()
-//                    rootStack.push(adminComponent)
-                    rootStack.popAllExceptFirstAndPush(adminComponent)
+                    //                    rootStack.push(adminComponent)
+                    //                    rootStack.popAllExceptFirstAndPush(adminComponent)
                 }
                 onPressAndHold: {
                     console.log("hold")
                     dialogtitle = "管理员登陆"
+                    //                    loginDialog.isAdmin = true
                     loginDialog.open()
                 }
 
@@ -62,23 +67,24 @@ Rectangle {
                 text: "当前状态：" + currentstatus
             }
 
-//            Loader {}
+            //            Loader {}
         }
     }
 
-    DownloadableResource {
-        id: userImageResource
-        headerParameters: ({
-                               "User-Agent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Mobile Safari/537.36 Edg/109.0.1518.52",
-                               "content-type":"application/x-www-form-urlencoded"
-                           })
-        extractAsPackage: false
-        source: "http://p.ananas.chaoxing.com/star3/80_80c/09d05f59e53250e3e680aa96881d4b9d.png"
-        Component.onCompleted: {
-            download()
+//    DownloadableResource {
+//        id: userImageResource
+//        headerParameters: ({
+//                               "User-Agent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Mobile Safari/537.36 Edg/109.0.1518.52",
+//                               "content-type":"application/x-www-form-urlencoded"
+//                           })
+//        extractAsPackage: false
+////        source: "http://p.ananas.chaoxing.com/star3/80_80c/09d05f59e53250e3e680aa96881d4b9d.png"
+//      source: "ftp://127.0.0.1/arch.png"
+//        Component.onCompleted: {
+//            download()
 
-        }
-    }
+//        }
+//    }
 
 
     Dialog {
@@ -92,13 +98,24 @@ Rectangle {
         }
         onCanceled: {
             close()
+
         }
 
         onAccepted: {
             //            console.log(usernameInput.text.trim()+"#"+passwordInput.text.trim())
-            qm.login(usernameInput.text.trim(),passwordInput.text.trim(),administrator)
-            close()
+            if(title ==  "管理员登陆"){
+                qm.tologin(usernameInput.text.trim(),passwordInput.text.trim(),administrator)
+                close()
+            }
+            else{
+//                HttpRequest.get("")
+//                userLogic.login(usernameInput.text.trim(),passwordInput.text.trim())
+                //测试用
+                userLogic.login()
+                console.log("userlogin here")
+            }
         }
+
 
         Column {
             id: column
@@ -127,21 +144,22 @@ Rectangle {
         target: qm
         onLoginSucceeded:{
             console.log("登陆成功！！")
-
+            toastManager.show("登录成功！",1000)
+            var adminComponent = Qt.createComponent("../pages/AdministratorPage.qml").createObject()
             if(dialogtitle === "管理员登陆"){
                 rootStack.push(adminComponent)
-
             }
 
         }
         onLoginFailed:{
             console.log("登陆失败！！")
+            toastManager.show("登录失败！",1000)
         }
     }
-    Component {
-        id:adminComponent
-        AdministratorPage{  }
-    }
+    //    Component {
+    //        id:adminComponent
+    //        AdministratorPage{  }
+    //    }
 
 
 

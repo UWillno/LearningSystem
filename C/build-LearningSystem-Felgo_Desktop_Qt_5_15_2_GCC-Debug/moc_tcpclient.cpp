@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_TcpClient_t {
-    QByteArrayData data[14];
-    char stringdata0[124];
+    QByteArrayData data[15];
+    char stringdata0[141];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -45,13 +45,14 @@ QT_MOC_LITERAL(9, 80, 2), // "id"
 QT_MOC_LITERAL(10, 83, 7), // "qint32&"
 QT_MOC_LITERAL(11, 91, 14), // "updateQuestion"
 QT_MOC_LITERAL(12, 106, 12), // "QJsonObject&"
-QT_MOC_LITERAL(13, 119, 4) // "json"
+QT_MOC_LITERAL(13, 119, 4), // "json"
+QT_MOC_LITERAL(14, 124, 16) // "commmitQuestions"
 
     },
     "TcpClient\0toLogin\0\0QStringList*\0list\0"
     "insertQuestion\0type\0deleteQuestion\0"
     "qint64&\0id\0qint32&\0updateQuestion\0"
-    "QJsonObject&\0json"
+    "QJsonObject&\0json\0commmitQuestions"
 };
 #undef QT_MOC_LITERAL
 
@@ -61,7 +62,7 @@ static const uint qt_meta_data_TcpClient[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-       4,   14, // methods
+       5,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -69,16 +70,18 @@ static const uint qt_meta_data_TcpClient[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    1,   34,    2, 0x0a /* Public */,
-       5,    2,   37,    2, 0x0a /* Public */,
-       7,    2,   42,    2, 0x0a /* Public */,
-      11,    2,   47,    2, 0x0a /* Public */,
+       1,    1,   39,    2, 0x0a /* Public */,
+       5,    2,   42,    2, 0x0a /* Public */,
+       7,    2,   47,    2, 0x0a /* Public */,
+      11,    2,   52,    2, 0x0a /* Public */,
+      14,    0,   57,    2, 0x0a /* Public */,
 
  // slots: parameters
     QMetaType::Bool, 0x80000000 | 3,    4,
     QMetaType::Bool, 0x80000000 | 3, QMetaType::Int,    4,    6,
     QMetaType::Bool, 0x80000000 | 8, 0x80000000 | 10,    9,    6,
     QMetaType::Bool, 0x80000000 | 12, 0x80000000 | 10,   13,    6,
+    QMetaType::Bool,
 
        0        // eod
 };
@@ -96,6 +99,8 @@ void TcpClient::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
         case 2: { bool _r = _t->deleteQuestion((*reinterpret_cast< qint64(*)>(_a[1])),(*reinterpret_cast< qint32(*)>(_a[2])));
             if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
         case 3: { bool _r = _t->updateQuestion((*reinterpret_cast< QJsonObject(*)>(_a[1])),(*reinterpret_cast< qint32(*)>(_a[2])));
+            if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
+        case 4: { bool _r = _t->commmitQuestions();
             if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
         default: ;
         }
@@ -131,13 +136,13 @@ int TcpClient::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 4)
+        if (_id < 5)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 4;
+        _id -= 5;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 4)
+        if (_id < 5)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 4;
+        _id -= 5;
     }
     return _id;
 }

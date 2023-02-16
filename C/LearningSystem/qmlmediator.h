@@ -35,6 +35,7 @@ signals:
     void deleteFailed();
     void updateSucceeded();
     void updateFailed();
+//    void commitSignal();
 
 
 public slots:
@@ -56,6 +57,9 @@ public slots:
 
     // 测试
     void testModel(QJsonObject a);
+
+    // 提交题库到HTTP
+    void commitQuestons();
 
 private:
     enum m_task{

@@ -14,10 +14,10 @@ EQ            = =
 
 CC            = gcc
 CXX           = g++
-DEFINES       = -DQT_QML_DEBUG -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_MULTIMEDIA_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_WEBSOCKETS_LIB -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_BLUETOOTH_LIB -DQT_CORE_LIB
+DEFINES       = -DQT_QML_DEBUG -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_MULTIMEDIA_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_XML_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_WEBSOCKETS_LIB -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_BLUETOOTH_LIB -DQT_CORE_LIB
 CFLAGS        = -pipe -g -Wall -Wextra -D_REENTRANT -fPIC $(DEFINES)
 CXXFLAGS      = -pipe -g -Wall -Wextra -D_REENTRANT -fPIC $(DEFINES)
-INCPATH       = -I../LearningSystem -I. -I/home/uwillno/Felgo/Felgo/gcc_64/include/Felgo -I/home/uwillno/Felgo/Felgo/gcc_64/include -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtQuick -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtWidgets -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtMultimedia -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtGui -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtConcurrent -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtQmlModels -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtQml -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtWebSockets -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtNetwork -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtSql -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtBluetooth -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore -I. -I/usr/include/libdrm -I/home/uwillno/Felgo/Felgo/gcc_64/mkspecs/linux-g++
+INCPATH       = -I../LearningSystem -I. -I/home/uwillno/Felgo/Felgo/gcc_64/include/Felgo -I/home/uwillno/Felgo/Felgo/gcc_64/include -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtQuick -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtWidgets -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtMultimedia -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtGui -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtConcurrent -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtXml -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtQmlModels -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtQml -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtWebSockets -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtNetwork -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtSql -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtBluetooth -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore -I. -I/usr/include/libdrm -I/home/uwillno/Felgo/Felgo/gcc_64/mkspecs/linux-g++
 QMAKE         = /home/uwillno/Felgo/Felgo/gcc_64/bin/qmake
 DEL_FILE      = rm -f
 CHK_DIR_EXISTS= test -d
@@ -40,7 +40,7 @@ DISTNAME      = LearningSystem1.0.0
 DISTDIR = /run/media/uwillno/WD40PURX-78AKYY0/BYSJ/C/build-LearningSystem-Felgo_Desktop_Qt_5_15_2_GCC-Debug/.tmp/LearningSystem1.0.0
 LINK          = g++
 LFLAGS        = -Wl,-rpath,'$$ORIGIN/lib' -Wl,-rpath,'$$ORIGIN/system' -Wl,-rpath,/home/uwillno/Felgo/Felgo/gcc_64/lib -Wl,-rpath-link,/home/uwillno/Felgo/Felgo/gcc_64/lib
-LIBS          = $(SUBLIBS) -L/home/uwillno/Felgo/Felgo/gcc_64/lib -lFelgo -lz /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt5Quick.so /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt5Widgets.so /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt5Multimedia.so /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt5Gui.so /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt5Concurrent.so /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt5QmlModels.so /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt5Qml.so /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt5WebSockets.so /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt5Network.so /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt5Sql.so /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt5Bluetooth.so /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt5Core.so -lGL -lpthread   
+LIBS          = $(SUBLIBS) -L/home/uwillno/Felgo/Felgo/gcc_64/lib -lFelgo -lz /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt5Quick.so /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt5Widgets.so /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt5Multimedia.so /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt5Gui.so /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt5Concurrent.so /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt5Xml.so /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt5QmlModels.so /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt5Qml.so /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt5WebSockets.so /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt5Network.so /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt5Sql.so /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt5Bluetooth.so /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt5Core.so -lGL -lpthread   
 AR            = ar cqs
 RANLIB        = 
 SED           = sed
@@ -53,14 +53,18 @@ OBJECTS_DIR   = ./
 ####### Files
 
 SOURCES       = ../LearningSystem/main.cpp \
+		../LearningSystem/documentparser.cpp \
 		../LearningSystem/qmlmediator.cpp \
 		../LearningSystem/tcpclient.cpp qrc_resources_user.cpp \
+		moc_documentparser.cpp \
 		moc_qmlmediator.cpp \
 		moc_tcpclient.cpp
 OBJECTS       = main.o \
+		documentparser.o \
 		qmlmediator.o \
 		tcpclient.o \
 		qrc_resources_user.o \
+		moc_documentparser.o \
 		moc_qmlmediator.o \
 		moc_tcpclient.o
 DIST          = ../LearningSystem/qml/items/BlankComponent.qml \
@@ -79,6 +83,7 @@ DIST          = ../LearningSystem/qml/items/BlankComponent.qml \
 		../LearningSystem/qml/items/toast/Toast.qml \
 		../LearningSystem/qml/items/toast/ToastManager.qml \
 		../LearningSystem/qml/logic/AdminLogic.qml \
+		../LearningSystem/qml/logic/UserLogic.qml \
 		../LearningSystem/qml/pages/AdministratorPage.qml \
 		../LearningSystem/qml/pages/IndexPage.qml \
 		../LearningSystem/qml/pages/QuestionPage.qml \
@@ -278,9 +283,11 @@ DIST          = ../LearningSystem/qml/items/BlankComponent.qml \
 		/home/uwillno/Felgo/Felgo/gcc_64/mkspecs/features/exceptions.prf \
 		/home/uwillno/Felgo/Felgo/gcc_64/mkspecs/features/yacc.prf \
 		/home/uwillno/Felgo/Felgo/gcc_64/mkspecs/features/lex.prf \
-		../LearningSystem/LearningSystem.pro ../LearningSystem/qmlmediator.h \
+		../LearningSystem/LearningSystem.pro ../LearningSystem/documentparser.h \
+		../LearningSystem/qmlmediator.h \
 		../LearningSystem/singleton.h \
 		../LearningSystem/tcpclient.h ../LearningSystem/main.cpp \
+		../LearningSystem/documentparser.cpp \
 		../LearningSystem/qmlmediator.cpp \
 		../LearningSystem/tcpclient.cpp
 QMAKE_TARGET  = LearningSystem
@@ -707,8 +714,8 @@ distdir: FORCE
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents /home/uwillno/Felgo/Felgo/gcc_64/mkspecs/common/felgo/resources_user.qrc $(DISTDIR)/
 	$(COPY_FILE) --parents /home/uwillno/Felgo/Felgo/gcc_64/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../LearningSystem/qmlmediator.h ../LearningSystem/singleton.h ../LearningSystem/tcpclient.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../LearningSystem/main.cpp ../LearningSystem/qmlmediator.cpp ../LearningSystem/tcpclient.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../LearningSystem/documentparser.h ../LearningSystem/qmlmediator.h ../LearningSystem/singleton.h ../LearningSystem/tcpclient.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../LearningSystem/main.cpp ../LearningSystem/documentparser.cpp ../LearningSystem/qmlmediator.cpp ../LearningSystem/tcpclient.cpp $(DISTDIR)/
 
 
 clean: compiler_clean 
@@ -751,9 +758,94 @@ compiler_moc_predefs_clean:
 moc_predefs.h: /home/uwillno/Felgo/Felgo/gcc_64/mkspecs/features/data/dummy.cpp
 	g++ -pipe -g -Wall -Wextra -dM -E -o moc_predefs.h /home/uwillno/Felgo/Felgo/gcc_64/mkspecs/features/data/dummy.cpp
 
-compiler_moc_header_make_all: moc_qmlmediator.cpp moc_tcpclient.cpp
+compiler_moc_header_make_all: moc_documentparser.cpp moc_qmlmediator.cpp moc_tcpclient.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) moc_qmlmediator.cpp moc_tcpclient.cpp
+	-$(DEL_FILE) moc_documentparser.cpp moc_qmlmediator.cpp moc_tcpclient.cpp
+moc_documentparser.cpp: ../LearningSystem/documentparser.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/QObject \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qobject.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qobjectdefs.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qnamespace.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qglobal.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qconfig-bootstrapped.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qconfig.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qtcore-config.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qsystemdetection.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qprocessordetection.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qcompilerdetection.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qtypeinfo.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qsysinfo.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qlogging.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qflags.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qatomic.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qbasicatomic.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qatomic_bootstrap.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qgenericatomic.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qatomic_cxx11.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qatomic_msvc.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qglobalstatic.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qmutex.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qnumeric.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qversiontagging.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qstring.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qchar.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qbytearray.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qrefcount.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qarraydata.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qstringliteral.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qstringalgorithms.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qstringview.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qstringbuilder.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qlist.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qalgorithms.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qiterator.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qhashfunctions.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qpair.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qvector.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qcontainertools_impl.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qpoint.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qbytearraylist.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qstringlist.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qregexp.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qstringmatcher.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qcoreevent.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qscopedpointer.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qmetatype.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qvarlengtharray.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qcontainerfwd.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qobject_impl.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtXml/QDomDocument \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtXml/qdom.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtXml/qtxmlglobal.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtXml/qtxml-config.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtXml/QDomElement \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/QJsonArray \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qjsonarray.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qjsonvalue.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qshareddata.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qhash.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qcborvalue.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qdatetime.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qcborcommon.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qdebug.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qmap.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qtextstream.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qiodevice.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qlocale.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qvariant.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qset.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qcontiguouscache.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qsharedpointer.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qsharedpointer_impl.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qregularexpression.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qurl.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qurlquery.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/quuid.h \
+		moc_predefs.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/bin/moc
+	/home/uwillno/Felgo/Felgo/gcc_64/bin/moc $(DEFINES) --include /run/media/uwillno/WD40PURX-78AKYY0/BYSJ/C/build-LearningSystem-Felgo_Desktop_Qt_5_15_2_GCC-Debug/moc_predefs.h -I/home/uwillno/Felgo/Felgo/gcc_64/mkspecs/linux-g++ -I/run/media/uwillno/WD40PURX-78AKYY0/BYSJ/C/LearningSystem -I/home/uwillno/Felgo/Felgo/gcc_64/include/Felgo -I/home/uwillno/Felgo/Felgo/gcc_64/include -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtQuick -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtWidgets -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtMultimedia -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtGui -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtConcurrent -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtXml -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtQmlModels -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtQml -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtWebSockets -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtNetwork -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtSql -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtBluetooth -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore -I. -I/usr/include/c++/12.2.1 -I/usr/include/c++/12.2.1/x86_64-pc-linux-gnu -I/usr/include/c++/12.2.1/backward -I/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include -I/usr/local/include -I/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include-fixed -I/usr/include ../LearningSystem/documentparser.h -o moc_documentparser.cpp
+
 moc_qmlmediator.cpp: ../LearningSystem/qmlmediator.h \
 		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/QObject \
 		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qobject.h \
@@ -842,6 +934,8 @@ moc_qmlmediator.cpp: ../LearningSystem/qmlmediator.h \
 		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qurl.h \
 		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qurlquery.h \
 		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/quuid.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/QJsonObject \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qjsonobject.h \
 		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/QDebug \
 		/home/uwillno/Felgo/Felgo/gcc_64/include/QtConcurrent/QtConcurrent \
 		/home/uwillno/Felgo/Felgo/gcc_64/include/QtConcurrent/QtConcurrentDepends \
@@ -902,7 +996,6 @@ moc_qmlmediator.cpp: ../LearningSystem/qmlmediator.h \
 		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qisenum.h \
 		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qitemselectionmodel.h \
 		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qjsondocument.h \
-		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qjsonobject.h \
 		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qlibrary.h \
 		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qlibraryinfo.h \
 		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qversionnumber.h \
@@ -988,7 +1081,7 @@ moc_qmlmediator.cpp: ../LearningSystem/qmlmediator.h \
 		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/QFuture \
 		moc_predefs.h \
 		/home/uwillno/Felgo/Felgo/gcc_64/bin/moc
-	/home/uwillno/Felgo/Felgo/gcc_64/bin/moc $(DEFINES) --include /run/media/uwillno/WD40PURX-78AKYY0/BYSJ/C/build-LearningSystem-Felgo_Desktop_Qt_5_15_2_GCC-Debug/moc_predefs.h -I/home/uwillno/Felgo/Felgo/gcc_64/mkspecs/linux-g++ -I/run/media/uwillno/WD40PURX-78AKYY0/BYSJ/C/LearningSystem -I/home/uwillno/Felgo/Felgo/gcc_64/include/Felgo -I/home/uwillno/Felgo/Felgo/gcc_64/include -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtQuick -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtWidgets -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtMultimedia -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtGui -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtConcurrent -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtQmlModels -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtQml -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtWebSockets -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtNetwork -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtSql -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtBluetooth -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore -I. -I/usr/include/c++/12.2.1 -I/usr/include/c++/12.2.1/x86_64-pc-linux-gnu -I/usr/include/c++/12.2.1/backward -I/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include -I/usr/local/include -I/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include-fixed -I/usr/include ../LearningSystem/qmlmediator.h -o moc_qmlmediator.cpp
+	/home/uwillno/Felgo/Felgo/gcc_64/bin/moc $(DEFINES) --include /run/media/uwillno/WD40PURX-78AKYY0/BYSJ/C/build-LearningSystem-Felgo_Desktop_Qt_5_15_2_GCC-Debug/moc_predefs.h -I/home/uwillno/Felgo/Felgo/gcc_64/mkspecs/linux-g++ -I/run/media/uwillno/WD40PURX-78AKYY0/BYSJ/C/LearningSystem -I/home/uwillno/Felgo/Felgo/gcc_64/include/Felgo -I/home/uwillno/Felgo/Felgo/gcc_64/include -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtQuick -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtWidgets -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtMultimedia -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtGui -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtConcurrent -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtXml -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtQmlModels -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtQml -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtWebSockets -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtNetwork -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtSql -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtBluetooth -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore -I. -I/usr/include/c++/12.2.1 -I/usr/include/c++/12.2.1/x86_64-pc-linux-gnu -I/usr/include/c++/12.2.1/backward -I/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include -I/usr/local/include -I/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include-fixed -I/usr/include ../LearningSystem/qmlmediator.h -o moc_qmlmediator.cpp
 
 moc_tcpclient.cpp: ../LearningSystem/tcpclient.h \
 		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/QObject \
@@ -1076,9 +1169,11 @@ moc_tcpclient.cpp: ../LearningSystem/tcpclient.h \
 		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qurl.h \
 		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qurlquery.h \
 		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/quuid.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/QJsonObject \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qjsonobject.h \
 		moc_predefs.h \
 		/home/uwillno/Felgo/Felgo/gcc_64/bin/moc
-	/home/uwillno/Felgo/Felgo/gcc_64/bin/moc $(DEFINES) --include /run/media/uwillno/WD40PURX-78AKYY0/BYSJ/C/build-LearningSystem-Felgo_Desktop_Qt_5_15_2_GCC-Debug/moc_predefs.h -I/home/uwillno/Felgo/Felgo/gcc_64/mkspecs/linux-g++ -I/run/media/uwillno/WD40PURX-78AKYY0/BYSJ/C/LearningSystem -I/home/uwillno/Felgo/Felgo/gcc_64/include/Felgo -I/home/uwillno/Felgo/Felgo/gcc_64/include -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtQuick -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtWidgets -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtMultimedia -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtGui -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtConcurrent -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtQmlModels -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtQml -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtWebSockets -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtNetwork -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtSql -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtBluetooth -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore -I. -I/usr/include/c++/12.2.1 -I/usr/include/c++/12.2.1/x86_64-pc-linux-gnu -I/usr/include/c++/12.2.1/backward -I/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include -I/usr/local/include -I/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include-fixed -I/usr/include ../LearningSystem/tcpclient.h -o moc_tcpclient.cpp
+	/home/uwillno/Felgo/Felgo/gcc_64/bin/moc $(DEFINES) --include /run/media/uwillno/WD40PURX-78AKYY0/BYSJ/C/build-LearningSystem-Felgo_Desktop_Qt_5_15_2_GCC-Debug/moc_predefs.h -I/home/uwillno/Felgo/Felgo/gcc_64/mkspecs/linux-g++ -I/run/media/uwillno/WD40PURX-78AKYY0/BYSJ/C/LearningSystem -I/home/uwillno/Felgo/Felgo/gcc_64/include/Felgo -I/home/uwillno/Felgo/Felgo/gcc_64/include -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtQuick -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtWidgets -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtMultimedia -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtGui -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtConcurrent -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtXml -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtQmlModels -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtQml -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtWebSockets -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtNetwork -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtSql -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtBluetooth -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore -I. -I/usr/include/c++/12.2.1 -I/usr/include/c++/12.2.1/x86_64-pc-linux-gnu -I/usr/include/c++/12.2.1/backward -I/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include -I/usr/local/include -I/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include-fixed -I/usr/include ../LearningSystem/tcpclient.h -o moc_tcpclient.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -1248,6 +1343,8 @@ main.o: ../LearningSystem/main.cpp /home/uwillno/Felgo/Felgo/gcc_64/include/QtWi
 		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qcborcommon.h \
 		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qregularexpression.h \
 		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/quuid.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/QJsonObject \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qjsonobject.h \
 		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/QDebug \
 		/home/uwillno/Felgo/Felgo/gcc_64/include/QtConcurrent/QtConcurrent \
 		/home/uwillno/Felgo/Felgo/gcc_64/include/QtConcurrent/QtConcurrentDepends \
@@ -1302,7 +1399,6 @@ main.o: ../LearningSystem/main.cpp /home/uwillno/Felgo/Felgo/gcc_64/include/QtWi
 		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qisenum.h \
 		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qitemselectionmodel.h \
 		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qjsondocument.h \
-		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qjsonobject.h \
 		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qlibrary.h \
 		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qlibraryinfo.h \
 		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qversionnumber.h \
@@ -1383,6 +1479,89 @@ main.o: ../LearningSystem/main.cpp /home/uwillno/Felgo/Felgo/gcc_64/include/QtWi
 		/home/uwillno/Felgo/Felgo/gcc_64/include/QtQml/QQmlContext \
 		/home/uwillno/Felgo/Felgo/gcc_64/include/QtQml/qqmlcontext.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../LearningSystem/main.cpp
+
+documentparser.o: ../LearningSystem/documentparser.cpp ../LearningSystem/documentparser.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/QObject \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qobject.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qobjectdefs.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qnamespace.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qglobal.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qconfig-bootstrapped.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qconfig.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qtcore-config.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qsystemdetection.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qprocessordetection.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qcompilerdetection.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qtypeinfo.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qsysinfo.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qlogging.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qflags.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qatomic.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qbasicatomic.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qatomic_bootstrap.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qgenericatomic.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qatomic_cxx11.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qatomic_msvc.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qglobalstatic.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qmutex.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qnumeric.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qversiontagging.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qstring.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qchar.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qbytearray.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qrefcount.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qarraydata.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qstringliteral.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qstringalgorithms.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qstringview.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qstringbuilder.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qlist.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qalgorithms.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qiterator.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qhashfunctions.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qpair.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qvector.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qcontainertools_impl.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qpoint.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qbytearraylist.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qstringlist.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qregexp.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qstringmatcher.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qcoreevent.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qscopedpointer.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qmetatype.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qvarlengtharray.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qcontainerfwd.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qobject_impl.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtXml/QDomDocument \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtXml/qdom.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtXml/qtxmlglobal.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtXml/qtxml-config.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtXml/QDomElement \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/QJsonArray \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qjsonarray.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qjsonvalue.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qshareddata.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qhash.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qcborvalue.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qdatetime.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qcborcommon.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qdebug.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qmap.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qtextstream.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qiodevice.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qlocale.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qvariant.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qset.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qcontiguouscache.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qsharedpointer.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qsharedpointer_impl.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qregularexpression.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qurl.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qurlquery.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/quuid.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o documentparser.o ../LearningSystem/documentparser.cpp
 
 qmlmediator.o: ../LearningSystem/qmlmediator.cpp ../LearningSystem/qmlmediator.h \
 		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/QObject \
@@ -1472,6 +1651,8 @@ qmlmediator.o: ../LearningSystem/qmlmediator.cpp ../LearningSystem/qmlmediator.h
 		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qurl.h \
 		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qurlquery.h \
 		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/quuid.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/QJsonObject \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qjsonobject.h \
 		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/QDebug \
 		/home/uwillno/Felgo/Felgo/gcc_64/include/QtConcurrent/QtConcurrent \
 		/home/uwillno/Felgo/Felgo/gcc_64/include/QtConcurrent/QtConcurrentDepends \
@@ -1532,7 +1713,6 @@ qmlmediator.o: ../LearningSystem/qmlmediator.cpp ../LearningSystem/qmlmediator.h
 		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qisenum.h \
 		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qitemselectionmodel.h \
 		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qjsondocument.h \
-		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qjsonobject.h \
 		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qlibrary.h \
 		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qlibraryinfo.h \
 		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qversionnumber.h \
@@ -1703,11 +1883,16 @@ tcpclient.o: ../LearningSystem/tcpclient.cpp ../LearningSystem/tcpclient.h \
 		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qregularexpression.h \
 		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qurl.h \
 		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qurlquery.h \
-		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/quuid.h
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/quuid.h \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/QJsonObject \
+		/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qjsonobject.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tcpclient.o ../LearningSystem/tcpclient.cpp
 
 qrc_resources_user.o: qrc_resources_user.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o qrc_resources_user.o qrc_resources_user.cpp
+
+moc_documentparser.o: moc_documentparser.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_documentparser.o moc_documentparser.cpp
 
 moc_qmlmediator.o: moc_qmlmediator.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_qmlmediator.o moc_qmlmediator.cpp

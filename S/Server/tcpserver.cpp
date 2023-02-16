@@ -10,7 +10,7 @@ TcpServer::TcpServer(QObject *parent): QTcpServer(parent)
     //    Singleton<SqlOperator>::GetInstance().connect("101.43.173.108",3306,"learning","root","44910244");
     //    Singleton<SqlOperator>::GetInstance().connect("www.uwillno.icu",3306,"learning","root","44910244");
     Singleton<SqlOperator>::GetInstance().connect("127.0.0.1",3306,"learning","root","UW1224222099");
-
+    QObject::connect(this,&TcpServer::commitQuestionSignal,&Singleton<SqlOperator>::GetInstance(),&SqlOperator::commitQuestions);
 }
 
 TcpServer::~TcpServer()
@@ -280,7 +280,12 @@ void TcpServer::handleClient(qintptr handle)
         break;
         //        break;
     }
-
+    case commitQ: {
+        qInfo() <<"题库提交";
+        stream >> date;
+        //        if(date != m_date){return;}
+        emit commitQuestionSignal();
+    }
     default:
         break;
     }

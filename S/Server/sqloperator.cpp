@@ -1,9 +1,11 @@
 ﻿#include "sqloperator.h"
+#include "qjsonarray.h"
 
 
 
 SqlOperator::SqlOperator(QObject *parent): QObject{parent}{
     //    Q_UNUSED(parent);
+
 }
 
 SqlOperator::~SqlOperator()
@@ -284,5 +286,65 @@ QList<QSharedPointer<FillInTheBlanksQuestion>> SqlOperator::selectAllFQuestion()
         list.append(p);
     }
     return list;
+
+}
+
+void SqlOperator::commitQuestions()
+{
+    qInfo("tcp sql to http here !");
+    QString version = QString::number(QDateTime::currentMSecsSinceEpoch());
+    //    QFile file("currentQuestions.txt");
+    QDir httpdir("/srv/http/");
+    QFile file(httpdir.filePath("currentQuestions.json"));
+    QList<QSharedPointer<ChoiceQuestion>> cQuestions = selectAllCQuestion();
+    QList<QSharedPointer<TrueOrFalseQuestion>> tQuestions = selectAllTQuestion();
+    QList<QSharedPointer<FillInTheBlanksQuestion>> fQuestions = selectAllFQuestion();
+    QJsonArray cJsonArray,tJsonArray,fJsonArray;
+    foreach (QSharedPointer<ChoiceQuestion> cq, cQuestions) {
+        QJsonObject question ;
+        //        question << cq->id;
+        question.insert("id",cq->id);
+        question.insert("question",cq->question);
+        question.insert("option1",cq->option1);
+        question.insert("option2",cq->option2);
+        question.insert("option3",cq->option3);
+        question.insert("option4",cq->option4);
+        question.insert("answer",cq->answer);
+        cJsonArray.append(question);
+    }
+    //    qInfo() << cJsonArray;
+    foreach (QSharedPointer<TrueOrFalseQuestion> tq, tQuestions) {
+        QJsonObject question ;
+        //        question << cq->id;
+        question.insert("id",tq->id);
+        question.insert("question",tq->question);
+        question.insert("answer",tq->answer);
+        tJsonArray.append(question);
+    }
+    foreach (QSharedPointer<FillInTheBlanksQuestion> fq, fQuestions) {
+        QJsonObject question ;
+        //        question << cq->id;
+        question.insert("id",fq->id);
+        question.insert("question",fq->question);
+        question.insert("answer",fq->answer);
+        fJsonArray.append(question);
+    }
+    QJsonObject json;
+    json.insert("C",cJsonArray);
+    json.insert("T",cJsonArray);
+    json.insert("F",cJsonArray);
+
+    json.insert("version",version);
+    QJsonDocument doc(json);
+
+    if(file.exists()) file.remove();
+    if(file.open(QIODevice::WriteOnly)){
+        QTextStream stream(&file);
+        stream << doc.toJson(QJsonDocument::Compact);
+    }
+    QString backuppath = "historyquestions/"+ version + ".json";
+    file.copy(httpdir.filePath(backuppath));
+
+    //    if(file.open(QIODevice::WriteOnly | QIODevice::))
 
 }

@@ -35,13 +35,15 @@ public slots:
     bool insertQuestion(QStringList *list,qint32 type);
     bool deleteQuestion(qint64 &id,qint32 &type);
     bool updateQuestion(QJsonObject &json, qint32 &type);
+    bool commmitQuestions();
+
 private:
     QString m_host;
     quint16 m_port;
     qint64 m_date;
     QByteArray passwordCryptographicHash(QByteArray password);
     enum m_task{
-        login,insertC,insertT,insertF,getQuestions,unUse,deleteQ,updateC,updateT,updateF
+        login,insertC,insertT,insertF,getQuestions,unUse,deleteQ,updateC,updateT,updateF,commitQ
     };
 
 private:

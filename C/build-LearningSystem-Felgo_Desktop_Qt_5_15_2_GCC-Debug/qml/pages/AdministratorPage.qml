@@ -9,13 +9,17 @@ Page {
     property var ops: [
         {
             text: "添加题目",
-            detailText: "A delicious question with round shape",
+            detailText: "Add Question",
             //            icon: IconType.apple
         },
 
         {
             text: "查看题目",
-            detailText: "A delicous question",
+            detailText: "Select & Update Questions",
+        },
+        {
+            text: "题库更新",
+            detailText: "Commit Questions to Users",
         }
     ]
 
@@ -24,17 +28,19 @@ Page {
         model:ops
         delegate: SimpleRow {
             onSelected: {
-                 createQuestionPage(index);
+                if(index === 0 || index === 1)
+                    createQuestionPage(index)
+                if(index === 2)
+                    adminLogic.commitQuestions()
+                //                switch(index){
+                //                case 0:
+                ////                    questionPage.qP.state=0
+                ////                    rootStack.push(questionPage)
 
-//                switch(index){
-//                case 0:
-////                    questionPage.qP.state=0
-////                    rootStack.push(questionPage)
-
-//                    break;
-//                case 1:
-//                    break;
-//                }
+                //                    break;
+                //                case 1:
+                //                    break;
+                //                }
             }
         }
 
@@ -43,38 +49,38 @@ Page {
     function createQuestionPage(index){
         var component = Qt.createComponent("QuestionPage.qml");
         if(component.status === Component.Ready){
-          var obj =  component.createObject(parent,{state: index})
+            var obj =  component.createObject(parent,{state: index})
         }
         rootStack.push(obj)
 
     }
-    Connections {
-        id: connection
-        target: qm
-        onSubmitSucceeded:{
-            toastManager.show("插入成功！",1000)
-            loaderItem.close()
-        }
-        onSubmitFailed:{
-            toastManager.show("插入失败！",1000)
-            loaderItem.close()
-        }
-//        onSelectSuceeded:{
-//            selectSwipeView.update()
-//            toastManager.show("查看成功！",1000)
-//            loaderItem.close()
-//        }
-//        onSelectFailed:{
-//            toastManager.show("查看失败！",1000)
-//            loaderItem.close()
-//        }
+    //    Connections {
+    //        id: connection
+    //        target: qm
+    //        onSubmitSucceeded:{
+    //            toastManager.show("插入成功！",1000)
+    //            loaderItem.close()
+    //        }
+    //        onSubmitFailed:{
+    //            toastManager.show("插入失败！",1000)
+    //            loaderItem.close()
+    //        }
+    //        onSelectSuceeded:{
+    //            selectSwipeView.update()
+    //            toastManager.show("查看成功！",1000)
+    //            loaderItem.close()
+    //        }
+    //        onSelectFailed:{
+    //            toastManager.show("查看失败！",1000)
+    //            loaderItem.close()
+    //        }
 
-    }
-//    Component {
+    //    }
+    //    Component {
 
-//        QuestionPage {
-//            id:questionPage
-//            state: 100
-//        }
-//    }
+    //        QuestionPage {
+    //            id:questionPage
+    //            state: 100
+    //        }
+    //    }
 }

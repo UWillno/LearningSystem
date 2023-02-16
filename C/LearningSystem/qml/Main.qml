@@ -39,6 +39,10 @@ App {
         id: adminLogic
 
     }
+    UserLogic {
+        id: userLogic
+    }
+
     //    property LoaderItem loaderItem: loaderItem
     LoaderItem {
         id: loaderItem

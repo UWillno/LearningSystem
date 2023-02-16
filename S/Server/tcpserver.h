@@ -22,7 +22,7 @@ public:
 
 signals:
     void connected();
-
+    void commitQuestionSignal();
     // QTcpServer interface
 protected:
     void incomingConnection(qintptr handle);
@@ -39,7 +39,7 @@ private:
     void sendQuestionsJson(QTcpSocket *s);
     void toLogin(QStringList *list,QTcpSocket *s);
     enum m_task{
-        login,insertC,insertT,insertF,getQuestions,unUse,deleteQ,updateC,updateT,updateF
+        login,insertC,insertT,insertF,getQuestions,unUse,deleteQ,updateC,updateT,updateF,commitQ
     };
     qint64 m_date;
     QuestionFactory factory;

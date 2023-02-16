@@ -59,4 +59,30 @@ Item {
         console.log(model)
         qm.updateQuestion(model,type)
     }
+
+    function commitQuestions(){
+        qm.commitQuestons()
+    }
+
+    Connections {
+//        id:con
+        target: qm
+
+        onDeleteFailed:{
+            toastManager.show("删除失败！",1000)
+            loaderItem.close()
+        }
+        onUpdateFailed:{
+            toastManager.show("保存失败！",1000)
+            rootStack.pop()
+        }
+        onSubmitSucceeded:{
+            toastManager.show("插入成功！",1000)
+            loaderItem.close()
+        }
+        onSubmitFailed:{
+            toastManager.show("插入失败！",1000)
+            loaderItem.close()
+        }
+    }
 }

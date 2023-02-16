@@ -189,6 +189,27 @@ bool TcpClient::updateQuestion(QJsonObject &json, qint32 &type)
 
 }
 
+bool TcpClient::commmitQuestions()
+{
+    QByteArray byte;
+    QDataStream stream(&byte,QIODevice::WriteOnly);
+    QScopedPointer<QTcpSocket> p(new QTcpSocket());
+    stream << commitQ << m_date;
+    p->connectToHost(this->m_host,this->port());
+    if(p->waitForConnected()){
+        p->write(byte);
+        if(p->waitForBytesWritten()){
+            return true;
+        }else{
+            qInfo() << "写入失败";
+        }
+    }else{
+        qInfo() << "连接失败";
+    }
+    p->close();
+    return false;
+}
+
 
 // 弃用
 QByteArray TcpClient::getQuestionsBytes()

@@ -4,6 +4,7 @@ QmlMediator::QmlMediator(QObject *parent)
     : QObject{parent}
 {
     tcpclientInit();
+    //    connect(this,QmlMediator::commitSignal(),&Singleton<TcpClient>::GetInstance(),TcpClient::);
 }
 
 void QmlMediator::adminLogin(QString username, QString password)
@@ -117,10 +118,10 @@ void QmlMediator::getQuestionsByTcp()
     QFuture<QList<QJsonArray>> future = QtConcurrent::run(&Singleton<TcpClient>::GetInstance(),&TcpClient::getQuestionsJson);
     m_tcpQuestions = future.result();
     if(m_tcpQuestions.isEmpty()){
-//        emit selectFailed();
+        //        emit selectFailed();
         return;
     }
-//    emit selectSuceeded();
+    //    emit selectSuceeded();
     qInfo() << m_tcpQuestions;
 
 }
@@ -144,9 +145,11 @@ void QmlMediator::deleteQuestion(qint64 id, qint32 type)
 {
     QFuture<bool> future = QtConcurrent::run(&Singleton<TcpClient>::GetInstance(),&TcpClient::deleteQuestion,id,type);
     if(future.result()){
-        emit deleteSuceeded();
         // 刷新JSON
         getQuestionsByTcp();
+
+        emit deleteSuceeded();
+
         return;
     }
     emit  deleteFailed();
@@ -156,6 +159,20 @@ void QmlMediator::deleteQuestion(qint64 id, qint32 type)
 void QmlMediator::testModel(QJsonObject a)
 {
     qInfo() << a;
+}
+
+void QmlMediator::commitQuestons()
+{
+    QFuture<bool> future = QtConcurrent::run(&Singleton<TcpClient>::GetInstance(),&TcpClient::commmitQuestions);
+    if(future.result()){
+        // 刷新JSON
+//        getQuestionsByTcp();
+
+//        emit deleteSuceeded();
+
+        return;
+    }
+//    emit  deleteFailed();
 }
 
 const QList<QJsonArray> &QmlMediator::tcpQuestions() const
