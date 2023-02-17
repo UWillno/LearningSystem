@@ -221,7 +221,7 @@ void TcpServer::handleClient(qintptr handle)
     }
 
     case deleteQ: {
-        qint64 id;
+        qint32 id;
         qint32 type;
         stream  >> id >> type >> date;
         qInfo() << id << type ;

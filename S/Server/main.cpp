@@ -8,14 +8,14 @@
 #include "singleton.h"
 #include "sqloperator.h"
 #include "tcpserver.h"
-void test(){
-//    Singleton<SqlOperator>::GetInstance().selectAllQuestion();
-    qint64 id;
+//void test(){
+////    Singleton<SqlOperator>::GetInstance().selectAllQuestion();
+//    qint64 id;
 
-    id=33;
-    int type=0;
-    Singleton<SqlOperator>::GetInstance().deleteQuestion(id,type);
-}
+//    id=33;
+//    int type=0;
+//    Singleton<SqlOperator>::GetInstance().deleteQuestion(id,type);
+//}
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);

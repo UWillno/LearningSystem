@@ -5,7 +5,7 @@ import QtQuick.Controls 2.5
 import "template"
 import "loader"
 Rectangle {
-    id: root
+    id: questionRect
     property var model
     property int type : 1
     property alias question: questionInput.text

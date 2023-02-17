@@ -196,7 +196,7 @@ bool SqlOperator::updateQuestion(iQuestion *question)
     return false;
 }
 
-bool SqlOperator::deleteQuestion(qint64 &id, qint32 &type)
+bool SqlOperator::deleteQuestion(qint32 &id, qint32 &type)
 {
     QSqlQuery query = QSqlQuery(m_db);
     //    QString sql;
@@ -241,7 +241,7 @@ QList<QSharedPointer<ChoiceQuestion>> SqlOperator::selectAllCQuestion()
     while (query.next()) {
         QSharedPointer<ChoiceQuestion> p(new ChoiceQuestion());
         //        list.append(p);
-        p->id = query.value(0).toLongLong();
+        p->id = query.value(0).toInt();
         p->question = query.value(1).toString();
         p->option1 = query.value(2).toString();
         p->option2 = query.value(3).toString();
@@ -263,7 +263,7 @@ QList<QSharedPointer<TrueOrFalseQuestion>> SqlOperator::selectAllTQuestion()
     while (query.next()) {
         QSharedPointer<TrueOrFalseQuestion> p(new TrueOrFalseQuestion());
         //        list.append(p);
-        p->id = query.value(0).toLongLong();
+        p->id = query.value(0).toInt();
         p->question = query.value(1).toString();
         p->answer = query.value(2).toBool();
         list.append(p);
@@ -280,7 +280,7 @@ QList<QSharedPointer<FillInTheBlanksQuestion>> SqlOperator::selectAllFQuestion()
     while (query.next()) {
         QSharedPointer<FillInTheBlanksQuestion> p(new FillInTheBlanksQuestion());
         //        list.append(p);
-        p->id = query.value(0).toLongLong();
+        p->id = query.value(0).toInt();
         p->question = query.value(1).toString();
         p->answer = query.value(2).toString();
         list.append(p);

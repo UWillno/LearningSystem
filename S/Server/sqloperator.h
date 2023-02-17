@@ -40,7 +40,7 @@ public slots:
     void selectAllQuestion();
 
     bool updateQuestion(iQuestion * question);
-    bool deleteQuestion(qint64 &id , int &type);
+    bool deleteQuestion(qint32 &id , int &type);
 
     QList<QSharedPointer<ChoiceQuestion>> selectAllCQuestion();
     QList<QSharedPointer<TrueOrFalseQuestion>> selectAllTQuestion();

@@ -51,6 +51,8 @@ Grid {
                     break;
                 }
                 }
+            }else{
+                toastManager.show("数据异常！",1000);
             }
         }
     }

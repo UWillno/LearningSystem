@@ -35,7 +35,7 @@ signals:
     void deleteFailed();
     void updateSucceeded();
     void updateFailed();
-//    void commitSignal();
+    //    void commitSignal();
 
 
 public slots:
@@ -53,7 +53,7 @@ public slots:
     void updateQuestion(QJsonObject json, qint32 type);
 
     // 删除题目
-    void deleteQuestion(qint64 id,qint32 type);
+    void deleteQuestion(qint32 id,qint32 type);
 
     // 测试
     void testModel(QJsonObject a);

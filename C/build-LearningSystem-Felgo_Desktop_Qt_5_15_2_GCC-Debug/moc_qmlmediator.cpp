@@ -146,7 +146,7 @@ static const uint qt_meta_data_QmlMediator[] = {
     QMetaType::Void, QMetaType::QString, QMetaType::QString,   18,   23,
     QMetaType::Void,
     QMetaType::Void, QMetaType::QJsonObject, QMetaType::Int,   28,   29,
-    QMetaType::Void, QMetaType::LongLong, QMetaType::Int,   31,   29,
+    QMetaType::Void, QMetaType::Int, QMetaType::Int,   31,   29,
     QMetaType::Void, QMetaType::QJsonObject,   33,
     QMetaType::Void,
 
@@ -182,7 +182,7 @@ void QmlMediator::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         case 14: _t->sendFillInTheBlanksQuestion((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< QString(*)>(_a[2]))); break;
         case 15: _t->getQuestionsByTcp(); break;
         case 16: _t->updateQuestion((*reinterpret_cast< QJsonObject(*)>(_a[1])),(*reinterpret_cast< qint32(*)>(_a[2]))); break;
-        case 17: _t->deleteQuestion((*reinterpret_cast< qint64(*)>(_a[1])),(*reinterpret_cast< qint32(*)>(_a[2]))); break;
+        case 17: _t->deleteQuestion((*reinterpret_cast< qint32(*)>(_a[1])),(*reinterpret_cast< qint32(*)>(_a[2]))); break;
         case 18: _t->testModel((*reinterpret_cast< QJsonObject(*)>(_a[1]))); break;
         case 19: _t->commitQuestons(); break;
         default: ;

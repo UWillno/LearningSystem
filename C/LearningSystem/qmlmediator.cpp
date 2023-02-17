@@ -141,7 +141,7 @@ void QmlMediator::updateQuestion(QJsonObject json, qint32 type)
 }
 
 
-void QmlMediator::deleteQuestion(qint64 id, qint32 type)
+void QmlMediator::deleteQuestion(qint32 id, qint32 type)
 {
     QFuture<bool> future = QtConcurrent::run(&Singleton<TcpClient>::GetInstance(),&TcpClient::deleteQuestion,id,type);
     if(future.result()){

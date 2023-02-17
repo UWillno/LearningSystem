@@ -8,7 +8,8 @@ import "template"
 import "loader"
 
 Rectangle{
-    id: root
+//    id: root
+    id:questionRect
     property var model
     property int type : 0
     property alias question: questionInput.text

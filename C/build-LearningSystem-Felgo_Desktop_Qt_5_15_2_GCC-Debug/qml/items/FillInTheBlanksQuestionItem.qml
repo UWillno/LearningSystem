@@ -5,11 +5,14 @@ import "template"
 import "loader"
 //Item {
 Rectangle {
+    id: questionRect
+
     property int blankcount: 0
     property var model
     property int type : 2
     property var blanks : new Array
     property alias question: questionInput.text
+    property bool ismodify: true
 
     function clear(){
         questionInput.text=""
@@ -20,9 +23,16 @@ Rectangle {
         blankcount = 0
     }
     function isEmpty(){
-        if(questionInput.text.trim() === "" && blankcount!=0 )
-            return true
-        return false
+        if(questionInput.text.trim() != "" && blankcount!=0 )
+        {
+            for(var i=0;i < blankcount;i++){
+                console.log(blanks[i].text)
+                if(!blanks[i].text) return true
+            }
+            return false
+        }
+
+        return true
     }
     Column {
         id: column
@@ -46,7 +56,8 @@ Rectangle {
                     if(blankcount != 5){
                         blankcount++;
                         createblank();
-                        questionInput.text += "____"
+                        if(ismodify)
+                            questionInput.text += "____"
                     }else{
                         toastManager.show("填空题至多5个空",1000);
                     }
@@ -100,7 +111,7 @@ Rectangle {
 
         console.log(index)
         //        questionInput.text = questionInput.text.splice(index,4)
-//        questionInput.text.replace()
+        //        questionInput.text.replace()
         blank.destroy()
         blankcount--
     }
@@ -110,6 +121,7 @@ Rectangle {
     Component.onCompleted: {
         console.log(model)
         if(model){
+            ismodify = false
             questionInput.text = model.question
             model.answer
             var list =JSON.parse(model.answer)
@@ -119,6 +131,7 @@ Rectangle {
                 console.log(blanks[i])
                 blanks[i].text = list[i]
             }
+            ismodify = true
             btnSubmit.visible = false
             gridModify.visible = true
         }

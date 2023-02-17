@@ -101,7 +101,7 @@ bool TcpClient::insertQuestion(QStringList *list, qint32 type)
     return false;
 }
 
-bool TcpClient::deleteQuestion(qint64 &id, qint32 &type)
+bool TcpClient::deleteQuestion(qint32 &id, qint32 &type)
 {
     //    QByteArray data;
     //    qInfo() << "TCP开始删除";
@@ -135,7 +135,8 @@ bool TcpClient::updateQuestion(QJsonObject &json, qint32 &type)
     switch (type) {
     case choice:{
         stream << updateC;
-        stream << QString::number(json["id"].toDouble()).toLongLong();
+        //        stream << QString::number(json["id"].toDouble()).toLongLong();
+        stream << json["id"].toInt();
         stream << json["question"].toString() << json["option1"].toString()
                 <<json["option2"].toString() << json["option3"].toString()
                 << json["option4"].toString() << json["answer"].toString();
@@ -144,7 +145,8 @@ bool TcpClient::updateQuestion(QJsonObject &json, qint32 &type)
     }
     case trueOrFalse:{
         stream << updateT;
-        stream << QString::number(json["id"].toDouble()).toLongLong();
+        //        stream << QString::number(json["id"].toDouble()).toLongLong();
+        stream << json["id"].toInt();
         stream << json["question"].toString();
         qInfo() << "bool?" <<  json["answer"].toBool();
         stream <<  json["answer"].toBool();
@@ -153,7 +155,8 @@ bool TcpClient::updateQuestion(QJsonObject &json, qint32 &type)
     }
     case fill:{
         stream << updateF;
-        stream << QString::number(json["id"].toDouble()).toLongLong();
+        //        stream << QString::number(json["id"].toDouble()).toLongLong();
+        stream << json["id"].toInt();
         stream << json["question"].toString();
         stream <<  json["answer"].toString();
         break;

@@ -33,7 +33,7 @@ signals:
 public slots:
     bool toLogin(QStringList *list);
     bool insertQuestion(QStringList *list,qint32 type);
-    bool deleteQuestion(qint64 &id,qint32 &type);
+    bool deleteQuestion(qint32 &id,qint32 &type);
     bool updateQuestion(QJsonObject &json, qint32 &type);
     bool commmitQuestions();
 
