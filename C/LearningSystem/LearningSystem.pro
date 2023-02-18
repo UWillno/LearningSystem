@@ -41,6 +41,7 @@ DEPLOYMENTFOLDERS += assetsFolder
 SOURCES += main.cpp \
     documentparser.cpp \
     qmlmediator.cpp \
+    settings.cpp \
     tcpclient.cpp
 
 
@@ -82,10 +83,12 @@ DISTFILES += \
     qml/logic/UserLogic.qml \
     qml/pages/AdministratorPage.qml \
     qml/pages/IndexPage.qml \
-    qml/pages/QuestionPage.qml
+    qml/pages/QuestionPage.qml \
+    qml/pages/XxtWebPage.qml
 
 HEADERS += \
     documentparser.h \
     qmlmediator.h \
+    settings.h \
     singleton.h \
     tcpclient.h

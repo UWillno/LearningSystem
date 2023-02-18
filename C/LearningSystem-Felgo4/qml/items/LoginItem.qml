@@ -1,8 +1,9 @@
-﻿import QtQuick 2.0
-import Felgo 3.0
+﻿import QtQuick
+import Felgo
 import "../pages"
 import  "./toast"
 //import "./loader"
+
 Rectangle {
     id: root
     anchors.horizontalCenter: parent.horizontalCenter
@@ -51,9 +52,11 @@ Rectangle {
                 }
                 onPressAndHold: {
                     console.log("hold")
-                    dialogtitle = "管理员登陆"
-                    //                    loginDialog.isAdmin = true
-                    loginDialog.open()
+                    var adminComponent = Qt.createComponent("../pages/AdministratorPage.qml").createObject()
+                    rootStack.push(adminComponent)
+//                    dialogtitle = "管理员登陆"
+
+//                    loginDialog.open()
                 }
 
             }
@@ -100,6 +103,8 @@ Rectangle {
         extractAsPackage: false
         //        source: "http://p.ananas.chaoxing.com/star3/80_80c/09d05f59e53250e3e680aa96881d4b9d.png"
         source: "http://photo.chaoxing.com/p/"+settings.cxid+"_80"
+
+        // @disable-check M16
         Component.onCompleted: {
             console.log(source)
             download()
@@ -195,6 +200,7 @@ Rectangle {
     }
 
 
+    // @disable-check M16
     Component.onCompleted: {
         if(settings.phone && settings.password ){
             userLogic.login(settings.phone,settings.password)

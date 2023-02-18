@@ -2,10 +2,9 @@
 #include <FelgoApplication>
 
 #include <QQmlApplicationEngine>
-#include "qmlmediator.h"
-#include <QQmlContext>
+#include <QtWebEngineQuick>
+#include "assets/qmlmediator.h"
 
-//#include <QtWebEngine>
 // uncomment this line to add the Live Client Module and use live reloading with your custom C++ code
 //#include <FelgoLiveClient>
 
@@ -14,13 +13,12 @@ int main(int argc, char *argv[])
 
     QApplication app(argc, argv);
 
+
     app.setOrganizationName("UWillno");
     app.setOrganizationDomain("uwillno.icu");
     app.setApplicationName("Learning System");
-//    QtWebEngine::initialize();
-//    QCoreApplication::setAttribute(Qt::AA_UseOpenGLES);
 
-
+    QtWebEngineQuick::initialize();
 
     FelgoApplication felgo;
 
@@ -37,14 +35,13 @@ int main(int argc, char *argv[])
     // use this during development
     // for PUBLISHING, use the entry point below
     felgo.setMainQmlFileName(QStringLiteral("qml/Main.qml"));
-    QmlMediator qmlMediator;
 
     // use this instead of the above call to avoid deployment of the qml files and compile them into the binary with qt's resource system qrc
     // this is the preferred deployment option for publishing games to the app stores, because then your qml files and js files are protected
     // to avoid deployment of your qml files and images, also comment the DEPLOYMENTFOLDERS command in the .pro file
     // also see the .pro file for more details
     //felgo.setMainQmlFileName(QStringLiteral("qrc:/qml/Main.qml"));
-
+    QmlMediator qmlMediator;
     engine.load(QUrl(felgo.mainQmlFileName()));
     engine.rootContext()->setContextProperty("qm",&qmlMediator);
     // to start your project as Live Client, comment (remove) the lines "felgo.setMainQmlFileName ..." & "engine.load ...",

@@ -1,13 +1,11 @@
-import QtQuick 2.0
-import Felgo 3.0
+import QtQuick
+import Felgo
+
 
 Item {
 
     id: logic
 
-
-    signal loginSucceed;
-    signal loginFailed;
     //    property var chaoxingLogin: value
 
 //    property string infoApi : "http://passport2.chaoxing.com/mooc/accountManage"

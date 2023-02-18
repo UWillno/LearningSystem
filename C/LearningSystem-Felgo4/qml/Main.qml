@@ -1,10 +1,12 @@
-﻿import Felgo 3.0
-import QtQuick 2.0
+﻿import Felgo
+import QtQuick
 import "pages"
 import "items/toast"
 import "logic"
 import "items/loader"
-import Qt.labs.settings 1.1
+import Qt.labs.settings
+import QtQuick.Controls
+
 App {
 
     Settings {
@@ -32,10 +34,11 @@ App {
     NavigationStack {
         id:rootStack
         anchors.fill: parent
-        splitView: tablet && landscape
+        splitView: tablet
 
         IndexPage {
             id: indexPage
+//            anchors.fill: parent
             //            anchors.horizontalCenter: parent.horizontalCenter
         }
 

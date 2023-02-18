@@ -1,7 +1,9 @@
-﻿import QtQuick 2.0
-import Felgo 3.0
+﻿import QtQuick
+import Felgo
 import "../items"
-Page {
+
+
+AppPage {
 
     id: indexPage
     title: "Learning System"
@@ -12,7 +14,6 @@ Page {
             detailText: "Add Question",
             //            icon: IconType.apple
         },
-
         {
             text: "查看题目",
             detailText: "Select & Update Questions",
@@ -30,14 +31,12 @@ Page {
             anchors.fill: parent
             anchors.topMargin: dp(10)
             LoginItem {
-
-
                 id:logitem
-
             }
 
             AppListView {
                 model:userops
+                z: -1
                 delegate: SimpleRow{
 
                     onSelected: {
