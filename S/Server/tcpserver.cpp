@@ -22,7 +22,9 @@ TcpServer::~TcpServer()
 void TcpServer::incomingConnection(qintptr handle)
 {
     qInfo() << "incoming";
-    QFuture<void> future =QtConcurrent::run(this,&TcpServer::handleClient,handle);
+    QFuture<void> future = QtConcurrent::run([this](qintptr handle){handleClient(handle);},handle);
+    //qt6不再支持传递成员函数指针和信号 下面是qt5写法 无法编译
+    //    QFuture<void> future =QtConcurrent::run(this,&TcpServer::handleClient,handle);
 }
 
 
@@ -110,7 +112,7 @@ void TcpServer::toLogin(QStringList *list,QTcpSocket *s)
     s->waitForBytesWritten();
 }
 
-void TcpServer::handleClient(qintptr handle)
+void TcpServer::handleClient(qintptr &handle)
 {
     QScopedPointer<QTcpSocket> p(new QTcpSocket());
     p->setSocketDescriptor(handle);
@@ -131,7 +133,7 @@ void TcpServer::handleClient(qintptr handle)
     }
     //    try {
     stream >> currentTask;
-    qInfo() << currentTask;
+    qInfo() << "current:" <<  currentTask;
     //    } catch (...) {
     //        qInfo() << "error";
     //        p->close();

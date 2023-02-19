@@ -1,0 +1,89 @@
+{
+	"backtrace" : 6,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"_qt_internal_expose_source_file_to_ide",
+			"_qt_internal_process_resource",
+			"qt6_add_resources",
+			"qt_add_resources",
+			"felgo_configure_executable"
+		],
+		"files" : 
+		[
+			"/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6Core/Qt6CoreMacros.cmake",
+			"/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Felgo/FelgoConfig.cmake",
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 2
+			},
+			{
+				"command" : 5,
+				"file" : 2,
+				"line" : 43,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 201,
+				"parent" : 1
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 394,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 342,
+				"parent" : 3
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 1727,
+				"parent" : 4
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 1584,
+				"parent" : 5
+			}
+		]
+	},
+	"id" : "Felgo_other_files::@6890427a1f51a3e7e1df",
+	"name" : "Felgo_other_files",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 6,
+			"path" : "/home/uwillno/Felgo/Felgo/felgo_license.key",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "UTILITY"
+}
