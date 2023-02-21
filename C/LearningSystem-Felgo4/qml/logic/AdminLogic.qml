@@ -64,6 +64,10 @@ Item {
         qm.commitQuestons()
     }
 
+    function selectPosts(){
+        qm.selectPosts()
+    }
+
     Connections {
 //        id:con
         target: qm

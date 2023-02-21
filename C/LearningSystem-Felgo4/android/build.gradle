@@ -24,39 +24,30 @@ dependencies {
 
     implementation "androidx.appcompat:appcompat:1.2.0"
 
-
+    implementation 'com.felgo.plugins:plugin-amplitude:4+'
+    implementation 'com.felgo.plugins:plugin-wikitude:4+'
 }
 
 android {
-    /*******************************************************
-     * The following variables:
-     * - androidBuildToolsVersion,
-     * - androidCompileSdkVersion
-     * - qt5AndroidDir - holds the path to qt android files
-     *                   needed to build any Qt application
-     *                   on Android.
-     *
-     * are defined in gradle.properties file. This file is
-     * updated by QtCreator and androiddeployqt tools.
-     * Changing them manually might break the compilation!
-     *******************************************************/
-
     compileSdkVersion    androidCompileSdkVersion.toInteger()
     buildToolsVersion    androidBuildToolsVersion
 
     compileOptions {
-      sourceCompatibility 1.8
-      targetCompatibility 1.8
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
     }
 
     defaultConfig {
-      multiDexEnabled true
-      targetSdkVersion   androidCompileSdkVersion.toInteger()
-      applicationId    = productIdentifier
-      versionCode      = productVersionCode.toInteger()
-      versionName      = productVersionName
-      minSdkVersion    = project.hasProperty("qtMinSdkVersion") ? qtMinSdkVersion.toInteger() : 23
+        multiDexEnabled true
+        targetSdkVersion   androidCompileSdkVersion.toInteger()
+        applicationId    = productIdentifier
+        versionCode      = productVersionCode.toInteger()
+        versionName      = productVersionName
+        minSdkVersion    = project.hasProperty("qtMinSdkVersion") ? qtMinSdkVersion.toInteger() : 23
 
+        ndk {
+            abiFilters = targetArchitecture.split(' |;').collect{it as String}
+        }
     }
 
     sourceSets {
@@ -69,7 +60,7 @@ android {
             renderscript.srcDirs = ['src']
             assets.srcDirs = ['assets']
             jniLibs.srcDirs = ['libs']
-       }
+        }
     }
 
     lintOptions {
@@ -82,4 +73,3 @@ android {
         options.incremental = true
     }
 }
-

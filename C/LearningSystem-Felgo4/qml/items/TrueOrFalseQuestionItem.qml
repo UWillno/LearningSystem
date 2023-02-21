@@ -34,6 +34,7 @@ Rectangle {
             buttons:[btnTrue,btnFalse]
         }
         Row{
+            anchors.horizontalCenter: parent.horizontalCenter
             AppRadio {
                 id: btnTrue
                 text: "正确"

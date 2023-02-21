@@ -20,6 +20,10 @@ AppPage {
         {
             text: "题库更新",
             detailText: "Commit Questions to Users",
+        },
+        {
+            text: "删帖/删评",
+            detailText: "Delete Post Or Comment",
         }
     ]
 
@@ -33,6 +37,9 @@ AppPage {
                             createQuestionPage(index)
                             if(index === 2)
                             adminLogic.commitQuestions()
+                            if(index === 3)
+                            createPostsPage()
+
                             //                switch(index){
                             //                case 0:
                             ////                    questionPage.qP.state=0
@@ -52,6 +59,16 @@ AppPage {
         if(component.status === Component.Ready){
             console.log("here")
             var obj =  component.createObject(parent,{state: index})
+            rootStack.push(obj)
+        }
+    }
+
+    function createPostsPage(){
+         var component = Qt.createComponent("PostsPage.qml");
+         adminLogic.selectPosts()
+        if(component.status === Component.Ready){
+            console.log("here")
+            var obj =  component.createObject(parent)
             rootStack.push(obj)
         }
     }

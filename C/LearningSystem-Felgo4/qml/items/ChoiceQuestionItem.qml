@@ -48,22 +48,22 @@ Rectangle{
 
         AppTextInput {
             id: option1Input
-            width: dp(200)
+            width: parent.width
             placeholderText: "选项A"
         }
         AppTextInput {
             id: option2Input
-            width: dp(200)
+            width: parent.width
             placeholderText: "选项B"
         }
         AppTextInput {
             id: option3Input
-            width: dp(200)
+            width: parent.width
             placeholderText: "选项C"
         }
         AppTextInput {
             id: option4Input
-            width: dp(200)
+            width: parent.width
             placeholderText: "选项D"
         }
 
@@ -78,7 +78,7 @@ Rectangle{
             ComboBox {
                 id:answerComboBox
                 model:['A','B','C','D']
-                height: apptext.height
+                height: apptext.height + dp(5)
             }
         }
 

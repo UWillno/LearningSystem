@@ -1,10 +1,13 @@
 #include <QApplication>
 #include <FelgoApplication>
-
+//#include <QtCore>
 #include <QQmlApplicationEngine>
-#include <QtWebEngineQuick>
-#include "assets/qmlmediator.h"
-#include "assets/settings.h"
+//#include <QtWebEngineQuick>
+#include <QtQml>
+//#include <QQmlContext>
+#include "qmlmediator.h"
+#include "settings.h"
+#include <QtWebView>
 
 // uncomment this line to add the Live Client Module and use live reloading with your custom C++ code
 //#include <FelgoLiveClient>
@@ -18,20 +21,24 @@ int main(int argc, char *argv[])
     app.setOrganizationDomain("uwillno.icu");
     app.setApplicationName("Learning System-Felgo4");
 
-    QtWebEngineQuick::initialize();
+    //    QtWebEngineQuick::initialize();
 
     FelgoApplication felgo;
 
     // Use platform-specific fonts instead of Felgo's default font
     felgo.setPreservePlatformFonts(true);
-
+    QtWebView::initialize();
     QQmlApplicationEngine engine;
+
+
+
     QmlMediator qmlMediator;
     Settings settings;
     engine.rootContext()->setContextProperty("qm",&qmlMediator);
     engine.rootContext()->setContextProperty("ss",&settings);
 
-
+    //    qmlRegisterType<QmlMediator>("Uwillno.qm",1,0,"QmlMediator");
+    //    qmlRegisterType<Settings>("UWillno.ss",1,0,"Settings");
     felgo.initialize(&engine);
 
     // Set an optional license key from project file
@@ -53,6 +60,7 @@ int main(int argc, char *argv[])
     // to start your project as Live Client, comment (remove) the lines "felgo.setMainQmlFileName ..." & "engine.load ...",
     // and uncomment the line below
     //FelgoLiveClient client (&engine);
+
 
     return app.exec();
 }

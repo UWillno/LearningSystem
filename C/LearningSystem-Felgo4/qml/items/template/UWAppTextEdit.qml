@@ -7,6 +7,7 @@ Rectangle {
     property alias text: appTextEdit.text
     property alias  placeholderText: appTextEdit.placeholderText
     property alias appTextEdit: appTextEdit
+    property alias textFormat :  appTextEdit.textFormat
     //    property alias  cursorPosition
     width: parent.width
     height: dp(100)
@@ -28,6 +29,7 @@ Rectangle {
             flickable: flick
             cursorInViewBottomPadding: dp(25)
             cursorInViewTopPadding: dp(25)
+//            cursorVisible: false
             //            cursorPosition: text.length
             //            cursorPosition
         }

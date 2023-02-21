@@ -6,6 +6,9 @@ import "logic"
 import "items/loader"
 import QtQuick.Controls
 
+
+
+
 App {
 
 
@@ -43,7 +46,9 @@ App {
                     //            anchors.horizontalCenter: parent.horizontalCenter
                 }
 
+
             }
+
 
         }
 

@@ -1,0 +1,49 @@
+{
+	"backtrace" : 3,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"_qt_internal_collect_apk_dependencies"
+		],
+		"files" : 
+		[
+			"/home/uwillno/Felgo/Felgo/android_arm64_v8a/lib/cmake/Qt6Core/Qt6AndroidMacros.cmake",
+			"/home/uwillno/Felgo/Felgo/android_arm64_v8a/lib/cmake/Qt6Core/Qt6AndroidMacros.cmake:573:EVAL",
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 2
+			},
+			{
+				"file" : 2,
+				"line" : -1,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 1,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 627,
+				"parent" : 2
+			}
+		]
+	},
+	"id" : "_qt_internal_apk_dependencies::@6890427a1f51a3e7e1df",
+	"name" : "_qt_internal_apk_dependencies",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

@@ -7,20 +7,16 @@ AppPage {
 
     title: "New Page"
 
-//    WebView {
-//        id:webview
-//        anchors.fill: parent
-
-//        url:  "https://www.baidu.com"
-////        Component.onCompleted: {
-////            webview.url="https://www.baidu.com"
-////        }
-//    }
-
-//    AppListView {
 
 
-//    }
+    WebView {
+        anchors.fill:parnt
+        url:"https://mooc1.chaoxing.com/course/phone/courselisthead?passed=1"
+
+
+
+//        cookieAdded:
+    }
 
 
 }

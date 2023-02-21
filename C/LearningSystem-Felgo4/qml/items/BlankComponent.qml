@@ -16,6 +16,7 @@ Rectangle {
     signal deleteThis(var obj)
 
     Row {
+        anchors.horizontalCenter: parent.horizontalCenter
         AppTextInput {
             id:blankInput
             width: dp(150)

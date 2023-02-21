@@ -6,7 +6,8 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(Felgo REQUIRED)
-find_package(Qt6 REQUIRED COMPONENTS Concurrent Network WebEngineQuick)
+#find_package(Qt6 REQUIRED COMPONENTS Concurrent Network WebEngineQuick)
+find_package(Qt6 REQUIRED COMPONENTS Concurrent Network Qml WebView)
 
 # Project identifier and version
 # More information: https://felgo.com/doc/felgo-publishing/#project-configuration
@@ -36,6 +37,14 @@ list(REMOVE_ITEM AssetsFiles ${QmlFiles})
 
 qt_add_executable(appLearningSystem-Felgo4
     main.cpp
+    singleton.h
+    settings.h
+    settings.cpp
+    qmlmediator.h
+    tcpclient.h
+    tcpclient.cpp
+    qmlmediator.cpp
+
     ${QmlFiles}
     ${AssetsFiles}
 )
@@ -50,9 +59,9 @@ deploy_resources("${QmlFiles};${AssetsFiles}")
 qt_add_qml_module(appLearningSystem-Felgo4
     URI LearningSystem-Felgo4
     VERSION 1.0
-# uncomment for publishing:
-#    QML_FILES ${QmlFiles}
-#    RESOURCES ${AssetsFiles}
+    # uncomment for publishing:
+    #    QML_FILES ${QmlFiles}
+    #    RESOURCES ${AssetsFiles}
     NO_RESOURCE_TARGET_PATH
 )
 
@@ -69,7 +78,8 @@ target_compile_definitions(appLearningSystem-Felgo4
     PRIVATE $<$<OR:$<CONFIG:Debug>,$<CONFIG:RelWithDebInfo>>:QT_QML_DEBUG>)
 
 target_link_libraries(appLearningSystem-Felgo4 PRIVATE Felgo)
-target_link_libraries(appLearningSystem-Felgo4 PRIVATE Qt6::Concurrent Qt6::Network Qt6::WebEngineQuick)
+#target_link_libraries(appLearningSystem-Felgo4 PRIVATE Qt6::Concurrent Qt6::Network Qt6::WebEngineQuick)
+target_link_libraries(appLearningSystem-Felgo4 PRIVATE Qt6::Concurrent Qt6::Network Qt6::Qml Qt6::WebView)
 # uncomment this line to add the Live Client Module and use live reloading with your custom C++ code
 # for the remaining steps to build a custom Live Code Reload app see here: https://felgo.com/custom-code-reload-app/
 #find_package(FelgoLive REQUIRED)

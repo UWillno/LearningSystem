@@ -7,7 +7,7 @@ import QtQuick.Controls
 Rectangle {
     id: root
     anchors.horizontalCenter: parent.horizontalCenter
-    color: "#FFFFF5"
+    //    color: "#FFFFF5"
     implicitWidth: parent.width - dp(20)
     implicitHeight: roundedImage.height + dp(20)
     radius: dp(20)
@@ -19,18 +19,18 @@ Rectangle {
     property int  times: 0
 
     Row {
+        spacing: dp(5)
         //        anchors.horizontalCenter: parent.horizontalCenter
         anchors.centerIn: parent
         RoundedImage {
             id: roundedImage
-            width: root.width - simpleInfo.width - dp(5)
+            //            width: root.width - simpleInfo.width - dp(5)
+            width: dp(100)
             height: width
+
             fillMode: Image.PreserveAspectCrop
             anchors.verticalCenter: parent.verticalCenter
             source: userImageResource.available ? userImageResource.storagePath :"http://q1.qlogo.cn/g?b=qq&nk=44910244&s=640"
-            //            source: "http://192.168.1.12/fromtwitter14.jpg"
-            //            source: "http://photo.chaoxing.com/p/239158049_80"
-            //            source:"/srv/http/arch.png"
             radius: width/2
 
 
@@ -112,14 +112,15 @@ Rectangle {
                                "content-type":"application/x-www-form-urlencoded"
                            })
         extractAsPackage: false
+        source:  ss.cxid ? "http://photo.chaoxing.com/p/"+ss.cxid+"_80" : "http://photo.chaoxing.com/photo_80.jpg"
 
 
         Component.onCompleted: {
-            if(ss.cxid){
-                source = "http://photo.chaoxing.com/p/"+ss.cxid+"_80";
-            }else {
-                source = "http://photo.chaoxing.com/photo_80.jpg";
-            }
+            //            if(ss.cxid){
+            //                source = "http://photo.chaoxing.com/p/"+ss.cxid+"_80";
+            //            }else {
+            //                source = "http://photo.chaoxing.com/photo_80.jpg";
+            //            }
 
             console.log(source)
             download()
@@ -212,6 +213,7 @@ Rectangle {
             cxidText.visible = true
             nameText.visible = true
             phoneText.visible = true
+
         }
         onNewUserLogined: {
             console.log("创建用户目录")
@@ -223,9 +225,15 @@ Rectangle {
 
 
     Component.onCompleted: {
-        console.log("asdasdasd")
+                console.log("asdasdasd")
         if(ss.phone && ss.password ){
-            userLogic.login(ss.phone,ss.password)
+            //            userLogic.login(ss.phone,ss.password)
+//            userLogic.userLoginSucceed()
+            currentstatus = "超星模式"
+            console.log(ss.cxid)
+            cxidText.visible = true
+            nameText.visible = true
+            phoneText.visible = true
         }
     }
 
