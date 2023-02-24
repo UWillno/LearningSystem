@@ -99,6 +99,18 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/qml/items" TYPE FILE FILES "/home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/qml/items/PostItem.qml")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/qml/items" TYPE FILE FILES "/home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/qml/items/PostRow.qml")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/qml/items" TYPE FILE FILES "/home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/qml/items/PostsPage.qml")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/qml/items" TYPE FILE FILES "/home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/qml/items/SelectSwipeView.qml")
 endif()
 
@@ -159,6 +171,18 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/qml/pages" TYPE FILE FILES "/home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/qml/pages/PdfPage.qml")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/qml/pages" TYPE FILE FILES "/home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/qml/pages/PostingPage.qml")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/qml/pages" TYPE FILE FILES "/home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/qml/pages/PostsPage.qml")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/qml/pages" TYPE FILE FILES "/home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/qml/pages/PracticePage.qml")
 endif()
 
@@ -176,34 +200,6 @@ endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/assets" TYPE FILE FILES "/home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/assets/felgo-logo.png")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/assets" TYPE FILE FILES "/home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/assets/qmlmediator.cpp")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/assets" TYPE FILE FILES "/home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/assets/qmlmediator.h")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/assets" TYPE FILE FILES "/home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/assets/settings.cpp")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/assets" TYPE FILE FILES "/home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/assets/settings.h")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/assets" TYPE FILE FILES "/home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/assets/singleton.h")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/assets" TYPE FILE FILES "/home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/assets/tcpclient.cpp")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/assets" TYPE FILE FILES "/home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/assets/tcpclient.h")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)

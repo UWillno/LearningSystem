@@ -3790,6 +3790,18 @@
 			"value" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6Core"
 		},
 		{
+			"name" : "Qt6HttpServer_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "The directory containing a CMake configuration file for Qt6HttpServer."
+				}
+			],
+			"type" : "PATH",
+			"value" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6HttpServer"
+		},
+		{
 			"name" : "Qt6Network_DIR",
 			"properties" : 
 			[
@@ -3812,6 +3824,18 @@
 			],
 			"type" : "PATH",
 			"value" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6Sql"
+		},
+		{
+			"name" : "Qt6WebSockets_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "The directory containing a CMake configuration file for Qt6WebSockets."
+				}
+			],
+			"type" : "PATH",
+			"value" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6WebSockets"
 		},
 		{
 			"name" : "Qt6_DIR",

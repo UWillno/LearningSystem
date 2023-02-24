@@ -6,8 +6,10 @@ import "logic"
 import "items/loader"
 import QtQuick.Controls
 
-App {
 
+
+
+App {
 
     id:main
     dpScale: 1
@@ -42,8 +44,8 @@ App {
                     //            anchors.fill: parent
                     //            anchors.horizontalCenter: parent.horizontalCenter
                 }
-
             }
+
 
         }
 
@@ -107,6 +109,9 @@ App {
     }
     UserLogic {
         id: userLogic
+    }
+    Logic {
+       id:logic
     }
 
     //    property LoaderItem loaderItem: loaderItem

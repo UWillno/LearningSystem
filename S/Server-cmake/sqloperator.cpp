@@ -351,3 +351,130 @@ void SqlOperator::commitQuestions()
     //    if(file.open(QIODevice::WriteOnly | QIODevice::))
 
 }
+
+bool SqlOperator::submitPost(QString &title, QString &text, qint32 &cxid, QString &username,qint32 &type)
+{
+    if(cxid==0) return false;
+    QSqlQuery query(m_db);
+    switch (type) {
+    case 0:{
+        query.prepare("INSERT INTO post VALUES(NULL,:cxid,:username,:title,:text,NOW(),0);");
+
+        break;
+    }
+    case 1:{
+        query.prepare("INSERT INTO post VALUES(NULL,:cxid,:username,:title,:text,NOW(),1);");
+
+        break;
+    }
+    case 2:{
+        query.prepare("INSERT INTO post VALUES(NULL,:cxid,:username,:title,:text,NOW(),2);");
+
+        break;
+    }
+    default:{
+        return false;
+        break;
+    }
+    }
+    query.bindValue(":cxid",cxid);
+    query.bindValue(":username",username);
+    query.bindValue(":title",title);
+    query.bindValue(":text",text);
+    query.exec();
+
+    return commitDB(&query);
+}
+
+QJsonArray SqlOperator::selectPosts()
+{
+    QJsonArray json;
+    QSqlQuery query(m_db);
+    query.prepare("select * from post;");
+    query.exec();
+
+    while(query.next()){
+        Post post;
+        QJsonObject object;
+        post.id = query.value(0).toInt();
+
+        post.cxid = query.value(1).toInt();
+        post.username= query.value(2).toString();
+        post.title= query.value(3).toString();
+        post.text= query.value(4).toString();
+        post.datetime= query.value(5).toDateTime();
+        post.type= query.value(6).toInt();
+        //        post.comments;
+
+        QFuture<QJsonArray> future = QtConcurrent::run([=](qint32 postId ){return selectComments(postId);},post.id);
+        post.comments = future.result();
+        //        selectComments(id);
+
+        object.insert("id",post.id);
+        object.insert("cxid",post.cxid);
+        object.insert("username",post.username);
+        object.insert("title",post.title);
+        object.insert("text",post.text);
+        object.insert("datetime",post.datetime.toString("dd.MM.yyyy"));
+        object.insert("type",post.type);
+        object.insert("comments",post.comments);
+        json.append(object);
+    }
+    qInfo() << json;
+    return json;
+}
+
+QJsonArray SqlOperator::selectComments(qint32 &postId)
+{
+    QJsonArray json;
+    qInfo() << "select回帖";
+    qInfo() << postId;
+    QSqlQuery query(m_db);
+    query.prepare("select * from comment where post_id =:postId;");
+    query.bindValue(":postId",postId);
+    query.exec();
+    while(query.next()){
+        Comment comment;
+        QJsonObject object;
+        comment.id = query.value(0).toInt();
+        comment.postId = query.value(1).toInt();
+        comment.cxid = query.value(2).toInt();
+        comment.username = query.value(3).toString();
+        comment.text = query.value(4).toString();
+        comment.datetime = query.value(5).toDateTime();
+        //        qInfo() << query.value(0);
+        object.insert("id",comment.id);
+        object.insert("postId",comment.postId);
+        object.insert("cxid",comment.cxid);
+        object.insert("username",comment.username);
+        object.insert("text",comment.text);
+        object.insert("datetime",comment.datetime.toString("dd.MM.yyyy"));
+        json.append(object);
+    }
+    qInfo() << json;
+    //    return json;
+    return json;
+}
+
+bool SqlOperator::deletePost(qint32 &id)
+{
+    QSqlQuery query(m_db);
+    query.prepare("DELETE FROM post WHERE id = :id;");
+    query.bindValue(":id",id);
+    query.exec();
+    if(commitDB(&query)){
+        return deleteComments(id);
+    }
+    return false;
+
+
+}
+
+bool SqlOperator::deleteComments(qint32 &id)
+{
+    QSqlQuery query(m_db);
+    query.prepare("DELETE FROM comment WHERE post_id = :id;");
+    query.bindValue(":id",id);
+    query.exec();
+    return commitDB(&query);
+}

@@ -1,0 +1,151 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-49bc8e65482fef657edf.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "LearningSystem-Felgo4",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Felgo_other_files::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Felgo_other_files-Debug-5c547335feec670a677b.json",
+					"name" : "Felgo_other_files",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Felgo_resources_1::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Felgo_resources_1-Debug-da8bffa6faf599e17436.json",
+					"name" : "Felgo_resources_1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Felgo_resources_1_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Felgo_resources_1_autogen-Debug-426b72aa2e55491a3a32.json",
+					"name" : "Felgo_resources_1_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Felgo_resources_1_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Felgo_resources_1_autogen_timestamp_deps-Debug-866522db589fa3f4f160.json",
+					"name" : "Felgo_resources_1_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmltyperegistrations::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmltyperegistrations-Debug-481a6fa4da9f93ae57b6.json",
+					"name" : "all_qmltyperegistrations",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appLearningSystem-Felgo4::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appLearningSystem-Felgo4-Debug-e9e342d687fd757da2bb.json",
+					"name" : "appLearningSystem-Felgo4",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appLearningSystem-Felgo4_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appLearningSystem-Felgo4_autogen-Debug-83d1130c8426446747b0.json",
+					"name" : "appLearningSystem-Felgo4_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appLearningSystem-Felgo4_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appLearningSystem-Felgo4_autogen_timestamp_deps-Debug-91c407f5668eab6f886e.json",
+					"name" : "appLearningSystem-Felgo4_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appLearningSystem-Felgo4_other_files::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appLearningSystem-Felgo4_other_files-Debug-1034ddb67ae037afa570.json",
+					"name" : "appLearningSystem-Felgo4_other_files",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appLearningSystem-Felgo4_qmlimportscan::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appLearningSystem-Felgo4_qmlimportscan-Debug-2a1d50ee7517dcc161b6.json",
+					"name" : "appLearningSystem-Felgo4_qmlimportscan",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appLearningSystem-Felgo4_qmltyperegistration::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appLearningSystem-Felgo4_qmltyperegistration-Debug-1bd23bdec5eb3c0d690b.json",
+					"name" : "appLearningSystem-Felgo4_qmltyperegistration",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug",
+		"source" : "/home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

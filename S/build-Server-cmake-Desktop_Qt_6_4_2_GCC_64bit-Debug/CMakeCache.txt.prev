@@ -264,11 +264,17 @@ Qt6CoreTools_DIR:PATH=/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6CoreTools
 //The directory containing a CMake configuration file for Qt6Core.
 Qt6Core_DIR:PATH=/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6Core
 
+//The directory containing a CMake configuration file for Qt6HttpServer.
+Qt6HttpServer_DIR:PATH=/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6HttpServer
+
 //The directory containing a CMake configuration file for Qt6Network.
 Qt6Network_DIR:PATH=/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6Network
 
 //The directory containing a CMake configuration file for Qt6Sql.
 Qt6Sql_DIR:PATH=/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6Sql
+
+//The directory containing a CMake configuration file for Qt6WebSockets.
+Qt6WebSockets_DIR:PATH=/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6WebSockets
 
 //The directory containing a CMake configuration file for Qt6.
 Qt6_DIR:PATH=/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6

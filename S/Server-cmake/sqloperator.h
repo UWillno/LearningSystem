@@ -16,6 +16,10 @@
 #include "trueorfalsequestion.h"
 #include "fillintheblanksquestion.h"
 #include <QJsonDocument>
+#include <QtConcurrent>
+#include "post.h"
+#include "comment.h"
+
 class SqlOperator : public QObject
 {
     Q_OBJECT
@@ -48,6 +52,14 @@ public slots:
 
     void commitQuestions();
 
+    bool submitPost(QString &title, QString &text, qint32 &cxid, QString &username,qint32 &type);
+
+    QJsonArray selectPosts();
+    QJsonArray selectComments(qint32 &postId);
+
+    bool deletePost(qint32 &id);
+
+    bool deleteComments(qint32 &id);
 
 private:
     QSqlDatabase m_db;

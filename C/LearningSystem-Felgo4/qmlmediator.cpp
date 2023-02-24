@@ -14,9 +14,11 @@ void QmlMediator::adminLogin(QString username, QString password)
     list.append(username);
     list.append(password);
     //    QFuture<bool> future = QtConcurrent::run(&Singleton<TcpClient>::GetInstance(),&TcpClient::toLogin,&list);
-    auto *p =&Singleton<TcpClient>::GetInstance();
-    QFuture<bool> future = QtConcurrent::run([p](QStringList list){ return p->toLogin(&list);},list);
+    //    auto *p =&Singleton<TcpClient>::GetInstance();
+    //    QFuture<bool> future = QtConcurrent::run([p](QStringList list){ return p->toLogin(&list);},list);
     //    //    bool result = Singleton<TcpClient>::GetInstance().toLogin(&list);
+    QFuture<bool> future = QtConcurrent::run([](QStringList list){ return Singleton<TcpClient>::GetInstance().toLogin(&list);},list);
+
     qInfo() << future.result();
     if(future.result()){
         emit loginSucceeded();

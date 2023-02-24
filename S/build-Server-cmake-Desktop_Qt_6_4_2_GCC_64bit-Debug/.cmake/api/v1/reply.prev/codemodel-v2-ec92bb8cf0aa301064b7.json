@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-cef12b13f3dd79f5137f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Server-cmake",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Server-cmake::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Server-cmake-Debug-efded4b8c159610191cf.json",
+					"name" : "Server-cmake",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Server-cmake_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Server-cmake_autogen-Debug-286e45d882ee1ebded5a.json",
+					"name" : "Server-cmake_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Server-cmake_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Server-cmake_autogen_timestamp_deps-Debug-3ef4d3b372633507908e.json",
+					"name" : "Server-cmake_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/uwillno/Desktop/BYSJ/S/build-Server-cmake-Desktop_Qt_6_4_2_GCC_64bit-Debug",
+		"source" : "/home/uwillno/Desktop/BYSJ/S/Server-cmake"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

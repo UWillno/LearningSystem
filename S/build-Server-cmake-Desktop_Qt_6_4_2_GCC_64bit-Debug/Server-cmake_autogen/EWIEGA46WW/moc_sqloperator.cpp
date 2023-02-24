@@ -26,7 +26,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 namespace {
 struct qt_meta_stringdata_SqlOperator_t {
-    uint offsetsAndSizes[38];
+    uint offsetsAndSizes[60];
     char stringdata0[12];
     char stringdata1[15];
     char stringdata2[1];
@@ -46,6 +46,17 @@ struct qt_meta_stringdata_SqlOperator_t {
     char stringdata16[19];
     char stringdata17[47];
     char stringdata18[16];
+    char stringdata19[11];
+    char stringdata20[9];
+    char stringdata21[6];
+    char stringdata22[5];
+    char stringdata23[5];
+    char stringdata24[9];
+    char stringdata25[12];
+    char stringdata26[15];
+    char stringdata27[7];
+    char stringdata28[11];
+    char stringdata29[15];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_SqlOperator_t::offsetsAndSizes) + ofs), len 
@@ -69,7 +80,18 @@ Q_CONSTINIT static const qt_meta_stringdata_SqlOperator_t qt_meta_stringdata_Sql
         QT_MOC_LITERAL(193, 42),  // "QList<QSharedPointer<TrueOrFa..."
         QT_MOC_LITERAL(236, 18),  // "selectAllFQuestion"
         QT_MOC_LITERAL(255, 46),  // "QList<QSharedPointer<FillInTh..."
-        QT_MOC_LITERAL(302, 15)   // "commitQuestions"
+        QT_MOC_LITERAL(302, 15),  // "commitQuestions"
+        QT_MOC_LITERAL(318, 10),  // "submitPost"
+        QT_MOC_LITERAL(329, 8),  // "QString&"
+        QT_MOC_LITERAL(338, 5),  // "title"
+        QT_MOC_LITERAL(344, 4),  // "text"
+        QT_MOC_LITERAL(349, 4),  // "cxid"
+        QT_MOC_LITERAL(354, 8),  // "username"
+        QT_MOC_LITERAL(363, 11),  // "selectPosts"
+        QT_MOC_LITERAL(375, 14),  // "selectComments"
+        QT_MOC_LITERAL(390, 6),  // "postId"
+        QT_MOC_LITERAL(397, 10),  // "deletePost"
+        QT_MOC_LITERAL(408, 14)   // "deleteComments"
     },
     "SqlOperator",
     "insertQuestion",
@@ -89,7 +111,18 @@ Q_CONSTINIT static const qt_meta_stringdata_SqlOperator_t qt_meta_stringdata_Sql
     "QList<QSharedPointer<TrueOrFalseQuestion>>",
     "selectAllFQuestion",
     "QList<QSharedPointer<FillInTheBlanksQuestion>>",
-    "commitQuestions"
+    "commitQuestions",
+    "submitPost",
+    "QString&",
+    "title",
+    "text",
+    "cxid",
+    "username",
+    "selectPosts",
+    "selectComments",
+    "postId",
+    "deletePost",
+    "deleteComments"
 };
 #undef QT_MOC_LITERAL
 } // unnamed namespace
@@ -100,7 +133,7 @@ Q_CONSTINIT static const uint qt_meta_data_SqlOperator[] = {
       10,       // revision
        0,       // classname
        0,    0, // classinfo
-       8,   14, // methods
+      13,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -108,14 +141,19 @@ Q_CONSTINIT static const uint qt_meta_data_SqlOperator[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    1,   62,    2, 0x0a,    1 /* Public */,
-       5,    0,   65,    2, 0x0a,    3 /* Public */,
-       6,    1,   66,    2, 0x0a,    4 /* Public */,
-       7,    2,   69,    2, 0x0a,    6 /* Public */,
-      12,    0,   74,    2, 0x0a,    9 /* Public */,
-      14,    0,   75,    2, 0x0a,   10 /* Public */,
-      16,    0,   76,    2, 0x0a,   11 /* Public */,
-      18,    0,   77,    2, 0x0a,   12 /* Public */,
+       1,    1,   92,    2, 0x0a,    1 /* Public */,
+       5,    0,   95,    2, 0x0a,    3 /* Public */,
+       6,    1,   96,    2, 0x0a,    4 /* Public */,
+       7,    2,   99,    2, 0x0a,    6 /* Public */,
+      12,    0,  104,    2, 0x0a,    9 /* Public */,
+      14,    0,  105,    2, 0x0a,   10 /* Public */,
+      16,    0,  106,    2, 0x0a,   11 /* Public */,
+      18,    0,  107,    2, 0x0a,   12 /* Public */,
+      19,    5,  108,    2, 0x0a,   13 /* Public */,
+      25,    0,  119,    2, 0x0a,   19 /* Public */,
+      26,    1,  120,    2, 0x0a,   20 /* Public */,
+      28,    1,  123,    2, 0x0a,   22 /* Public */,
+      29,    1,  126,    2, 0x0a,   24 /* Public */,
 
  // slots: parameters
     QMetaType::Bool, 0x80000000 | 3,    4,
@@ -126,6 +164,11 @@ Q_CONSTINIT static const uint qt_meta_data_SqlOperator[] = {
     0x80000000 | 15,
     0x80000000 | 17,
     QMetaType::Void,
+    QMetaType::Bool, 0x80000000 | 20, 0x80000000 | 20, 0x80000000 | 8, 0x80000000 | 20, 0x80000000 | 8,   21,   22,   23,   24,   11,
+    QMetaType::QJsonArray,
+    QMetaType::QJsonArray, 0x80000000 | 8,   27,
+    QMetaType::Bool, 0x80000000 | 8,    9,
+    QMetaType::Bool, 0x80000000 | 8,    9,
 
        0        // eod
 };
@@ -158,7 +201,25 @@ Q_CONSTINIT const QMetaObject SqlOperator::staticMetaObject = { {
         // method 'selectAllFQuestion'
         QtPrivate::TypeAndForceComplete<QList<QSharedPointer<FillInTheBlanksQuestion>>, std::false_type>,
         // method 'commitQuestions'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'submitPost'
+        QtPrivate::TypeAndForceComplete<bool, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QString &, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QString &, std::false_type>,
+        QtPrivate::TypeAndForceComplete<qint32 &, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QString &, std::false_type>,
+        QtPrivate::TypeAndForceComplete<qint32 &, std::false_type>,
+        // method 'selectPosts'
+        QtPrivate::TypeAndForceComplete<QJsonArray, std::false_type>,
+        // method 'selectComments'
+        QtPrivate::TypeAndForceComplete<QJsonArray, std::false_type>,
+        QtPrivate::TypeAndForceComplete<qint32 &, std::false_type>,
+        // method 'deletePost'
+        QtPrivate::TypeAndForceComplete<bool, std::false_type>,
+        QtPrivate::TypeAndForceComplete<qint32 &, std::false_type>,
+        // method 'deleteComments'
+        QtPrivate::TypeAndForceComplete<bool, std::false_type>,
+        QtPrivate::TypeAndForceComplete<qint32 &, std::false_type>
     >,
     nullptr
 } };
@@ -183,6 +244,16 @@ void SqlOperator::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         case 6: { QList<QSharedPointer<FillInTheBlanksQuestion>> _r = _t->selectAllFQuestion();
             if (_a[0]) *reinterpret_cast< QList<QSharedPointer<FillInTheBlanksQuestion>>*>(_a[0]) = std::move(_r); }  break;
         case 7: _t->commitQuestions(); break;
+        case 8: { bool _r = _t->submitPost((*reinterpret_cast< std::add_pointer_t<QString&>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString&>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<qint32&>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<QString&>>(_a[4])),(*reinterpret_cast< std::add_pointer_t<qint32&>>(_a[5])));
+            if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
+        case 9: { QJsonArray _r = _t->selectPosts();
+            if (_a[0]) *reinterpret_cast< QJsonArray*>(_a[0]) = std::move(_r); }  break;
+        case 10: { QJsonArray _r = _t->selectComments((*reinterpret_cast< std::add_pointer_t<qint32&>>(_a[1])));
+            if (_a[0]) *reinterpret_cast< QJsonArray*>(_a[0]) = std::move(_r); }  break;
+        case 11: { bool _r = _t->deletePost((*reinterpret_cast< std::add_pointer_t<qint32&>>(_a[1])));
+            if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
+        case 12: { bool _r = _t->deleteComments((*reinterpret_cast< std::add_pointer_t<qint32&>>(_a[1])));
+            if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
         default: ;
         }
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
@@ -225,13 +296,13 @@ int SqlOperator::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 8)
+        if (_id < 13)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 8;
+        _id -= 13;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 8)
+        if (_id < 13)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 8;
+        _id -= 13;
     }
     return _id;
 }

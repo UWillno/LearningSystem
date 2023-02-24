@@ -226,6 +226,49 @@
                         ],
                         "name": "createNewUser",
                         "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "path",
+                                "type": "QUrl"
+                            }
+                        ],
+                        "name": "uploadPicture",
+                        "returnType": "QString"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "title",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "text",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "cxid",
+                                "type": "qint32"
+                            },
+                            {
+                                "name": "username",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "type",
+                                "type": "qint32"
+                            }
+                        ],
+                        "name": "submitPost",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "selectPosts",
+                        "returnType": "void"
                     }
                 ],
                 "superClasses": [
@@ -474,6 +517,49 @@
                         ],
                         "name": "createNewUser",
                         "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "path",
+                                "type": "QUrl&"
+                            }
+                        ],
+                        "name": "uploadPicture",
+                        "returnType": "QString"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "title",
+                                "type": "QString&"
+                            },
+                            {
+                                "name": "text",
+                                "type": "QString&"
+                            },
+                            {
+                                "name": "cxid",
+                                "type": "qint32&"
+                            },
+                            {
+                                "name": "username",
+                                "type": "QString&"
+                            },
+                            {
+                                "name": "type",
+                                "type": "qint32&"
+                            }
+                        ],
+                        "name": "submitPost",
+                        "returnType": "bool"
+                    },
+                    {
+                        "access": "public",
+                        "name": "selectPosts",
+                        "returnType": "bool"
                     }
                 ],
                 "superClasses": [

@@ -2,11 +2,17 @@ Server-cmake_autogen/timestamp: \
   /home/uwillno/Desktop/BYSJ/S/Server-cmake/CMakeLists.txt \
   /home/uwillno/Desktop/BYSJ/S/Server-cmake/choicequestion.cpp \
   /home/uwillno/Desktop/BYSJ/S/Server-cmake/choicequestion.h \
+  /home/uwillno/Desktop/BYSJ/S/Server-cmake/comment.cpp \
+  /home/uwillno/Desktop/BYSJ/S/Server-cmake/comment.h \
   /home/uwillno/Desktop/BYSJ/S/Server-cmake/fillintheblanksquestion.cpp \
   /home/uwillno/Desktop/BYSJ/S/Server-cmake/fillintheblanksquestion.h \
+  /home/uwillno/Desktop/BYSJ/S/Server-cmake/httpserver.cpp \
+  /home/uwillno/Desktop/BYSJ/S/Server-cmake/httpserver.h \
   /home/uwillno/Desktop/BYSJ/S/Server-cmake/interface/iQuestion.h \
   /home/uwillno/Desktop/BYSJ/S/Server-cmake/interface/iQuestionFactory.h \
   /home/uwillno/Desktop/BYSJ/S/Server-cmake/main.cpp \
+  /home/uwillno/Desktop/BYSJ/S/Server-cmake/post.cpp \
+  /home/uwillno/Desktop/BYSJ/S/Server-cmake/post.h \
   /home/uwillno/Desktop/BYSJ/S/Server-cmake/questionfactory.cpp \
   /home/uwillno/Desktop/BYSJ/S/Server-cmake/questionfactory.h \
   /home/uwillno/Desktop/BYSJ/S/Server-cmake/singleton.h \
@@ -47,6 +53,7 @@ Server-cmake_autogen/timestamp: \
   /home/uwillno/Qt/6.4.2/gcc_64/include/QtCore/QDebug \
   /home/uwillno/Qt/6.4.2/gcc_64/include/QtCore/QDir \
   /home/uwillno/Qt/6.4.2/gcc_64/include/QtCore/QFile \
+  /home/uwillno/Qt/6.4.2/gcc_64/include/QtCore/QFlags \
   /home/uwillno/Qt/6.4.2/gcc_64/include/QtCore/QFuture \
   /home/uwillno/Qt/6.4.2/gcc_64/include/QtCore/QFutureWatcher \
   /home/uwillno/Qt/6.4.2/gcc_64/include/QtCore/QHash \
@@ -58,8 +65,11 @@ Server-cmake_autogen/timestamp: \
   /home/uwillno/Qt/6.4.2/gcc_64/include/QtCore/QMutex \
   /home/uwillno/Qt/6.4.2/gcc_64/include/QtCore/QObject \
   /home/uwillno/Qt/6.4.2/gcc_64/include/QtCore/QScopedPointer \
+  /home/uwillno/Qt/6.4.2/gcc_64/include/QtCore/QSharedDataPointer \
   /home/uwillno/Qt/6.4.2/gcc_64/include/QtCore/QString \
   /home/uwillno/Qt/6.4.2/gcc_64/include/QtCore/QStringList \
+  /home/uwillno/Qt/6.4.2/gcc_64/include/QtCore/QUrl \
+  /home/uwillno/Qt/6.4.2/gcc_64/include/QtCore/QUuid \
   /home/uwillno/Qt/6.4.2/gcc_64/include/QtCore/QVariant \
   /home/uwillno/Qt/6.4.2/gcc_64/include/QtCore/QtCore \
   /home/uwillno/Qt/6.4.2/gcc_64/include/QtCore/QtCoreDepends \
@@ -285,10 +295,35 @@ Server-cmake_autogen/timestamp: \
   /home/uwillno/Qt/6.4.2/gcc_64/include/QtCore/qwineventnotifier.h \
   /home/uwillno/Qt/6.4.2/gcc_64/include/QtCore/qxmlstream.h \
   /home/uwillno/Qt/6.4.2/gcc_64/include/QtCore/qxpfunctional.h \
+  /home/uwillno/Qt/6.4.2/gcc_64/include/QtHttpServer/QHttpServer \
+  /home/uwillno/Qt/6.4.2/gcc_64/include/QtHttpServer/qabstracthttpserver.h \
+  /home/uwillno/Qt/6.4.2/gcc_64/include/QtHttpServer/qhttpserver.h \
+  /home/uwillno/Qt/6.4.2/gcc_64/include/QtHttpServer/qhttpserverrequest.h \
+  /home/uwillno/Qt/6.4.2/gcc_64/include/QtHttpServer/qhttpserverresponder.h \
+  /home/uwillno/Qt/6.4.2/gcc_64/include/QtHttpServer/qhttpserverresponse.h \
+  /home/uwillno/Qt/6.4.2/gcc_64/include/QtHttpServer/qhttpserverrouter.h \
+  /home/uwillno/Qt/6.4.2/gcc_64/include/QtHttpServer/qhttpserverrouterrule.h \
+  /home/uwillno/Qt/6.4.2/gcc_64/include/QtHttpServer/qhttpserverrouterviewtraits.h \
+  /home/uwillno/Qt/6.4.2/gcc_64/include/QtHttpServer/qhttpserverviewtraits.h \
+  /home/uwillno/Qt/6.4.2/gcc_64/include/QtHttpServer/qhttpserverviewtraits_impl.h \
+  /home/uwillno/Qt/6.4.2/gcc_64/include/QtHttpServer/qthttpserverexports.h \
+  /home/uwillno/Qt/6.4.2/gcc_64/include/QtHttpServer/qthttpserverglobal.h \
+  /home/uwillno/Qt/6.4.2/gcc_64/include/QtNetwork/QAbstractSocket \
+  /home/uwillno/Qt/6.4.2/gcc_64/include/QtNetwork/QNetworkProxy \
+  /home/uwillno/Qt/6.4.2/gcc_64/include/QtNetwork/QNetworkRequest \
+  /home/uwillno/Qt/6.4.2/gcc_64/include/QtNetwork/QSslConfiguration \
+  /home/uwillno/Qt/6.4.2/gcc_64/include/QtNetwork/QSslError \
   /home/uwillno/Qt/6.4.2/gcc_64/include/QtNetwork/QTcpServer \
   /home/uwillno/Qt/6.4.2/gcc_64/include/QtNetwork/QTcpSocket \
   /home/uwillno/Qt/6.4.2/gcc_64/include/QtNetwork/qabstractsocket.h \
   /home/uwillno/Qt/6.4.2/gcc_64/include/QtNetwork/qhostaddress.h \
+  /home/uwillno/Qt/6.4.2/gcc_64/include/QtNetwork/qnetworkproxy.h \
+  /home/uwillno/Qt/6.4.2/gcc_64/include/QtNetwork/qnetworkrequest.h \
+  /home/uwillno/Qt/6.4.2/gcc_64/include/QtNetwork/qssl.h \
+  /home/uwillno/Qt/6.4.2/gcc_64/include/QtNetwork/qsslcertificate.h \
+  /home/uwillno/Qt/6.4.2/gcc_64/include/QtNetwork/qsslconfiguration.h \
+  /home/uwillno/Qt/6.4.2/gcc_64/include/QtNetwork/qsslerror.h \
+  /home/uwillno/Qt/6.4.2/gcc_64/include/QtNetwork/qsslsocket.h \
   /home/uwillno/Qt/6.4.2/gcc_64/include/QtNetwork/qtcpserver.h \
   /home/uwillno/Qt/6.4.2/gcc_64/include/QtNetwork/qtcpsocket.h \
   /home/uwillno/Qt/6.4.2/gcc_64/include/QtNetwork/qtnetwork-config.h \
@@ -304,6 +339,10 @@ Server-cmake_autogen/timestamp: \
   /home/uwillno/Qt/6.4.2/gcc_64/include/QtSql/qtsql-config.h \
   /home/uwillno/Qt/6.4.2/gcc_64/include/QtSql/qtsqlexports.h \
   /home/uwillno/Qt/6.4.2/gcc_64/include/QtSql/qtsqlglobal.h \
+  /home/uwillno/Qt/6.4.2/gcc_64/include/QtWebSockets/qtwebsocketsexports.h \
+  /home/uwillno/Qt/6.4.2/gcc_64/include/QtWebSockets/qwebsocket.h \
+  /home/uwillno/Qt/6.4.2/gcc_64/include/QtWebSockets/qwebsocketprotocol.h \
+  /home/uwillno/Qt/6.4.2/gcc_64/include/QtWebSockets/qwebsockets_global.h \
   /home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6/FindWrapAtomic.cmake \
   /home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6/Qt6Config.cmake \
   /home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6/Qt6ConfigExtras.cmake \
@@ -351,6 +390,14 @@ Server-cmake_autogen/timestamp: \
   /home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6CoreTools/Qt6CoreToolsTargets-relwithdebinfo.cmake \
   /home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6CoreTools/Qt6CoreToolsTargets.cmake \
   /home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6CoreTools/Qt6CoreToolsVersionlessTargets.cmake \
+  /home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6HttpServer/Qt6HttpServerAdditionalTargetInfo.cmake \
+  /home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6HttpServer/Qt6HttpServerConfig.cmake \
+  /home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6HttpServer/Qt6HttpServerConfigVersion.cmake \
+  /home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6HttpServer/Qt6HttpServerConfigVersionImpl.cmake \
+  /home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6HttpServer/Qt6HttpServerDependencies.cmake \
+  /home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6HttpServer/Qt6HttpServerTargets-relwithdebinfo.cmake \
+  /home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6HttpServer/Qt6HttpServerTargets.cmake \
+  /home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6HttpServer/Qt6HttpServerVersionlessTargets.cmake \
   /home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6Network/Qt6NetworkAdditionalTargetInfo.cmake \
   /home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6Network/Qt6NetworkConfig.cmake \
   /home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6Network/Qt6NetworkConfigVersion.cmake \
@@ -401,6 +448,14 @@ Server-cmake_autogen/timestamp: \
   /home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6Sql/Qt6SqlTargets-relwithdebinfo.cmake \
   /home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6Sql/Qt6SqlTargets.cmake \
   /home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6Sql/Qt6SqlVersionlessTargets.cmake \
+  /home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6WebSockets/Qt6WebSocketsAdditionalTargetInfo.cmake \
+  /home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6WebSockets/Qt6WebSocketsConfig.cmake \
+  /home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6WebSockets/Qt6WebSocketsConfigVersion.cmake \
+  /home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6WebSockets/Qt6WebSocketsConfigVersionImpl.cmake \
+  /home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6WebSockets/Qt6WebSocketsDependencies.cmake \
+  /home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6WebSockets/Qt6WebSocketsTargets-relwithdebinfo.cmake \
+  /home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6WebSockets/Qt6WebSocketsTargets.cmake \
+  /home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6WebSockets/Qt6WebSocketsVersionlessTargets.cmake \
   /home/uwillno/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeCXXInformation.cmake \
   /home/uwillno/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake \
   /home/uwillno/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake \

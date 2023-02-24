@@ -11,7 +11,6 @@ import QtQuick.Controls
 
 App {
 
-
     id:main
     dpScale: 1
     //    property int name: value
@@ -45,8 +44,6 @@ App {
                     //            anchors.fill: parent
                     //            anchors.horizontalCenter: parent.horizontalCenter
                 }
-
-
             }
 
 
@@ -112,6 +109,9 @@ App {
     }
     UserLogic {
         id: userLogic
+    }
+    Logic {
+       id:logic
     }
 
     //    property LoaderItem loaderItem: loaderItem

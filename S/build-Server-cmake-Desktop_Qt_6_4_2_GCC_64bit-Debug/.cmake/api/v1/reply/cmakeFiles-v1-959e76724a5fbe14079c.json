@@ -234,84 +234,15 @@
 		},
 		{
 			"isExternal" : true,
-			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6/Qt6ConfigVersion.cmake"
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6HttpServer/Qt6HttpServerConfigVersion.cmake"
 		},
 		{
 			"isExternal" : true,
-			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6/Qt6ConfigVersionImpl.cmake"
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6HttpServer/Qt6HttpServerConfigVersionImpl.cmake"
 		},
 		{
 			"isExternal" : true,
-			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6/Qt6Config.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6/Qt6ConfigExtras.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6/QtPublicCMakeVersionHelpers.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6/Qt6Targets.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6/Qt6VersionlessTargets.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6/QtFeature.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6/QtFeatureCommon.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/uwillno/Qt/Tools/CMake/share/cmake-3.24/Modules/CheckCXXCompilerFlag.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6/QtPublicAppleHelpers.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6/QtPublicFinalizerHelpers.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6/QtPublicPluginHelpers.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6/QtPublicTargetHelpers.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6/QtPublicWalkLibsHelpers.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6/QtPublicFindPackageHelpers.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6/QtPublicTestHelpers.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6/QtPublicToolHelpers.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6/QtPublicCMakeHelpers.cmake"
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6HttpServer/Qt6HttpServerConfig.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -320,37 +251,7 @@
 		},
 		{
 			"isExternal" : true,
-			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6/Qt6Dependencies.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/uwillno/Qt/Tools/CMake/share/cmake-3.24/Modules/FindThreads.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/uwillno/Qt/Tools/CMake/share/cmake-3.24/Modules/CheckLibraryExists.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/uwillno/Qt/Tools/CMake/share/cmake-3.24/Modules/CheckIncludeFileCXX.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/uwillno/Qt/Tools/CMake/share/cmake-3.24/Modules/CheckCXXSourceCompiles.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/uwillno/Qt/Tools/CMake/share/cmake-3.24/Modules/FindPackageHandleStandardArgs.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/uwillno/Qt/Tools/CMake/share/cmake-3.24/Modules/FindPackageMessage.cmake"
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6HttpServer/Qt6HttpServerDependencies.cmake"
 		},
 		{
 			"isExternal" : true,
@@ -457,131 +358,6 @@
 			"isCMake" : true,
 			"isExternal" : true,
 			"path" : "/home/uwillno/Qt/Tools/CMake/share/cmake-3.24/Modules/GNUInstallDirs.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6Sql/Qt6SqlConfigVersion.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6Sql/Qt6SqlConfigVersionImpl.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6Sql/Qt6SqlConfig.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/uwillno/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeFindDependencyMacro.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6Sql/Qt6SqlDependencies.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6Sql/Qt6SqlTargets.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6Sql/Qt6SqlTargets-relwithdebinfo.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6Sql/Qt6SqlAdditionalTargetInfo.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6Sql/Qt6SqlVersionlessTargets.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6Sql/Qt6SqlPlugins.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6Sql/Qt6QMYSQLDriverPluginConfig.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/uwillno/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeFindDependencyMacro.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6Sql/Qt6QMYSQLDriverPluginTargets.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6Sql/Qt6QMYSQLDriverPluginTargets-relwithdebinfo.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6Sql/Qt6QMYSQLDriverPluginAdditionalTargetInfo.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6Sql/Qt6QODBCDriverPluginConfig.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/uwillno/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeFindDependencyMacro.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6Sql/Qt6QODBCDriverPluginTargets.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6Sql/Qt6QODBCDriverPluginTargets-relwithdebinfo.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6Sql/Qt6QODBCDriverPluginAdditionalTargetInfo.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6Sql/Qt6QPSQLDriverPluginConfig.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/uwillno/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeFindDependencyMacro.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6Sql/Qt6QPSQLDriverPluginTargets.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6Sql/Qt6QPSQLDriverPluginTargets-relwithdebinfo.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6Sql/Qt6QPSQLDriverPluginAdditionalTargetInfo.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6Sql/Qt6QSQLiteDriverPluginConfig.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/uwillno/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeFindDependencyMacro.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6Sql/Qt6QSQLiteDriverPluginTargets.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6Sql/Qt6QSQLiteDriverPluginTargets-relwithdebinfo.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6Sql/Qt6QSQLiteDriverPluginAdditionalTargetInfo.cmake"
 		},
 		{
 			"isExternal" : true,
@@ -710,6 +486,184 @@
 		},
 		{
 			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6WebSockets/Qt6WebSocketsConfigVersion.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6WebSockets/Qt6WebSocketsConfigVersionImpl.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6WebSockets/Qt6WebSocketsConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeFindDependencyMacro.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6WebSockets/Qt6WebSocketsDependencies.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6WebSockets/Qt6WebSocketsTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6WebSockets/Qt6WebSocketsTargets-relwithdebinfo.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6WebSockets/Qt6WebSocketsAdditionalTargetInfo.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6WebSockets/Qt6WebSocketsVersionlessTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6HttpServer/Qt6HttpServerTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6HttpServer/Qt6HttpServerTargets-relwithdebinfo.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6HttpServer/Qt6HttpServerAdditionalTargetInfo.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6HttpServer/Qt6HttpServerVersionlessTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6Sql/Qt6SqlConfigVersion.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6Sql/Qt6SqlConfigVersionImpl.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6Sql/Qt6SqlConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeFindDependencyMacro.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6Sql/Qt6SqlDependencies.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6Sql/Qt6SqlTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6Sql/Qt6SqlTargets-relwithdebinfo.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6Sql/Qt6SqlAdditionalTargetInfo.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6Sql/Qt6SqlVersionlessTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6Sql/Qt6SqlPlugins.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6Sql/Qt6QMYSQLDriverPluginConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeFindDependencyMacro.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6Sql/Qt6QMYSQLDriverPluginTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6Sql/Qt6QMYSQLDriverPluginTargets-relwithdebinfo.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6Sql/Qt6QMYSQLDriverPluginAdditionalTargetInfo.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6Sql/Qt6QODBCDriverPluginConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeFindDependencyMacro.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6Sql/Qt6QODBCDriverPluginTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6Sql/Qt6QODBCDriverPluginTargets-relwithdebinfo.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6Sql/Qt6QODBCDriverPluginAdditionalTargetInfo.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6Sql/Qt6QPSQLDriverPluginConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeFindDependencyMacro.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6Sql/Qt6QPSQLDriverPluginTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6Sql/Qt6QPSQLDriverPluginTargets-relwithdebinfo.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6Sql/Qt6QPSQLDriverPluginAdditionalTargetInfo.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6Sql/Qt6QSQLiteDriverPluginConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeFindDependencyMacro.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6Sql/Qt6QSQLiteDriverPluginTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6Sql/Qt6QSQLiteDriverPluginTargets-relwithdebinfo.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6Sql/Qt6QSQLiteDriverPluginAdditionalTargetInfo.cmake"
+		},
+		{
+			"isExternal" : true,
 			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6Concurrent/Qt6ConcurrentConfigVersion.cmake"
 		},
 		{
@@ -744,6 +698,246 @@
 		{
 			"isExternal" : true,
 			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6Concurrent/Qt6ConcurrentVersionlessTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6/Qt6ConfigVersion.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6/Qt6ConfigVersionImpl.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6/Qt6Config.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6/Qt6ConfigExtras.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6/QtPublicCMakeVersionHelpers.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6/Qt6Targets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6/Qt6VersionlessTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6/QtFeature.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6/QtFeatureCommon.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/Tools/CMake/share/cmake-3.24/Modules/CheckCXXCompilerFlag.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6/QtPublicAppleHelpers.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6/QtPublicFinalizerHelpers.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6/QtPublicPluginHelpers.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6/QtPublicTargetHelpers.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6/QtPublicWalkLibsHelpers.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6/QtPublicFindPackageHelpers.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6/QtPublicTestHelpers.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6/QtPublicToolHelpers.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6/QtPublicCMakeHelpers.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeFindDependencyMacro.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6/Qt6Dependencies.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/Tools/CMake/share/cmake-3.24/Modules/FindThreads.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/Tools/CMake/share/cmake-3.24/Modules/CheckLibraryExists.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/Tools/CMake/share/cmake-3.24/Modules/CheckIncludeFileCXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/Tools/CMake/share/cmake-3.24/Modules/CheckCXXSourceCompiles.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/Tools/CMake/share/cmake-3.24/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/Tools/CMake/share/cmake-3.24/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6/Qt6ConfigVersion.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6/Qt6ConfigVersionImpl.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6/Qt6Config.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6/Qt6ConfigExtras.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6/QtPublicCMakeVersionHelpers.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6/Qt6Targets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6/Qt6VersionlessTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6/QtFeature.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6/QtFeatureCommon.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/Tools/CMake/share/cmake-3.24/Modules/CheckCXXCompilerFlag.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6/QtPublicAppleHelpers.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6/QtPublicFinalizerHelpers.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6/QtPublicPluginHelpers.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6/QtPublicTargetHelpers.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6/QtPublicWalkLibsHelpers.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6/QtPublicFindPackageHelpers.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6/QtPublicTestHelpers.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6/QtPublicToolHelpers.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6/QtPublicCMakeHelpers.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeFindDependencyMacro.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/6.4.2/gcc_64/lib/cmake/Qt6/Qt6Dependencies.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/Tools/CMake/share/cmake-3.24/Modules/FindThreads.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/Tools/CMake/share/cmake-3.24/Modules/CheckLibraryExists.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/Tools/CMake/share/cmake-3.24/Modules/CheckIncludeFileCXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/Tools/CMake/share/cmake-3.24/Modules/CheckCXXSourceCompiles.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/Tools/CMake/share/cmake-3.24/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/uwillno/Qt/Tools/CMake/share/cmake-3.24/Modules/FindPackageMessage.cmake"
 		}
 	],
 	"kind" : "cmakeFiles",
