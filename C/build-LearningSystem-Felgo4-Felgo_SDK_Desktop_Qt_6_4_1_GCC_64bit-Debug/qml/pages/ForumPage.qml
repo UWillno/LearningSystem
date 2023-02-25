@@ -2,17 +2,16 @@ import QtQuick
 import Felgo
 
 AppPage {
-
     title: "论坛"
     AppListView {
         delegate: SimpleRow {
             onSelected: index=>{
                             if(index === 0 ){
                                 var page = Qt.createComponent("PostingPage.qml").createObject(parent)
-                                forumStatck.push(page)
+                                forumStack.push(page)
                             }
                             if(index===1){
-                                logic.getAllPosts()
+                                createPostsPage()
                             }
                         }
         }
@@ -33,12 +32,11 @@ AppPage {
 
     function createPostsPage(){
         var component = Qt.createComponent("PostsPage.qml");
-        var model = logic.postsdata
+        var model = logic.getAllPosts()
         var obj =  component.createObject(parent,{dmodel:model,admin:false})
-        forumStatck.push(obj)
+        forumStack.push(obj)
     }
     Connections {
-        //        id:con
         target: logic
         onPostsGot:{
             createPostsPage()

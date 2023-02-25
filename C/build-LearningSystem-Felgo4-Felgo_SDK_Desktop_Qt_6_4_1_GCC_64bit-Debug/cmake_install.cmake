@@ -83,6 +83,10 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/qml/items" TYPE FILE FILES "/home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/qml/items/CommentRow.qml")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/qml/items" TYPE FILE FILES "/home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/qml/items/FillInTheBlanksQuestionItem.qml")
 endif()
 
@@ -172,6 +176,10 @@ endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/qml/pages" TYPE FILE FILES "/home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/qml/pages/PdfPage.qml")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/qml/pages" TYPE FILE FILES "/home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/qml/pages/PostDetailPage.qml")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)

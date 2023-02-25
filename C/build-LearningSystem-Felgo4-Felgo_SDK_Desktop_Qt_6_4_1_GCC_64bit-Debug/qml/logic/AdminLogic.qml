@@ -4,7 +4,7 @@ import Felgo
 Item {
     property string qhttpserver: "http://127.0.0.1:4444/"
     signal deleteSucceed()
-    property var postsdata
+    //    property var postsdata
     id: adminLogic
     function insertChoiceQuestion(question,option1, option2,option3,option4,answer){
         qm.sendChoiceQuestion(question,option1, option2,option3,option4,answer)
@@ -46,13 +46,13 @@ Item {
         qm.selectPosts()
     }
 
-    function getAllPosts(){
-        var p = HttpRequest.get(qhttpserver + "selectAllPosts").timeout(5000).then(function(res){
-            JSON.stringify(res.body)
-            postsdata = res.body
-            deleteSucceed()
-        });
-    }
+    //    function getAllPosts(){
+    //        var p = HttpRequest.get(qhttpserver + "selectAllPosts").timeout(5000).then(function(res){
+    //            JSON.stringify(res.body)
+    //            postsdata = res.body
+    //            deleteSucceed()
+    //        });
+    //    }
 
     Connections {
         //        id:con
@@ -83,7 +83,7 @@ Item {
         .send({ postId: id, v: "" })
         .then(function(res) {
             if(res.body === "success"){
-                getAllPosts()
+                deleteSucceed()
             }
         })
         .catch(function(err) {

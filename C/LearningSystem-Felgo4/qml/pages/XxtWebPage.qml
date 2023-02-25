@@ -10,7 +10,7 @@ AppPage {
 
 
     WebView {
-        anchors.fill:parnt
+        anchors.fill:parent
         url:"https://mooc1.chaoxing.com/course/phone/courselisthead?passed=1"
 
 

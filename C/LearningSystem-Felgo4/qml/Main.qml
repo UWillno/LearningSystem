@@ -11,8 +11,10 @@ import QtQuick.Controls
 
 App {
 
-    id:main
+    id:app
     dpScale: 1
+
+    property alias navMode: navigation.navigationMode
     //    property int name: value
     //    property NavigationStack rootStack: rootStack
     // You get free licenseKeys from https://felgo.com/licenseKey
@@ -54,7 +56,7 @@ App {
             iconType: IconType.book
 
             NavigationStack {
-                id:studyStatck
+                id:studyStack
                 anchors.fill: parent
                 splitView: tablet
 
@@ -69,7 +71,7 @@ App {
             iconType: IconType.pencil
 
             NavigationStack {
-                id:practiceStatck
+                id:practiceStack
                 anchors.fill: parent
                 splitView: tablet
 
@@ -85,7 +87,7 @@ App {
             iconType: IconType.weixin
 
             NavigationStack {
-                id:forumStatck
+                id:forumStack
                 anchors.fill: parent
                 splitView: tablet
 

@@ -6,7 +6,7 @@ AppPage {
     id:postsPage
     property var dmodel
     property bool admin: false
-    backgroundColor: "#F5F5F5"
+    //    backgroundColor: "#F"
     title: "帖子列表"
 
 
@@ -15,24 +15,44 @@ AppPage {
     //        anchors.topMargin: dp(20)
     AppListView {
 
-        backgroundColor: "#F5F5F5"
+        backgroundColor: "white"
         id:postList
         delegate: admin ? adminItem : userItem
         model: dmodel
         scrollsToTop : true
 
-        function update() {
-            var pos = getScrollPosition() //retrieve scroll position data
-            loadMoreItems()         //adds new items to list model
-            restoreScrollPosition(pos) //scrolls to the previous position
+
+
+        //        function update() {
+        //            var pos = getScrollPosition() //retrieve scroll position data
+        //            loadMoreItems()         //adds new items to list model
+        //            restoreScrollPosition(pos) //scrolls to the previous position
+        //        }
+
+        function refresh(){
+            console.log("refresh");
+            dmodel = logic.getAllPosts()
         }
         PullToRefreshHandler {
             onRefresh: {
-                console.log("refresh");
+                postList.refresh()
+                toastManager.show("刷新成功",1000)
             }
         }
+
+        onContentYChanged:  {
+            //分页时可以做
+            if((contentY+height)>=contentHeight){
+
+            }
+
+        }
+
+
     }
     //    }
+
+
 
     Component {
         id:adminItem
@@ -44,13 +64,16 @@ AppPage {
         id:userItem
         PostItem {
             admin: false
+
         }
     }
 
     Connections {
         target: adminLogic
         onDeleteSucceed: {
-            dmodel = adminLogic.postsdata
+            var pos = postList.getScrollPosition()
+            postList.refresh()
+            postList.restoreScrollPosition(pos)
         }
     }
 

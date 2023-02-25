@@ -415,10 +415,11 @@ QJsonArray SqlOperator::selectPosts()
         object.insert("username",post.username);
         object.insert("title",post.title);
         object.insert("text",post.text);
-        object.insert("datetime",post.datetime.toString("dd.MM.yyyy"));
+        object.insert("datetime",post.datetime.toString("yyyy-MM-dd hh:mm:ss"));
         object.insert("type",post.type);
         object.insert("comments",post.comments);
         json.append(object);
+
     }
     qInfo() << json;
     return json;
@@ -477,4 +478,47 @@ bool SqlOperator::deleteComments(qint32 &id)
     query.bindValue(":id",id);
     query.exec();
     return commitDB(&query);
+}
+
+QJsonArray SqlOperator::selectPosts(qint32 &page)
+{
+    QJsonArray json;
+    QSqlQuery query(m_db);
+    if(page==0){
+        query.prepare("SELECT * FROM post ORDER BY id DESC LIMIT 0, 5;");
+    }else{
+
+        query.prepare("SELECT * FROM post ORDER BY id DESC LIMIT "+ QString::number(5*page) +", 5;");
+    }
+    query.exec();
+
+    while(query.next()){
+        Post post;
+        QJsonObject object;
+        post.id = query.value(0).toInt();
+
+        post.cxid = query.value(1).toInt();
+        post.username= query.value(2).toString();
+        post.title= query.value(3).toString();
+        post.text= query.value(4).toString();
+        post.datetime= query.value(5).toDateTime();
+        post.type= query.value(6).toInt();
+        //        post.comments;
+
+        QFuture<QJsonArray> future = QtConcurrent::run([=](qint32 postId ){return selectComments(postId);},post.id);
+        post.comments = future.result();
+        //        selectComments(id);
+
+        object.insert("id",post.id);
+        object.insert("cxid",post.cxid);
+        object.insert("username",post.username);
+        object.insert("title",post.title);
+        object.insert("text",post.text);
+        object.insert("datetime",post.datetime.toString("dd.MM.yyyy"));
+        object.insert("type",post.type);
+        object.insert("comments",post.comments);
+        json.append(object);
+    }
+    qInfo() << json;
+    return json;
 }

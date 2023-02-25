@@ -61,6 +61,8 @@ public slots:
 
     bool deleteComments(qint32 &id);
 
+    QJsonArray selectPosts(qint32 &page);
+
 private:
     QSqlDatabase m_db;
 
