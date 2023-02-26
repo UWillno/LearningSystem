@@ -72,8 +72,9 @@ AppPage {
         var component = Qt.createComponent("PostsPage.qml");
 //        var model = logic.postsdata
 
-        var model = logic.getAllPosts()
-        var obj =  component.createObject(parent,{dmodel:model,admin:true})
+//        var model = logic.getAllPosts()
+//        var obj =  component.createObject(parent,{dmodel:model,admin:true})
+        var obj =  component.createObject(parent,{admin:true})
         rootStack.push(obj)
     }
 

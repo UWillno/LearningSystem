@@ -5,7 +5,7 @@ import Felgo
 
 Rectangle {
     property alias text: appTextEdit.text
-    property alias  placeholderText: appTextEdit.placeholderText
+    property alias placeholderText: appTextEdit.placeholderText
     property alias appTextEdit: appTextEdit
     property alias textFormat :  appTextEdit.textFormat
     //    property alias  cursorPosition
@@ -25,7 +25,7 @@ Rectangle {
             verticalAlignment: TextEdit.AlignTop
             wrapMode: AppTextEdit.WrapAnywhere
             // This enables the text field to automatically scroll if cursor moves outside while typing
-            cursorInView: true
+//            cursorInView: true
             flickable: flick
             cursorInViewBottomPadding: dp(25)
             cursorInViewTopPadding: dp(25)

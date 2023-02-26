@@ -3,7 +3,7 @@ import Felgo
 //import "../items/loaders/LoaderDialog.qml"
 Item {
     property string qhttpserver: "http://127.0.0.1:4444/"
-    signal deleteSucceed()
+    signal deleteSucceed(int index)
     //    property var postsdata
     id: adminLogic
     function insertChoiceQuestion(question,option1, option2,option3,option4,answer){
@@ -76,14 +76,14 @@ Item {
         }
     }
 
-    function deletePost(id){
+    function deletePost(id,index){
         HttpRequest
         .post(qhttpserver+"deletePost")
         .set('Content-Type', 'application/json')
         .send({ postId: id, v: "" })
         .then(function(res) {
             if(res.body === "success"){
-                deleteSucceed()
+                deleteSucceed(index)
             }
         })
         .catch(function(err) {
