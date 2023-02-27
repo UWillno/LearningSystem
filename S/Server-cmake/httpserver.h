@@ -26,6 +26,10 @@ private :
     QHttpServer server;
     void routeDeletePost();
 
+    void routeGetPosts();
+
+    void routeSubmitComment();
+
 };
 
 #endif // HTTPSERVER_H

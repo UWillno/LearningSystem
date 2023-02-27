@@ -37,4 +37,20 @@ Item {
         return JSON.parse(xhr.responseText)
     }
 
+    function submitComment(postId,text){
+
+        if(typeof ss.cxid == "undefined"){
+            toastManager.show("未登录!",1000);
+        }else{
+            const xhr = new XMLHttpRequest();
+            xhr.open("POST",qhttpserver + "submitComment",false);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
+            xhr.send(JSON.stringify({cxid:ss.cxid,username:ss.username,postId:postId,text:text}))
+            if(xhr.responseText == "success"){
+                return true
+            }
+        }
+        return false
+    }
+
 }

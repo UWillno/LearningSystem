@@ -50,7 +50,7 @@ Rectangle {
         AppText {
             id:usernameText
             elide: Text.ElideRight
-            text:modelData.username
+            text:model.username
 
             Layout.columnSpan: 3
             maximumLineCount: 1
@@ -76,7 +76,7 @@ Rectangle {
             Layout.fillWidth: true
             verticalAlignment: Text.AlignBottom
             Layout.preferredWidth: parent.width
-            text:modelData.datetime
+            text:model.datetime
             //            font.bold: true
         }
         AppText {
@@ -92,7 +92,7 @@ Rectangle {
             Layout.fillWidth: true
             verticalAlignment: Text.AlignBottom
             Layout.preferredWidth: parent.width
-            text:modelData.title
+            text:model.title
             font.bold: true
         }
 
@@ -104,7 +104,7 @@ Rectangle {
             font.family: Theme.normalFont.name
             font.pixelSize: dp(14)
             lineHeight: 1.15
-            text: modelData.text
+            text: model.text
             wrapMode: Text.WordWrap
             Layout.columnSpan: 3
             Layout.fillWidth: true
@@ -133,15 +133,12 @@ Rectangle {
                 width: parent.width/3
                 //                height: parent.height
                 color:"green"
-                iconType: IconType.comment +" "+ modelData.comments.length
+                iconType: IconType.comment +" "+ model.comments.count
                 MouseArea {
                     anchors.fill: parent
                     onClicked: {
-                        console.log("asdasdasd")
-                        console.log(pm)
-                        //                        console.log(commentIcon.data)
-                        //                        console.log("查看并回复")
-                        var com = Qt.createComponent("../pages/PostDetailPage.qml").createObject(parent,{postModel:pm})
+//                        console.log(index)
+                        var com = Qt.createComponent("../pages/PostDetailPage.qml").createObject(parent,{postModel:model})
                         if(admin){
                             rootStack.push(com)
                         }else{
@@ -179,7 +176,7 @@ Rectangle {
                 MouseArea{
                     anchors.fill: parent
                     onClicked: {
-                        adminLogic.deletePost(modelData.id);
+                        adminLogic.deletePost(model.id,index);
                     }
                 }
             }
@@ -219,7 +216,7 @@ Rectangle {
                                "content-type":"application/x-www-form-urlencoded"
                            })
         extractAsPackage: false
-        source: "http://photo.chaoxing.com/p/"+modelData.cxid+"_80"
+        source: "http://photo.chaoxing.com/p/"+model.cxid+"_80"
 
         Component.onCompleted: {
             console.log(source)
@@ -228,7 +225,7 @@ Rectangle {
     }
 
     Component.onCompleted:{
-        switch(modelData.type){
+        switch(model.type){
         case 0:{
             typeText.text = "学习心得";
             typeText.color = "green"
@@ -249,9 +246,6 @@ Rectangle {
         }
         }
 
-        pm=modelData
-        console.log(pm.datetime)
-        console.log(typeof(pm.datetime))
     }
 
 }

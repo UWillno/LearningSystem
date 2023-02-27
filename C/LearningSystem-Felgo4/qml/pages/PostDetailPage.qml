@@ -122,13 +122,14 @@ AppPage {
                 Layout.fillWidth: true
             }
 
+            AppListView {
+                model: postModel.comments
+                delegate: SimpleRow{ text:model.text}
+            }
 
 
         }
-        AppListView {
-            model: postModel.comments
-            delegate: SimpleRow{}
-        }
+
 
     }
     RowLayout {
@@ -160,15 +161,16 @@ AppPage {
 
             radius: width
             color: "#f5f5f5"
-//            AppTextEdit {
+            //            AppTextEdit {
             UWAppTextEdit{
+                id:textEdit
                 anchors.fill: parent
                 placeholderText: "回帖"
 
-//                MouseArea {
-//                    anchors.fill: parent
-//                    onClicked: rowlayout.height = dp(200)
-//                }
+                //                MouseArea {
+                //                    anchors.fill: parent
+                //                    onClicked: rowlayout.height = dp(200)
+                //                }
             }
         }
 
@@ -182,7 +184,11 @@ AppPage {
             Layout.preferredWidth: parent.width - r1.width - r2.width
             //            text:"发送"
             onClicked: {
-                console.log("asda")
+                console.log("评论发送")
+                if(logic.submitComment(postModel.id,textEdit.text)){
+                    textEdit.text = ""
+                    toastManager.show("发送成功!",1000);
+                }
             }
         }
         anchors.bottom: parent.bottom
@@ -205,7 +211,7 @@ AppPage {
         }
     }
     Component.onCompleted: {
-//        console.log(JSON.stringify(postModel))
+        //        console.log(JSON.stringify(postModel))
         //        download()
     }
 

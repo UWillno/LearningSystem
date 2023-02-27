@@ -26,7 +26,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 namespace {
 struct qt_meta_stringdata_SqlOperator_t {
-    uint offsetsAndSizes[62];
+    uint offsetsAndSizes[68];
     char stringdata0[12];
     char stringdata1[15];
     char stringdata2[1];
@@ -58,6 +58,9 @@ struct qt_meta_stringdata_SqlOperator_t {
     char stringdata28[11];
     char stringdata29[15];
     char stringdata30[5];
+    char stringdata31[14];
+    char stringdata32[9];
+    char stringdata33[8];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_SqlOperator_t::offsetsAndSizes) + ofs), len 
@@ -93,7 +96,10 @@ Q_CONSTINIT static const qt_meta_stringdata_SqlOperator_t qt_meta_stringdata_Sql
         QT_MOC_LITERAL(390, 6),  // "postId"
         QT_MOC_LITERAL(397, 10),  // "deletePost"
         QT_MOC_LITERAL(408, 14),  // "deleteComments"
-        QT_MOC_LITERAL(423, 4)   // "page"
+        QT_MOC_LITERAL(423, 4),  // "page"
+        QT_MOC_LITERAL(428, 13),  // "insertComment"
+        QT_MOC_LITERAL(442, 8),  // "Comment&"
+        QT_MOC_LITERAL(451, 7)   // "comment"
     },
     "SqlOperator",
     "insertQuestion",
@@ -125,7 +131,10 @@ Q_CONSTINIT static const qt_meta_stringdata_SqlOperator_t qt_meta_stringdata_Sql
     "postId",
     "deletePost",
     "deleteComments",
-    "page"
+    "page",
+    "insertComment",
+    "Comment&",
+    "comment"
 };
 #undef QT_MOC_LITERAL
 } // unnamed namespace
@@ -136,7 +145,7 @@ Q_CONSTINIT static const uint qt_meta_data_SqlOperator[] = {
       10,       // revision
        0,       // classname
        0,    0, // classinfo
-      14,   14, // methods
+      15,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -144,20 +153,21 @@ Q_CONSTINIT static const uint qt_meta_data_SqlOperator[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    1,   98,    2, 0x0a,    1 /* Public */,
-       5,    0,  101,    2, 0x0a,    3 /* Public */,
-       6,    1,  102,    2, 0x0a,    4 /* Public */,
-       7,    2,  105,    2, 0x0a,    6 /* Public */,
-      12,    0,  110,    2, 0x0a,    9 /* Public */,
-      14,    0,  111,    2, 0x0a,   10 /* Public */,
-      16,    0,  112,    2, 0x0a,   11 /* Public */,
-      18,    0,  113,    2, 0x0a,   12 /* Public */,
-      19,    5,  114,    2, 0x0a,   13 /* Public */,
-      25,    0,  125,    2, 0x0a,   19 /* Public */,
-      26,    1,  126,    2, 0x0a,   20 /* Public */,
-      28,    1,  129,    2, 0x0a,   22 /* Public */,
-      29,    1,  132,    2, 0x0a,   24 /* Public */,
-      25,    1,  135,    2, 0x0a,   26 /* Public */,
+       1,    1,  104,    2, 0x0a,    1 /* Public */,
+       5,    0,  107,    2, 0x0a,    3 /* Public */,
+       6,    1,  108,    2, 0x0a,    4 /* Public */,
+       7,    2,  111,    2, 0x0a,    6 /* Public */,
+      12,    0,  116,    2, 0x0a,    9 /* Public */,
+      14,    0,  117,    2, 0x0a,   10 /* Public */,
+      16,    0,  118,    2, 0x0a,   11 /* Public */,
+      18,    0,  119,    2, 0x0a,   12 /* Public */,
+      19,    5,  120,    2, 0x0a,   13 /* Public */,
+      25,    0,  131,    2, 0x0a,   19 /* Public */,
+      26,    1,  132,    2, 0x0a,   20 /* Public */,
+      28,    1,  135,    2, 0x0a,   22 /* Public */,
+      29,    1,  138,    2, 0x0a,   24 /* Public */,
+      25,    1,  141,    2, 0x0a,   26 /* Public */,
+      31,    1,  144,    2, 0x0a,   28 /* Public */,
 
  // slots: parameters
     QMetaType::Bool, 0x80000000 | 3,    4,
@@ -174,6 +184,7 @@ Q_CONSTINIT static const uint qt_meta_data_SqlOperator[] = {
     QMetaType::Bool, 0x80000000 | 8,    9,
     QMetaType::Bool, 0x80000000 | 8,    9,
     QMetaType::QJsonArray, 0x80000000 | 8,   30,
+    QMetaType::Bool, 0x80000000 | 32,   33,
 
        0        // eod
 };
@@ -227,7 +238,10 @@ Q_CONSTINIT const QMetaObject SqlOperator::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<qint32 &, std::false_type>,
         // method 'selectPosts'
         QtPrivate::TypeAndForceComplete<QJsonArray, std::false_type>,
-        QtPrivate::TypeAndForceComplete<qint32 &, std::false_type>
+        QtPrivate::TypeAndForceComplete<qint32 &, std::false_type>,
+        // method 'insertComment'
+        QtPrivate::TypeAndForceComplete<bool, std::false_type>,
+        QtPrivate::TypeAndForceComplete<Comment &, std::false_type>
     >,
     nullptr
 } };
@@ -264,6 +278,8 @@ void SqlOperator::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
             if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
         case 13: { QJsonArray _r = _t->selectPosts((*reinterpret_cast< std::add_pointer_t<qint32&>>(_a[1])));
             if (_a[0]) *reinterpret_cast< QJsonArray*>(_a[0]) = std::move(_r); }  break;
+        case 14: { bool _r = _t->insertComment((*reinterpret_cast< std::add_pointer_t<Comment&>>(_a[1])));
+            if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
         default: ;
         }
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
@@ -306,13 +322,13 @@ int SqlOperator::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 14)
+        if (_id < 15)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 14;
+        _id -= 15;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 14)
+        if (_id < 15)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 14;
+        _id -= 15;
     }
     return _id;
 }

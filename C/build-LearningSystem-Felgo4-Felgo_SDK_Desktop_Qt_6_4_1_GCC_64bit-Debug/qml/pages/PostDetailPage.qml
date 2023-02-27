@@ -2,15 +2,15 @@ import QtQuick
 import Felgo
 import QtQuick.Layouts
 import QtQuick.Controls
-
+import "../items/template"
 AppPage {
     title: "帖子"
-    height: parent.height - dp(80)
+    //    height: parent.height
     property var postModel
 
     AppFlickable{
         width: parent.width
-        height: parent.height
+        height: parent.height - dp(40)
         //        contentWidth: Math.max(width, child.width)
         contentHeight: Math.max(height, child.height)
 
@@ -122,21 +122,75 @@ AppPage {
                 Layout.fillWidth: true
             }
 
+            AppListView {
+                model: postModel.comments
+                delegate: SimpleRow{ text:model.text}
+            }
 
 
         }
-        AppListView {
-            model: postModel.comments
-            delegate: SimpleRow{}
-        }
+
 
     }
-    Row{
-        AppText{
-            text:"woqunidaty"
-
+    RowLayout {
+        id:rowlayout
+        x: dp(10)
+        width: parent.width - 2 * x
+        height: dp(40)
+        Rectangle {
+            id:r1
+            //            width: dp(10)
+            //                        Layout.fillWidth: true
+            Layout.fillHeight: true
+            Layout.preferredHeight:ico.height
+            Layout.preferredWidth:ico.width
+            Layout.alignment: Qt.AlignTop
+            AppIcon {
+                id:ico
+                iconType: IconType.pencil
+            }
         }
 
+        Rectangle {
+            id:r2
+            //            Layout.fillWidth: true
+            Layout.preferredHeight:dp(25)
+            //            Layout.fillHeight: true
+            Layout.alignment:  Qt.AlignTop
+            Layout.preferredWidth:parent.width*2/3
+
+            radius: width
+            color: "#f5f5f5"
+            //            AppTextEdit {
+            UWAppTextEdit{
+                id:textEdit
+                anchors.fill: parent
+                placeholderText: "回帖"
+
+                //                MouseArea {
+                //                    anchors.fill: parent
+                //                    onClicked: rowlayout.height = dp(200)
+                //                }
+            }
+        }
+
+        AppButton {
+            radius: width
+            Layout.alignment:  Qt.AlignTop
+            iconType: IconType.send
+            //            Layout.preferredWidth:
+            //            Layout.fillWidth: true
+            Layout.preferredHeight:dp(20)
+            Layout.preferredWidth: parent.width - r1.width - r2.width
+            //            text:"发送"
+            onClicked: {
+                console.log("评论发送")
+                if(logic.submitComment(postModel.id,textEdit.text)){
+                    textEdit.text =""
+                    toast.show("发送成功!",1000);
+                }
+            }
+        }
         anchors.bottom: parent.bottom
     }
 
@@ -157,7 +211,7 @@ AppPage {
         }
     }
     Component.onCompleted: {
-        console.log(JSON.stringify(postModel))
+        //        console.log(JSON.stringify(postModel))
         //        download()
     }
 

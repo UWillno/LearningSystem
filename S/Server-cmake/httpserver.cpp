@@ -10,13 +10,15 @@ HttpServer::HttpServer(QObject *parent)
 
 
     routeDeletePost();
+    routeGetPosts();
+    routeSubmitComment();
     //    http://127.0.0.1:4444/test/1
-    server.route("/test/", [] (const int page, const int sd) {
-        qInfo()<< page;
-        qInfo()<< sd;
+//    server.route("/test/", [] (const int page, const int sd) {
+//        qInfo()<< page;
+//        qInfo()<< sd;
 
 
-        return "asdasd"; });
+//        return "asdasd"; });
 
 
 
@@ -48,6 +50,42 @@ void HttpServer::routeDeletePost()
             return "error";
         }
 
+        return "error";
+    });
+}
+
+void HttpServer::routeGetPosts()
+{
+    server.route("/getPosts/",[](const qint32 page,const QHttpServerRequest &request){
+
+        //        auto p = &Singleton<SqlOperator>::GetInstance();
+        return QtConcurrent::run([](qint32 page){ return Singleton<SqlOperator>::GetInstance().selectPosts(page);},page).result();
+
+
+    });
+}
+
+void HttpServer::routeSubmitComment()
+{
+    server.route("/submitComment",[](const QHttpServerRequest &request){
+        if (request.method() == QHttpServerRequest::Method::Post){
+            qInfo() << request.body();
+            QJsonObject object = QJsonDocument::fromJson(request.body()).object();
+            qInfo() << object;
+            //            bool insertComment(qint32 &postId,qint32 &cxid,QString &username,QString &text);
+
+            bool ok =  QtConcurrent::run([&](){
+                Comment comment;
+                comment.postId = object.value("postId").toInt();
+                comment.cxid = object.value("cxid").toInt();
+                comment.username = object.value("username").toString();
+                comment.text = object.value("text").toString();
+                return (Singleton<SqlOperator>::GetInstance().insertComment(comment));
+            }).result();
+
+            return ok ?   "success" :  "error";
+            //            //            object.value
+        }
         return "error";
     });
 }

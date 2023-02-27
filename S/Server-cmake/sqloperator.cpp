@@ -484,11 +484,11 @@ QJsonArray SqlOperator::selectPosts(qint32 &page)
 {
     QJsonArray json;
     QSqlQuery query(m_db);
-    if(page==0){
-        query.prepare("SELECT * FROM post ORDER BY id DESC LIMIT 0, 5;");
+    if(page==1){
+        query.prepare("SELECT * FROM post ORDER BY id DESC LIMIT 0, 10;");
     }else{
 
-        query.prepare("SELECT * FROM post ORDER BY id DESC LIMIT "+ QString::number(5*page) +", 5;");
+        query.prepare("SELECT * FROM post ORDER BY id DESC LIMIT "+ QString::number(10*(page-1)) +", 10;");
     }
     query.exec();
 
@@ -522,3 +522,18 @@ QJsonArray SqlOperator::selectPosts(qint32 &page)
     qInfo() << json;
     return json;
 }
+
+bool SqlOperator::insertComment(Comment &comment)
+{
+    if(comment.cxid==0) return false;
+    QSqlQuery query(m_db);
+    query.prepare("INSERT INTO `comment` VALUES(NULL,:postId,:cxid,:username,:text,NOW());");
+    query.bindValue(":postId",comment.postId);
+    query.bindValue(":cxid",comment.cxid);
+    query.bindValue(":username",comment.username);
+    query.bindValue(":text",comment.text);
+    query.exec();
+    return commitDB(&query);
+}
+
+
