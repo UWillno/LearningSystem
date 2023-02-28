@@ -27,10 +27,26 @@ AppPage {
                 radius: dp(20)
                 width: parent.width - dp(10)
 
-//                AppSwitch {
+                Column{
+                    topPadding: dp(10)
+                    anchors.fill: parent
+                    AppText {
+                        anchors.horizontalCenter: parent.horizontalCenter
+                        text:"asdas "
+                    }
 
-//                    anchors.horizontalCenter: parent.horizontalCenter
-//                }
+                    AppButton {
+                        anchors.horizontalCenter: parent.horizontalCenter
+                        text: "下载"
+                    }
+                }
+
+
+
+                //                AppSwitch {
+
+                //                    anchors.horizontalCenter: parent.horizontalCenter
+                //                }
 
 
             }

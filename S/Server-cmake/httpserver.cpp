@@ -12,6 +12,7 @@ HttpServer::HttpServer(QObject *parent)
     routeDeletePost();
     routeGetPosts();
     routeSubmitComment();
+    routeGetComments();
     //    http://127.0.0.1:4444/test/1
 //    server.route("/test/", [] (const int page, const int sd) {
 //        qInfo()<< page;
@@ -60,8 +61,6 @@ void HttpServer::routeGetPosts()
 
         //        auto p = &Singleton<SqlOperator>::GetInstance();
         return QtConcurrent::run([](qint32 page){ return Singleton<SqlOperator>::GetInstance().selectPosts(page);},page).result();
-
-
     });
 }
 
@@ -87,5 +86,13 @@ void HttpServer::routeSubmitComment()
             //            //            object.value
         }
         return "error";
+    });
+}
+
+void HttpServer::routeGetComments()
+{
+    server.route("/getComments/<arg>/<arg>",[](const qint32 postId,const qint32 page,const QHttpServerRequest &request){
+
+        return QtConcurrent::run([&](qint32 postId,qint32 page){ return Singleton<SqlOperator>::GetInstance().selectComments(postId,page);},postId,page).result();
     });
 }

@@ -449,7 +449,7 @@ QJsonArray SqlOperator::selectComments(qint32 &postId)
         object.insert("cxid",comment.cxid);
         object.insert("username",comment.username);
         object.insert("text",comment.text);
-        object.insert("datetime",comment.datetime.toString("dd.MM.yyyy"));
+        object.insert("datetime",comment.datetime.toString("yyyy-MM-dd hh:mm:ss"));
         json.append(object);
     }
     qInfo() << json;
@@ -505,18 +505,19 @@ QJsonArray SqlOperator::selectPosts(qint32 &page)
         post.type= query.value(6).toInt();
         //        post.comments;
 
-        QFuture<QJsonArray> future = QtConcurrent::run([=](qint32 postId ){return selectComments(postId);},post.id);
+        QFuture<QJsonArray> future = QtConcurrent::run([=](qint32 postId){ return selectComments(postId,1);},post.id);
         post.comments = future.result();
-        //        selectComments(id);
+        qint32 commentsCount =  QtConcurrent::run([=](qint32 postId){ return selectCommentsCount(postId);},post.id).result();
 
         object.insert("id",post.id);
         object.insert("cxid",post.cxid);
         object.insert("username",post.username);
         object.insert("title",post.title);
         object.insert("text",post.text);
-        object.insert("datetime",post.datetime.toString("dd.MM.yyyy"));
+        object.insert("datetime",post.datetime.toString("yyyy-MM-dd hh:mm:ss"));
         object.insert("type",post.type);
         object.insert("comments",post.comments);
+        object.insert("commentsCount",commentsCount);
         json.append(object);
     }
     qInfo() << json;
@@ -534,6 +535,53 @@ bool SqlOperator::insertComment(Comment &comment)
     query.bindValue(":text",comment.text);
     query.exec();
     return commitDB(&query);
+}
+
+QJsonArray SqlOperator::selectComments(qint32 &postId,const qint32 &page)
+{
+    QJsonArray json;
+    QSqlQuery query(m_db);
+    qInfo()<<"分页查询评论";
+    if(page==1){
+        query.prepare("SELECT * FROM `comment` WHERE post_id = :postId ORDER BY id DESC LIMIT 0, 20;");
+    }else{
+        query.prepare("SELECT * FROM `comment` WHERE post_id = :postId ORDER BY id DESC LIMIT "+ QString::number(10*(page-1)) +", 20;");
+    }
+    query.bindValue(":postId",postId);
+    query.exec();
+
+    while(query.next()){
+        Comment comment;
+        QJsonObject object;
+        comment.id = query.value(0).toInt();
+        comment.postId = query.value(1).toInt();
+        comment.cxid = query.value(2).toInt();
+        comment.username = query.value(3).toString();
+        comment.text = query.value(4).toString();
+        comment.datetime = query.value(5).toDateTime();
+        //        qInfo() << query.value(0);
+        object.insert("id",comment.id);
+        object.insert("postId",comment.postId);
+        object.insert("cxid",comment.cxid);
+        object.insert("username",comment.username);
+        object.insert("text",comment.text);
+        object.insert("datetime",comment.datetime.toString("yyyy-MM-dd hh:mm:ss"));
+        json.append(object);
+    }
+    qInfo() << json;
+    return json;
+}
+
+qint32 SqlOperator::selectCommentsCount(qint32 &postId)
+{
+    QSqlQuery query(m_db);
+    query.prepare("select Count(*) from comment where post_id =:postId;");
+    query.bindValue(":postId",postId);
+    query.exec();
+    while(query.next()){
+        return query.value(0).toInt();
+    }
+    return 0;
 }
 
 

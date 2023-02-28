@@ -37,6 +37,8 @@ AppPage {
         }
         footer: VisibilityRefreshHandler {
             id:refreshHandler
+//            animation
+            defaultAppActivityIndicatorVisible:false
             canRefresh: true
             onRefresh: {
                 postList.page++

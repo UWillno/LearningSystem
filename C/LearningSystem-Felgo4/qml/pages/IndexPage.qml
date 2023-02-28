@@ -27,10 +27,56 @@ AppPage {
                 radius: dp(20)
                 width: parent.width - dp(10)
 
-//                AppSwitch {
+                Column{
+                    topPadding: dp(10)
+                    spacing: dp(10)
+                    anchors.fill: parent
+                    AppText {
+                        anchors.horizontalCenter: parent.horizontalCenter
+                        text:"当前题库版本:"
+                    }
 
-//                    anchors.horizontalCenter: parent.horizontalCenter
-//                }
+                    AppButton {
+                        anchors.horizontalCenter: parent.horizontalCenter
+                        text: "下载"
+                    }
+                    Row{
+//                        height: dp(200)
+                         spacing: dp(10)
+                        anchors.horizontalCenter: parent.horizontalCenter
+                        AppText {
+                            text:"自动同步:"
+                        }
+                        AppSwitch {
+                            id:autoSyncSwitch
+                        }
+                    }
+//                    Row{
+////                        height: dp(200)
+//                        spacing: dp(10)
+//                        anchors.horizontalCenter: parent.horizontalCenter
+//                        AppText {
+//                            text:"手动同步:"
+//                        }
+//                        AppButton {
+//                            anchors.horizontalCenter: parent.horizontalCenter
+//                            text: "上传"
+//                        }
+//                        AppButton {
+//                            anchors.horizontalCenter: parent.horizontalCenter
+//                            text: "下载"
+//                        }
+//                    }
+
+
+                }
+
+
+
+                //                AppSwitch {
+
+                //                    anchors.horizontalCenter: parent.horizontalCenter
+                //                }
 
 
             }

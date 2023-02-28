@@ -30,6 +30,8 @@ private :
 
     void routeSubmitComment();
 
+    void routeGetComments();
+
 };
 
 #endif // HTTPSERVER_H

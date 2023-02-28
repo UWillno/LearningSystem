@@ -65,6 +65,10 @@ public slots:
 
     bool insertComment(Comment &comment);
 
+    QJsonArray selectComments(qint32 &postId,const qint32 &page);
+
+    qint32 selectCommentsCount(qint32 &postId);
+
 private:
     QSqlDatabase m_db;
 

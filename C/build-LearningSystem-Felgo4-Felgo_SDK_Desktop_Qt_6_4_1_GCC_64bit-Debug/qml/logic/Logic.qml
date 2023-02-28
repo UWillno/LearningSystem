@@ -53,4 +53,11 @@ Item {
         return false
     }
 
+    function getComments(postId,page){
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET",qhttpserver + "getComments/"+postId+"/"+page,false);
+        xhr.send(null)
+        return JSON.parse(xhr.responseText)
+    }
+
 }

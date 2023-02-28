@@ -133,7 +133,7 @@ Rectangle {
                 width: parent.width/3
                 //                height: parent.height
                 color:"green"
-                iconType: IconType.comment +" "+ model.comments.count
+                iconType: IconType.comment +" "+ model.commentsCount
                 MouseArea {
                     anchors.fill: parent
                     onClicked: {
