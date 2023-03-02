@@ -102,7 +102,28 @@ Item {
         }
         return false
     }
+    function updateResource(id,name,info,url,type){
 
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST",qhttpserver + "updateResource",false);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
+        xhr.send(JSON.stringify({id:id,name:name,info:info,url:url,type:type}))
+        if(xhr.responseText == "success"){
+            return true
+        }
+        return false
+    }
+
+    function deleteResource(id){
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST",qhttpserver + "deleteResource",false);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
+        xhr.send(JSON.stringify({id:id}))
+        if(xhr.responseText == "success"){
+            return true
+        }
+        return false
+    }
 
 
 

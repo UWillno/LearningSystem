@@ -584,4 +584,85 @@ qint32 SqlOperator::selectCommentsCount(qint32 &postId)
     return 0;
 }
 
+bool SqlOperator::insertResource(Resource &res)
+{
+    QSqlQuery query(m_db);
+    query.prepare("INSERT INTO `resource` VALUES(NULL,:name,:info,:url,:type);");
+    query.bindValue(":name",res.name);
+    query.bindValue(":info",res.info);
+    query.bindValue(":url",res.url);
+    query.bindValue(":type",res.type);
+    query.exec();
+    return commitDB(&query);
+}
+
+QJsonArray SqlOperator::selectAllResources()
+{
+    QJsonArray json;
+    QSqlQuery query(m_db);
+    query.prepare("SELECT * from resource;");
+    query.exec();
+
+    while(query.next()){
+
+        Resource res;
+        QJsonObject object;
+        res.id = query.value(0).toInt();
+        res.name = query.value(1).toString();
+        res.info = query.value(2).toString();
+        res.url = query.value(3).toString();
+        res.type = query.value(4).toInt();
+        //        qInfo() << query.value(0);
+        object.insert("id",res.id);
+        object.insert("name",res.name);
+        object.insert("info",res.info);
+        object.insert("url",res.url);
+        object.insert("type",res.type);
+        switch(res.type){
+        case 0:{
+            object.insert("typeText","文档资源");
+            break;
+        }
+        case 1:{
+            object.insert("typeText","图片资源");
+            break;
+        }
+        case 2:{
+            object.insert("typeText","视频资源");
+            break;
+        }
+        case 3:{
+            object.insert("typeText","WEB资源");
+            break;
+        }
+        }
+
+        json.append(object);
+    }
+    qInfo() << json;
+    return json;
+}
+
+bool SqlOperator::updateResource(Resource &res)
+{
+    QSqlQuery query(m_db);
+    query.prepare("UPDATE resource SET name = :name, info = :info, url = :url, type = :type WHERE id = :id;");
+    query.bindValue(":name",res.name);
+    query.bindValue(":info",res.info);
+    query.bindValue(":url",res.url);
+    query.bindValue(":type",res.type);
+    query.bindValue(":id",res.id);
+    query.exec();
+    return commitDB(&query);
+}
+
+bool SqlOperator::deleteResource(qint32 &id)
+{
+    QSqlQuery query(m_db);
+    query.prepare("DELETE FROM resource WHERE id = :id;");
+    query.bindValue(":id",id);
+    query.exec();
+    return commitDB(&query);
+}
+
 

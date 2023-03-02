@@ -187,13 +187,33 @@ AppPage {
 
     function submit(){
         //        console.log(type.value)
-        if(name.trim()!==""&&info.trim()!==""&&url.trim()!==""){
-            if(adminLogic.submitResource(name.trim(),info.trim(),url.trim(),type.value)){
-                toastManager.show("添加成功",1000);
-                popped()
+        if(model){
+            if(model.name === name.trim() && model.info === info.trim()
+                    && model.url === url.trim() && model.type === type.value){
+                toastManager.show("数据无变化!!",1000);
             }
+            else{
+                if(name.trim()!==""&&info.trim()!==""&&url.trim()!==""){
+                    if(adminLogic.updateResource(model.id,name.trim(),info.trim(),url.trim(),type.value)){
+                        toastManager.show("修改成功",1000);
+                        reslistPage.refresh()
+                        popped()
+                    }
+
+                }else{
+                    toastManager.show("数据异常",1000);
+                }
+            }
+
         }else{
-            toastManager.show("数据异常",1000);
+            if(name.trim()!==""&&info.trim()!==""&&url.trim()!==""){
+                if(adminLogic.submitResource(name.trim(),info.trim(),url.trim(),type.value)){
+                    toastManager.show("添加成功",1000);
+                    popped()
+                }
+            }else{
+                toastManager.show("数据异常",1000);
+            }
         }
     }
 
@@ -207,7 +227,7 @@ AppPage {
             uploadStatus = "上传完成"
             switch(model.type){
             case 0:{
-//                radio1.toggle()
+                //                radio1.toggle()
                 break
             }
             case 1:{
@@ -226,7 +246,7 @@ AppPage {
             }
 
         }else{
-             console.log("添加模式")
+            console.log("添加模式")
 
         }
     }

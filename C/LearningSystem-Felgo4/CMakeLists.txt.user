@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 9.0.0, 2023-03-01T23:20:43. -->
+<!-- Written by QtCreator 9.0.0, 2023-03-03T00:11:32. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -797,7 +797,6 @@
     <valuelist type="QVariantList" key="CustomOutputParsers"/>
     <value type="int" key="PE.EnvironmentAspect.Base">0</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">appLearningSystem-Felgo4</value>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.AndroidRunConfiguration:appLearningSystem-Felgo4</value>
     <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">appLearningSystem-Felgo4</value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
@@ -812,8 +811,8 @@
   <variable>ProjectExplorer.Project.Target.2</variable>
   <valuemap type="QVariantMap">
    <value type="QString" key="DeviceType">Android.Device.Type</value>
-   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">安卓 Qt 6.4.1 Clang arm64-v8a</value>
-   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">安卓 Qt 6.4.1 Clang arm64-v8a</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Replacement for &quot;安卓 Qt 6.4.1 Clang arm64-v8a&quot;4</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Replacement for &quot;安卓 Qt 6.4.1 Clang arm64-v8a&quot;4</value>
    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">{31016664-1123-4a02-a0ca-f5f7044489da}</value>
    <value type="qlonglong" key="ProjectExplorer.Target.ActiveBuildConfiguration">0</value>
    <value type="qlonglong" key="ProjectExplorer.Target.ActiveDeployConfiguration">0</value>
@@ -1212,7 +1211,6 @@
     <valuelist type="QVariantList" key="CustomOutputParsers"/>
     <value type="int" key="PE.EnvironmentAspect.Base">0</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">appLearningSystem-Felgo4</value>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.AndroidRunConfiguration:appLearningSystem-Felgo4</value>
     <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">appLearningSystem-Felgo4</value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>

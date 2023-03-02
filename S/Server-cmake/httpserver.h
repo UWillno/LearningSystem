@@ -10,6 +10,8 @@
 #include <QJsonObject>
 #include <QJsonArray>
 #include <QJsonDocument>
+#include <QHttpMultiPart>
+#include <QHttpServerResponse>
 
 class HttpServer : public QObject
 {
@@ -24,13 +26,24 @@ signals:
 
 private :
     QHttpServer server;
+    //删除帖子
     void routeDeletePost();
-
+    // 获取帖子
     void routeGetPosts();
-
+    //提交评论
     void routeSubmitComment();
-
+    // 获取评论
     void routeGetComments();
+    // 资源文件上传
+    void routeUpload();
+    // 资源提交入库
+    void routeSubmitResource();
+    // 获取全部资源文件
+    void routeGetAllResources();
+    // 更新资源
+    void routeUpdateResource();
+    // 删除资源
+    void routeDeleteResource();
 
 };
 

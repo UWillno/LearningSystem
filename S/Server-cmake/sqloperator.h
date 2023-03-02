@@ -19,6 +19,8 @@
 #include <QtConcurrent>
 #include "post.h"
 #include "comment.h"
+#include "resource.h"
+
 //#include "
 class SqlOperator : public QObject
 {
@@ -68,6 +70,14 @@ public slots:
     QJsonArray selectComments(qint32 &postId,const qint32 &page);
 
     qint32 selectCommentsCount(qint32 &postId);
+
+    bool insertResource(Resource &res);
+
+    QJsonArray selectAllResources();
+
+    bool updateResource(Resource &res);
+
+    bool deleteResource(qint32 &id);
 
 private:
     QSqlDatabase m_db;

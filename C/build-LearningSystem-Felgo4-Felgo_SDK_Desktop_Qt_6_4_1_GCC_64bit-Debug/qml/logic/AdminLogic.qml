@@ -3,7 +3,7 @@ import Felgo
 //import "../items/loaders/LoaderDialog.qml"
 Item {
     property string qhttpserver: "http://127.0.0.1:4444/"
-    signal deleteSucceed()
+    signal deleteSucceed(int index)
     //    property var postsdata
     id: adminLogic
     function insertChoiceQuestion(question,option1, option2,option3,option4,answer){
@@ -76,19 +76,55 @@ Item {
         }
     }
 
-    function deletePost(id){
+    function deletePost(id,index){
         HttpRequest
         .post(qhttpserver+"deletePost")
         .set('Content-Type', 'application/json')
         .send({ postId: id, v: "" })
         .then(function(res) {
             if(res.body === "success"){
-                deleteSucceed()
+                deleteSucceed(index)
             }
         })
         .catch(function(err) {
             console.log(err.code)
         });
     }
+
+    function submitResource(name,info,url,type){
+
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST",qhttpserver + "submitResource",false);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
+        xhr.send(JSON.stringify({name:name,info:info,url:url,type:type}))
+        if(xhr.responseText == "success"){
+            return true
+        }
+        return false
+    }
+    function updateResource(id,name,info,url,type){
+
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST",qhttpserver + "updateResource",false);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
+        xhr.send(JSON.stringify({id:id,name:name,info:info,url:url,type:type}))
+        if(xhr.responseText == "success"){
+            return true
+        }
+        return false
+    }
+
+    function deleteResource(id){
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST",qhttpserver + "deleteResource",false);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
+        xhr.send(JSON.stringify({id:id}))
+        if(xhr.responseText == "success"){
+            return true
+        }
+        return false
+    }
+
+
 
 }

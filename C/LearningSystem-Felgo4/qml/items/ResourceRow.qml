@@ -27,14 +27,23 @@ Rectangle {
                 text: "修改"
                 onClicked: {
                     var p = Qt.createComponent("../pages/AddResourcePage.qml").createObject(parent,{model:model})
-                   rootStack.push(p)
+                    rootStack.push(p)
                 }
             }
             AppButton {
                 text: "删除"
+                onClicked: {
+                    if(adminLogic.deleteResource(model.id)){
+                        reslistPage.model.remove(index,1)
+                        toastManager.show("删除成功!",1000)
+                    }
+                }
             }
             AppButton {
                 text: "查看"
+                onClicked: {
+
+                }
 
             }
         }

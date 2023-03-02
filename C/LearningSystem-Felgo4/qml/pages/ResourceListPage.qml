@@ -20,6 +20,17 @@ ListPage {
         arr.forEach(function(obj) {
             reslistPage.model.append(obj);
         })
+        section.property="typeText"
     }
+
+    function refresh(){
+        reslistPage.model.clear()
+        var arr = logic.getAllResources()
+        arr.forEach(function(obj) {
+            reslistPage.model.append(obj);
+        })
+        section.property= "typeText"
+    }
+
 
 }
