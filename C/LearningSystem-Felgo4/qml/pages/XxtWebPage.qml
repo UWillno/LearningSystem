@@ -5,12 +5,12 @@ import QtWebView
 
 AppPage {
 
-    title: "New Page"
+    title: "学习通"
 
 
 
     WebView {
-        anchors.fill:parent
+//        anchors.fill:parent
         url:"https://mooc1.chaoxing.com/course/phone/courselisthead?passed=1"
 
 

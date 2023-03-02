@@ -44,7 +44,7 @@ qt_add_executable(appLearningSystem-Felgo4
     tcpclient.h
     tcpclient.cpp
     qmlmediator.cpp
-
+    httpclient.h httpclient.cpp
     ${QmlFiles}
     ${AssetsFiles}
 )

@@ -26,7 +26,12 @@ AppPage {
         {
             text: "删帖/删评",
             detailText: "Delete Post Or Comment",
+        },
+        {
+            text: "学习资源管理",
+            detailText: "Resources Management",
         }
+
     ]
 
     AppListView {
@@ -41,6 +46,13 @@ AppPage {
                             adminLogic.commitQuestions()
                             if(index === 3)
                             createPostsPage()
+                            if(index === 4)
+                            {
+                                var p = Qt.createComponent("SRMListPage.qml").createObject(parent)
+                                rootStack.push(p)
+                            }
+
+
 //                            logic.getAllPosts()
                             //                            createPostsPage()
                             //                            if(index === 4)

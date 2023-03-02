@@ -8,7 +8,6 @@
 #include "qmlmediator.h"
 #include "settings.h"
 #include <QtWebView>
-
 // uncomment this line to add the Live Client Module and use live reloading with your custom C++ code
 //#include <FelgoLiveClient>
 
@@ -60,7 +59,6 @@ int main(int argc, char *argv[])
     // to start your project as Live Client, comment (remove) the lines "felgo.setMainQmlFileName ..." & "engine.load ...",
     // and uncomment the line below
     //FelgoLiveClient client (&engine);
-
 
     return app.exec();
 }

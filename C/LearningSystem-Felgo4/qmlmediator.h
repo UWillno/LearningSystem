@@ -2,6 +2,7 @@
 #define QMLMEDIATOR_H
 
 #include <QObject>
+#include "httpclient.h"
 #include "singleton.h"
 #include "tcpclient.h"
 #include <QDebug>
@@ -35,7 +36,9 @@ signals:
     void deleteFailed();
     void updateSucceeded();
     void updateFailed();
+    void uploadResource(QUrl &path);
     //    void commitSignal();
+    void uploadResourceSucceed(QString url);
 
 
 public slots:
@@ -64,14 +67,19 @@ public slots:
     // 创建新用户
     void createNewUser(QString username,qint32 cxid);
 
-    //上传图片
+    //上传图片 by Tcp
     QString uploadPicture(QUrl path);
+
+    // 上传任意资源 by Http
+    void upload(QUrl path);
 
     //发帖
     void submitPost(QString title,QString text,qint32 cxid,QString username,qint32 type);
 
     //管理员用帖子列表
     void selectPosts();
+
+
 
 
 private:

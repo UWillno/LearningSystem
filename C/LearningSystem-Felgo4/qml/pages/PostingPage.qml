@@ -109,6 +109,10 @@ AppPage {
                                    }
                                }
     }
+
+    onPopped: {
+        destroy()
+    }
 }
 
 

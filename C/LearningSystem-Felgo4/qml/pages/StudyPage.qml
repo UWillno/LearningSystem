@@ -44,7 +44,7 @@ AppPage {
                             }
                             if(index === 1 ) {
                                 page = Qt.createComponent("XxtWebPage.qml").createObject();
-                                //                                studyStatck.push(page)
+                                studyStack.push(page)
                             }
                             //                            studyStatck.push(page)
                             //                console.log(modelData.id)
@@ -65,11 +65,11 @@ AppPage {
         onAvailableChanged: if(available) openPdf()
     }
     function openPdf() {
-       // you can also open files with nativeUtils.openUrl() now (for paths starting with "file://")
-       //nativeUtils.openUrl(pdfResource.storagePath)
-       // with V-Play 2.17.0 you can also use fileUtils.openFile()
-       fileUtils.openFile(pdfResource.storagePath)
-     }
+        // you can also open files with nativeUtils.openUrl() now (for paths starting with "file://")
+        //nativeUtils.openUrl(pdfResource.storagePath)
+        // with V-Play 2.17.0 you can also use fileUtils.openFile()
+        fileUtils.openFile(pdfResource.storagePath)
+    }
     //    WebView {
     //        id:webview
     //        anchors.fill: parent

@@ -91,4 +91,19 @@ Item {
         });
     }
 
+    function submitResource(name,info,url,type){
+
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST",qhttpserver + "submitResource",false);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
+        xhr.send(JSON.stringify({name:name,info:info,url:url,type:type}))
+        if(xhr.responseText == "success"){
+            return true
+        }
+        return false
+    }
+
+
+
+
 }

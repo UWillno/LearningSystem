@@ -1,7 +1,7 @@
 ﻿import QtQuick
 import Felgo
 import "../items"
-
+import QtQuick.Layouts
 
 AppPage {
 
@@ -28,61 +28,68 @@ AppPage {
                 width: parent.width - dp(10)
 
                 Column{
-                    topPadding: dp(10)
+                    //                    topPadding: dp(10)
                     spacing: dp(10)
+
+                    anchors.topMargin: dp(10)
                     anchors.fill: parent
                     AppText {
+
                         anchors.horizontalCenter: parent.horizontalCenter
                         text:"当前题库版本:"
                     }
-
                     AppButton {
                         anchors.horizontalCenter: parent.horizontalCenter
-                        text: "下载"
+                        text:"下载/更新"
                     }
-                    Row{
-//                        height: dp(200)
-                         spacing: dp(10)
+                    AppText {
                         anchors.horizontalCenter: parent.horizontalCenter
-                        AppText {
-                            text:"自动同步:"
+                        text:"自动同步状态:"
+                    }
+                    AppSwitch {
+                        anchors.horizontalCenter: parent.horizontalCenter
+                        //                        text:"下载"
+                    }
+                    AppText {
+                        anchors.horizontalCenter: parent.horizontalCenter
+                        text:"手动同步:"
+                    }
+                    Row {
+                        //                        anchors.verticalCenter: parent.verticalCenter
+                        anchors.horizontalCenter: parent.horizontalCenter
+                        spacing:dp(10)
+                        AppButton {
+                            text: "上传"
+
+                            onClicked: {
+//                                NativeUtils.displayFilePicker("asdasd");
+                            }
                         }
-                        AppSwitch {
-                            id:autoSyncSwitch
+                        AppButton {
+                            text: "下载"
                         }
                     }
-//                    Row{
-////                        height: dp(200)
-//                        spacing: dp(10)
-//                        anchors.horizontalCenter: parent.horizontalCenter
-//                        AppText {
-//                            text:"手动同步:"
-//                        }
-//                        AppButton {
-//                            anchors.horizontalCenter: parent.horizontalCenter
-//                            text: "上传"
-//                        }
-//                        AppButton {
-//                            anchors.horizontalCenter: parent.horizontalCenter
-//                            text: "下载"
-//                        }
-//                    }
-
 
                 }
-
-
-
-                //                AppSwitch {
-
-                //                    anchors.horizontalCenter: parent.horizontalCenter
-                //                }
 
 
             }
 
         }
     }
+
+//    Connections {
+//        target: NativeUtils
+//        onFilePickerFinished:(accepted,files)=>{
+//                                 if(accepted)
+////                                 console.log(files[0])
+//                                 qm.upload(files[0])
+//                             }
+
+
+
+
+//    }
 
 }
 

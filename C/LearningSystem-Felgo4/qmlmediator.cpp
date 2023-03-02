@@ -4,6 +4,13 @@ QmlMediator::QmlMediator(QObject *parent)
     : QObject{parent}
 {
     tcpclientInit();
+    HttpClient *httpclient = new HttpClient(this);
+    QObject::connect(this,&QmlMediator::uploadResource,httpclient,&HttpClient::uploadFile);
+
+    QObject::connect(httpclient,&HttpClient::getFilenameSucceed,this,[this](QString url){
+        qInfo() << url;
+        emit uploadResourceSucceed(url);
+    });
     //    connect(this,QmlMediator::commitSignal(),&Singleton<TcpClient>::GetInstance(),TcpClient::);
 }
 
@@ -225,6 +232,14 @@ QString QmlMediator::uploadPicture(QUrl path)
     QFuture<QString> future = QtConcurrent::run([p](QUrl path){ return p->uploadPicture(path);},path);
     //    qInfo() << future.result();
     return future.result();
+}
+
+void QmlMediator::upload(QUrl path)
+{
+    qInfo() << path;
+
+    emit uploadResource(path);
+    qInfo() <<"uploadResource信号发射";
 }
 
 void QmlMediator::submitPost(QString title, QString text, qint32 cxid, QString username,qint32 type)

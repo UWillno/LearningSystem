@@ -59,5 +59,23 @@ Item {
         xhr.send(null)
         return JSON.parse(xhr.responseText)
     }
+    function getAllResources(){
+        //        var p = HttpRequest.get(qhttpserver + "selectAllPosts").timeout(5000).then(function(res){
+        //            JSON.stringify(res.body)
+        //            postsdata = res.body
+        //            postsGot()
+        //        });
+
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET",qhttpserver + "selectAllResources",false);  //建立连接，要求同步响应
+        xhr.send(null)
+        //        console.log(req.statusText)
+        //        console.log(req.responseText)
+
+        return JSON.parse(xhr.responseText)
+    }
+
+
+
 
 }
