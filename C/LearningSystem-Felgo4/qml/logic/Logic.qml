@@ -3,12 +3,13 @@ import Felgo
 
 Item {
     //    property var data
-    property string qhttpserver: "http://127.0.0.1:4444/"
+//    property string qhttpserver: "http://127.0.0.1:4444/"
+    property string qhttpserver: "http://192.168.1.244:4444/"
     id: item
     property var postsdata
     signal postsGot()
     function getQuestion(){
-        HttpRequest.get("http://192.168.1.12/currentQuestions.json").timeout(50000).then(function(res){
+        HttpRequest.get("http://192.168.1.244/currentQuestions.json").timeout(50000).then(function(res){
             console.log(res.body)
         });
     }
@@ -74,7 +75,6 @@ Item {
 
         return JSON.parse(xhr.responseText)
     }
-
 
 
 

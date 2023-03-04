@@ -37,7 +37,8 @@ void QmlMediator::adminLogin(QString username, QString password)
 void QmlMediator::tcpclientInit()
 {
     //    Singleton<TcpClient>::GetInstance().init("192.168.1.12",9444);
-    Singleton<TcpClient>::GetInstance().init("127.0.0.1",9444);
+//    Singleton<TcpClient>::GetInstance().init("127.0.0.1",9444);
+    Singleton<TcpClient>::GetInstance().init("192.168.1.244",9444);
 }
 
 void QmlMediator::tologin(QString username, QString password,int usertype)

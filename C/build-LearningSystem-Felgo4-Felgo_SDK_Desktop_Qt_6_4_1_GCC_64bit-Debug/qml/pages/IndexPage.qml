@@ -1,13 +1,13 @@
 ﻿import QtQuick
 import Felgo
 import "../items"
-
+import QtQuick.Layouts
 
 AppPage {
 
     id: indexPage
     title: "Learning System"
-
+    property string version : settings.questionsDB['version']
     Rectangle {
         id: rectangle
         anchors.fill: parent
@@ -28,31 +28,80 @@ AppPage {
                 width: parent.width - dp(10)
 
                 Column{
-                    topPadding: dp(10)
+                    //                    topPadding: dp(10)
+                    spacing: dp(10)
+
+                    anchors.topMargin: dp(10)
                     anchors.fill: parent
                     AppText {
-                        anchors.horizontalCenter: parent.horizontalCenter
-                        text:"asdas "
-                    }
 
+                        anchors.horizontalCenter: parent.horizontalCenter
+                        text:"当前题库版本:" + version
+                    }
                     AppButton {
                         anchors.horizontalCenter: parent.horizontalCenter
-                        text: "下载"
+                        text:"下载/更新"
+                        onClicked: {
+//                            questionResource.download()
+                            userLogic.getQuestionsDB()
+                        }
                     }
+                    AppText {
+                        anchors.horizontalCenter: parent.horizontalCenter
+                        text:"自动同步状态:"
+                    }
+                    AppSwitch {
+                        anchors.horizontalCenter: parent.horizontalCenter
+                        //                        text:"下载"
+                    }
+                    AppText {
+                        anchors.horizontalCenter: parent.horizontalCenter
+                        text:"手动同步:"
+                    }
+                    Row {
+                        //                        anchors.verticalCenter: parent.verticalCenter
+                        anchors.horizontalCenter: parent.horizontalCenter
+                        spacing:dp(10)
+                        AppButton {
+                            text: "上传"
+
+                            onClicked: {
+//                                NativeUtils.displayFilePicker("asdasd");
+                            }
+                        }
+                        AppButton {
+                            text: "下载"
+                        }
+                    }
+
                 }
-
-
-
-                //                AppSwitch {
-
-                //                    anchors.horizontalCenter: parent.horizontalCenter
-                //                }
 
 
             }
 
         }
     }
+
+    Connections{
+        target: userLogic
+        onGetQuestionsDBSucceed: questionsDB =>{
+            settings.questionsDB = questionsDB
+//            console.log(questionsDB)
+        }
+    }
+
+//    Connections {
+//        target: NativeUtils
+//        onFilePickerFinished:(accepted,files)=>{
+//                                 if(accepted)
+////                                 console.log(files[0])
+//                                 qm.upload(files[0])
+//                             }
+
+
+
+
+//    }
 
 }
 

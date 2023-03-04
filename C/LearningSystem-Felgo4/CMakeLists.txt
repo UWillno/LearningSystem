@@ -9,6 +9,7 @@ find_package(Felgo REQUIRED)
 #find_package(Qt6 REQUIRED COMPONENTS Concurrent Network WebEngineQuick)
 find_package(Qt6 REQUIRED COMPONENTS Concurrent Network Qml WebView)
 
+
 # Project identifier and version
 # More information: https://felgo.com/doc/felgo-publishing/#project-configuration
 set(PRODUCT_IDENTIFIER "com.uwillno.icu.LearningSystemFelgo4")
@@ -80,6 +81,7 @@ target_compile_definitions(appLearningSystem-Felgo4
 target_link_libraries(appLearningSystem-Felgo4 PRIVATE Felgo)
 #target_link_libraries(appLearningSystem-Felgo4 PRIVATE Qt6::Concurrent Qt6::Network Qt6::WebEngineQuick)
 target_link_libraries(appLearningSystem-Felgo4 PRIVATE Qt6::Concurrent Qt6::Network Qt6::Qml Qt6::WebView)
+
 # uncomment this line to add the Live Client Module and use live reloading with your custom C++ code
 # for the remaining steps to build a custom Live Code Reload app see here: https://felgo.com/custom-code-reload-app/
 #find_package(FelgoLive REQUIRED)

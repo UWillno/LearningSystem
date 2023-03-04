@@ -36,7 +36,7 @@ void HttpClient::getFilename(QNetworkReply *r)
         return;
     }
     qInfo() << ahost+"resources/"+result;
-    emit getFilenameSucceed(ahost+"resource/"+result);
+    emit getFilenameSucceed(ahost+"resources/"+result);
 
 }
 

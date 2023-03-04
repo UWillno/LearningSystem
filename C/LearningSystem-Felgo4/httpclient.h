@@ -28,9 +28,11 @@ public slots:
      void getFilename(QNetworkReply *r);
 
 private:
-     QString qhost = "http://127.0.0.1:4444/";
-     QString ahost = "http://127.0.0.1/";
+//     QString qhost = "http://127.0.0.1:4444/";
+//     QString ahost = "http://127.0.0.1/";
 //     QString host ="http://192.168.1.107:4444/";
+     QString qhost = "http://192.168.1.244:4444/";
+     QString ahost = "http://192.168.1.244/";
 
      QNetworkAccessManager *manager;
 };

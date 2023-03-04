@@ -7,7 +7,7 @@ AppPage {
 
     id: indexPage
     title: "Learning System"
-
+    property string version : settings.questionsDB['version']
     Rectangle {
         id: rectangle
         anchors.fill: parent
@@ -36,11 +36,15 @@ AppPage {
                     AppText {
 
                         anchors.horizontalCenter: parent.horizontalCenter
-                        text:"当前题库版本:"
+                        text:"当前题库版本:" + version
                     }
                     AppButton {
                         anchors.horizontalCenter: parent.horizontalCenter
                         text:"下载/更新"
+                        onClicked: {
+//                            questionResource.download()
+                            userLogic.getQuestionsDB()
+                        }
                     }
                     AppText {
                         anchors.horizontalCenter: parent.horizontalCenter
@@ -75,6 +79,14 @@ AppPage {
 
             }
 
+        }
+    }
+
+    Connections{
+        target: userLogic
+        onGetQuestionsDBSucceed: questionsDB =>{
+            settings.questionsDB = questionsDB
+//            console.log(questionsDB)
         }
     }
 

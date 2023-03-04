@@ -6,7 +6,7 @@ import "logic"
 import "items/loader"
 import QtQuick.Controls
 
-
+import Qt.labs.settings
 
 
 App {
@@ -15,6 +15,8 @@ App {
     dpScale: 1
 
     property alias navMode: navigation.navigationMode
+
+    property alias settings: settings
     //    property int name: value
     //    property NavigationStack rootStack: rootStack
     // You get free licenseKeys from https://felgo.com/licenseKey
@@ -24,6 +26,12 @@ App {
     //  * Add plugins to monetize, analyze & improve your apps (available with the Pro Licenses)
     //licenseKey: "<generate one from https://felgo.com/licenseKey>"
 
+    Settings {
+        id: settings
+        property var questionsDB
+        property var questions
+        property var exams
+    }
 
     Navigation {
 
@@ -113,7 +121,7 @@ App {
         id: userLogic
     }
     Logic {
-       id:logic
+        id:logic
     }
 
     //    property LoaderItem loaderItem: loaderItem

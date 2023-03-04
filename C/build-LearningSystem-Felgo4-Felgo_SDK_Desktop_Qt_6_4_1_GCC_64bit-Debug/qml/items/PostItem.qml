@@ -137,8 +137,8 @@ Rectangle {
                 MouseArea {
                     anchors.fill: parent
                     onClicked: {
-//                        console.log(index)
-                        var com = Qt.createComponent("../pages/PostDetailPage.qml").createObject(parent,{postModel:model})
+                        console.log(index+admin)
+                        var com = Qt.createComponent("../pages/PostDetailPage.qml").createObject(parent,{admin:admin,postModel:model})
                         if(admin){
                             rootStack.push(com)
                         }else{
@@ -172,7 +172,14 @@ Rectangle {
                 height: parent.height
                 iconType: IconType.remove
                 color: "red"
-                visible: admin ? true:false
+                visible: {
+                    if(admin || (ss.cxid === model.cxid )) {
+                        return true
+                    }else{
+                        return false
+                    }
+                }
+
                 MouseArea{
                     anchors.fill: parent
                     onClicked: {

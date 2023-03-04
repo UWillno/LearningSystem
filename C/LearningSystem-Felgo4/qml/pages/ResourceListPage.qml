@@ -9,10 +9,6 @@ ListPage {
     title:"资源列表"
     model: ListModel {}
     section.property: "typeText"
-
-
-
-
     delegate:ResourceRow {}
 
     Component.onCompleted:{

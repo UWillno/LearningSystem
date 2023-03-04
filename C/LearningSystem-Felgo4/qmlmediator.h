@@ -40,7 +40,6 @@ signals:
     //    void commitSignal();
     void uploadResourceSucceed(QString url);
 
-
 public slots:
     // 登录
     void tologin(QString username,QString password, const int usertype);

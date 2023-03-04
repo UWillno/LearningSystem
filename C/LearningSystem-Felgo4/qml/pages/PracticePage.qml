@@ -1,5 +1,6 @@
 import QtQuick
 import Felgo
+import QtWebView
 
 AppPage {
 
@@ -7,25 +8,35 @@ AppPage {
 
     AppListView {
         delegate: SimpleRow {
-            onSelected: console.log("Clicked Item #"+index+": "+JSON.stringify(modelData))
+            onSelected: index => {
+                            var p
+                            switch(index){
+                                case 0:{
+                                    p = Qt.createComponent("ExercisesPage.qml").createObject(parent)
+                                    break;
+                                }
+                            }
+                            practiceStack.push(p)
+                        }
         }
         model: [
             {
                 text: "刷题",
                 detailText: "Immerse Oneself In Exercises",
-                iconType: IconType.apple
+                icon: IconType.question
             },
 
             {
                 text: "历史错题",
                 detailText: "Historical Mistakes",
-                iconType: IconType.beer
+                icon: IconType.history
             },
             {
                 text: "模拟考试",
                 detailText: "Virtual Exams",
-                iconType: IconType.beer
+                icon: IconType.pencil
             }
         ]
+
     }
 }

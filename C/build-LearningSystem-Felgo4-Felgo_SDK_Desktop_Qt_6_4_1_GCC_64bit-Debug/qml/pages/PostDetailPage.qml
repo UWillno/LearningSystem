@@ -7,8 +7,10 @@ import "../items/template"
 import "../items"
 
 AppPage {
+    id:postDetailPage
     title: "帖子"
     //    height: parent.height
+    property bool admin: false
     property var postModel
     AppTabBar {
         id: appTabBar
@@ -156,7 +158,9 @@ AppPage {
                 anchors.fill: parent
                 id:commentList
                 model: postModel.comments
-                delegate: CommentRow{}
+                delegate: CommentRow{
+                    admin:postDetailPage.admin
+                }
 
                 function refresh(){
                     page = 1
@@ -269,8 +273,6 @@ AppPage {
         anchors.bottom: parent.bottom
     }
 
-
-
     DownloadableResource {
         id: userImageResource
         headerParameters: ({
@@ -288,7 +290,16 @@ AppPage {
     Component.onCompleted: {
         //        console.log(JSON.stringify(postModel))
         //        download()
+        console.log("postDetailPage"+admin)
     }
 
-
+    Connections {
+        target: adminLogic
+        onDeleteCSucceed : index => {
+                               commentList.model.remove(index,1)
+                           }
+    }
+    onPopped: {
+        destroy()
+    }
 }

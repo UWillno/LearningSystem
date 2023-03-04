@@ -7,7 +7,9 @@ Item {
     id: logic
     //    property string httpserver: "http://192.168.1.12/"
     //    http://192.168.1.12/
-    property string localhost : "http://127.0.0.1/"
+    //    property string localhost : "http://127.0.0.1/"
+    property string qhttpserver: "http://192.168.1.244:4444/"
+    property string localhost : "http://192.168.1.244/"
     //    property var chaoxingLogin: value
 
     //    property string infoApi : "http://passport2.chaoxing.com/mooc/accountManage"
@@ -15,6 +17,9 @@ Item {
 
     signal userLoginSucceed()
     signal newUserLogined()
+
+    signal getResourcesSucceed(var json,int type)
+    signal getQuestionsDBSucceed(var questionsDB)
     //17671056113
 
 
@@ -84,5 +89,39 @@ Item {
 
     function submitPost(title,text,type){
         qm.submitPost(title,text,ss.cxid,ss.username,type)
+    }
+
+    function getResourcesByType(type){
+
+        const xhr = new XMLHttpRequest()
+        xhr.open("GET",qhttpserver + "getResourcesByType/"+type,true);
+        xhr.send(null)
+        xhr.onload = function (e) {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+//                    console.log(xhr.responseText);
+                    getResourcesSucceed(JSON.parse(xhr.responseText),type)
+                } else {
+                    console.error(xhr.statusText);
+                }
+            }
+        };
+    }
+
+    function getQuestionsDB(){
+        const xhr = new XMLHttpRequest()
+        xhr.open("GET",localhost + "currentQuestions.json",true);
+        xhr.send(null)
+        xhr.onload = function (e) {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+//                    console.log(xhr.responseText);
+                    getQuestionsDBSucceed(JSON.parse(xhr.responseText))
+                } else {
+                    console.error(xhr.statusText);
+                }
+            }
+        };
+
     }
 }

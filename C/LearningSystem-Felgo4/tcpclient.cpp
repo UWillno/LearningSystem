@@ -260,9 +260,10 @@ QString TcpClient::uploadPicture(QUrl &path)
                 //                p->write(data);
                 qint64 send = 0;
                 qint64 size = file.size();
+                char buf[4*1024] = {0};
                 forever{
 
-                    char buf[4*1024] = {0};
+                    //                    char buf[4*1024] = {0};
                     qint64 len = file.read(buf, sizeof(buf));
                     send+=len;
                     p->write(buf,len);
@@ -374,7 +375,18 @@ QList<QJsonArray> TcpClient::getQuestionsJson()
         p->write(byte);
         if(p->waitForBytesWritten()){
             if(p->waitForReadyRead()){
-                data = p->readAll();
+                qint32 time=0;
+                forever {
+                    qInfo() << time;
+                    time++;
+                    if(p->waitForReadyRead()){
+                        QByteArray temp = p->readAll();
+                        data.append(temp);
+                    }else{
+                        qInfo() << "读完";
+                        break;
+                    }
+                }
 
                 questionsStream >> c;
                 questionsStream >> t;
@@ -382,7 +394,6 @@ QList<QJsonArray> TcpClient::getQuestionsJson()
                 list.append(c);
                 list.append(t);
                 list.append(f);
-
             }else{
                 qInfo() << "读取失败";}
         }else{

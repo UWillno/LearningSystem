@@ -98,7 +98,8 @@ AppPage {
                                        if(filename === ""){
                                            toastManager.show("图片上传失败！",1000);
                                        }else{
-                                           var httppath = "http://127.0.0.1/images/"+ filename
+//                                           var httppath = "http://127.0.0.1/images/"+ filename
+                                           var httppath = "http://192.168.1.244/images/"+ filename
                                            var ah = "<a href=\""+httppath+"\">"
                                            var ae = "</a>"
                                            var br =  "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>"

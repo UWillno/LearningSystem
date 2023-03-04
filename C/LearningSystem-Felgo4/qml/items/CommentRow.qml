@@ -7,10 +7,10 @@ import QtQuick.Layouts
 
 Rectangle {
 
-//    property var model
+    //    property var model
     width: parent.width
     height: innerGrid.height
-
+    property bool admin: false
 
     GridLayout {
         id: innerGrid
@@ -89,21 +89,41 @@ Rectangle {
             Layout.fillHeight: true
             Layout.alignment: Qt.AlignTop
             height: (contentHeight > dp(400))? dp(400):contentHeight
-//            clip: true
+            //            clip: true
             onLinkActivated: link => {
                                  //              Qt.openUrlExternally(link)
                                  PictureViewer.show(app,link)
                              }
 
         }
+        AppIcon {
+            //                horizontalItemAlignment:horizontalCenter
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+            //            height: parent.height
+            iconType: IconType.remove
+            color: "red"
+            visible: if(admin || (ss.cxid === model.cxid )) {
+                         return true
+                     }else{
+                         return false
+                     }
+            MouseArea{
+                anchors.fill: parent
+                onClicked: {
+                    adminLogic.deleteComment(model.id,index);
+                }
+            }
+        }
+
         Item {
-          id: bottomSpacer
+            id: bottomSpacer
 
-          width: parent.width
-          height: dp(6)
+            width: parent.width
+            height: dp(6)
 
-          Layout.columnSpan: parent.columns
-          Layout.fillWidth: true
+            Layout.columnSpan: parent.columns
+            Layout.fillWidth: true
         }
     }
 
@@ -119,6 +139,10 @@ Rectangle {
         Component.onCompleted: {
             download()
         }
+    }
+
+    Component.onCompleted:{
+        console.log("Crow" + admin)
     }
 
 

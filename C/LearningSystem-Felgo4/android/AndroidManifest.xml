@@ -1,43 +1,25 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0"?>
 <manifest package="com.uwillno.icu.LearningSystemFelgo4" xmlns:android="http://schemas.android.com/apk/res/android" android:versionName="1.0" android:versionCode="1" android:installLocation="auto">
-    <application android:allowNativeHeapPointerTagging="false"
-                 android:hardwareAccelerated="true"
-                 android:extractNativeLibs="true"
-                 android:name="com.felgo.helper.FelgoApplication"
-                 android:label="-- %%INSERT_APP_NAME%% --"
-                 android:icon="@drawable/ic_launcher"
-                 android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
-
-        <activity android:configChanges="orientation|uiMode|screenLayout|screenSize|smallestScreenSize|layoutDirection|locale|fontScale|keyboard|keyboardHidden|navigation"
-                  android:name="com.felgo.helper.FelgoActivity"
-                  android:exported="true"
-                  android:launchMode="singleTop"
-                  android:label="-- %%INSERT_APP_NAME%% --"
-                  android:screenOrientation="sensor">
-
+ <uses-permission android:name="android.permission.INTERNET"/>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+<application
+    android:usesCleartextTraffic="true"
+    android:allowNativeHeapPointerTagging="false" android:hardwareAccelerated="true" android:extractNativeLibs="true" android:name="com.felgo.helper.FelgoApplication" android:label="-- %%INSERT_APP_NAME%% --" android:icon="@drawable/ic_launcher" android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+        <activity android:configChanges="orientation|uiMode|screenLayout|screenSize|smallestScreenSize|layoutDirection|locale|fontScale|keyboard|keyboardHidden|navigation" android:name="com.felgo.helper.FelgoActivity" android:exported="true" android:launchMode="singleTop" android:label="-- %%INSERT_APP_NAME%% --" android:screenOrientation="sensor">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
-
             <!-- Qt internal meta data -->
             <meta-data android:name="android.app.lib_name" android:value="-- %%INSERT_APP_LIB_NAME%% --"/>
             <meta-data android:name="android.app.arguments" android:value="-- %%INSERT_APP_ARGUMENTS%% --"/>
             <meta-data android:name="android.app.extract_android_style" android:value="minimal"/>
         </activity>
-
         <!-- file provider needed for letting external apps (like camera) write to a file of the app -->
-        <provider
-            android:name="androidx.core.content.FileProvider"
-            android:authorities="${applicationId}.fileprovider"
-            android:exported="false"
-            android:grantUriPermissions="true">
+        <provider android:name="androidx.core.content.FileProvider" android:authorities="${applicationId}.fileprovider" android:exported="false" android:grantUriPermissions="true">
 
-            <meta-data
-                android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/file_paths"/>
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"/>
         </provider>
-
     </application>
 
     <supports-screens android:largeScreens="true" android:normalScreens="true" android:anyDensity="true" android:smallScreens="true"/>

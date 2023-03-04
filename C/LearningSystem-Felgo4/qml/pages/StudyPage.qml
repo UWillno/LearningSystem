@@ -3,7 +3,7 @@ import Felgo
 import QtWebView
 AppPage {
 
-    title: "学习模块"
+    title: "课程学习"
 
     AppListView {
         //            showSearch: true
@@ -12,40 +12,80 @@ AppPage {
         //                        model: model1
         model: [
             {
-                text: "《计算机应用基础》PDF阅读",
-                detailText: "Study From Book",
-                iconType: IconType.apple
+                text: "文档学习",
+                detailText: "Study From DOC/PPT/PDF……",
+                icon: IconType.file
             },
 
             {
-                text: "学习通Mobile",
-                detailText: "Study By CHAOXING ",
-                iconType: IconType.beer
+                text: "图片学习",
+                detailText: "Study By Images",
+                icon: IconType.image
             },
+            {
+                text: "视频学习",
+                detailText: "Study By Video",
+                icon: IconType.filevideoo
+            },
+            {
+                text: "WEB学习",
+                detailText: "Study By WEB",
+                icon: IconType.weixin
+            },
+            {
+                text: "学习通学习",
+                detailText: "Study By ChaoXing",
+                icon: IconType.star
+            }
         ]
         delegate: SimpleRow {
+
             onSelected: index=>{
                             console.log(index)
-
+                            if(index !== 4){
                             var page
-                            if(index === 0 ) {
-                                //                                page = Qt.createComponent("PdfPage.qml").createObject();
-                                //                                Qt.openUrlExternally("http://stackoverflow.com/questions/23001582/how-to-open-a-pdf-file-from-qml/23002658")
-                                //                                FileUtils.openFile()
-                                if(pdfResource.available) {
-                                    toastManager.show("本地已有文件，直接打开",1000);
-                                    openPdf()
-                                }
-                                else {
-                                    toastManager.show("文件下载中！",1000)
-                                    pdfResource.download()
-                                }
+                            userLogic.getResourcesByType(index)
+                            }
+                            if(index === 4){
+                                var p = Qt.createComponent("WebPage.qml").createObject(parent,{title:"学习通",url:"https://mooc1.chaoxing.com/course/phone/courselisthead?passed=1"})
+                                studyStack.push(p)
+                            }
 
-                            }
-                            if(index === 1 ) {
-                                page = Qt.createComponent("XxtWebPage.qml").createObject();
-                                studyStack.push(page)
-                            }
+                            //                            switch(index){
+                            //                                case 0:{
+                            //                                    userLogic.getResourcesByType(index)
+                            //                                    break;
+                            //                                }
+                            //                                case 1:{
+                            //                                    break;
+                            //                                }
+                            //                                case 2:{
+                            //                                    break;
+                            //                                }
+                            //                                case 3:{
+                            //                                    break;
+                            //                                }
+
+                            //                            }
+
+                            //                            if(index === 0 ) {
+                            //                                //                                page = Qt.createComponent("PdfPage.qml").createObject();
+                            //                                //                                Qt.openUrlExternally("http://stackoverflow.com/questions/23001582/how-to-open-a-pdf-file-from-qml/23002658")
+                            //                                //                                FileUtils.openFile()
+                            //                                if(pdfResource.available) {
+                            //                                    toastManager.show("本地已有文件，直接打开",1000);
+                            //                                    openPdf()
+                            //                                }
+                            //                                else {
+                            //                                    toastManager.show("文件下载中！",1000)
+                            //                                    pdfResource.download()
+                            //                                }
+
+                            //                            }
+                            //                            if(index === 1 ) {
+                            //                                page = Qt.createComponent("XxtWebPage.qml").createObject();
+                            //                                studyStack.push(page)
+                            //                            }
                             //                            studyStatck.push(page)
                             //                console.log(modelData.id)
                             //                viewDetail(0,modelData)
@@ -55,21 +95,52 @@ AppPage {
     }
 
 
-    DownloadableResource {
-        id: pdfResource
-        source: "http://www.orimi.com/pdf-test.pdf"
-        storageLocation: FileUtils.DocumentsLocation
-        storageName: "pdf-test.pdf"
-        extractAsPackage: false
-        // if the download is competed, available will be set to true
-        onAvailableChanged: if(available) openPdf()
+    Connections {
+        target: userLogic
+        onGetResourcesSucceed: function(json,type){
+
+            var t
+            switch(type){
+            case 0:{
+                t = "文档资源"
+                break
+            }
+            case 1:{
+                t = "图片资源"
+                break
+            }
+            case 2:{
+                t = "视频资源"
+                break
+            }
+            case 3:{
+                t = "WEB资源"
+                break
+            }
+            }
+            if(t){
+                 var p =Qt.createComponent("UserResourcesListPage.qml").createObject(parent,{title:t,data:json})
+                 studyStack.push(p)
+            }
+        }
+
     }
-    function openPdf() {
-        // you can also open files with nativeUtils.openUrl() now (for paths starting with "file://")
-        //nativeUtils.openUrl(pdfResource.storagePath)
-        // with V-Play 2.17.0 you can also use fileUtils.openFile()
-        fileUtils.openFile(pdfResource.storagePath)
-    }
+
+    //    DownloadableResource {
+    //        id: pdfResource
+    //        source: "http://www.orimi.com/pdf-test.pdf"
+    //        storageLocation: FileUtils.DocumentsLocation
+    //        storageName: "pdf-test.pdf"
+    //        extractAsPackage: false
+    //        // if the download is competed, available will be set to true
+    //        onAvailableChanged: if(available) openPdf()
+    //    }
+    //    function openPdf() {
+    //        // you can also open files with nativeUtils.openUrl() now (for paths starting with "file://")
+    //        //nativeUtils.openUrl(pdfResource.storagePath)
+    //        // with V-Play 2.17.0 you can also use fileUtils.openFile()
+    //        fileUtils.openFile(pdfResource.storagePath)
+    //    }
     //    WebView {
     //        id:webview
     //        anchors.fill: parent

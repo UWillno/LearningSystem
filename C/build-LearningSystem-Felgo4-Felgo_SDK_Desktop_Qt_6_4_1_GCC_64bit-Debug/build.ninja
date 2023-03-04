@@ -47,7 +47,7 @@ cmake_ninja_workdir = /home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-F
 #############################################
 # Order-only phony target for appLearningSystem-Felgo4
 
-build cmake_object_order_depends_target_appLearningSystem-Felgo4: phony || .rcc/qrc_qmake_LearningSystem-Felgo4.cpp .rcc/qrc_qmake_LearningSystem-Felgo4_copy.cpp LearningSystem-Felgo4/appLearningSystem-Felgo4.qmltypes appLearningSystem-Felgo4_autogen appLearningSystem-Felgo4_autogen/mocs_compilation.cpp appLearningSystem-Felgo4_autogen/timestamp appLearningSystem-Felgo4_autogen_timestamp_deps appLearningSystem-Felgo4_qmlimportscan applearningsystem-felgo4_qmltyperegistrations.cpp assets/felgo-logo.png cmake_object_order_depends_target_Felgo_resources_1 meta_types/appLearningSystem-Felgo4_json_file_list.txt meta_types/appLearningSystem-Felgo4_json_file_list.txt.timestamp meta_types/qt6applearningsystem-felgo4_debug_metatypes.json meta_types/qt6applearningsystem-felgo4_debug_metatypes.json.gen qml/Main.qml qml/config.json qml/items/BlankComponent.qml qml/items/ChoiceQuestionItem.qml qml/items/CommentRow.qml qml/items/FillInTheBlanksQuestionItem.qml qml/items/InsertSwipeView.qml qml/items/LoginItem.qml qml/items/ModifyQuestionPage.qml qml/items/PostItem.qml qml/items/PostRow.qml qml/items/PostsPage.qml qml/items/SelectSwipeView.qml qml/items/TrueOrFalseQuestionItem.qml qml/items/loader/LoaderItem.qml qml/items/practice/ExercisesPage.qml qml/items/template/ModifyButtons.qml qml/items/template/UWAppTextEdit.qml qml/items/toast/SelectSwipeView.qml qml/items/toast/Toast.qml qml/items/toast/ToastManager.qml qml/logic/AdminLogic.qml qml/logic/Logic.qml qml/logic/UserLogic.qml qml/logic/adminscript.mjs qml/pages/AdministratorPage.qml qml/pages/ForumPage.qml qml/pages/IndexPage.qml qml/pages/PdfPage.qml qml/pages/PostDetailPage.qml qml/pages/PostingPage.qml qml/pages/PostsPage.qml qml/pages/PracticePage.qml qml/pages/QuestionPage.qml qml/pages/StudyPage.qml qml/pages/XxtWebPage.qml
+build cmake_object_order_depends_target_appLearningSystem-Felgo4: phony || .rcc/qrc_qmake_LearningSystem-Felgo4.cpp .rcc/qrc_qmake_LearningSystem-Felgo4_copy.cpp LearningSystem-Felgo4/appLearningSystem-Felgo4.qmltypes appLearningSystem-Felgo4_autogen appLearningSystem-Felgo4_autogen/mocs_compilation.cpp appLearningSystem-Felgo4_autogen/timestamp appLearningSystem-Felgo4_autogen_timestamp_deps appLearningSystem-Felgo4_qmlimportscan applearningsystem-felgo4_qmltyperegistrations.cpp assets/felgo-logo.png cmake_object_order_depends_target_Felgo_resources_1 meta_types/appLearningSystem-Felgo4_json_file_list.txt meta_types/appLearningSystem-Felgo4_json_file_list.txt.timestamp meta_types/qt6applearningsystem-felgo4_debug_metatypes.json meta_types/qt6applearningsystem-felgo4_debug_metatypes.json.gen qml/Main.qml qml/config.json qml/items/BlankComponent.qml qml/items/ChoiceQuestionItem.qml qml/items/CommentRow.qml qml/items/FillInTheBlanksQuestionItem.qml qml/items/InsertSwipeView.qml qml/items/LoginItem.qml qml/items/ModifyQuestionPage.qml qml/items/PostItem.qml qml/items/PostRow.qml qml/items/PostsPage.qml qml/items/QGridView.qml qml/items/QuestionRect.qml qml/items/ResourceRow.qml qml/items/SelectSwipeView.qml qml/items/TrueOrFalseQuestionItem.qml qml/items/loader/LoaderItem.qml qml/items/practice/ExercisesPage.qml qml/items/template/ModifyButtons.qml qml/items/template/UWAppTextEdit.qml qml/items/toast/SelectSwipeView.qml qml/items/toast/Toast.qml qml/items/toast/ToastManager.qml qml/logic/AdminLogic.qml qml/logic/Logic.qml qml/logic/UserLogic.qml qml/logic/adminscript.mjs qml/pages/AddResourcePage.qml qml/pages/AdministratorPage.qml qml/pages/ChoiceQuestionPage.qml qml/pages/ExercisesPage.qml qml/pages/ForumPage.qml qml/pages/ImagePage.qml qml/pages/IndexPage.qml qml/pages/MediaPage.qml qml/pages/PdfPage.qml qml/pages/PostDetailPage.qml qml/pages/PostingPage.qml qml/pages/PostsPage.qml qml/pages/PracticePage.qml qml/pages/QuestionPage.qml qml/pages/ResourceListPage.qml qml/pages/SRMListPage.qml qml/pages/StudyPage.qml qml/pages/UserResourcesListPage.qml qml/pages/WebPage.qml qml/pages/XxtWebPage.qml
 
 build CMakeFiles/appLearningSystem-Felgo4.dir/appLearningSystem-Felgo4_autogen/mocs_compilation.cpp.o: CXX_COMPILER__appLearningSystem-Felgo4_Debug /home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/appLearningSystem-Felgo4_autogen/mocs_compilation.cpp || cmake_object_order_depends_target_appLearningSystem-Felgo4
   DEFINES = -DQT_BLUETOOTH_LIB -DQT_CONCURRENT_LIB -DQT_CORE5COMPAT_LIB -DQT_CORE_LIB -DQT_DBUS_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMODELS_LIB -DQT_QML_DEBUG -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB -DQT_SQL_LIB -DQT_WEBSOCKETS_LIB -DQT_WEBVIEW_LIB -DQT_WIDGETS_LIB
@@ -89,6 +89,14 @@ build CMakeFiles/appLearningSystem-Felgo4.dir/qmlmediator.cpp.o: CXX_COMPILER__a
   OBJECT_DIR = CMakeFiles/appLearningSystem-Felgo4.dir
   OBJECT_FILE_DIR = CMakeFiles/appLearningSystem-Felgo4.dir
 
+build CMakeFiles/appLearningSystem-Felgo4.dir/httpclient.cpp.o: CXX_COMPILER__appLearningSystem-Felgo4_Debug /home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/httpclient.cpp || cmake_object_order_depends_target_appLearningSystem-Felgo4
+  DEFINES = -DQT_BLUETOOTH_LIB -DQT_CONCURRENT_LIB -DQT_CORE5COMPAT_LIB -DQT_CORE_LIB -DQT_DBUS_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMODELS_LIB -DQT_QML_DEBUG -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB -DQT_SQL_LIB -DQT_WEBSOCKETS_LIB -DQT_WEBVIEW_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/appLearningSystem-Felgo4.dir/httpclient.cpp.o.d
+  FLAGS = -DQT_QML_DEBUG -g -fPIC
+  INCLUDES = -I/home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/appLearningSystem-Felgo4_autogen/include -I/home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4 -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtQml/6.4.1 -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtQml/6.4.1/QtQml -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/6.4.1 -I/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/6.4.1/QtCore -isystem /home/uwillno/Felgo/Felgo/gcc_64/include/QtCore -isystem /home/uwillno/Felgo/Felgo/gcc_64/include -isystem /home/uwillno/Felgo/Felgo/gcc_64/mkspecs/linux-g++ -isystem /home/uwillno/Felgo/Felgo/gcc_64/include/QtQml -isystem /home/uwillno/Felgo/Felgo/gcc_64/include/QtQmlIntegration -isystem /home/uwillno/Felgo/Felgo/gcc_64/include/QtNetwork -isystem /home/uwillno/Felgo/Felgo/gcc_64/include/Felgo -isystem /home/uwillno/Felgo/Felgo/gcc_64/include/QtQuick -isystem /home/uwillno/Felgo/Felgo/gcc_64/include/QtGui -isystem /home/uwillno/Felgo/Felgo/gcc_64/include/QtQmlModels -isystem /home/uwillno/Felgo/Felgo/gcc_64/include/QtOpenGL -isystem /home/uwillno/Felgo/Felgo/gcc_64/include/QtWidgets -isystem /home/uwillno/Felgo/Felgo/gcc_64/include/QtMultimedia -isystem /home/uwillno/Felgo/Felgo/gcc_64/include/QtSql -isystem /home/uwillno/Felgo/Felgo/gcc_64/include/QtWebSockets -isystem /home/uwillno/Felgo/Felgo/gcc_64/include/QtBluetooth -isystem /home/uwillno/Felgo/Felgo/gcc_64/include/QtDBus -isystem /home/uwillno/Felgo/Felgo/gcc_64/include/QtCore5Compat -isystem /home/uwillno/Felgo/Felgo/gcc_64/include/QtQuickControls2 -isystem /home/uwillno/Felgo/Felgo/gcc_64/include/QtConcurrent -isystem /home/uwillno/Felgo/Felgo/gcc_64/include/QtWebView
+  OBJECT_DIR = CMakeFiles/appLearningSystem-Felgo4.dir
+  OBJECT_FILE_DIR = CMakeFiles/appLearningSystem-Felgo4.dir
+
 build CMakeFiles/appLearningSystem-Felgo4.dir/applearningsystem-felgo4_qmltyperegistrations.cpp.o: CXX_COMPILER__appLearningSystem-Felgo4_Debug /home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/applearningsystem-felgo4_qmltyperegistrations.cpp || cmake_object_order_depends_target_appLearningSystem-Felgo4
   DEFINES = -DQT_BLUETOOTH_LIB -DQT_CONCURRENT_LIB -DQT_CORE5COMPAT_LIB -DQT_CORE_LIB -DQT_DBUS_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NETWORK_LIB -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMODELS_LIB -DQT_QML_DEBUG -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB -DQT_SQL_LIB -DQT_WEBSOCKETS_LIB -DQT_WEBVIEW_LIB -DQT_WIDGETS_LIB
   DEP_FILE = CMakeFiles/appLearningSystem-Felgo4.dir/applearningsystem-felgo4_qmltyperegistrations.cpp.o.d
@@ -121,7 +129,7 @@ build CMakeFiles/appLearningSystem-Felgo4.dir/.rcc/qrc_qmake_LearningSystem-Felg
 #############################################
 # Link the executable appLearningSystem-Felgo4.run
 
-build appLearningSystem-Felgo4.run: CXX_EXECUTABLE_LINKER__appLearningSystem-Felgo4_Debug CMakeFiles/appLearningSystem-Felgo4.dir/appLearningSystem-Felgo4_autogen/mocs_compilation.cpp.o CMakeFiles/appLearningSystem-Felgo4.dir/main.cpp.o CMakeFiles/appLearningSystem-Felgo4.dir/settings.cpp.o CMakeFiles/appLearningSystem-Felgo4.dir/tcpclient.cpp.o CMakeFiles/appLearningSystem-Felgo4.dir/qmlmediator.cpp.o CMakeFiles/appLearningSystem-Felgo4.dir/applearningsystem-felgo4_qmltyperegistrations.cpp.o CMakeFiles/appLearningSystem-Felgo4.dir/.rcc/qrc_qmake_LearningSystem-Felgo4.cpp.o CMakeFiles/appLearningSystem-Felgo4.dir/.rcc/qrc_qmake_LearningSystem-Felgo4_copy.cpp.o | CMakeFiles/Felgo_resources_1.dir/./.rcc/qrc_FelgoResources.cpp.o /home/uwillno/Felgo/Felgo/gcc_64/lib/libFelgo.a /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Concurrent.so.6.4.1 /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6WebView.so.6.4.1 /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Widgets.so.6.4.1 /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Multimedia.so.6.4.1 /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Sql.so.6.4.1 /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6WebSockets.so.6.4.1 /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Bluetooth.so.6.4.1 /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6DBus.so.6.4.1 /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Core5Compat.so.6.4.1 /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6QuickControls2.so.6.4.1 /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Quick.so.6.4.1 /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6QmlModels.so.6.4.1 /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Qml.so.6.4.1 /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Network.so.6.4.1 /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6OpenGL.so.6.4.1 /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Gui.so.6.4.1 /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Core.so.6.4.1 /usr/lib/libGLX.so /usr/lib/libOpenGL.so || Felgo_resources_1 appLearningSystem-Felgo4_autogen appLearningSystem-Felgo4_autogen_timestamp_deps appLearningSystem-Felgo4_qmlimportscan
+build appLearningSystem-Felgo4.run: CXX_EXECUTABLE_LINKER__appLearningSystem-Felgo4_Debug CMakeFiles/appLearningSystem-Felgo4.dir/appLearningSystem-Felgo4_autogen/mocs_compilation.cpp.o CMakeFiles/appLearningSystem-Felgo4.dir/main.cpp.o CMakeFiles/appLearningSystem-Felgo4.dir/settings.cpp.o CMakeFiles/appLearningSystem-Felgo4.dir/tcpclient.cpp.o CMakeFiles/appLearningSystem-Felgo4.dir/qmlmediator.cpp.o CMakeFiles/appLearningSystem-Felgo4.dir/httpclient.cpp.o CMakeFiles/appLearningSystem-Felgo4.dir/applearningsystem-felgo4_qmltyperegistrations.cpp.o CMakeFiles/appLearningSystem-Felgo4.dir/.rcc/qrc_qmake_LearningSystem-Felgo4.cpp.o CMakeFiles/appLearningSystem-Felgo4.dir/.rcc/qrc_qmake_LearningSystem-Felgo4_copy.cpp.o | CMakeFiles/Felgo_resources_1.dir/./.rcc/qrc_FelgoResources.cpp.o /home/uwillno/Felgo/Felgo/gcc_64/lib/libFelgo.a /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Concurrent.so.6.4.1 /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6WebView.so.6.4.1 /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Widgets.so.6.4.1 /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Multimedia.so.6.4.1 /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Sql.so.6.4.1 /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6WebSockets.so.6.4.1 /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Bluetooth.so.6.4.1 /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6DBus.so.6.4.1 /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Core5Compat.so.6.4.1 /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6QuickControls2.so.6.4.1 /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Quick.so.6.4.1 /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6QmlModels.so.6.4.1 /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Qml.so.6.4.1 /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Network.so.6.4.1 /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6OpenGL.so.6.4.1 /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Gui.so.6.4.1 /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Core.so.6.4.1 /usr/lib/libGLX.so /usr/lib/libOpenGL.so || Felgo_resources_1 appLearningSystem-Felgo4_autogen appLearningSystem-Felgo4_autogen_timestamp_deps appLearningSystem-Felgo4_qmlimportscan
   FLAGS = -DQT_QML_DEBUG -g
   LINK_LIBRARIES = -Wl,-rpath,/home/uwillno/Felgo/Felgo/gcc_64/lib:  CMakeFiles/Felgo_resources_1.dir/./.rcc/qrc_FelgoResources.cpp.o  /home/uwillno/Felgo/Felgo/gcc_64/lib/libFelgo.a  /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Concurrent.so.6.4.1  /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6WebView.so.6.4.1  /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Widgets.so.6.4.1  /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Multimedia.so.6.4.1  /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Sql.so.6.4.1  /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6WebSockets.so.6.4.1  -lz  /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Bluetooth.so.6.4.1  /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6DBus.so.6.4.1  /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Core5Compat.so.6.4.1  /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6QuickControls2.so.6.4.1  /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Quick.so.6.4.1  /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6QmlModels.so.6.4.1  /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Qml.so.6.4.1  /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Network.so.6.4.1  /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6OpenGL.so.6.4.1  /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Gui.so.6.4.1  /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Core.so.6.4.1  /usr/lib/libGLX.so  /usr/lib/libOpenGL.so
   OBJECT_DIR = CMakeFiles/appLearningSystem-Felgo4.dir
@@ -383,6 +391,33 @@ build qml/items/PostsPage.qml | ${cmake_ninja_workdir}qml/items/PostsPage.qml: C
 
 
 #############################################
+# Custom command for qml/items/QGridView.qml
+
+build qml/items/QGridView.qml | ${cmake_ninja_workdir}qml/items/QGridView.qml: CUSTOM_COMMAND /home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/qml/items/QGridView.qml || Felgo_resources_1 Felgo_resources_1_autogen Felgo_resources_1_autogen_timestamp_deps appLearningSystem-Felgo4_autogen appLearningSystem-Felgo4_autogen_timestamp_deps appLearningSystem-Felgo4_qmlimportscan
+  COMMAND = cd /home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug && /home/uwillno/Felgo/Tools/CMake/bin/cmake -E make_directory /home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/qml/items/ && /home/uwillno/Felgo/Tools/CMake/bin/cmake -E copy /home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/qml/items/QGridView.qml /home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/qml/items/
+  DESC = Generating qml/items/QGridView.qml
+  restat = 1
+
+
+#############################################
+# Custom command for qml/items/QuestionRect.qml
+
+build qml/items/QuestionRect.qml | ${cmake_ninja_workdir}qml/items/QuestionRect.qml: CUSTOM_COMMAND /home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/qml/items/QuestionRect.qml || Felgo_resources_1 Felgo_resources_1_autogen Felgo_resources_1_autogen_timestamp_deps appLearningSystem-Felgo4_autogen appLearningSystem-Felgo4_autogen_timestamp_deps appLearningSystem-Felgo4_qmlimportscan
+  COMMAND = cd /home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug && /home/uwillno/Felgo/Tools/CMake/bin/cmake -E make_directory /home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/qml/items/ && /home/uwillno/Felgo/Tools/CMake/bin/cmake -E copy /home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/qml/items/QuestionRect.qml /home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/qml/items/
+  DESC = Generating qml/items/QuestionRect.qml
+  restat = 1
+
+
+#############################################
+# Custom command for qml/items/ResourceRow.qml
+
+build qml/items/ResourceRow.qml | ${cmake_ninja_workdir}qml/items/ResourceRow.qml: CUSTOM_COMMAND /home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/qml/items/ResourceRow.qml || Felgo_resources_1 Felgo_resources_1_autogen Felgo_resources_1_autogen_timestamp_deps appLearningSystem-Felgo4_autogen appLearningSystem-Felgo4_autogen_timestamp_deps appLearningSystem-Felgo4_qmlimportscan
+  COMMAND = cd /home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug && /home/uwillno/Felgo/Tools/CMake/bin/cmake -E make_directory /home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/qml/items/ && /home/uwillno/Felgo/Tools/CMake/bin/cmake -E copy /home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/qml/items/ResourceRow.qml /home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/qml/items/
+  DESC = Generating qml/items/ResourceRow.qml
+  restat = 1
+
+
+#############################################
 # Custom command for qml/items/SelectSwipeView.qml
 
 build qml/items/SelectSwipeView.qml | ${cmake_ninja_workdir}qml/items/SelectSwipeView.qml: CUSTOM_COMMAND /home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/qml/items/SelectSwipeView.qml || Felgo_resources_1 Felgo_resources_1_autogen Felgo_resources_1_autogen_timestamp_deps appLearningSystem-Felgo4_autogen appLearningSystem-Felgo4_autogen_timestamp_deps appLearningSystem-Felgo4_qmlimportscan
@@ -491,11 +526,38 @@ build qml/logic/UserLogic.qml | ${cmake_ninja_workdir}qml/logic/UserLogic.qml: C
 
 
 #############################################
+# Custom command for qml/pages/AddResourcePage.qml
+
+build qml/pages/AddResourcePage.qml | ${cmake_ninja_workdir}qml/pages/AddResourcePage.qml: CUSTOM_COMMAND /home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/qml/pages/AddResourcePage.qml || Felgo_resources_1 Felgo_resources_1_autogen Felgo_resources_1_autogen_timestamp_deps appLearningSystem-Felgo4_autogen appLearningSystem-Felgo4_autogen_timestamp_deps appLearningSystem-Felgo4_qmlimportscan
+  COMMAND = cd /home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug && /home/uwillno/Felgo/Tools/CMake/bin/cmake -E make_directory /home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/qml/pages/ && /home/uwillno/Felgo/Tools/CMake/bin/cmake -E copy /home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/qml/pages/AddResourcePage.qml /home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/qml/pages/
+  DESC = Generating qml/pages/AddResourcePage.qml
+  restat = 1
+
+
+#############################################
 # Custom command for qml/pages/AdministratorPage.qml
 
 build qml/pages/AdministratorPage.qml | ${cmake_ninja_workdir}qml/pages/AdministratorPage.qml: CUSTOM_COMMAND /home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/qml/pages/AdministratorPage.qml || Felgo_resources_1 Felgo_resources_1_autogen Felgo_resources_1_autogen_timestamp_deps appLearningSystem-Felgo4_autogen appLearningSystem-Felgo4_autogen_timestamp_deps appLearningSystem-Felgo4_qmlimportscan
   COMMAND = cd /home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug && /home/uwillno/Felgo/Tools/CMake/bin/cmake -E make_directory /home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/qml/pages/ && /home/uwillno/Felgo/Tools/CMake/bin/cmake -E copy /home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/qml/pages/AdministratorPage.qml /home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/qml/pages/
   DESC = Generating qml/pages/AdministratorPage.qml
+  restat = 1
+
+
+#############################################
+# Custom command for qml/pages/ChoiceQuestionPage.qml
+
+build qml/pages/ChoiceQuestionPage.qml | ${cmake_ninja_workdir}qml/pages/ChoiceQuestionPage.qml: CUSTOM_COMMAND /home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/qml/pages/ChoiceQuestionPage.qml || Felgo_resources_1 Felgo_resources_1_autogen Felgo_resources_1_autogen_timestamp_deps appLearningSystem-Felgo4_autogen appLearningSystem-Felgo4_autogen_timestamp_deps appLearningSystem-Felgo4_qmlimportscan
+  COMMAND = cd /home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug && /home/uwillno/Felgo/Tools/CMake/bin/cmake -E make_directory /home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/qml/pages/ && /home/uwillno/Felgo/Tools/CMake/bin/cmake -E copy /home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/qml/pages/ChoiceQuestionPage.qml /home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/qml/pages/
+  DESC = Generating qml/pages/ChoiceQuestionPage.qml
+  restat = 1
+
+
+#############################################
+# Custom command for qml/pages/ExercisesPage.qml
+
+build qml/pages/ExercisesPage.qml | ${cmake_ninja_workdir}qml/pages/ExercisesPage.qml: CUSTOM_COMMAND /home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/qml/pages/ExercisesPage.qml || Felgo_resources_1 Felgo_resources_1_autogen Felgo_resources_1_autogen_timestamp_deps appLearningSystem-Felgo4_autogen appLearningSystem-Felgo4_autogen_timestamp_deps appLearningSystem-Felgo4_qmlimportscan
+  COMMAND = cd /home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug && /home/uwillno/Felgo/Tools/CMake/bin/cmake -E make_directory /home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/qml/pages/ && /home/uwillno/Felgo/Tools/CMake/bin/cmake -E copy /home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/qml/pages/ExercisesPage.qml /home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/qml/pages/
+  DESC = Generating qml/pages/ExercisesPage.qml
   restat = 1
 
 
@@ -509,11 +571,29 @@ build qml/pages/ForumPage.qml | ${cmake_ninja_workdir}qml/pages/ForumPage.qml: C
 
 
 #############################################
+# Custom command for qml/pages/ImagePage.qml
+
+build qml/pages/ImagePage.qml | ${cmake_ninja_workdir}qml/pages/ImagePage.qml: CUSTOM_COMMAND /home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/qml/pages/ImagePage.qml || Felgo_resources_1 Felgo_resources_1_autogen Felgo_resources_1_autogen_timestamp_deps appLearningSystem-Felgo4_autogen appLearningSystem-Felgo4_autogen_timestamp_deps appLearningSystem-Felgo4_qmlimportscan
+  COMMAND = cd /home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug && /home/uwillno/Felgo/Tools/CMake/bin/cmake -E make_directory /home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/qml/pages/ && /home/uwillno/Felgo/Tools/CMake/bin/cmake -E copy /home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/qml/pages/ImagePage.qml /home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/qml/pages/
+  DESC = Generating qml/pages/ImagePage.qml
+  restat = 1
+
+
+#############################################
 # Custom command for qml/pages/IndexPage.qml
 
 build qml/pages/IndexPage.qml | ${cmake_ninja_workdir}qml/pages/IndexPage.qml: CUSTOM_COMMAND /home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/qml/pages/IndexPage.qml || Felgo_resources_1 Felgo_resources_1_autogen Felgo_resources_1_autogen_timestamp_deps appLearningSystem-Felgo4_autogen appLearningSystem-Felgo4_autogen_timestamp_deps appLearningSystem-Felgo4_qmlimportscan
   COMMAND = cd /home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug && /home/uwillno/Felgo/Tools/CMake/bin/cmake -E make_directory /home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/qml/pages/ && /home/uwillno/Felgo/Tools/CMake/bin/cmake -E copy /home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/qml/pages/IndexPage.qml /home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/qml/pages/
   DESC = Generating qml/pages/IndexPage.qml
+  restat = 1
+
+
+#############################################
+# Custom command for qml/pages/MediaPage.qml
+
+build qml/pages/MediaPage.qml | ${cmake_ninja_workdir}qml/pages/MediaPage.qml: CUSTOM_COMMAND /home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/qml/pages/MediaPage.qml || Felgo_resources_1 Felgo_resources_1_autogen Felgo_resources_1_autogen_timestamp_deps appLearningSystem-Felgo4_autogen appLearningSystem-Felgo4_autogen_timestamp_deps appLearningSystem-Felgo4_qmlimportscan
+  COMMAND = cd /home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug && /home/uwillno/Felgo/Tools/CMake/bin/cmake -E make_directory /home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/qml/pages/ && /home/uwillno/Felgo/Tools/CMake/bin/cmake -E copy /home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/qml/pages/MediaPage.qml /home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/qml/pages/
+  DESC = Generating qml/pages/MediaPage.qml
   restat = 1
 
 
@@ -572,11 +652,47 @@ build qml/pages/QuestionPage.qml | ${cmake_ninja_workdir}qml/pages/QuestionPage.
 
 
 #############################################
+# Custom command for qml/pages/ResourceListPage.qml
+
+build qml/pages/ResourceListPage.qml | ${cmake_ninja_workdir}qml/pages/ResourceListPage.qml: CUSTOM_COMMAND /home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/qml/pages/ResourceListPage.qml || Felgo_resources_1 Felgo_resources_1_autogen Felgo_resources_1_autogen_timestamp_deps appLearningSystem-Felgo4_autogen appLearningSystem-Felgo4_autogen_timestamp_deps appLearningSystem-Felgo4_qmlimportscan
+  COMMAND = cd /home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug && /home/uwillno/Felgo/Tools/CMake/bin/cmake -E make_directory /home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/qml/pages/ && /home/uwillno/Felgo/Tools/CMake/bin/cmake -E copy /home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/qml/pages/ResourceListPage.qml /home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/qml/pages/
+  DESC = Generating qml/pages/ResourceListPage.qml
+  restat = 1
+
+
+#############################################
+# Custom command for qml/pages/SRMListPage.qml
+
+build qml/pages/SRMListPage.qml | ${cmake_ninja_workdir}qml/pages/SRMListPage.qml: CUSTOM_COMMAND /home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/qml/pages/SRMListPage.qml || Felgo_resources_1 Felgo_resources_1_autogen Felgo_resources_1_autogen_timestamp_deps appLearningSystem-Felgo4_autogen appLearningSystem-Felgo4_autogen_timestamp_deps appLearningSystem-Felgo4_qmlimportscan
+  COMMAND = cd /home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug && /home/uwillno/Felgo/Tools/CMake/bin/cmake -E make_directory /home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/qml/pages/ && /home/uwillno/Felgo/Tools/CMake/bin/cmake -E copy /home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/qml/pages/SRMListPage.qml /home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/qml/pages/
+  DESC = Generating qml/pages/SRMListPage.qml
+  restat = 1
+
+
+#############################################
 # Custom command for qml/pages/StudyPage.qml
 
 build qml/pages/StudyPage.qml | ${cmake_ninja_workdir}qml/pages/StudyPage.qml: CUSTOM_COMMAND /home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/qml/pages/StudyPage.qml || Felgo_resources_1 Felgo_resources_1_autogen Felgo_resources_1_autogen_timestamp_deps appLearningSystem-Felgo4_autogen appLearningSystem-Felgo4_autogen_timestamp_deps appLearningSystem-Felgo4_qmlimportscan
   COMMAND = cd /home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug && /home/uwillno/Felgo/Tools/CMake/bin/cmake -E make_directory /home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/qml/pages/ && /home/uwillno/Felgo/Tools/CMake/bin/cmake -E copy /home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/qml/pages/StudyPage.qml /home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/qml/pages/
   DESC = Generating qml/pages/StudyPage.qml
+  restat = 1
+
+
+#############################################
+# Custom command for qml/pages/UserResourcesListPage.qml
+
+build qml/pages/UserResourcesListPage.qml | ${cmake_ninja_workdir}qml/pages/UserResourcesListPage.qml: CUSTOM_COMMAND /home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/qml/pages/UserResourcesListPage.qml || Felgo_resources_1 Felgo_resources_1_autogen Felgo_resources_1_autogen_timestamp_deps appLearningSystem-Felgo4_autogen appLearningSystem-Felgo4_autogen_timestamp_deps appLearningSystem-Felgo4_qmlimportscan
+  COMMAND = cd /home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug && /home/uwillno/Felgo/Tools/CMake/bin/cmake -E make_directory /home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/qml/pages/ && /home/uwillno/Felgo/Tools/CMake/bin/cmake -E copy /home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/qml/pages/UserResourcesListPage.qml /home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/qml/pages/
+  DESC = Generating qml/pages/UserResourcesListPage.qml
+  restat = 1
+
+
+#############################################
+# Custom command for qml/pages/WebPage.qml
+
+build qml/pages/WebPage.qml | ${cmake_ninja_workdir}qml/pages/WebPage.qml: CUSTOM_COMMAND /home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/qml/pages/WebPage.qml || Felgo_resources_1 Felgo_resources_1_autogen Felgo_resources_1_autogen_timestamp_deps appLearningSystem-Felgo4_autogen appLearningSystem-Felgo4_autogen_timestamp_deps appLearningSystem-Felgo4_qmlimportscan
+  COMMAND = cd /home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug && /home/uwillno/Felgo/Tools/CMake/bin/cmake -E make_directory /home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/qml/pages/ && /home/uwillno/Felgo/Tools/CMake/bin/cmake -E copy /home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/qml/pages/WebPage.qml /home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/qml/pages/
+  DESC = Generating qml/pages/WebPage.qml
   restat = 1
 
 
@@ -714,7 +830,7 @@ build .qt_plugins/Qt6_QmlPlugins_Imports_appLearningSystem-Felgo4.cmake | ${cmak
 #############################################
 # Phony custom command for CMakeFiles/appLearningSystem-Felgo4_autogen_timestamp_deps
 
-build CMakeFiles/appLearningSystem-Felgo4_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/appLearningSystem-Felgo4_autogen_timestamp_deps: phony /home/uwillno/Felgo/Felgo/gcc_64/lib/libFelgo.a /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Core.so.6.4.1 /home/uwillno/Felgo/Felgo/gcc_64/./libexec/moc /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Concurrent.so.6.4.1 /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Network.so.6.4.1 /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6WebView.so.6.4.1
+build CMakeFiles/appLearningSystem-Felgo4_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/appLearningSystem-Felgo4_autogen_timestamp_deps: phony /home/uwillno/Felgo/Felgo/gcc_64/lib/libFelgo.a /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Core.so.6.4.1 /home/uwillno/Felgo/Felgo/gcc_64/./libexec/moc /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Network.so.6.4.1 /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Concurrent.so.6.4.1 /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6WebView.so.6.4.1
 
 
 #############################################

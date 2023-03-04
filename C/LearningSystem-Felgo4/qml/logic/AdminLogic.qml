@@ -2,8 +2,13 @@
 import Felgo
 //import "../items/loaders/LoaderDialog.qml"
 Item {
-    property string qhttpserver: "http://127.0.0.1:4444/"
+    //    property string qhttpserver: "http://127.0.0.1:4444/"
+    property string qhttpserver: "http://192.168.1.244:4444/"
+    // 删帖
     signal deleteSucceed(int index)
+    // 删评
+    signal deleteCSucceed(int index)
+
     //    property var postsdata
     id: adminLogic
     function insertChoiceQuestion(question,option1, option2,option3,option4,answer){
@@ -91,6 +96,21 @@ Item {
         });
     }
 
+    function deleteComment(id,index){
+        HttpRequest
+        .post(qhttpserver+"deleteComment")
+        .set('Content-Type', 'application/json')
+        .send({ id: id, v: "" })
+        .then(function(res) {
+            if(res.body === "success"){
+                deleteCSucceed(index)
+            }
+        })
+        .catch(function(err) {
+            console.log(err.code)
+        });
+    }
+
     function submitResource(name,info,url,type){
 
         const xhr = new XMLHttpRequest();
@@ -123,6 +143,10 @@ Item {
             return true
         }
         return false
+    }
+
+    function getQuestionByTcp(){
+        qm.getQuestionsByTcp();
     }
 
 

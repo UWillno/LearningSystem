@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 9.0.0, 2023-03-03T00:11:32. -->
+<!-- Written by QtCreator 9.0.0, 2023-03-04T23:11:46. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -398,9 +398,9 @@
   <variable>ProjectExplorer.Project.Target.1</variable>
   <valuemap type="QVariantMap">
    <value type="QString" key="DeviceType">Android.Device.Type</value>
-   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Replacement for &quot;安卓 Qt 6.4.1 Clang arm64-v8a&quot;3</value>
-   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Replacement for &quot;安卓 Qt 6.4.1 Clang arm64-v8a&quot;3</value>
-   <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">{5de3fb81-191d-48c7-a4ea-8d9d954a96dd}</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">安卓 Qt 6.4.1 Clang x86_64</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">安卓 Qt 6.4.1 Clang x86_64</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">{c18e344b-dd6e-404c-bc65-9f252b7abb41}</value>
    <value type="qlonglong" key="ProjectExplorer.Target.ActiveBuildConfiguration">0</value>
    <value type="qlonglong" key="ProjectExplorer.Target.ActiveDeployConfiguration">0</value>
    <value type="qlonglong" key="ProjectExplorer.Target.ActiveRunConfiguration">0</value>
@@ -418,14 +418,15 @@
 -DANDROID_NDK:PATH=/home/uwillno/Android/Sdk/ndk/23.1.7779620
 -DCMAKE_TOOLCHAIN_FILE:FILEPATH=/home/uwillno/Android/Sdk/ndk/23.1.7779620/build/cmake/android.toolchain.cmake
 -DANDROID_USE_LEGACY_TOOLCHAIN_FILE:BOOL=OFF
--DANDROID_ABI:STRING=arm64-v8a
+-DANDROID_ABI:STRING=x86_64
 -DANDROID_STL:STRING=c++_shared
 -DCMAKE_FIND_ROOT_PATH:PATH=%{Qt:QT_INSTALL_PREFIX}
 -DQT_NO_GLOBAL_APK_TARGET_PART_OF_ALL:BOOL=ON
 -DQT_HOST_PATH:PATH=%{Qt:QT_HOST_PREFIX}
 -DANDROID_SDK_ROOT:PATH=/home/uwillno/Android/Sdk
 -DCMAKE_CXX_FLAGS_INIT:STRING=%{Qt:QML_DEBUG_FLAG}</value>
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/uwillno/Desktop/BYSJ/C/arm64</value>
+    <value type="int" key="EnableQmlDebugging">0</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/../build-LearningSystem-Felgo4-Qt_6_4_1_Clang_x86_64-Debug</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <value type="QString" key="CMakeProjectManager.MakeStep.BuildPreset"></value>
@@ -490,14 +491,14 @@
 -DANDROID_NDK:PATH=/home/uwillno/Android/Sdk/ndk/23.1.7779620
 -DCMAKE_TOOLCHAIN_FILE:FILEPATH=/home/uwillno/Android/Sdk/ndk/23.1.7779620/build/cmake/android.toolchain.cmake
 -DANDROID_USE_LEGACY_TOOLCHAIN_FILE:BOOL=OFF
--DANDROID_ABI:STRING=arm64-v8a
+-DANDROID_ABI:STRING=x86_64
 -DANDROID_STL:STRING=c++_shared
 -DCMAKE_FIND_ROOT_PATH:PATH=%{Qt:QT_INSTALL_PREFIX}
 -DQT_NO_GLOBAL_APK_TARGET_PART_OF_ALL:BOOL=ON
 -DQT_HOST_PATH:PATH=%{Qt:QT_HOST_PREFIX}
 -DANDROID_SDK_ROOT:PATH=/home/uwillno/Android/Sdk
 -DCMAKE_CXX_FLAGS_INIT:STRING=%{Qt:QML_DEBUG_FLAG}</value>
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/../build-LearningSystem-Felgo4-Qt_6_4_1_Clang_arm64_v8a-Release</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/../build-LearningSystem-Felgo4-Qt_6_4_1_Clang_x86_64-Release</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <value type="QString" key="CMakeProjectManager.MakeStep.BuildPreset"></value>
@@ -560,14 +561,14 @@
 -DANDROID_NDK:PATH=/home/uwillno/Android/Sdk/ndk/23.1.7779620
 -DCMAKE_TOOLCHAIN_FILE:FILEPATH=/home/uwillno/Android/Sdk/ndk/23.1.7779620/build/cmake/android.toolchain.cmake
 -DANDROID_USE_LEGACY_TOOLCHAIN_FILE:BOOL=OFF
--DANDROID_ABI:STRING=arm64-v8a
+-DANDROID_ABI:STRING=x86_64
 -DANDROID_STL:STRING=c++_shared
 -DCMAKE_FIND_ROOT_PATH:PATH=%{Qt:QT_INSTALL_PREFIX}
 -DQT_NO_GLOBAL_APK_TARGET_PART_OF_ALL:BOOL=ON
 -DQT_HOST_PATH:PATH=%{Qt:QT_HOST_PREFIX}
 -DANDROID_SDK_ROOT:PATH=/home/uwillno/Android/Sdk
 -DCMAKE_CXX_FLAGS_INIT:STRING=%{Qt:QML_DEBUG_FLAG}</value>
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/../build-LearningSystem-Felgo4-Qt_6_4_1_Clang_arm64_v8a-RelWithDebInfo</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/../build-LearningSystem-Felgo4-Qt_6_4_1_Clang_x86_64-RelWithDebInfo</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <value type="QString" key="CMakeProjectManager.MakeStep.BuildPreset"></value>
@@ -630,7 +631,7 @@
 -DANDROID_NDK:PATH=/home/uwillno/Android/Sdk/ndk/23.1.7779620
 -DCMAKE_TOOLCHAIN_FILE:FILEPATH=/home/uwillno/Android/Sdk/ndk/23.1.7779620/build/cmake/android.toolchain.cmake
 -DANDROID_USE_LEGACY_TOOLCHAIN_FILE:BOOL=OFF
--DANDROID_ABI:STRING=arm64-v8a
+-DANDROID_ABI:STRING=x86_64
 -DANDROID_STL:STRING=c++_shared
 -DCMAKE_FIND_ROOT_PATH:PATH=%{Qt:QT_INSTALL_PREFIX}
 -DQT_NO_GLOBAL_APK_TARGET_PART_OF_ALL:BOOL=ON
@@ -638,7 +639,7 @@
 -DANDROID_SDK_ROOT:PATH=/home/uwillno/Android/Sdk
 -DCMAKE_CXX_FLAGS_INIT:STRING=%{Qt:QML_DEBUG_FLAG}</value>
     <value type="int" key="EnableQmlDebugging">0</value>
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/../build-LearningSystem-Felgo4-Qt_6_4_1_Clang_arm64_v8a-Profile</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/../build-LearningSystem-Felgo4-Qt_6_4_1_Clang_x86_64-Profile</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <value type="QString" key="CMakeProjectManager.MakeStep.BuildPreset"></value>
@@ -701,14 +702,14 @@
 -DANDROID_NDK:PATH=/home/uwillno/Android/Sdk/ndk/23.1.7779620
 -DCMAKE_TOOLCHAIN_FILE:FILEPATH=/home/uwillno/Android/Sdk/ndk/23.1.7779620/build/cmake/android.toolchain.cmake
 -DANDROID_USE_LEGACY_TOOLCHAIN_FILE:BOOL=OFF
--DANDROID_ABI:STRING=arm64-v8a
+-DANDROID_ABI:STRING=x86_64
 -DANDROID_STL:STRING=c++_shared
 -DCMAKE_FIND_ROOT_PATH:PATH=%{Qt:QT_INSTALL_PREFIX}
 -DQT_NO_GLOBAL_APK_TARGET_PART_OF_ALL:BOOL=ON
 -DQT_HOST_PATH:PATH=%{Qt:QT_HOST_PREFIX}
 -DANDROID_SDK_ROOT:PATH=/home/uwillno/Android/Sdk
 -DCMAKE_CXX_FLAGS_INIT:STRING=%{Qt:QML_DEBUG_FLAG}</value>
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/../build-LearningSystem-Felgo4-Qt_6_4_1_Clang_arm64_v8a-MinSizeRel</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/../build-LearningSystem-Felgo4-Qt_6_4_1_Clang_x86_64-MinSizeRel</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <value type="QString" key="CMakeProjectManager.MakeStep.BuildPreset"></value>
@@ -777,12 +778,11 @@
    <value type="qlonglong" key="ProjectExplorer.Target.DeployConfigurationCount">1</value>
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.PluginSettings">
     <valuelist type="QVariantList" key="AndroidDeviceAbis">
-     <value type="QString">arm64-v8a</value>
-     <value type="QString">armeabi-v7a</value>
-     <value type="QString">armeabi</value>
+     <value type="QString">x86_64</value>
+     <value type="QString">x86</value>
     </valuelist>
-    <value type="QString" key="AndroidDeviceSerialNumber">S8CYL7DYG6JBJZHM</value>
-    <value type="int" key="AndroidVersion.ApiLevel">33</value>
+    <value type="QString" key="AndroidDeviceSerialNumber">192.168.56.105:5555</value>
+    <value type="int" key="AndroidVersion.ApiLevel">30</value>
    </valuemap>
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.RunConfiguration.0">
     <value type="bool" key="Analyzer.Perf.Settings.UseGlobalSettings">true</value>
@@ -797,6 +797,7 @@
     <valuelist type="QVariantList" key="CustomOutputParsers"/>
     <value type="int" key="PE.EnvironmentAspect.Base">0</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">appLearningSystem-Felgo4</value>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.AndroidRunConfiguration:appLearningSystem-Felgo4</value>
     <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">appLearningSystem-Felgo4</value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
@@ -811,9 +812,9 @@
   <variable>ProjectExplorer.Project.Target.2</variable>
   <valuemap type="QVariantMap">
    <value type="QString" key="DeviceType">Android.Device.Type</value>
-   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Replacement for &quot;安卓 Qt 6.4.1 Clang arm64-v8a&quot;4</value>
-   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Replacement for &quot;安卓 Qt 6.4.1 Clang arm64-v8a&quot;4</value>
-   <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">{31016664-1123-4a02-a0ca-f5f7044489da}</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">安卓 Qt 6.4.1 Clang arm64-v8a</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">安卓 Qt 6.4.1 Clang arm64-v8a</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">{a1f836ba-9cce-4f8f-9079-241ce7c73181}</value>
    <value type="qlonglong" key="ProjectExplorer.Target.ActiveBuildConfiguration">0</value>
    <value type="qlonglong" key="ProjectExplorer.Target.ActiveDeployConfiguration">0</value>
    <value type="qlonglong" key="ProjectExplorer.Target.ActiveRunConfiguration">0</value>
@@ -1211,6 +1212,7 @@
     <valuelist type="QVariantList" key="CustomOutputParsers"/>
     <value type="int" key="PE.EnvironmentAspect.Base">0</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">appLearningSystem-Felgo4</value>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.AndroidRunConfiguration:appLearningSystem-Felgo4</value>
     <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">appLearningSystem-Felgo4</value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>

@@ -53,7 +53,7 @@ AppPage {
                             }
 
 
-//                            logic.getAllPosts()
+                            //                            logic.getAllPosts()
                             //                            createPostsPage()
                             //                            if(index === 4)
 
@@ -72,20 +72,29 @@ AppPage {
 
     }
     function createQuestionPage(index){
-        var component = Qt.createComponent("QuestionPage.qml");
-        if(component.status === Component.Ready){
-            console.log("here")
-            var obj =  component.createObject(parent,{state: index})
-            rootStack.push(obj)
+
+
+        if(index===0){
+
+            var component = Qt.createComponent("QuestionPage.qml");
+            if(component.status === Component.Ready){
+                console.log("here")
+                var obj =  component.createObject(parent,{state: index})
+                rootStack.push(obj)
+            }
+        }else{
+            //            if(index === 1){
+            adminLogic.getQuestionByTcp()
+            //            }
         }
     }
 
     function createPostsPage(){
         var component = Qt.createComponent("PostsPage.qml");
-//        var model = logic.postsdata
+        //        var model = logic.postsdata
 
-//        var model = logic.getAllPosts()
-//        var obj =  component.createObject(parent,{dmodel:model,admin:true})
+        //        var model = logic.getAllPosts()
+        //        var obj =  component.createObject(parent,{dmodel:model,admin:true})
         var obj =  component.createObject(parent,{admin:true})
         rootStack.push(obj)
     }
@@ -95,6 +104,19 @@ AppPage {
         target: logic
         onPostsGot:{
             createPostsPage()
+        }
+    }
+
+    Connections {
+        //        id:con
+        target: qm
+        onSelectSuceeded:{
+            var component = Qt.createComponent("QuestionPage.qml");
+            if(component.status === Component.Ready){
+                console.log("here")
+                var obj =  component.createObject(parent,{state: 1})
+                rootStack.push(obj)
+            }
         }
     }
     onPopped: {

@@ -1,5 +1,6 @@
 import QtQuick
 import Felgo
+import "../pages"
 
 Rectangle {
     width: parent.width
@@ -41,6 +42,27 @@ Rectangle {
             }
             AppButton {
                 text: "查看"
+                onClicked: {
+                    switch(model.type){
+                    case 0:{
+                        Qt.openUrlExternally(model.url)
+                        break;
+                    }
+                    case 1:{
+                        console.log(model.url)
+                        PictureViewer.show(app,model.url)
+                        break;
+                    }
+                    case 2:{
+                        Qt.openUrlExternally(model.url)
+                        break;
+                    }
+                    case 3:{
+                        Qt.openUrlExternally(model.url)
+                        break;
+                    }
+                    }
+                }
 
             }
         }
