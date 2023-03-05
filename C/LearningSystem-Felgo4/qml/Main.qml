@@ -17,6 +17,12 @@ App {
     property alias navMode: navigation.navigationMode
 
     property alias settings: settings
+//    property alias  wCQ: settings.wCQ
+//    property alias  wTQ: settings.wTQ
+//    property alias  wFQ: settings.wFQ
+//    property alias  rCQ: settings.rCQ
+//    property alias  rTQ: settings.rTQ
+//    property alias  rFQ: settings.rFQ
     //    property int name: value
     //    property NavigationStack rootStack: rootStack
     // You get free licenseKeys from https://felgo.com/licenseKey
@@ -29,8 +35,34 @@ App {
     Settings {
         id: settings
         property var questionsDB
-        property var questions
+//        property var wCQ
+//        property var wTQ
+//        property var wFQ
+//        property var rCQ
+//        property var rTQ
+//        property var rFQ
         property var exams
+
+        Component.onCompleted:{
+//            if(!wCQ){
+//                wCQ = []
+//            }
+//            if(!wTQ){
+//                wTQ = []
+//            }
+//            if(!wFQ){
+//                wFQ = []
+//            }
+//            if(!rCQ){
+//                rCQ = []
+//            }
+//            if(!rTQ){
+//                rTQ = []
+//            }
+//            if(!rFQ){
+//                rFQ = []
+//            }
+        }
     }
 
     Navigation {

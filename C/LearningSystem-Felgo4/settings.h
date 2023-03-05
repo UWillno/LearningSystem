@@ -3,6 +3,7 @@
 
 #include <QObject>
 #include <QSettings>
+//#include <QSet>
 class Settings : public QObject
 {
     Q_OBJECT
@@ -35,6 +36,31 @@ public:
     Q_PROPERTY(QString fileName READ fileName WRITE setFileName NOTIFY fileNameChanged)
 
 
+    QSet<qint32> wrongCQ() const;
+    void setWrongCQ(const QSet<qint32> &newWrongCQ);
+
+    QSet<qint32> wrongTQ() const;
+    void setWrongTQ(const QSet<qint32> &newWrongTQ);
+
+    QSet<qint32> wrongFQ() const;
+    void setWrongFQ(const QSet<qint32> &newWrongFQ);
+
+    QSet<qint32> rightCQ() const;
+    void setRightCQ(const QSet<qint32> &newRightCQ);
+
+    QSet<qint32> rightTQ() const;
+    void setRightTQ(const QSet<qint32> &newRightTQ);
+
+    QSet<qint32> rightFQ() const;
+    void setRightFQ(const QSet<qint32> &newRightFQ);
+
+    Q_PROPERTY(QSet<qint32> wrongCQ READ wrongCQ WRITE setWrongCQ NOTIFY wrongCQChanged)
+    Q_PROPERTY(QSet<qint32> wrongTQ READ wrongTQ WRITE setWrongTQ NOTIFY wrongTQChanged)
+    Q_PROPERTY(QSet<qint32> wrongFQ READ wrongFQ WRITE setWrongFQ NOTIFY wrongFQChanged)
+    Q_PROPERTY(QSet<qint32> rightCQ READ rightCQ WRITE setRightCQ NOTIFY rightCQChanged)
+    Q_PROPERTY(QSet<qint32> rightTQ READ rightTQ WRITE setRightTQ NOTIFY rightTQChanged)
+    Q_PROPERTY(QSet<qint32> rightFQ READ rightFQ WRITE setRightFQ NOTIFY rightFQChanged)
+
 signals:
 
     void usernameChanged();
@@ -49,9 +75,26 @@ signals:
 
     void fileNameChanged();
 
+    void wrongCQChanged();
+
+    void wrongTQChanged();
+
+    void wrongFQChanged();
+
+    void rightCQChanged();
+
+    void rightTQChanged();
+
+    void rightFQChanged();
+
 public slots:
-       void save();
-       void init();
+    void save();
+    void init();
+    void insertW(qint32 id,qint32 type);
+    void insertR(qint32 id,qint32 type);
+
+    bool isWrong(qint32 id,qint32 type);
+    bool isRight(qint32 id,qint32 type);
 
 private:
     QSettings *m_settings;
@@ -63,15 +106,15 @@ private:
     QString m_cookie;
     QString m_fileName;
 
+    QSet<qint32> m_wrongCQ;
+    QSet<qint32> m_wrongTQ;
+    QSet<qint32> m_wrongFQ;
 
-    //        property int cxid
-    //        property double phone
-    //        property string password
-    //        property var cookie
-    //        //         fileName:""
+    QSet<qint32> m_rightCQ;
+    QSet<qint32> m_rightTQ;
+    QSet<qint32> m_rightFQ;
 
 
-
-  };
+};
 
 #endif // SETTINGS_H

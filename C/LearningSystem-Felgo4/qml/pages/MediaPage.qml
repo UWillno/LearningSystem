@@ -11,6 +11,7 @@ AppPage {
     Column {
         width:parent.width
         height: parent.height
+//        anchors.fill: parent
 
         AppFlickable {
             width: parent.width
@@ -70,12 +71,12 @@ AppPage {
                         if(playing){
                             mediaplayer.pause()
                             playing = false
-                            navigationBarHidden = true
+//                            navigationBarHidden = true
                         }
                         else{
                             mediaplayer.play()
                             playing = true
-                            navigationBarHidden = false
+//                            navigationBarHidden = false
                         }
                     }
                 }
@@ -99,7 +100,7 @@ AppPage {
                 MouseArea {
                     anchors.fill: parent
                     onClicked: {
-                        ori =  (ori==90)? 0 :90
+                        ori =  (ori===90)? 0 :90
                         if(ori===90){
                             mediaPage.navigationBarHidden = true
                             navMode = 4
@@ -115,9 +116,11 @@ AppPage {
 
     Component.onCompleted: mediaplayer.play()
     onPopped: {
-//        mediaplayer.stop()
-       navMode = 3
-       destroy()
+//        destroy()
+        navMode = 3
+        mediaplayer.stop()
+
+//        destroy()
     }
 
 }

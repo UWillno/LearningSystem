@@ -17,6 +17,7 @@ Item {
 
     signal userLoginSucceed()
     signal newUserLogined()
+    signal postingSucceed()
 
     signal getResourcesSucceed(var json,int type)
     signal getQuestionsDBSucceed(var questionsDB)
@@ -88,7 +89,22 @@ Item {
     }
 
     function submitPost(title,text,type){
-        qm.submitPost(title,text,ss.cxid,ss.username,type)
+        //        qm.submitPost(title,text,ss.cxid,ss.username,type)
+        //改为HTTP
+        const xhr = new XMLHttpRequest()
+        xhr.open("POST",qhttpserver + "submitPost",true);
+        xhr.send(JSON.stringify({title:title,text:text,cxid:ss.cxid,username:ss.username,type:type}))
+        xhr.onload = function (e) {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+                    //                    console.log(xhr.responseText);
+                    //                   console.log(xhr.responseText)
+                    postingSucceed()
+                } else {
+                    console.error(xhr.statusText);
+                }
+            }
+        };
     }
 
     function getResourcesByType(type){
@@ -99,7 +115,7 @@ Item {
         xhr.onload = function (e) {
             if (xhr.readyState === 4) {
                 if (xhr.status === 200) {
-//                    console.log(xhr.responseText);
+                    //                    console.log(xhr.responseText);
                     getResourcesSucceed(JSON.parse(xhr.responseText),type)
                 } else {
                     console.error(xhr.statusText);
@@ -115,7 +131,7 @@ Item {
         xhr.onload = function (e) {
             if (xhr.readyState === 4) {
                 if (xhr.status === 200) {
-//                    console.log(xhr.responseText);
+                    //                    console.log(xhr.responseText);
                     getQuestionsDBSucceed(JSON.parse(xhr.responseText))
                 } else {
                     console.error(xhr.statusText);
@@ -124,4 +140,66 @@ Item {
         };
 
     }
+    function isWrong(id,type){
+        return ss.isWrong(id,type)
+    }
+    function isRight(id,type){
+        return ss.isRight(id,type)
+    }
+
+    function addWQ(id,type){
+        ss.insertW(id,type)
+    }
+
+    function addRQ(id,type){
+        ss.insertR(id,type)
+    }
+
+    //    function addWQ(id,type){
+    //        switch(type){
+    //        case 0:{
+    //            if(wCQ.indexOf(id)!==-1){
+    //                wCQ.push(id)
+    //            }
+    //            break;
+    //        }
+    //        case 1:{
+    //            if(wTQ.indexOf(id)!==-1){
+    //                wTQ.push(id)
+    //            }
+    //            break;
+    //        }
+    //        case 2:{
+    //            if(wFQ.indexOf(id)!==-1){
+    //                wFQ.push(id)
+    //            }
+    //            break;
+    //        }
+    //        }
+    //    }
+
+    //    function addRQ(id,type){
+    //        switch(type){
+    //        case 0:{
+    //            if(rCQ.indexOf(id)!==-1){
+    //                rCQ.push(id)
+    //            }
+    //            break;
+    //        }
+    //        case 1:{
+    //            if(rTQ.indexOf(id)!==-1){
+    //                rTQ.push(id)
+    //            }
+    //            break;
+    //        }
+    //        case 2:{
+    //            if(rFQ.indexOf(id)!==-1){
+    //                rFQ.push(id)
+    //            }
+    //            break;
+    //        }
+    //        }
+    //    }
+
+
 }

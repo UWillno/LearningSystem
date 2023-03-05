@@ -76,7 +76,7 @@ AppPage {
                         if(r2.checked) type=1;
                         if(r3.checked) type=2;
                         userLogic.submitPost(titleInput.text.trim(),postEdit.text.trim(),type)
-                        forumStack.pop()
+//                        forumStack.pop()
                     }else{
                         toastManager.show("标题或内容不能为空",1000);
                     }
@@ -109,6 +109,14 @@ AppPage {
                                        }
                                    }
                                }
+    }
+
+    Connections{
+        target: userLogic
+        onPostingSucceed :{
+            toastManager.show("发布成功！",1000)
+            popped()
+        }
     }
 
     onPopped: {

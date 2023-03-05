@@ -255,24 +255,33 @@ QString TcpClient::uploadPicture(QUrl &path)
             p->waitForReadyRead();
             //            qInfo() <<QString( p->readAll());
             //            forever
+            qint64 chunk = 4096;
             if(QString( p->readAll()).contains("ready"))
             {
                 //                p->write(data);
                 qint64 send = 0;
                 qint64 size = file.size();
-                char buf[4*1024] = {0};
+                //                char buf[4*1024] = {0};
                 forever{
 
-                    //                    char buf[4*1024] = {0};
-                    qint64 len = file.read(buf, sizeof(buf));
-                    send+=len;
-                    p->write(buf,len);
-                    p->waitForBytesWritten();
-                    if(send == size) {
-
-                        qInfo() << "发完";
+                    if(send + chunk >= size){
+                        p->write(file.readAll());
+                        p->waitForBytesWritten();
                         break;
                     }
+                    p->write(file.read(chunk));
+                    p->waitForBytesWritten();
+                    send+=chunk;
+
+                    //                    char buf[4*1024] = {0};
+                    //                    qint64 len = file.read(buf, sizeof(buf));
+                    //                    send+=len;
+                    //                    p->write(buf,len);
+                    //                    p->waitForBytesWritten();
+                    //                    if(send == size) {
+                    //                        qInfo() << "发完";
+                    //                        break;
+                    //                    }
                 }
                 file.close();
                 p->disconnectFromHost();

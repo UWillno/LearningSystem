@@ -3,4 +3,10 @@ cookie="route=3a66e47c0ac92560e5c67cd5e1803201; domain=passport2-api.chaoxing.co
 cxid=103750678
 password=zhj775825
 phone=17671056113
+rightCQ=@Variant(\0\0\0\x7f\0\0\0\rQSet<qint32>\0\0\0\0\x5\0\0\0\x13\0\0\0\x1c\0\0\0\x35\0\0\0\x32\0\0\0\x34)
+rightFQ=@Variant(\0\0\0\x7f\0\0\0\rQSet<qint32>\0\0\0\0\0)
+rightTQ="@Variant(\0\0\0\x7f\0\0\0\rQSet<qint32>\0\0\0\0\x2\0\0\0+\0\0\0,)"
 username=张航建
+wrongCQ=@Variant(\0\0\0\x7f\0\0\0\rQSet<qint32>\0\0\0\0\a\0\0\0\x33\0\0\0\x13\0\0\0\x14\0\0\0\x16\0\0\0\x1d\0\0\0\x31\0\0\0\x15)
+wrongFQ=@Variant(\0\0\0\x7f\0\0\0\rQSet<qint32>\0\0\0\0\0)
+wrongTQ=@Variant(\0\0\0\x7f\0\0\0\rQSet<qint32>\0\0\0\0\x1\0\0\0\x1a)

@@ -79,6 +79,10 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/qml/items" TYPE FILE FILES "/home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/qml/items/BlankItem.qml")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/qml/items" TYPE FILE FILES "/home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/qml/items/ChoiceQuestionItem.qml")
 endif()
 
@@ -187,7 +191,15 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/qml/pages" TYPE FILE FILES "/home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/qml/pages/ChoiceQuestionRectangle.qml")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/qml/pages" TYPE FILE FILES "/home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/qml/pages/ExercisesPage.qml")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/qml/pages" TYPE FILE FILES "/home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/qml/pages/FillInTheBlanksQuestionRectangle.qml")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -231,6 +243,10 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/qml/pages" TYPE FILE FILES "/home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/qml/pages/QuestionSwipeViewPage.qml")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/qml/pages" TYPE FILE FILES "/home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/qml/pages/ResourceListPage.qml")
 endif()
 
@@ -240,6 +256,10 @@ endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/qml/pages" TYPE FILE FILES "/home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/qml/pages/StudyPage.qml")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/qml/pages" TYPE FILE FILES "/home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/qml/pages/TrueOrFalseQuestionRectangle.qml")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)

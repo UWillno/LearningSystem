@@ -3,9 +3,10 @@
 Settings::Settings(QObject *parent)
     : QObject{parent}
 {
-
+    qRegisterMetaType<QSet<qint32>>("QSet<qint32>");
     qInfo() <<"Settings !!!";
     m_settings = new QSettings("./config",QSettings::NativeFormat,this);
+    qInfo() << m_settings->fileName();
     init();
 }
 
@@ -97,19 +98,174 @@ void Settings::save()
     m_settings->setValue("cxid",m_cxid);
     m_settings->setValue("cookie",m_cookie);
     //    m_settings->sync();
-}
+    m_settings->setValue("wrongCQ",QVariant::fromValue(wrongCQ()));
+    m_settings->setValue("wrongTQ",QVariant::fromValue(wrongTQ()));
+    m_settings->setValue("wrongFQ",QVariant::fromValue(wrongFQ()));
+    m_settings->setValue("rightCQ",QVariant::fromValue(rightCQ()));
+    m_settings->setValue("rightTQ",QVariant::fromValue(rightTQ()));
+    m_settings->setValue("rightFQ",QVariant::fromValue(rightFQ()));
 
+}
 void Settings::init()
 {
-//    qInfo() <<"Settings init !!!";
+    //    qInfo() <<"Settings init !!!";
     setCxid(m_settings->value("cxid").toInt());
-//    qInfo() <<"1" <<  m_settings->value("cxid").toInt() ;
+    //    qInfo() <<"1" <<  m_settings->value("cxid").toInt() ;
     setUsername(m_settings->value("username").toString());
-//    qInfo() <<"2" <<  m_settings->value("username").toString() ;
+    //    qInfo() <<"2" <<  m_settings->value("username").toString() ;
     setPassword(m_settings->value("password").toString());
-//    qInfo() <<"3" << m_settings->value("password").toString() ;
+    //    qInfo() <<"3" << m_settings->value("password").toString() ;
     setCookie(m_settings->value("cookie").toString());
-//    qInfo() <<"4" << m_settings->value("cookie").toString() ;
+    //    qInfo() <<"4" << m_settings->value("cookie").toString() ;
     setPhone(m_settings->value("phone").toLongLong());
-//    qInfo() <<"5" << m_settings->value("phone").toLongLong() ;
+    //    qInfo() <<"5" << m_settings->value("phone").toLongLong() ;
+    setWrongCQ(m_settings->value("wrongCQ").value<QSet<qint32>>());
+    setWrongTQ(m_settings->value("wrongTQ").value<QSet<qint32>>());
+    setWrongFQ(m_settings->value("wrongFQ").value<QSet<qint32>>());
+    setRightCQ(m_settings->value("rightCQ").value<QSet<qint32>>());
+    setRightTQ(m_settings->value("rightTQ").value<QSet<qint32>>());
+    setRightFQ(m_settings->value("rightFQ").value<QSet<qint32>>());
+
+}
+
+void Settings::insertW(qint32 id, qint32 type)
+{
+    switch (type) {
+    case 0:
+        m_wrongCQ.insert(id);
+        break;
+    case 1:
+        m_wrongTQ.insert(id);
+        break;
+    case 2:
+        m_wrongFQ.insert(id);
+        break;
+    }
+    save();
+}
+
+void Settings::insertR(qint32 id, qint32 type)
+{
+    switch (type) {
+    case 0:
+        m_rightCQ.insert(id);
+        break;
+    case 1:
+        m_rightTQ.insert(id);
+        break;
+    case 2:
+        m_rightFQ.insert(id);
+        break;
+    }
+    save();
+}
+
+bool Settings::isWrong(qint32 id, qint32 type)
+{
+    switch (type) {
+    case 0:
+        return m_wrongCQ.contains(id);
+        //        break;
+    case 1:
+        return m_wrongTQ.contains(id);
+        //        break;
+    case 2:
+        return m_wrongFQ.contains(id);
+        //        break;
+    }
+    return false;
+}
+
+bool Settings::isRight(qint32 id, qint32 type)
+{
+    switch (type) {
+    case 0:
+        return m_rightCQ.contains(id);
+        //        break;
+    case 1:
+        return m_rightTQ.contains(id);
+        //        break;
+    case 2:
+        return m_rightFQ.contains(id);
+        //        break;
+    }
+    return false;
+}
+
+QSet<qint32> Settings::rightFQ() const
+{
+    return m_rightFQ;
+}
+
+void Settings::setRightFQ(const QSet<qint32> &newRightFQ)
+{
+    if (m_rightFQ == newRightFQ)
+        return;
+    m_rightFQ = newRightFQ;
+    emit rightFQChanged();
+}
+
+QSet<qint32> Settings::rightTQ() const
+{
+    return m_rightTQ;
+}
+
+void Settings::setRightTQ(const QSet<qint32> &newRightTQ)
+{
+    if (m_rightTQ == newRightTQ)
+        return;
+    m_rightTQ = newRightTQ;
+    emit rightTQChanged();
+}
+
+QSet<qint32> Settings::rightCQ() const
+{
+    return m_rightCQ;
+}
+
+void Settings::setRightCQ(const QSet<qint32> &newRightCQ)
+{
+    if (m_rightCQ == newRightCQ)
+        return;
+    m_rightCQ = newRightCQ;
+    emit rightCQChanged();
+}
+
+QSet<qint32> Settings::wrongFQ() const
+{
+    return m_wrongFQ;
+}
+
+void Settings::setWrongFQ(const QSet<qint32> &newWrongFQ)
+{
+    if (m_wrongFQ == newWrongFQ)
+        return;
+    m_wrongFQ = newWrongFQ;
+    emit wrongFQChanged();
+}
+
+QSet<qint32> Settings::wrongTQ() const
+{
+    return m_wrongTQ;
+}
+
+void Settings::setWrongTQ(const QSet<qint32> &newWrongTQ)
+{
+    if (m_wrongTQ == newWrongTQ)
+        return;
+    m_wrongTQ = newWrongTQ;
+    emit wrongTQChanged();
+}
+
+QSet<qint32> Settings::wrongCQ() const
+{
+    return m_wrongCQ;
+}
+
+void Settings::setWrongCQ(const QSet<qint32> &newWrongCQ)
+{
+    if (m_wrongCQ == newWrongCQ)
+        return;
+    m_wrongCQ = newWrongCQ;
+    emit wrongCQChanged();
 }

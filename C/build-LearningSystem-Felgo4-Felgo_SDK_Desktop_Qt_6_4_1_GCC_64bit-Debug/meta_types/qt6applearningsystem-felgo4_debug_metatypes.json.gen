@@ -2,6 +2,65 @@
     {
         "classes": [
             {
+                "className": "HttpClient",
+                "object": true,
+                "qualifiedClassName": "HttpClient",
+                "signals": [
+                    {
+                        "access": "public",
+                        "name": "getFilenameFailed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "url",
+                                "type": "QString"
+                            }
+                        ],
+                        "name": "getFilenameSucceed",
+                        "returnType": "void"
+                    }
+                ],
+                "slots": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "path",
+                                "type": "QUrl&"
+                            }
+                        ],
+                        "name": "uploadFile",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "r",
+                                "type": "QNetworkReply*"
+                            }
+                        ],
+                        "name": "getFilename",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "httpclient.h",
+        "outputRevision": 68
+    },
+    {
+        "classes": [
+            {
                 "className": "QmlMediator",
                 "object": true,
                 "properties": [
@@ -77,6 +136,28 @@
                     {
                         "access": "public",
                         "name": "updateFailed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "path",
+                                "type": "QUrl&"
+                            }
+                        ],
+                        "name": "uploadResource",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "url",
+                                "type": "QString"
+                            }
+                        ],
+                        "name": "uploadResourceSucceed",
                         "returnType": "void"
                     }
                 ],
@@ -242,6 +323,17 @@
                         "access": "public",
                         "arguments": [
                             {
+                                "name": "path",
+                                "type": "QUrl"
+                            }
+                        ],
+                        "name": "upload",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
                                 "name": "title",
                                 "type": "QString"
                             },
@@ -377,6 +469,96 @@
                         "type": "QString",
                         "user": false,
                         "write": "setFileName"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 6,
+                        "name": "wrongCQ",
+                        "notify": "wrongCQChanged",
+                        "read": "wrongCQ",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QSet<qint32>",
+                        "user": false,
+                        "write": "setWrongCQ"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 7,
+                        "name": "wrongTQ",
+                        "notify": "wrongTQChanged",
+                        "read": "wrongTQ",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QSet<qint32>",
+                        "user": false,
+                        "write": "setWrongTQ"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 8,
+                        "name": "wrongFQ",
+                        "notify": "wrongFQChanged",
+                        "read": "wrongFQ",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QSet<qint32>",
+                        "user": false,
+                        "write": "setWrongFQ"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 9,
+                        "name": "rightCQ",
+                        "notify": "rightCQChanged",
+                        "read": "rightCQ",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QSet<qint32>",
+                        "user": false,
+                        "write": "setRightCQ"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 10,
+                        "name": "rightTQ",
+                        "notify": "rightTQChanged",
+                        "read": "rightTQ",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QSet<qint32>",
+                        "user": false,
+                        "write": "setRightTQ"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 11,
+                        "name": "rightFQ",
+                        "notify": "rightFQChanged",
+                        "read": "rightFQ",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QSet<qint32>",
+                        "user": false,
+                        "write": "setRightFQ"
                     }
                 ],
                 "qualifiedClassName": "Settings",
@@ -410,6 +592,36 @@
                         "access": "public",
                         "name": "fileNameChanged",
                         "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "wrongCQChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "wrongTQChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "wrongFQChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "rightCQChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "rightTQChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "rightFQChanged",
+                        "returnType": "void"
                     }
                 ],
                 "slots": [
@@ -422,6 +634,66 @@
                         "access": "public",
                         "name": "init",
                         "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "id",
+                                "type": "qint32"
+                            },
+                            {
+                                "name": "type",
+                                "type": "qint32"
+                            }
+                        ],
+                        "name": "insertW",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "id",
+                                "type": "qint32"
+                            },
+                            {
+                                "name": "type",
+                                "type": "qint32"
+                            }
+                        ],
+                        "name": "insertR",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "id",
+                                "type": "qint32"
+                            },
+                            {
+                                "name": "type",
+                                "type": "qint32"
+                            }
+                        ],
+                        "name": "isWrong",
+                        "returnType": "bool"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "id",
+                                "type": "qint32"
+                            },
+                            {
+                                "name": "type",
+                                "type": "qint32"
+                            }
+                        ],
+                        "name": "isRight",
+                        "returnType": "bool"
                     }
                 ],
                 "superClasses": [

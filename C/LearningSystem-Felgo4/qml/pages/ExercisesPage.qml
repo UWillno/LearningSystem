@@ -27,42 +27,39 @@ AppPage {
         width: parent.width
         clip: true
 
-        //         Rectangle {
-        //           color: "Red"
-        //         }
         QGridView {
+            id: qGridViewC
             modelData : questionsDB["C"]
+            type: 0
         }
 
         QGridView {
+            id: qGridViewT
             modelData : questionsDB["T"]
+            type: 1
         }
         QGridView {
+            id: qGridViewF
             modelData : questionsDB["F"]
+            type: 2
         }
 
     }
-    //    GridView {
-    //        anchors.fill: parent
-
-    //        model:JsonListModel{
-
-    //            source: settings.questionsDB
-    //        }
-    ////        model:settings.questionsDB
-    //        delegate:
-    //            SimpleRow {}
-    ////            Column {
-    ////            Image { source: IconType.android; anchors.horizontalCenter: parent.horizontalCenter }
-    ////            Text { text: id; anchors.horizontalCenter: parent.horizontalCenter }
-    ////        }
-    //    }
 
     Component.onCompleted:{
-        //        console.log(settings.questionsDB)
-        //        console.log(JSON.stringify(settings.questionsDB))
-        console.log(questionsDB["F"])
+
+    }
+    Connections {
+        target: practiceStack
+        onPopped:{
+            qGridViewC.refresh()
+            qGridViewT.refresh()
+            qGridViewF.refresh()
+        }
     }
 
+    onPopped: {
+        destroy()
+    }
 
 }
