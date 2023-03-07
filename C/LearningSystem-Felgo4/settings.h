@@ -63,6 +63,8 @@ public:
 
 signals:
 
+    void changed();
+
     void usernameChanged();
 
     void cxidChanged();
@@ -95,6 +97,8 @@ public slots:
 
     bool isWrong(qint32 id,qint32 type);
     bool isRight(qint32 id,qint32 type);
+
+    bool removeW(qint32 id,qint32 type);
 
 private:
     QSettings *m_settings;

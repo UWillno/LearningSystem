@@ -8,6 +8,43 @@ Settings::Settings(QObject *parent)
     m_settings = new QSettings("./config",QSettings::NativeFormat,this);
     qInfo() << m_settings->fileName();
     init();
+    QObject::connect(this,&Settings::cookieChanged,this,[&]{
+        save();
+    });
+    QObject::connect(this,&Settings::cxidChanged,this,[&]{
+        save();
+    });
+    QObject::connect(this,&Settings::usernameChanged,this,[&]{
+        save();
+    });
+    QObject::connect(this,&Settings::passwordChanged,this,[&]{
+        save();
+    });
+    QObject::connect(this,&Settings::rightCQChanged,this,[&]{
+        save();
+    });
+    QObject::connect(this,&Settings::rightTQChanged,this,[&]{
+        save();
+    });
+    QObject::connect(this,&Settings::rightFQChanged,this,[&]{
+        save();
+    });
+    QObject::connect(this,&Settings::wrongCQChanged,this,[&]{
+        save();
+    });
+
+    QObject::connect(this,&Settings::wrongFQChanged,this,[&]{
+        save();
+    });
+    QObject::connect(this,&Settings::wrongTQChanged,this,[&]{
+        save();
+    });
+    QObject::connect(this,&Settings::phoneChanged,this,[&]{
+        save();
+    });
+    QObject::connect(this,&Settings::changed,this,[&]{
+        save();
+    });
 }
 
 QString Settings::username() const
@@ -131,47 +168,55 @@ void Settings::init()
 void Settings::insertW(qint32 id, qint32 type)
 {
     switch (type) {
-    case 0:
+    case 0:{
         m_wrongCQ.insert(id);
         break;
-    case 1:
+    }
+    case 1:{
         m_wrongTQ.insert(id);
         break;
+    }
     case 2:
         m_wrongFQ.insert(id);
         break;
     }
-    save();
+    emit changed();
+    //    save();
+    //    emit wrongTQChanged()
 }
 
 void Settings::insertR(qint32 id, qint32 type)
 {
     switch (type) {
-    case 0:
+    case 0:{
         m_rightCQ.insert(id);
         break;
-    case 1:
+    }
+    case 1:{
         m_rightTQ.insert(id);
         break;
-    case 2:
+    }
+    case 2:{
         m_rightFQ.insert(id);
         break;
     }
-    save();
+    }
+    //    save();
+    emit changed();
 }
 
 bool Settings::isWrong(qint32 id, qint32 type)
 {
     switch (type) {
-    case 0:
+    case 0:{
         return m_wrongCQ.contains(id);
-        //        break;
-    case 1:
+    } //        break;
+    case 1:{
         return m_wrongTQ.contains(id);
-        //        break;
-    case 2:
+    }//        break;
+    case 2:{
         return m_wrongFQ.contains(id);
-        //        break;
+    }//        break;
     }
     return false;
 }
@@ -179,15 +224,63 @@ bool Settings::isWrong(qint32 id, qint32 type)
 bool Settings::isRight(qint32 id, qint32 type)
 {
     switch (type) {
-    case 0:
+    case 0:{
         return m_rightCQ.contains(id);
-        //        break;
-    case 1:
+        }//        break;
+    case 1:{
         return m_rightTQ.contains(id);
-        //        break;
-    case 2:
+        }//        break;
+    case 2:{
         return m_rightFQ.contains(id);
+        }//        break;
+    }
+    return false;
+}
+
+bool Settings::removeW(qint32 id, qint32 type)
+{
+    //    qInfo() << type;
+    switch (type) {
+    case 0:{
+//        qInfo() << m_wrongCQ;
+//        qInfo() << id;
+        if(m_wrongCQ.remove(id))
+        {
+//            qInfo() << m_rightCQ;
+            emit changed();
+            return true;
+        }
+        else
+        {
+//            qInfo() <<m_wrongCQ;
+            return false;
+        }
         //        break;
+    }
+    case 1:{
+        //        break;
+        if(m_wrongTQ.remove(id))
+        {
+            emit changed();
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    case 2:
+    {
+        if(m_wrongFQ.remove(id))
+        {
+            emit changed();
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
     }
     return false;
 }

@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "appLearningSystem-Felgo4.run"
+			"path" : "libappLearningSystem-Felgo4_x86_64.so"
 		}
 	],
 	"backtrace" : 4,
@@ -10,7 +10,7 @@
 	{
 		"commands" : 
 		[
-			"add_executable",
+			"add_library",
 			"_qt_internal_create_executable",
 			"qt6_add_executable",
 			"qt_add_executable",
@@ -26,17 +26,11 @@
 			"find_package",
 			"set_target_properties",
 			"include",
-			"find_dependency",
-			"_qt_internal_find_qt_dependencies",
 			"qt6_add_qml_module",
 			"qt_add_qml_module",
+			"find_dependency",
+			"_qt_internal_find_qt_dependencies",
 			"_qt_internal_find_third_party_dependencies",
-			"add_dependencies",
-			"_qt_internal_scan_qml_imports",
-			"_qt_internal_generate_deploy_qml_imports_script",
-			"cmake_language",
-			"_qt_internal_finalize_executable",
-			"qt6_finalize_target",
 			"target_compile_definitions",
 			"target_include_directories",
 			"_qt_internal_qml_type_registration",
@@ -45,27 +39,27 @@
 		],
 		"files" : 
 		[
-			"/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6Core/Qt6CoreMacros.cmake",
+			"/home/uwillno/Felgo/Felgo/android_x86_64/lib/cmake/Qt6Core/Qt6CoreMacros.cmake",
 			"CMakeLists.txt",
-			"/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Felgo/FelgoConfig.cmake",
-			"/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6DBus/Qt6DBusVersionlessTargets.cmake",
-			"/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6DBus/Qt6DBusConfig.cmake",
+			"/home/uwillno/Felgo/Felgo/android_x86_64/lib/cmake/Felgo/FelgoConfig.cmake",
+			"/home/uwillno/Felgo/Felgo/android_x86_64/lib/cmake/Qt6Quick/Qt6QuickTargets.cmake",
+			"/home/uwillno/Felgo/Felgo/android_x86_64/lib/cmake/Qt6Quick/Qt6QuickConfig.cmake",
+			"/home/uwillno/Felgo/Felgo/android_x86_64/lib/cmake/Qt6/Qt6Config.cmake",
+			"/home/uwillno/Felgo/Felgo/android_x86_64/lib/cmake/Qt6Qml/Qt6QmlMacros.cmake",
+			"/home/uwillno/Felgo/Felgo/android_x86_64/lib/cmake/Qt6OpenGL/Qt6OpenGLVersionlessTargets.cmake",
+			"/home/uwillno/Felgo/Felgo/android_x86_64/lib/cmake/Qt6OpenGL/Qt6OpenGLConfig.cmake",
 			"/home/uwillno/Felgo/Tools/CMake/share/cmake-3.24/Modules/CMakeFindDependencyMacro.cmake",
-			"/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake",
-			"/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6Gui/Qt6GuiDependencies.cmake",
-			"/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake",
-			"/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6Quick/Qt6QuickDependencies.cmake",
-			"/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6Quick/Qt6QuickConfig.cmake",
-			"/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6/Qt6Config.cmake",
-			"/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6Quick/Qt6QuickTargets.cmake",
-			"/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6Qml/Qt6QmlMacros.cmake",
-			"/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6OpenGL/Qt6OpenGLVersionlessTargets.cmake",
-			"/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6OpenGL/Qt6OpenGLConfig.cmake",
-			"/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6Widgets/Qt6WidgetsTargets.cmake",
-			"/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake",
-			"/home/uwillno/Felgo/Tools/CMake/share/cmake-3.24/Modules/FindOpenGL.cmake",
-			"/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6/FindWrapOpenGL.cmake",
-			"/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6Core/Qt6CoreMacros.cmake:685:EVAL"
+			"/home/uwillno/Felgo/Felgo/android_x86_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake",
+			"/home/uwillno/Felgo/Felgo/android_x86_64/lib/cmake/Qt6Quick/Qt6QuickDependencies.cmake",
+			"/home/uwillno/Felgo/Felgo/android_x86_64/lib/cmake/Qt6Widgets/Qt6WidgetsTargets.cmake",
+			"/home/uwillno/Felgo/Felgo/android_x86_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake",
+			"/home/uwillno/Felgo/Felgo/android_x86_64/lib/cmake/Qt6/Qt6Targets.cmake",
+			"/home/uwillno/Felgo/Tools/CMake/share/cmake-3.24/Modules/FindThreads.cmake",
+			"/home/uwillno/Felgo/Felgo/android_x86_64/lib/cmake/Qt6/Qt6Dependencies.cmake",
+			"/home/uwillno/Felgo/Felgo/android_x86_64/lib/cmake/Qt6Gui/Qt6GuiTargets.cmake",
+			"/home/uwillno/Felgo/Felgo/android_x86_64/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake",
+			"/home/uwillno/Felgo/Felgo/android_x86_64/lib/cmake/Qt6/FindGLESv2.cmake",
+			"/home/uwillno/Felgo/Felgo/android_x86_64/lib/cmake/Qt6Gui/Qt6GuiDependencies.cmake"
 		],
 		"nodes" : 
 		[
@@ -93,7 +87,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 584,
+				"line" : 572,
 				"parent" : 3
 			},
 			{
@@ -147,13 +141,13 @@
 			{
 				"command" : 6,
 				"file" : 1,
-				"line" : 81,
+				"line" : 82,
 				"parent" : 0
 			},
 			{
 				"command" : 6,
 				"file" : 1,
-				"line" : 83,
+				"line" : 84,
 				"parent" : 0
 			},
 			{
@@ -175,13 +169,13 @@
 			{
 				"command" : 12,
 				"file" : 2,
-				"line" : 46,
+				"line" : 51,
 				"parent" : 16
 			},
 			{
 				"command" : 12,
 				"file" : 2,
-				"line" : 51,
+				"line" : 57,
 				"parent" : 16
 			},
 			{
@@ -191,196 +185,132 @@
 				"parent" : 16
 			},
 			{
-				"file" : 11,
+				"file" : 5,
 				"parent" : 20
 			},
 			{
 				"command" : 13,
-				"file" : 11,
+				"file" : 5,
 				"line" : 157,
 				"parent" : 21
 			},
 			{
-				"file" : 10,
+				"file" : 4,
 				"parent" : 22
 			},
 			{
 				"command" : 15,
-				"file" : 10,
-				"line" : 40,
+				"file" : 4,
+				"line" : 52,
 				"parent" : 23
 			},
 			{
-				"file" : 9,
+				"file" : 3,
 				"parent" : 24
 			},
 			{
-				"command" : 17,
-				"file" : 9,
-				"line" : 39,
+				"command" : 14,
+				"file" : 3,
+				"line" : 56,
 				"parent" : 25
+			},
+			{
+				"command" : 17,
+				"file" : 1,
+				"line" : 60,
+				"parent" : 0
 			},
 			{
 				"command" : 16,
 				"file" : 6,
-				"line" : 108,
-				"parent" : 26
-			},
-			{
-				"command" : 13,
-				"file" : 5,
-				"line" : 47,
+				"line" : 670,
 				"parent" : 27
 			},
 			{
-				"file" : 8,
+				"command" : 6,
+				"file" : 6,
+				"line" : 388,
 				"parent" : 28
 			},
 			{
 				"command" : 15,
-				"file" : 8,
+				"file" : 4,
 				"line" : 40,
-				"parent" : 29
+				"parent" : 23
 			},
 			{
-				"file" : 7,
+				"file" : 11,
 				"parent" : 30
 			},
 			{
-				"command" : 17,
-				"file" : 7,
+				"command" : 19,
+				"file" : 11,
 				"line" : 39,
 				"parent" : 31
 			},
 			{
-				"command" : 16,
-				"file" : 6,
+				"command" : 18,
+				"file" : 10,
 				"line" : 108,
 				"parent" : 32
 			},
 			{
 				"command" : 13,
-				"file" : 5,
+				"file" : 9,
 				"line" : 47,
 				"parent" : 33
 			},
 			{
-				"file" : 4,
+				"file" : 8,
 				"parent" : 34
 			},
 			{
 				"command" : 15,
-				"file" : 4,
+				"file" : 8,
 				"line" : 55,
 				"parent" : 35
 			},
 			{
-				"file" : 3,
+				"file" : 7,
 				"parent" : 36
 			},
 			{
 				"command" : 14,
-				"file" : 3,
+				"file" : 7,
 				"line" : 56,
 				"parent" : 37
 			},
 			{
 				"command" : 12,
 				"file" : 2,
-				"line" : 57,
-				"parent" : 16
-			},
-			{
-				"command" : 15,
-				"file" : 10,
-				"line" : 52,
-				"parent" : 23
-			},
-			{
-				"file" : 12,
-				"parent" : 40
-			},
-			{
-				"command" : 14,
-				"file" : 12,
-				"line" : 56,
-				"parent" : 41
-			},
-			{
-				"command" : 19,
-				"file" : 1,
-				"line" : 60,
-				"parent" : 0
-			},
-			{
-				"command" : 18,
-				"file" : 13,
-				"line" : 670,
-				"parent" : 43
-			},
-			{
-				"command" : 6,
-				"file" : 13,
-				"line" : 388,
-				"parent" : 44
-			},
-			{
-				"command" : 16,
-				"file" : 6,
-				"line" : 108,
-				"parent" : 26
+				"line" : 232,
+				"parent" : 5
 			},
 			{
 				"command" : 13,
 				"file" : 5,
-				"line" : 47,
-				"parent" : 46
-			},
-			{
-				"file" : 15,
-				"parent" : 47
-			},
-			{
-				"command" : 15,
-				"file" : 15,
-				"line" : 55,
-				"parent" : 48
-			},
-			{
-				"file" : 14,
-				"parent" : 49
-			},
-			{
-				"command" : 14,
-				"file" : 14,
-				"line" : 56,
-				"parent" : 50
-			},
-			{
-				"command" : 13,
-				"file" : 11,
 				"line" : 157,
 				"parent" : 21
 			},
 			{
-				"file" : 17,
-				"parent" : 52
+				"file" : 13,
+				"parent" : 40
 			},
 			{
 				"command" : 15,
-				"file" : 17,
+				"file" : 13,
 				"line" : 52,
-				"parent" : 53
+				"parent" : 41
 			},
 			{
-				"file" : 16,
-				"parent" : 54
+				"file" : 12,
+				"parent" : 42
 			},
 			{
 				"command" : 14,
-				"file" : 16,
+				"file" : 12,
 				"line" : 56,
-				"parent" : 55
+				"parent" : 43
 			},
 			{
 				"command" : 6,
@@ -389,149 +319,212 @@
 				"parent" : 2
 			},
 			{
-				"command" : 20,
-				"file" : 7,
-				"line" : 30,
-				"parent" : 31
-			},
-			{
-				"command" : 16,
-				"file" : 6,
-				"line" : 33,
-				"parent" : 58
-			},
-			{
-				"command" : 13,
+				"command" : 15,
 				"file" : 5,
-				"line" : 47,
-				"parent" : 59
+				"line" : 37,
+				"parent" : 21
 			},
 			{
-				"file" : 19,
-				"parent" : 60
-			},
-			{
-				"command" : 13,
-				"file" : 19,
-				"line" : 10,
-				"parent" : 61
-			},
-			{
-				"file" : 18,
-				"parent" : 62
-			},
-			{
-				"command" : 12,
-				"file" : 18,
-				"line" : 512,
-				"parent" : 63
+				"file" : 14,
+				"parent" : 46
 			},
 			{
 				"command" : 14,
+				"file" : 14,
+				"line" : 56,
+				"parent" : 47
+			},
+			{
+				"command" : 15,
+				"file" : 5,
+				"line" : 112,
+				"parent" : 21
+			},
+			{
+				"file" : 16,
+				"parent" : 49
+			},
+			{
+				"command" : 20,
+				"file" : 16,
+				"line" : 24,
+				"parent" : 50
+			},
+			{
+				"command" : 18,
+				"file" : 10,
+				"line" : 33,
+				"parent" : 51
+			},
+			{
+				"command" : 13,
+				"file" : 9,
+				"line" : 47,
+				"parent" : 52
+			},
+			{
+				"file" : 15,
+				"parent" : 53
+			},
+			{
+				"command" : 12,
+				"file" : 15,
+				"line" : 242,
+				"parent" : 54
+			},
+			{
+				"command" : 18,
+				"file" : 10,
+				"line" : 108,
+				"parent" : 32
+			},
+			{
+				"command" : 13,
+				"file" : 9,
+				"line" : 47,
+				"parent" : 56
+			},
+			{
 				"file" : 18,
-				"line" : 510,
+				"parent" : 57
+			},
+			{
+				"command" : 15,
+				"file" : 18,
+				"line" : 52,
+				"parent" : 58
+			},
+			{
+				"file" : 17,
+				"parent" : 59
+			},
+			{
+				"command" : 14,
+				"file" : 17,
+				"line" : 56,
+				"parent" : 60
+			},
+			{
+				"command" : 15,
+				"file" : 18,
+				"line" : 40,
+				"parent" : 58
+			},
+			{
+				"file" : 20,
+				"parent" : 62
+			},
+			{
+				"command" : 20,
+				"file" : 20,
+				"line" : 30,
 				"parent" : 63
 			},
 			{
-				"file" : 1,
-				"line" : -1,
-				"parent" : 0
+				"command" : 18,
+				"file" : 10,
+				"line" : 33,
+				"parent" : 64
 			},
 			{
-				"command" : 26,
-				"file" : 20,
-				"line" : 1,
+				"command" : 13,
+				"file" : 9,
+				"line" : 47,
+				"parent" : 65
+			},
+			{
+				"file" : 19,
 				"parent" : 66
 			},
 			{
-				"command" : 25,
-				"file" : 0,
-				"line" : 705,
+				"command" : 6,
+				"file" : 19,
+				"line" : 81,
 				"parent" : 67
 			},
 			{
-				"command" : 24,
-				"file" : 0,
-				"line" : 640,
-				"parent" : 68
-			},
-			{
-				"command" : 23,
-				"file" : 0,
-				"line" : 640,
-				"parent" : 69
-			},
-			{
-				"command" : 22,
-				"file" : 13,
-				"line" : 2870,
-				"parent" : 70
-			},
-			{
 				"command" : 21,
-				"file" : 13,
-				"line" : 2723,
-				"parent" : 71
-			},
-			{
-				"command" : 27,
 				"file" : 1,
-				"line" : 78,
+				"line" : 79,
 				"parent" : 0
 			},
 			{
-				"command" : 29,
-				"file" : 13,
+				"command" : 23,
+				"file" : 6,
 				"line" : 517,
-				"parent" : 44
+				"parent" : 28
 			},
 			{
-				"command" : 28,
-				"file" : 13,
+				"command" : 22,
+				"file" : 6,
 				"line" : 2515,
-				"parent" : 74
+				"parent" : 70
 			},
 			{
-				"command" : 28,
-				"file" : 13,
+				"command" : 22,
+				"file" : 6,
 				"line" : 2540,
-				"parent" : 74
+				"parent" : 70
 			},
 			{
-				"command" : 30,
+				"command" : 24,
 				"file" : 2,
 				"line" : 214,
 				"parent" : 5
 			},
 			{
-				"command" : 30,
+				"command" : 24,
 				"file" : 2,
 				"line" : 219,
 				"parent" : 5
 			},
 			{
-				"command" : 31,
-				"file" : 13,
+				"command" : 25,
+				"file" : 6,
 				"line" : 2322,
-				"parent" : 74
+				"parent" : 70
 			},
 			{
-				"command" : 30,
+				"command" : 24,
 				"file" : 0,
 				"line" : 1077,
-				"parent" : 79
+				"parent" : 75
 			},
 			{
-				"command" : 30,
-				"file" : 13,
+				"command" : 24,
+				"file" : 6,
 				"line" : 2506,
-				"parent" : 74
+				"parent" : 70
 			},
 			{
 				"command" : 10,
-				"file" : 13,
+				"file" : 6,
 				"line" : 561,
-				"parent" : 44
+				"parent" : 28
+			},
+			{
+				"command" : 9,
+				"file" : 0,
+				"line" : 342,
+				"parent" : 78
+			},
+			{
+				"command" : 8,
+				"file" : 0,
+				"line" : 1810,
+				"parent" : 79
+			},
+			{
+				"command" : 24,
+				"file" : 0,
+				"line" : 1574,
+				"parent" : 80
+			},
+			{
+				"command" : 10,
+				"file" : 6,
+				"line" : 561,
+				"parent" : 28
 			},
 			{
 				"command" : 9,
@@ -546,34 +539,10 @@
 				"parent" : 83
 			},
 			{
-				"command" : 30,
+				"command" : 24,
 				"file" : 0,
 				"line" : 1574,
 				"parent" : 84
-			},
-			{
-				"command" : 10,
-				"file" : 13,
-				"line" : 561,
-				"parent" : 44
-			},
-			{
-				"command" : 9,
-				"file" : 0,
-				"line" : 342,
-				"parent" : 86
-			},
-			{
-				"command" : 8,
-				"file" : 0,
-				"line" : 1810,
-				"parent" : 87
-			},
-			{
-				"command" : 30,
-				"file" : 0,
-				"line" : 1574,
-				"parent" : 88
 			}
 		]
 	},
@@ -583,11 +552,18 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-DQT_QML_DEBUG -g"
+					"fragment" : "-DQT_QML_DEBUG   -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions -frtti -stdlib=libc++ -g  -fno-limit-debug-info -fPIC -fvisibility=default"
 				},
 				{
-					"backtrace" : 57,
+					"backtrace" : 45,
 					"fragment" : "-fPIC"
+				},
+				{
+					"backtrace" : 45,
+					"fragment" : "-pthread"
+				},
+				{
+					"fragment" : "-std=gnu++17"
 				}
 			],
 			"defines" : 
@@ -605,12 +581,8 @@
 					"define" : "QT_CORE5COMPAT_LIB"
 				},
 				{
-					"backtrace" : 57,
+					"backtrace" : 45,
 					"define" : "QT_CORE_LIB"
-				},
-				{
-					"backtrace" : 13,
-					"define" : "QT_DBUS_LIB"
 				},
 				{
 					"backtrace" : 13,
@@ -621,7 +593,7 @@
 					"define" : "QT_MULTIMEDIA_LIB"
 				},
 				{
-					"backtrace" : 45,
+					"backtrace" : 29,
 					"define" : "QT_NETWORK_LIB"
 				},
 				{
@@ -629,7 +601,7 @@
 					"define" : "QT_OPENGL_LIB"
 				},
 				{
-					"backtrace" : 45,
+					"backtrace" : 29,
 					"define" : "QT_QMLINTEGRATION_LIB"
 				},
 				{
@@ -637,11 +609,11 @@
 					"define" : "QT_QMLMODELS_LIB"
 				},
 				{
-					"backtrace" : 73,
+					"backtrace" : 69,
 					"define" : "QT_QML_DEBUG"
 				},
 				{
-					"backtrace" : 45,
+					"backtrace" : 29,
 					"define" : "QT_QML_LIB"
 				},
 				{
@@ -667,141 +639,147 @@
 				{
 					"backtrace" : 13,
 					"define" : "QT_WIDGETS_LIB"
+				},
+				{
+					"define" : "appLearningSystem_Felgo4_EXPORTS"
 				}
 			],
 			"includes" : 
 			[
 				{
 					"backtrace" : 0,
-					"path" : "/home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/appLearningSystem-Felgo4_autogen/include"
+					"path" : "/home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Qt_6_4_1_Clang_x86_64-Debug/appLearningSystem-Felgo4_autogen/include"
 				},
 				{
-					"backtrace" : 75,
+					"backtrace" : 71,
 					"path" : "/home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4"
 				},
 				{
-					"backtrace" : 76,
-					"path" : "/home/uwillno/Felgo/Felgo/gcc_64/include/QtQml/6.4.1"
+					"backtrace" : 72,
+					"path" : "/home/uwillno/Felgo/Felgo/android_x86_64/include/QtQml/6.4.1"
 				},
 				{
-					"backtrace" : 76,
-					"path" : "/home/uwillno/Felgo/Felgo/gcc_64/include/QtQml/6.4.1/QtQml"
+					"backtrace" : 72,
+					"path" : "/home/uwillno/Felgo/Felgo/android_x86_64/include/QtQml/6.4.1/QtQml"
 				},
 				{
-					"backtrace" : 76,
-					"path" : "/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/6.4.1"
+					"backtrace" : 72,
+					"path" : "/home/uwillno/Felgo/Felgo/android_x86_64/include/QtCore/6.4.1"
 				},
 				{
-					"backtrace" : 76,
-					"path" : "/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/6.4.1/QtCore"
+					"backtrace" : 72,
+					"path" : "/home/uwillno/Felgo/Felgo/android_x86_64/include/QtCore/6.4.1/QtCore"
 				},
 				{
-					"backtrace" : 76,
+					"backtrace" : 72,
 					"isSystem" : true,
-					"path" : "/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore"
+					"path" : "/home/uwillno/Felgo/Felgo/android_x86_64/include/QtCore"
 				},
 				{
-					"backtrace" : 76,
+					"backtrace" : 72,
 					"isSystem" : true,
-					"path" : "/home/uwillno/Felgo/Felgo/gcc_64/include"
+					"path" : "/home/uwillno/Felgo/Felgo/android_x86_64/include"
 				},
 				{
-					"backtrace" : 76,
+					"backtrace" : 72,
 					"isSystem" : true,
-					"path" : "/home/uwillno/Felgo/Felgo/gcc_64/mkspecs/linux-g++"
+					"path" : "/home/uwillno/Felgo/Felgo/android_x86_64/mkspecs/android-clang"
 				},
 				{
-					"backtrace" : 76,
+					"backtrace" : 72,
 					"isSystem" : true,
-					"path" : "/home/uwillno/Felgo/Felgo/gcc_64/include/QtQml"
+					"path" : "/home/uwillno/Felgo/Felgo/android_x86_64/include/QtQml"
 				},
 				{
-					"backtrace" : 76,
+					"backtrace" : 72,
 					"isSystem" : true,
-					"path" : "/home/uwillno/Felgo/Felgo/gcc_64/include/QtQmlIntegration"
+					"path" : "/home/uwillno/Felgo/Felgo/android_x86_64/include/QtQmlIntegration"
 				},
 				{
-					"backtrace" : 76,
+					"backtrace" : 72,
 					"isSystem" : true,
-					"path" : "/home/uwillno/Felgo/Felgo/gcc_64/include/QtNetwork"
+					"path" : "/home/uwillno/Felgo/Felgo/android_x86_64/include/QtNetwork"
 				},
 				{
 					"backtrace" : 13,
 					"isSystem" : true,
-					"path" : "/home/uwillno/Felgo/Felgo/gcc_64/include/Felgo"
+					"path" : "/home/uwillno/Felgo/Felgo/android_x86_64/include/Felgo"
 				},
 				{
 					"backtrace" : 13,
 					"isSystem" : true,
-					"path" : "/home/uwillno/Felgo/Felgo/gcc_64/include/QtQuick"
+					"path" : "/home/uwillno/Felgo/Felgo/android_x86_64/include/QtQuick"
 				},
 				{
 					"backtrace" : 13,
 					"isSystem" : true,
-					"path" : "/home/uwillno/Felgo/Felgo/gcc_64/include/QtGui"
+					"path" : "/home/uwillno/Felgo/Felgo/android_x86_64/include/QtGui"
 				},
 				{
 					"backtrace" : 13,
 					"isSystem" : true,
-					"path" : "/home/uwillno/Felgo/Felgo/gcc_64/include/QtQmlModels"
+					"path" : "/home/uwillno/Felgo/Felgo/android_x86_64/include/QtQmlModels"
 				},
 				{
 					"backtrace" : 13,
 					"isSystem" : true,
-					"path" : "/home/uwillno/Felgo/Felgo/gcc_64/include/QtOpenGL"
+					"path" : "/home/uwillno/Felgo/Felgo/android_x86_64/include/QtOpenGL"
 				},
 				{
 					"backtrace" : 13,
 					"isSystem" : true,
-					"path" : "/home/uwillno/Felgo/Felgo/gcc_64/include/QtWidgets"
+					"path" : "/home/uwillno/Felgo/Felgo/android_x86_64/include/QtWidgets"
 				},
 				{
 					"backtrace" : 13,
 					"isSystem" : true,
-					"path" : "/home/uwillno/Felgo/Felgo/gcc_64/include/QtMultimedia"
+					"path" : "/home/uwillno/Felgo/Felgo/android_x86_64/include/QtMultimedia"
 				},
 				{
 					"backtrace" : 13,
 					"isSystem" : true,
-					"path" : "/home/uwillno/Felgo/Felgo/gcc_64/include/QtSql"
+					"path" : "/home/uwillno/Felgo/Felgo/android_x86_64/include/QtSql"
 				},
 				{
 					"backtrace" : 13,
 					"isSystem" : true,
-					"path" : "/home/uwillno/Felgo/Felgo/gcc_64/include/QtWebSockets"
+					"path" : "/home/uwillno/Felgo/Felgo/android_x86_64/include/QtWebSockets"
 				},
 				{
 					"backtrace" : 13,
 					"isSystem" : true,
-					"path" : "/home/uwillno/Felgo/Felgo/gcc_64/include/QtBluetooth"
+					"path" : "/home/uwillno/Felgo/Felgo/android_x86_64/include/QtBluetooth"
 				},
 				{
 					"backtrace" : 13,
 					"isSystem" : true,
-					"path" : "/home/uwillno/Felgo/Felgo/gcc_64/include/QtDBus"
+					"path" : "/home/uwillno/Felgo/Felgo/android_x86_64/include/QtCore5Compat"
 				},
 				{
 					"backtrace" : 13,
 					"isSystem" : true,
-					"path" : "/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore5Compat"
-				},
-				{
-					"backtrace" : 13,
-					"isSystem" : true,
-					"path" : "/home/uwillno/Felgo/Felgo/gcc_64/include/QtQuickControls2"
+					"path" : "/home/uwillno/Felgo/Felgo/android_x86_64/include/QtQuickControls2"
 				},
 				{
 					"backtrace" : 14,
 					"isSystem" : true,
-					"path" : "/home/uwillno/Felgo/Felgo/gcc_64/include/QtConcurrent"
+					"path" : "/home/uwillno/Felgo/Felgo/android_x86_64/include/QtConcurrent"
 				},
 				{
 					"backtrace" : 14,
 					"isSystem" : true,
-					"path" : "/home/uwillno/Felgo/Felgo/gcc_64/include/QtWebView"
+					"path" : "/home/uwillno/Felgo/Felgo/android_x86_64/include/QtWebView"
 				}
 			],
 			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					45
+				],
+				"standard" : "17"
+			},
 			"sourceIndexes" : 
 			[
 				0,
@@ -810,10 +788,14 @@
 				7,
 				8,
 				10,
-				67,
-				68,
-				69
-			]
+				74,
+				75,
+				76
+			],
+			"sysroot" : 
+			{
+				"path" : "/home/uwillno/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/linux-x86_64/sysroot"
+			}
 		}
 	],
 	"dependencies" : 
@@ -821,10 +803,6 @@
 		{
 			"backtrace" : 13,
 			"id" : "Felgo_resources_1::@6890427a1f51a3e7e1df"
-		},
-		{
-			"backtrace" : 72,
-			"id" : "appLearningSystem-Felgo4_qmlimportscan::@6890427a1f51a3e7e1df"
 		},
 		{
 			"id" : "appLearningSystem-Felgo4_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
@@ -854,16 +832,8 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "-DQT_QML_DEBUG -g",
+				"fragment" : "-Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--fatal-warnings -Qunused-arguments -Wl,--no-undefined",
 				"role" : "flags"
-			},
-			{
-				"fragment" : "",
-				"role" : "flags"
-			},
-			{
-				"fragment" : "-Wl,-rpath,/home/uwillno/Felgo/Felgo/gcc_64/lib:",
-				"role" : "libraries"
 			},
 			{
 				"backtrace" : 12,
@@ -872,114 +842,132 @@
 			},
 			{
 				"backtrace" : 13,
-				"fragment" : "/home/uwillno/Felgo/Felgo/gcc_64/lib/libFelgo.a",
+				"fragment" : "/home/uwillno/Felgo/Felgo/android_x86_64/lib/libFelgo_x86_64.so",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 14,
-				"fragment" : "/home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Concurrent.so.6.4.1",
+				"fragment" : "/home/uwillno/Felgo/Felgo/android_x86_64/lib/libQt6Concurrent_x86_64.so",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 14,
-				"fragment" : "/home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6WebView.so.6.4.1",
+				"fragment" : "/home/uwillno/Felgo/Felgo/android_x86_64/lib/libQt6WebView_x86_64.so",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 17,
-				"fragment" : "/home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Widgets.so.6.4.1",
+				"fragment" : "/home/uwillno/Felgo/Felgo/android_x86_64/lib/libQt6Widgets_x86_64.so",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 17,
-				"fragment" : "/home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Multimedia.so.6.4.1",
+				"fragment" : "/home/uwillno/Felgo/Felgo/android_x86_64/lib/libQt6Multimedia_x86_64.so",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 17,
-				"fragment" : "/home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Sql.so.6.4.1",
+				"fragment" : "/home/uwillno/Felgo/Felgo/android_x86_64/lib/libQt6Sql_x86_64.so",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 17,
-				"fragment" : "/home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6WebSockets.so.6.4.1",
+				"fragment" : "/home/uwillno/Felgo/Felgo/android_x86_64/lib/libQt6WebSockets_x86_64.so",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 18,
-				"fragment" : "-lz",
+				"fragment" : "/home/uwillno/Felgo/Felgo/android_x86_64/lib/libQt6Bluetooth_x86_64.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 18,
+				"fragment" : "/home/uwillno/Felgo/Felgo/android_x86_64/lib/libQt6Core5Compat_x86_64.so",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 19,
-				"fragment" : "/home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Bluetooth.so.6.4.1",
-				"role" : "libraries"
-			},
-			{
-				"backtrace" : 38,
-				"fragment" : "/home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6DBus.so.6.4.1",
-				"role" : "libraries"
-			},
-			{
-				"backtrace" : 19,
-				"fragment" : "/home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Core5Compat.so.6.4.1",
-				"role" : "libraries"
-			},
-			{
-				"backtrace" : 39,
-				"fragment" : "/home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6QuickControls2.so.6.4.1",
+				"fragment" : "/home/uwillno/Felgo/Felgo/android_x86_64/lib/libQt6QuickControls2_x86_64.so",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 17,
-				"fragment" : "/home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Quick.so.6.4.1",
+				"fragment" : "/home/uwillno/Felgo/Felgo/android_x86_64/lib/libQt6Quick_x86_64.so",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 42,
-				"fragment" : "/home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6QmlModels.so.6.4.1",
+				"backtrace" : 26,
+				"fragment" : "/home/uwillno/Felgo/Felgo/android_x86_64/lib/libQt6QmlModels_x86_64.so",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 45,
-				"fragment" : "/home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Qml.so.6.4.1",
+				"backtrace" : 29,
+				"fragment" : "/home/uwillno/Felgo/Felgo/android_x86_64/lib/libQt6Qml_x86_64.so",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 14,
-				"fragment" : "/home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Network.so.6.4.1",
+				"fragment" : "/home/uwillno/Felgo/Felgo/android_x86_64/lib/libQt6Network_x86_64.so",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 51,
-				"fragment" : "/home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6OpenGL.so.6.4.1",
+				"backtrace" : 38,
+				"fragment" : "/home/uwillno/Felgo/Felgo/android_x86_64/lib/libQt6OpenGL_x86_64.so",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 56,
-				"fragment" : "/home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Gui.so.6.4.1",
+				"backtrace" : 39,
+				"fragment" : "/home/uwillno/Felgo/Felgo/android_x86_64/lib/libssl_1_1.so",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 57,
-				"fragment" : "/home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Core.so.6.4.1",
+				"backtrace" : 39,
+				"fragment" : "/home/uwillno/Felgo/Felgo/android_x86_64/lib/libcrypto_1_1.so",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 64,
-				"fragment" : "/usr/lib/libGLX.so",
+				"backtrace" : 44,
+				"fragment" : "/home/uwillno/Felgo/Felgo/android_x86_64/lib/libQt6Gui_x86_64.so",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 65,
-				"fragment" : "/usr/lib/libOpenGL.so",
+				"backtrace" : 45,
+				"fragment" : "/home/uwillno/Felgo/Felgo/android_x86_64/lib/libQt6Core_x86_64.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 48,
+				"fragment" : "-llog",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 55,
+				"fragment" : "-pthread",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 61,
+				"fragment" : "/home/uwillno/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/x86_64-linux-android/21/libGLESv2.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 68,
+				"fragment" : "/home/uwillno/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/x86_64-linux-android/21/libEGL.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-latomic -lm",
 				"role" : "libraries"
 			}
 		],
-		"language" : "CXX"
+		"language" : "CXX",
+		"sysroot" : 
+		{
+			"path" : "/home/uwillno/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/linux-x86_64/sysroot"
+		}
 	},
 	"name" : "appLearningSystem-Felgo4",
-	"nameOnDisk" : "appLearningSystem-Felgo4.run",
+	"nameOnDisk" : "libappLearningSystem-Felgo4_x86_64.so",
 	"paths" : 
 	{
 		"build" : ".",
@@ -997,10 +985,10 @@
 				7,
 				8,
 				10,
-				65,
-				67,
-				68,
-				69
+				72,
+				74,
+				75,
+				76
 			]
 		},
 		{
@@ -1068,47 +1056,62 @@
 				58,
 				59,
 				60,
+				61,
 				62,
 				63,
 				64,
+				65,
 				66,
+				68,
+				69,
 				70,
+				71,
+				73,
 				77,
-				78,
-				79,
-				80,
-				81,
-				82,
-				83,
 				84,
 				85,
 				86,
 				87,
 				88,
-				89,
-				90,
-				91,
-				92,
-				93
+				93,
+				94,
+				95,
+				96,
+				97,
+				98,
+				99,
+				100,
+				101,
+				102,
+				103,
+				104,
+				105,
+				106,
+				107,
+				108
 			]
 		},
 		{
 			"name" : "Resources",
 			"sourceIndexes" : 
 			[
-				61
+				67,
+				89,
+				90,
+				91,
+				92
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				71,
-				72,
-				73,
-				74,
-				75,
-				76
+				78,
+				79,
+				80,
+				81,
+				82,
+				83
 			]
 		}
 	],
@@ -1118,7 +1121,7 @@
 			"backtrace" : 0,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
-			"path" : "/home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/appLearningSystem-Felgo4_autogen/mocs_compilation.cpp",
+			"path" : "/home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Qt_6_4_1_Clang_x86_64-Debug/appLearningSystem-Felgo4_autogen/mocs_compilation.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -1184,6 +1187,11 @@
 		{
 			"backtrace" : 4,
 			"path" : "qml/items/BlankComponent.qml",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "qml/items/BlankItem.qml",
 			"sourceGroupIndex" : 2
 		},
 		{
@@ -1328,6 +1336,21 @@
 		},
 		{
 			"backtrace" : 4,
+			"path" : "qml/pages/ExamCQRectangle.qml",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "qml/pages/ExamFQRectangle.qml",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "qml/pages/ExamTQRectangle.qml",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
 			"path" : "qml/pages/ExercisesPage.qml",
 			"sourceGroupIndex" : 2
 		},
@@ -1339,6 +1362,11 @@
 		{
 			"backtrace" : 4,
 			"path" : "qml/pages/ForumPage.qml",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "qml/pages/HistoryWrongQuestionsPage.qml",
 			"sourceGroupIndex" : 2
 		},
 		{
@@ -1418,6 +1446,11 @@
 		},
 		{
 			"backtrace" : 4,
+			"path" : "qml/pages/VirtualExamPage.qml",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
 			"path" : "qml/pages/WebPage.qml",
 			"sourceGroupIndex" : 2
 		},
@@ -1438,173 +1471,218 @@
 		},
 		{
 			"backtrace" : 4,
+			"path" : "qml/logic/UserLogic.qml.autosave",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
 			"path" : "qml/logic/adminscript.mjs",
 			"sourceGroupIndex" : 2
 		},
 		{
-			"backtrace" : 77,
+			"backtrace" : 73,
 			"path" : "macx/app_icon.icns",
 			"sourceGroupIndex" : 2
 		},
 		{
-			"backtrace" : 78,
+			"backtrace" : 74,
 			"path" : "win/app_icon.rc",
 			"sourceGroupIndex" : 0
 		},
 		{
-			"backtrace" : 80,
+			"backtrace" : 76,
 			"isGenerated" : true,
-			"path" : "/home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/meta_types/qt6applearningsystem-felgo4_debug_metatypes.json.gen",
+			"path" : "/home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Qt_6_4_1_Clang_x86_64-Debug/meta_types/qt6applearningsystem-felgo4_debug_metatypes.json.gen",
 			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 77,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "/home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Qt_6_4_1_Clang_x86_64-Debug/applearningsystem-felgo4_qmltyperegistrations.cpp",
+			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 81,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
-			"path" : "/home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/applearningsystem-felgo4_qmltyperegistrations.cpp",
+			"path" : "/home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Qt_6_4_1_Clang_x86_64-Debug/.rcc/qrc_qmake_LearningSystem-Felgo4.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 85,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
-			"path" : "/home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/.rcc/qrc_qmake_LearningSystem-Felgo4.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 89,
-			"compileGroupIndex" : 0,
-			"isGenerated" : true,
-			"path" : "/home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/.rcc/qrc_qmake_LearningSystem-Felgo4_copy.cpp",
+			"path" : "/home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Qt_6_4_1_Clang_x86_64-Debug/.rcc/qrc_qmake_LearningSystem-Felgo4_copy.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "/home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/appLearningSystem-Felgo4_autogen/timestamp",
+			"path" : "/home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Qt_6_4_1_Clang_x86_64-Debug/appLearningSystem-Felgo4_autogen/timestamp",
 			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "/home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/meta_types/qt6applearningsystem-felgo4_debug_metatypes.json.gen.rule",
+			"path" : "/home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Qt_6_4_1_Clang_x86_64-Debug/meta_types/qt6applearningsystem-felgo4_debug_metatypes.json.gen.rule",
 			"sourceGroupIndex" : 4
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "/home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/applearningsystem-felgo4_qmltyperegistrations.cpp.rule",
+			"path" : "/home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Qt_6_4_1_Clang_x86_64-Debug/applearningsystem-felgo4_qmltyperegistrations.cpp.rule",
 			"sourceGroupIndex" : 4
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "/home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/.rcc/qrc_qmake_LearningSystem-Felgo4.cpp.rule",
+			"path" : "/home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Qt_6_4_1_Clang_x86_64-Debug/.rcc/qrc_qmake_LearningSystem-Felgo4.cpp.rule",
 			"sourceGroupIndex" : 4
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "/home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/.rcc/qrc_qmake_LearningSystem-Felgo4_copy.cpp.rule",
+			"path" : "/home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Qt_6_4_1_Clang_x86_64-Debug/.rcc/qrc_qmake_LearningSystem-Felgo4_copy.cpp.rule",
 			"sourceGroupIndex" : 4
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "/home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/appLearningSystem-Felgo4_autogen/timestamp.rule",
+			"path" : "/home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Qt_6_4_1_Clang_x86_64-Debug/appLearningSystem-Felgo4_autogen/timestamp.rule",
 			"sourceGroupIndex" : 4
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "/home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/meta_types/appLearningSystem-Felgo4_json_file_list.txt.rule",
+			"path" : "/home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Qt_6_4_1_Clang_x86_64-Debug/meta_types/appLearningSystem-Felgo4_json_file_list.txt.rule",
 			"sourceGroupIndex" : 4
-		},
-		{
-			"backtrace" : 57,
-			"path" : "/home/uwillno/Felgo/Felgo/gcc_64/lib/metatypes/qt6core_relwithdebinfo_metatypes.json",
-			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 45,
-			"path" : "/home/uwillno/Felgo/Felgo/gcc_64/lib/metatypes/qt6qml_relwithdebinfo_metatypes.json",
+			"path" : "/home/uwillno/Felgo/Felgo/android_x86_64/lib/metatypes/qt6core_relwithdebinfo_metatypes.json",
 			"sourceGroupIndex" : 2
 		},
 		{
-			"backtrace" : 45,
-			"path" : "/home/uwillno/Felgo/Felgo/gcc_64/lib/metatypes/qt6network_relwithdebinfo_metatypes.json",
+			"backtrace" : 29,
+			"path" : "/home/uwillno/Felgo/Felgo/android_x86_64/lib/metatypes/qt6qml_relwithdebinfo_metatypes.json",
 			"sourceGroupIndex" : 2
 		},
 		{
-			"backtrace" : 13,
-			"path" : "/home/uwillno/Felgo/Felgo/gcc_64/lib/metatypes/qt6quick_relwithdebinfo_metatypes.json",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 13,
-			"path" : "/home/uwillno/Felgo/Felgo/gcc_64/lib/metatypes/qt6gui_relwithdebinfo_metatypes.json",
+			"backtrace" : 29,
+			"path" : "/home/uwillno/Felgo/Felgo/android_x86_64/lib/metatypes/qt6network_relwithdebinfo_metatypes.json",
 			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 13,
-			"path" : "/home/uwillno/Felgo/Felgo/gcc_64/lib/metatypes/qt6qmlmodels_relwithdebinfo_metatypes.json",
+			"path" : "android/AndroidManifest.xml",
 			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 13,
-			"path" : "/home/uwillno/Felgo/Felgo/gcc_64/lib/metatypes/qt6opengl_relwithdebinfo_metatypes.json",
+			"path" : "android/build.gradle",
 			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 13,
-			"path" : "/home/uwillno/Felgo/Felgo/gcc_64/lib/metatypes/qt6widgets_relwithdebinfo_metatypes.json",
+			"path" : "android/res/drawable-hdpi/ic_launcher.png",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 13,
+			"path" : "android/res/drawable-mdpi/ic_launcher.png",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 13,
+			"path" : "android/res/drawable-xhdpi/ic_launcher.png",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 13,
+			"path" : "android/res/drawable-xxhdpi/ic_launcher.png",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 13,
+			"path" : "android/res/values/strings.xml",
 			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 13,
-			"path" : "/home/uwillno/Felgo/Felgo/gcc_64/lib/metatypes/qt6multimedia_relwithdebinfo_metatypes.json",
+			"path" : "android/res/xml/file_paths.xml",
 			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 13,
-			"path" : "/home/uwillno/Felgo/Felgo/gcc_64/lib/metatypes/qt6sql_relwithdebinfo_metatypes.json",
+			"path" : "android/res/xml/network_security_config.xml",
 			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 13,
-			"path" : "/home/uwillno/Felgo/Felgo/gcc_64/lib/metatypes/qt6websockets_relwithdebinfo_metatypes.json",
+			"path" : "/home/uwillno/Felgo/Felgo/android_x86_64/lib/metatypes/qt6quick_relwithdebinfo_metatypes.json",
 			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 13,
-			"path" : "/home/uwillno/Felgo/Felgo/gcc_64/lib/metatypes/qt6bluetooth_relwithdebinfo_metatypes.json",
+			"path" : "/home/uwillno/Felgo/Felgo/android_x86_64/lib/metatypes/qt6gui_relwithdebinfo_metatypes.json",
 			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 13,
-			"path" : "/home/uwillno/Felgo/Felgo/gcc_64/lib/metatypes/qt6dbus_relwithdebinfo_metatypes.json",
+			"path" : "/home/uwillno/Felgo/Felgo/android_x86_64/lib/metatypes/qt6qmlmodels_relwithdebinfo_metatypes.json",
 			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 13,
-			"path" : "/home/uwillno/Felgo/Felgo/gcc_64/lib/metatypes/qt6core5compat_relwithdebinfo_metatypes.json",
+			"path" : "/home/uwillno/Felgo/Felgo/android_x86_64/lib/metatypes/qt6opengl_relwithdebinfo_metatypes.json",
 			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 13,
-			"path" : "/home/uwillno/Felgo/Felgo/gcc_64/lib/metatypes/qt6quickcontrols2_relwithdebinfo_metatypes.json",
+			"path" : "/home/uwillno/Felgo/Felgo/android_x86_64/lib/metatypes/qt6widgets_relwithdebinfo_metatypes.json",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 13,
+			"path" : "/home/uwillno/Felgo/Felgo/android_x86_64/lib/metatypes/qt6multimedia_relwithdebinfo_metatypes.json",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 13,
+			"path" : "/home/uwillno/Felgo/Felgo/android_x86_64/lib/metatypes/qt6sql_relwithdebinfo_metatypes.json",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 13,
+			"path" : "/home/uwillno/Felgo/Felgo/android_x86_64/lib/metatypes/qt6websockets_relwithdebinfo_metatypes.json",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 13,
+			"path" : "/home/uwillno/Felgo/Felgo/android_x86_64/lib/metatypes/qt6bluetooth_relwithdebinfo_metatypes.json",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 13,
+			"path" : "/home/uwillno/Felgo/Felgo/android_x86_64/lib/metatypes/qt6core5compat_relwithdebinfo_metatypes.json",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 13,
+			"path" : "/home/uwillno/Felgo/Felgo/android_x86_64/lib/metatypes/qt6quickcontrols2_relwithdebinfo_metatypes.json",
 			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 14,
-			"path" : "/home/uwillno/Felgo/Felgo/gcc_64/lib/metatypes/qt6concurrent_relwithdebinfo_metatypes.json",
+			"path" : "/home/uwillno/Felgo/Felgo/android_x86_64/lib/metatypes/qt6concurrent_relwithdebinfo_metatypes.json",
 			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 14,
-			"path" : "/home/uwillno/Felgo/Felgo/gcc_64/lib/metatypes/qt6webview_relwithdebinfo_metatypes.json",
+			"path" : "/home/uwillno/Felgo/Felgo/android_x86_64/lib/metatypes/qt6webview_relwithdebinfo_metatypes.json",
 			"sourceGroupIndex" : 2
 		}
 	],
-	"type" : "EXECUTABLE"
+	"type" : "MODULE_LIBRARY"
 }

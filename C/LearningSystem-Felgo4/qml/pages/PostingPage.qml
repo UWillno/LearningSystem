@@ -62,6 +62,7 @@ AppPage {
             AppButton {
                 id:addPictureBtn
                 text: "上传图片"
+                iconType: IconType.upload
                 onClicked: {
                     NativeUtils.displayImagePicker("test")
                 }
@@ -69,6 +70,7 @@ AppPage {
             AppButton {
                 id:postingBtn
                 text: "发帖"
+                iconType: IconType.send
                 onClicked: {
                     if(postEdit.text.trim()!=="" && titleInput.text.trim()!==""){
                         var type

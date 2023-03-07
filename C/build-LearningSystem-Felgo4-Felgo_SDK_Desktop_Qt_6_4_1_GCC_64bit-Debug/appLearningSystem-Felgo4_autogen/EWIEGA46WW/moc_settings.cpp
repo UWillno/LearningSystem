@@ -27,86 +27,91 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 namespace {
 struct qt_meta_stringdata_Settings_t {
-    uint offsetsAndSizes[70];
+    uint offsetsAndSizes[74];
     char stringdata0[9];
-    char stringdata1[16];
+    char stringdata1[8];
     char stringdata2[1];
-    char stringdata3[12];
-    char stringdata4[13];
-    char stringdata5[16];
-    char stringdata6[14];
-    char stringdata7[16];
-    char stringdata8[15];
+    char stringdata3[16];
+    char stringdata4[12];
+    char stringdata5[13];
+    char stringdata6[16];
+    char stringdata7[14];
+    char stringdata8[16];
     char stringdata9[15];
     char stringdata10[15];
     char stringdata11[15];
     char stringdata12[15];
     char stringdata13[15];
-    char stringdata14[5];
+    char stringdata14[15];
     char stringdata15[5];
-    char stringdata16[8];
-    char stringdata17[3];
-    char stringdata18[5];
-    char stringdata19[8];
+    char stringdata16[5];
+    char stringdata17[8];
+    char stringdata18[3];
+    char stringdata19[5];
     char stringdata20[8];
     char stringdata21[8];
-    char stringdata22[9];
-    char stringdata23[5];
-    char stringdata24[6];
-    char stringdata25[9];
-    char stringdata26[7];
+    char stringdata22[8];
+    char stringdata23[8];
+    char stringdata24[9];
+    char stringdata25[5];
+    char stringdata26[6];
     char stringdata27[9];
-    char stringdata28[8];
-    char stringdata29[13];
+    char stringdata28[7];
+    char stringdata29[9];
     char stringdata30[8];
-    char stringdata31[8];
+    char stringdata31[13];
     char stringdata32[8];
     char stringdata33[8];
     char stringdata34[8];
+    char stringdata35[8];
+    char stringdata36[8];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_Settings_t::offsetsAndSizes) + ofs), len 
 Q_CONSTINIT static const qt_meta_stringdata_Settings_t qt_meta_stringdata_Settings = {
     {
         QT_MOC_LITERAL(0, 8),  // "Settings"
-        QT_MOC_LITERAL(9, 15),  // "usernameChanged"
-        QT_MOC_LITERAL(25, 0),  // ""
-        QT_MOC_LITERAL(26, 11),  // "cxidChanged"
-        QT_MOC_LITERAL(38, 12),  // "phoneChanged"
-        QT_MOC_LITERAL(51, 15),  // "passwordChanged"
-        QT_MOC_LITERAL(67, 13),  // "cookieChanged"
-        QT_MOC_LITERAL(81, 15),  // "fileNameChanged"
-        QT_MOC_LITERAL(97, 14),  // "wrongCQChanged"
-        QT_MOC_LITERAL(112, 14),  // "wrongTQChanged"
-        QT_MOC_LITERAL(127, 14),  // "wrongFQChanged"
-        QT_MOC_LITERAL(142, 14),  // "rightCQChanged"
-        QT_MOC_LITERAL(157, 14),  // "rightTQChanged"
-        QT_MOC_LITERAL(172, 14),  // "rightFQChanged"
-        QT_MOC_LITERAL(187, 4),  // "save"
-        QT_MOC_LITERAL(192, 4),  // "init"
-        QT_MOC_LITERAL(197, 7),  // "insertW"
-        QT_MOC_LITERAL(205, 2),  // "id"
-        QT_MOC_LITERAL(208, 4),  // "type"
-        QT_MOC_LITERAL(213, 7),  // "insertR"
-        QT_MOC_LITERAL(221, 7),  // "isWrong"
-        QT_MOC_LITERAL(229, 7),  // "isRight"
-        QT_MOC_LITERAL(237, 8),  // "username"
-        QT_MOC_LITERAL(246, 4),  // "cxid"
-        QT_MOC_LITERAL(251, 5),  // "phone"
-        QT_MOC_LITERAL(257, 8),  // "password"
-        QT_MOC_LITERAL(266, 6),  // "cookie"
-        QT_MOC_LITERAL(273, 8),  // "fileName"
-        QT_MOC_LITERAL(282, 7),  // "wrongCQ"
-        QT_MOC_LITERAL(290, 12),  // "QSet<qint32>"
-        QT_MOC_LITERAL(303, 7),  // "wrongTQ"
-        QT_MOC_LITERAL(311, 7),  // "wrongFQ"
-        QT_MOC_LITERAL(319, 7),  // "rightCQ"
-        QT_MOC_LITERAL(327, 7),  // "rightTQ"
-        QT_MOC_LITERAL(335, 7)   // "rightFQ"
+        QT_MOC_LITERAL(9, 7),  // "changed"
+        QT_MOC_LITERAL(17, 0),  // ""
+        QT_MOC_LITERAL(18, 15),  // "usernameChanged"
+        QT_MOC_LITERAL(34, 11),  // "cxidChanged"
+        QT_MOC_LITERAL(46, 12),  // "phoneChanged"
+        QT_MOC_LITERAL(59, 15),  // "passwordChanged"
+        QT_MOC_LITERAL(75, 13),  // "cookieChanged"
+        QT_MOC_LITERAL(89, 15),  // "fileNameChanged"
+        QT_MOC_LITERAL(105, 14),  // "wrongCQChanged"
+        QT_MOC_LITERAL(120, 14),  // "wrongTQChanged"
+        QT_MOC_LITERAL(135, 14),  // "wrongFQChanged"
+        QT_MOC_LITERAL(150, 14),  // "rightCQChanged"
+        QT_MOC_LITERAL(165, 14),  // "rightTQChanged"
+        QT_MOC_LITERAL(180, 14),  // "rightFQChanged"
+        QT_MOC_LITERAL(195, 4),  // "save"
+        QT_MOC_LITERAL(200, 4),  // "init"
+        QT_MOC_LITERAL(205, 7),  // "insertW"
+        QT_MOC_LITERAL(213, 2),  // "id"
+        QT_MOC_LITERAL(216, 4),  // "type"
+        QT_MOC_LITERAL(221, 7),  // "insertR"
+        QT_MOC_LITERAL(229, 7),  // "isWrong"
+        QT_MOC_LITERAL(237, 7),  // "isRight"
+        QT_MOC_LITERAL(245, 7),  // "removeW"
+        QT_MOC_LITERAL(253, 8),  // "username"
+        QT_MOC_LITERAL(262, 4),  // "cxid"
+        QT_MOC_LITERAL(267, 5),  // "phone"
+        QT_MOC_LITERAL(273, 8),  // "password"
+        QT_MOC_LITERAL(282, 6),  // "cookie"
+        QT_MOC_LITERAL(289, 8),  // "fileName"
+        QT_MOC_LITERAL(298, 7),  // "wrongCQ"
+        QT_MOC_LITERAL(306, 12),  // "QSet<qint32>"
+        QT_MOC_LITERAL(319, 7),  // "wrongTQ"
+        QT_MOC_LITERAL(327, 7),  // "wrongFQ"
+        QT_MOC_LITERAL(335, 7),  // "rightCQ"
+        QT_MOC_LITERAL(343, 7),  // "rightTQ"
+        QT_MOC_LITERAL(351, 7)   // "rightFQ"
     },
     "Settings",
-    "usernameChanged",
+    "changed",
     "",
+    "usernameChanged",
     "cxidChanged",
     "phoneChanged",
     "passwordChanged",
@@ -126,6 +131,7 @@ Q_CONSTINIT static const qt_meta_stringdata_Settings_t qt_meta_stringdata_Settin
     "insertR",
     "isWrong",
     "isRight",
+    "removeW",
     "username",
     "cxid",
     "phone",
@@ -149,36 +155,39 @@ Q_CONSTINIT static const uint qt_meta_data_Settings[] = {
       10,       // revision
        0,       // classname
        0,    0, // classinfo
-      18,   14, // methods
-      12,  156, // properties
+      20,   14, // methods
+      12,  174, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-      12,       // signalCount
+      13,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,  122,    2, 0x06,   13 /* Public */,
-       3,    0,  123,    2, 0x06,   14 /* Public */,
-       4,    0,  124,    2, 0x06,   15 /* Public */,
-       5,    0,  125,    2, 0x06,   16 /* Public */,
-       6,    0,  126,    2, 0x06,   17 /* Public */,
-       7,    0,  127,    2, 0x06,   18 /* Public */,
-       8,    0,  128,    2, 0x06,   19 /* Public */,
-       9,    0,  129,    2, 0x06,   20 /* Public */,
-      10,    0,  130,    2, 0x06,   21 /* Public */,
-      11,    0,  131,    2, 0x06,   22 /* Public */,
-      12,    0,  132,    2, 0x06,   23 /* Public */,
-      13,    0,  133,    2, 0x06,   24 /* Public */,
+       1,    0,  134,    2, 0x06,   13 /* Public */,
+       3,    0,  135,    2, 0x06,   14 /* Public */,
+       4,    0,  136,    2, 0x06,   15 /* Public */,
+       5,    0,  137,    2, 0x06,   16 /* Public */,
+       6,    0,  138,    2, 0x06,   17 /* Public */,
+       7,    0,  139,    2, 0x06,   18 /* Public */,
+       8,    0,  140,    2, 0x06,   19 /* Public */,
+       9,    0,  141,    2, 0x06,   20 /* Public */,
+      10,    0,  142,    2, 0x06,   21 /* Public */,
+      11,    0,  143,    2, 0x06,   22 /* Public */,
+      12,    0,  144,    2, 0x06,   23 /* Public */,
+      13,    0,  145,    2, 0x06,   24 /* Public */,
+      14,    0,  146,    2, 0x06,   25 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-      14,    0,  134,    2, 0x0a,   25 /* Public */,
-      15,    0,  135,    2, 0x0a,   26 /* Public */,
-      16,    2,  136,    2, 0x0a,   27 /* Public */,
-      19,    2,  141,    2, 0x0a,   30 /* Public */,
-      20,    2,  146,    2, 0x0a,   33 /* Public */,
-      21,    2,  151,    2, 0x0a,   36 /* Public */,
+      15,    0,  147,    2, 0x0a,   26 /* Public */,
+      16,    0,  148,    2, 0x0a,   27 /* Public */,
+      17,    2,  149,    2, 0x0a,   28 /* Public */,
+      20,    2,  154,    2, 0x0a,   31 /* Public */,
+      21,    2,  159,    2, 0x0a,   34 /* Public */,
+      22,    2,  164,    2, 0x0a,   37 /* Public */,
+      23,    2,  169,    2, 0x0a,   40 /* Public */,
 
  // signals: parameters
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -195,24 +204,25 @@ Q_CONSTINIT static const uint qt_meta_data_Settings[] = {
  // slots: parameters
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::Int, QMetaType::Int,   17,   18,
-    QMetaType::Void, QMetaType::Int, QMetaType::Int,   17,   18,
-    QMetaType::Bool, QMetaType::Int, QMetaType::Int,   17,   18,
-    QMetaType::Bool, QMetaType::Int, QMetaType::Int,   17,   18,
+    QMetaType::Void, QMetaType::Int, QMetaType::Int,   18,   19,
+    QMetaType::Void, QMetaType::Int, QMetaType::Int,   18,   19,
+    QMetaType::Bool, QMetaType::Int, QMetaType::Int,   18,   19,
+    QMetaType::Bool, QMetaType::Int, QMetaType::Int,   18,   19,
+    QMetaType::Bool, QMetaType::Int, QMetaType::Int,   18,   19,
 
  // properties: name, type, flags
-      22, QMetaType::QString, 0x00015103, uint(0), 0,
-      23, QMetaType::Int, 0x00015103, uint(1), 0,
-      24, QMetaType::LongLong, 0x00015103, uint(2), 0,
-      25, QMetaType::QString, 0x00015103, uint(3), 0,
-      26, QMetaType::QString, 0x00015103, uint(4), 0,
-      27, QMetaType::QString, 0x00015103, uint(5), 0,
-      28, 0x80000000 | 29, 0x0001510b, uint(6), 0,
-      30, 0x80000000 | 29, 0x0001510b, uint(7), 0,
-      31, 0x80000000 | 29, 0x0001510b, uint(8), 0,
-      32, 0x80000000 | 29, 0x0001510b, uint(9), 0,
-      33, 0x80000000 | 29, 0x0001510b, uint(10), 0,
-      34, 0x80000000 | 29, 0x0001510b, uint(11), 0,
+      24, QMetaType::QString, 0x00015103, uint(1), 0,
+      25, QMetaType::Int, 0x00015103, uint(2), 0,
+      26, QMetaType::LongLong, 0x00015103, uint(3), 0,
+      27, QMetaType::QString, 0x00015103, uint(4), 0,
+      28, QMetaType::QString, 0x00015103, uint(5), 0,
+      29, QMetaType::QString, 0x00015103, uint(6), 0,
+      30, 0x80000000 | 31, 0x0001510b, uint(7), 0,
+      32, 0x80000000 | 31, 0x0001510b, uint(8), 0,
+      33, 0x80000000 | 31, 0x0001510b, uint(9), 0,
+      34, 0x80000000 | 31, 0x0001510b, uint(10), 0,
+      35, 0x80000000 | 31, 0x0001510b, uint(11), 0,
+      36, 0x80000000 | 31, 0x0001510b, uint(12), 0,
 
        0        // eod
 };
@@ -250,6 +260,8 @@ Q_CONSTINIT const QMetaObject Settings::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<QSet<qint32>, std::true_type>,
         // Q_OBJECT / Q_GADGET
         QtPrivate::TypeAndForceComplete<Settings, std::true_type>,
+        // method 'changed'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'usernameChanged'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'cxidChanged'
@@ -293,6 +305,10 @@ Q_CONSTINIT const QMetaObject Settings::staticMetaObject = { {
         // method 'isRight'
         QtPrivate::TypeAndForceComplete<bool, std::false_type>,
         QtPrivate::TypeAndForceComplete<qint32, std::false_type>,
+        QtPrivate::TypeAndForceComplete<qint32, std::false_type>,
+        // method 'removeW'
+        QtPrivate::TypeAndForceComplete<bool, std::false_type>,
+        QtPrivate::TypeAndForceComplete<qint32, std::false_type>,
         QtPrivate::TypeAndForceComplete<qint32, std::false_type>
     >,
     nullptr
@@ -304,25 +320,28 @@ void Settings::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
         auto *_t = static_cast<Settings *>(_o);
         (void)_t;
         switch (_id) {
-        case 0: _t->usernameChanged(); break;
-        case 1: _t->cxidChanged(); break;
-        case 2: _t->phoneChanged(); break;
-        case 3: _t->passwordChanged(); break;
-        case 4: _t->cookieChanged(); break;
-        case 5: _t->fileNameChanged(); break;
-        case 6: _t->wrongCQChanged(); break;
-        case 7: _t->wrongTQChanged(); break;
-        case 8: _t->wrongFQChanged(); break;
-        case 9: _t->rightCQChanged(); break;
-        case 10: _t->rightTQChanged(); break;
-        case 11: _t->rightFQChanged(); break;
-        case 12: _t->save(); break;
-        case 13: _t->init(); break;
-        case 14: _t->insertW((*reinterpret_cast< std::add_pointer_t<qint32>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<qint32>>(_a[2]))); break;
-        case 15: _t->insertR((*reinterpret_cast< std::add_pointer_t<qint32>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<qint32>>(_a[2]))); break;
-        case 16: { bool _r = _t->isWrong((*reinterpret_cast< std::add_pointer_t<qint32>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<qint32>>(_a[2])));
+        case 0: _t->changed(); break;
+        case 1: _t->usernameChanged(); break;
+        case 2: _t->cxidChanged(); break;
+        case 3: _t->phoneChanged(); break;
+        case 4: _t->passwordChanged(); break;
+        case 5: _t->cookieChanged(); break;
+        case 6: _t->fileNameChanged(); break;
+        case 7: _t->wrongCQChanged(); break;
+        case 8: _t->wrongTQChanged(); break;
+        case 9: _t->wrongFQChanged(); break;
+        case 10: _t->rightCQChanged(); break;
+        case 11: _t->rightTQChanged(); break;
+        case 12: _t->rightFQChanged(); break;
+        case 13: _t->save(); break;
+        case 14: _t->init(); break;
+        case 15: _t->insertW((*reinterpret_cast< std::add_pointer_t<qint32>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<qint32>>(_a[2]))); break;
+        case 16: _t->insertR((*reinterpret_cast< std::add_pointer_t<qint32>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<qint32>>(_a[2]))); break;
+        case 17: { bool _r = _t->isWrong((*reinterpret_cast< std::add_pointer_t<qint32>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<qint32>>(_a[2])));
             if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
-        case 17: { bool _r = _t->isRight((*reinterpret_cast< std::add_pointer_t<qint32>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<qint32>>(_a[2])));
+        case 18: { bool _r = _t->isRight((*reinterpret_cast< std::add_pointer_t<qint32>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<qint32>>(_a[2])));
+            if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
+        case 19: { bool _r = _t->removeW((*reinterpret_cast< std::add_pointer_t<qint32>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<qint32>>(_a[2])));
             if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
         default: ;
         }
@@ -330,85 +349,92 @@ void Settings::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
         int *result = reinterpret_cast<int *>(_a[0]);
         {
             using _t = void (Settings::*)();
-            if (_t _q_method = &Settings::usernameChanged; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
+            if (_t _q_method = &Settings::changed; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
                 *result = 0;
                 return;
             }
         }
         {
             using _t = void (Settings::*)();
-            if (_t _q_method = &Settings::cxidChanged; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
+            if (_t _q_method = &Settings::usernameChanged; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
                 *result = 1;
                 return;
             }
         }
         {
             using _t = void (Settings::*)();
-            if (_t _q_method = &Settings::phoneChanged; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
+            if (_t _q_method = &Settings::cxidChanged; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
                 *result = 2;
                 return;
             }
         }
         {
             using _t = void (Settings::*)();
-            if (_t _q_method = &Settings::passwordChanged; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
+            if (_t _q_method = &Settings::phoneChanged; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
                 *result = 3;
                 return;
             }
         }
         {
             using _t = void (Settings::*)();
-            if (_t _q_method = &Settings::cookieChanged; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
+            if (_t _q_method = &Settings::passwordChanged; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
                 *result = 4;
                 return;
             }
         }
         {
             using _t = void (Settings::*)();
-            if (_t _q_method = &Settings::fileNameChanged; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
+            if (_t _q_method = &Settings::cookieChanged; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
                 *result = 5;
                 return;
             }
         }
         {
             using _t = void (Settings::*)();
-            if (_t _q_method = &Settings::wrongCQChanged; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
+            if (_t _q_method = &Settings::fileNameChanged; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
                 *result = 6;
                 return;
             }
         }
         {
             using _t = void (Settings::*)();
-            if (_t _q_method = &Settings::wrongTQChanged; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
+            if (_t _q_method = &Settings::wrongCQChanged; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
                 *result = 7;
                 return;
             }
         }
         {
             using _t = void (Settings::*)();
-            if (_t _q_method = &Settings::wrongFQChanged; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
+            if (_t _q_method = &Settings::wrongTQChanged; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
                 *result = 8;
                 return;
             }
         }
         {
             using _t = void (Settings::*)();
-            if (_t _q_method = &Settings::rightCQChanged; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
+            if (_t _q_method = &Settings::wrongFQChanged; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
                 *result = 9;
                 return;
             }
         }
         {
             using _t = void (Settings::*)();
-            if (_t _q_method = &Settings::rightTQChanged; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
+            if (_t _q_method = &Settings::rightCQChanged; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
                 *result = 10;
                 return;
             }
         }
         {
             using _t = void (Settings::*)();
-            if (_t _q_method = &Settings::rightFQChanged; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
+            if (_t _q_method = &Settings::rightTQChanged; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
                 *result = 11;
+                return;
+            }
+        }
+        {
+            using _t = void (Settings::*)();
+            if (_t _q_method = &Settings::rightFQChanged; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
+                *result = 12;
                 return;
             }
         }
@@ -486,13 +512,13 @@ int Settings::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 18)
+        if (_id < 20)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 18;
+        _id -= 20;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 18)
+        if (_id < 20)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 18;
+        _id -= 20;
     }else if (_c == QMetaObject::ReadProperty || _c == QMetaObject::WriteProperty
             || _c == QMetaObject::ResetProperty || _c == QMetaObject::BindableProperty
             || _c == QMetaObject::RegisterPropertyMetaType) {
@@ -503,75 +529,81 @@ int Settings::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 
 // SIGNAL 0
-void Settings::usernameChanged()
+void Settings::changed()
 {
     QMetaObject::activate(this, &staticMetaObject, 0, nullptr);
 }
 
 // SIGNAL 1
-void Settings::cxidChanged()
+void Settings::usernameChanged()
 {
     QMetaObject::activate(this, &staticMetaObject, 1, nullptr);
 }
 
 // SIGNAL 2
-void Settings::phoneChanged()
+void Settings::cxidChanged()
 {
     QMetaObject::activate(this, &staticMetaObject, 2, nullptr);
 }
 
 // SIGNAL 3
-void Settings::passwordChanged()
+void Settings::phoneChanged()
 {
     QMetaObject::activate(this, &staticMetaObject, 3, nullptr);
 }
 
 // SIGNAL 4
-void Settings::cookieChanged()
+void Settings::passwordChanged()
 {
     QMetaObject::activate(this, &staticMetaObject, 4, nullptr);
 }
 
 // SIGNAL 5
-void Settings::fileNameChanged()
+void Settings::cookieChanged()
 {
     QMetaObject::activate(this, &staticMetaObject, 5, nullptr);
 }
 
 // SIGNAL 6
-void Settings::wrongCQChanged()
+void Settings::fileNameChanged()
 {
     QMetaObject::activate(this, &staticMetaObject, 6, nullptr);
 }
 
 // SIGNAL 7
-void Settings::wrongTQChanged()
+void Settings::wrongCQChanged()
 {
     QMetaObject::activate(this, &staticMetaObject, 7, nullptr);
 }
 
 // SIGNAL 8
-void Settings::wrongFQChanged()
+void Settings::wrongTQChanged()
 {
     QMetaObject::activate(this, &staticMetaObject, 8, nullptr);
 }
 
 // SIGNAL 9
-void Settings::rightCQChanged()
+void Settings::wrongFQChanged()
 {
     QMetaObject::activate(this, &staticMetaObject, 9, nullptr);
 }
 
 // SIGNAL 10
-void Settings::rightTQChanged()
+void Settings::rightCQChanged()
 {
     QMetaObject::activate(this, &staticMetaObject, 10, nullptr);
 }
 
 // SIGNAL 11
-void Settings::rightFQChanged()
+void Settings::rightTQChanged()
 {
     QMetaObject::activate(this, &staticMetaObject, 11, nullptr);
+}
+
+// SIGNAL 12
+void Settings::rightFQChanged()
+{
+    QMetaObject::activate(this, &staticMetaObject, 12, nullptr);
 }
 QT_WARNING_POP
 QT_END_MOC_NAMESPACE

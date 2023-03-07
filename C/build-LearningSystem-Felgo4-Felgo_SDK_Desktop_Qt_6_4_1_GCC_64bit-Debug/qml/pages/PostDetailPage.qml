@@ -36,7 +36,10 @@ AppPage {
         Rectangle {
             AppFlickable{
                 id:flick
+                scrollsToTop : true
                 anchors.fill: parent
+                contentHeight: child.height
+
                 GridLayout {
                     id: child
 
@@ -132,15 +135,16 @@ AppPage {
                         Layout.fillHeight: true
                         Layout.alignment: Qt.AlignTop
                         height: contentHeight
-                        clip: true
-
+//                        clip: true
+                        onLinkActivated: link => {
+                                             //              Qt.openUrlExternally(link)
+                                             PictureViewer.show(app,link)
+                                         }
                     }
                     Item {
                         id: bottomSpacer
-
                         width: parent.width
                         height: dp(6)
-
                         Layout.columnSpan: parent.columns
                         Layout.fillWidth: true
                     }

@@ -30,10 +30,9 @@ Rectangle {
 
             fillMode: Image.PreserveAspectCrop
             anchors.verticalCenter: parent.verticalCenter
-            source: userImageResource.available ? userImageResource.storagePath :"http://q1.qlogo.cn/g?b=qq&nk=44910244&s=640"
+            //            source: userImageResource.available ? userImageResource.storagePath :"http://q1.qlogo.cn/g?b=qq&nk=44910244&s=640"
             radius: width/2
-
-
+            source: userImageResource.storagePath
 
             MouseArea {
                 anchors.fill:parent
@@ -114,15 +113,8 @@ Rectangle {
         extractAsPackage: false
         source:  ss.cxid ? "http://photo.chaoxing.com/p/"+ss.cxid+"_80" : "http://photo.chaoxing.com/photo_80.jpg"
 
-
         Component.onCompleted: {
-            //            if(ss.cxid){
-            //                source = "http://photo.chaoxing.com/p/"+ss.cxid+"_80";
-            //            }else {
-            //                source = "http://photo.chaoxing.com/photo_80.jpg";
-            //            }
-
-            console.log(source)
+            userImageResource.remove()
             download()
         }
     }
@@ -151,16 +143,6 @@ Rectangle {
             else{
                 userLogic.login(usernameInput.text.trim(),passwordInput.text.trim())
                 close()
-                //                HttpRequest.get("")
-                //                userLogic.login(usernameInput.text.trim(),passwordInput.text.trim())
-                //测试用
-                //                if(userLogic.login()){
-                //                    toastManager.show("登录成功!",1000)
-                //                }else{
-                //                    toastManager.show("登录失败!",1000)
-                //                }
-
-                //                console.log("userlogin here")
             }
         }
 
@@ -191,6 +173,8 @@ Rectangle {
     Connections {
         target: qm
         onLoginSucceeded:{
+            userImageResource.remove()
+            userImageResource.download()
             console.log("登陆成功！！")
             toastManager.show("登录成功！",1000)
             var adminComponent = Qt.createComponent("../pages/AdministratorPage.qml").createObject()
@@ -215,20 +199,21 @@ Rectangle {
             phoneText.visible = true
 
         }
-        onNewUserLogined: {
-            console.log("创建用户目录")
-            qm.createNewUser(ss.username,ss.cxid)
-        }
+        //        onNewUserLogined: {
+        //            console.log("创建用户目录")
+        //            qm.createNewUser(ss.username,ss.cxid)
+
+        //        }
 
     }
 
 
 
     Component.onCompleted: {
-                console.log("asdasdasd")
+        console.log("asdasdasd")
         if(ss.phone && ss.password ){
             //            userLogic.login(ss.phone,ss.password)
-//            userLogic.userLoginSucceed()
+            //            userLogic.userLoginSucceed()
             currentstatus = "超星模式"
             console.log(ss.cxid)
             cxidText.visible = true

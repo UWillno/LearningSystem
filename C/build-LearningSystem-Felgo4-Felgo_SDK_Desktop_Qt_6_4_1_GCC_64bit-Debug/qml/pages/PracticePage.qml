@@ -15,6 +15,14 @@ AppPage {
                                     p = Qt.createComponent("ExercisesPage.qml").createObject(parent)
                                     break;
                                 }
+                                case 1:{
+                                    p = Qt.createComponent("HistoryWrongQuestionsPage.qml").createObject(parent)
+                                    break
+                                }
+                                case 2:{
+                                    p = Qt.createComponent("VirtualExamPage.qml").createObject(parent)
+                                    break
+                                }
                             }
                             practiceStack.push(p)
                         }

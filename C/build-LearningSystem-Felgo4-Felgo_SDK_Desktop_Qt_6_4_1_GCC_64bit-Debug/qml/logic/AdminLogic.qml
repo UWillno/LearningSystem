@@ -18,7 +18,7 @@ Item {
     function blanksToAnswer(blanksObj){
         var temp = new Array
         blanksObj.forEach(function(obj){
-            temp.push(obj.text)
+            temp.push(obj.text.trim())
         })
         //        console.log(temp)
         //        console.log(JSON.stringify(temp))

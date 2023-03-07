@@ -26,17 +26,17 @@ Rectangle {
             MouseArea {
                 anchors.fill: parent
                 onClicked:  {
-//                    if(gridViewRect.type === 0){
-                        var p = Qt.createComponent("../pages/QuestionSwipeViewPage.qml").createObject(parent,{model:modelData,swipeIndex:index})
-                        practiceStack.push(p)
-//                    }
+                    //                    if(gridViewRect.type === 0){
+                    var p = Qt.createComponent("../pages/QuestionSwipeViewPage.qml").createObject(parent,{model:modelData,swipeIndex:index})
+                    practiceStack.push(p)
+                    //                    }
 
                 }
             }
 
             Component.onCompleted:{
                 if(userLogic.isWrong(model.id,gridViewRect.type)){
-                     state = "wrong"
+                    state = "wrong"
                 }
                 if(userLogic.isRight(model.id,gridViewRect.type)){
                     state = "right"
@@ -49,6 +49,10 @@ Rectangle {
         var m = modelData
         gridView.model.clear()
         modelData = m
+    }
+    function refreshH(myModel){
+        gridView.model.clear()
+        modelData = myModel
     }
 
 }

@@ -7,7 +7,7 @@
 				{
 					"build" : ".",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-Debug-3c9a46fd63d8eb8b6f02.json",
+					"jsonFile" : "directory-.-Debug-deb720ec91d1505f9d89.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.16"
@@ -95,7 +95,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "appLearningSystem-Felgo4::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-appLearningSystem-Felgo4-Debug-113d48255a415521c501.json",
+					"jsonFile" : "target-appLearningSystem-Felgo4-Debug-e63ae8cd70c44b0d3ebc.json",
 					"name" : "appLearningSystem-Felgo4",
 					"projectIndex" : 0
 				},

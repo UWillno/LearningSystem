@@ -3,9 +3,33 @@ import Felgo
 import QtQuick.Controls
 
 AppPage {
+    id:questionSwipeViewPage
     property alias model: repeater.model
     property alias swipeIndex: questionSwipeView.currentIndex
-    title: "New Page"
+
+    rightBarItem: IconButtonBarItem {
+        visible: false
+        iconType: IconType.recycle
+        onClicked: {
+            var id = questionSwipeView.currentItem.item.question.id
+//            console.log(questionSwipeView.currentItem.item.question.id)
+            const type =questionSwipeView.currentItem.item.type
+            //            console.log(type)
+            if(userLogic.removeW(id,type)){
+                toastManager.show("已移出错题库",1000)
+            }
+
+
+        }
+        Component.onCompleted:{
+            var id = questionSwipeView.currentItem.item.question.id
+            const type =questionSwipeView.currentItem.item.type
+            if(userLogic.isWrong(id,type)){
+                visible = true
+            }
+        }
+    }
+
     SwipeView {
         id: questionSwipeView
         anchors.fill: parent

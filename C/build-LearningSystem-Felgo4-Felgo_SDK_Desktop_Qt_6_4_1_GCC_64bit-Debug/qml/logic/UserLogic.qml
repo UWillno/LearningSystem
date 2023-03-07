@@ -19,10 +19,13 @@ Item {
     signal newUserLogined()
     signal postingSucceed()
 
+    signal oldUserLogined()
+
     signal getResourcesSucceed(var json,int type)
     signal getQuestionsDBSucceed(var questionsDB)
     //17671056113
 
+    //    signal
 
     function login(phone,password){
         HttpRequest.get("https://passport2-api.chaoxing.com/v11/loginregister?cx_xxt_passport=json&uname="+phone+"&code="+password).timeout(50000)
@@ -64,7 +67,9 @@ Item {
             //            cxid = cxidreg.exec(html)[1]
             ss.cxid = cxidreg.exec(html)[1]
             //            toastManager.show("登录成功！",1000)
-            isNewUser(ss.cxid)
+            //            isNewUser(ss.cxid)
+            userExists(ss.cxid)
+
             ss.save()
             userLoginSucceed()
             //            return true
@@ -77,6 +82,45 @@ Item {
         //        return false
     }
 
+    function userExists(cxid){
+        const xhr = new XMLHttpRequest()
+        xhr.open("GET",qhttpserver + "userExists/"+cxid,true);
+        xhr.send(null)
+        xhr.onload = function (e) {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+                    if(xhr.responseText === "new"){
+                        createUser()
+                    }else{
+                        oldUserLogined()
+                    }
+                } else {
+                    console.error(xhr.statusText);
+                }
+            }
+        };
+    }
+
+    function createUser(){
+        const xhr = new XMLHttpRequest()
+        xhr.open("POST",qhttpserver + "createUser",true);
+        xhr.send(JSON.stringify({cxid:ss.cxid,username:ss.username}))
+        xhr.onload = function (e) {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+                    if(xhr.responseText === "success")
+                        toastManager.show("创建用户成功！",1000)
+                    else{
+                        toastManager.show("创建用户失败！",1000)
+                    }
+                } else {
+                    console.error(xhr.statusText);
+                }
+            }
+        };
+    }
+
+    //弃用
     function isNewUser(cxid){
         HttpRequest.get(localhost+cxid+"/info.json").timeout(50000).then(function(res){
             console.log("老用户")
@@ -154,6 +198,39 @@ Item {
     function addRQ(id,type){
         ss.insertR(id,type)
     }
+
+    function removeW(id,type){
+        return ss.removeW(id,type)
+        //        console.log(ss.removeW(id,type))
+        //        return
+    }
+
+    function randomNum(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+
+    // 定义一个函数，用于产生不重复随机数
+    function getUniqueRandomNum(min, max, count) {
+        var arr = []; // 定义一个数组，用于存储随机数
+        for (var i = 0; i < count; i++) { // 循环产生count个随机数
+            arr[i] = randomNum(min, max); // 调用上面的函数，生成一个范围内的随机数
+            for (var j = 0; j < i; j++) { // 遍历数组，检查是否有重复的元素
+                if (arr[i] === arr[j]) { // 如果有重复，则重新产生一个随机数
+                    i--;
+                    break;
+                }
+            }
+        }
+        return arr;
+    }
+
+    function upload(){
+
+
+
+    }
+
+
 
     //    function addWQ(id,type){
     //        switch(type){

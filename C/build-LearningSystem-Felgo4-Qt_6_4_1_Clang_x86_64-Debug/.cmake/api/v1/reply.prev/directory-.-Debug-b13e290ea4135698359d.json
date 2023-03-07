@@ -9,7 +9,7 @@
 		],
 		"files" : 
 		[
-			"/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Felgo/FelgoConfig.cmake",
+			"/home/uwillno/Felgo/Felgo/android_x86_64/lib/cmake/Felgo/FelgoConfig.cmake",
 			"CMakeLists.txt"
 		],
 		"nodes" : 
@@ -358,6 +358,42 @@
 				"file" : 0,
 				"line" : 121,
 				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 121,
+				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 121,
+				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 121,
+				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 121,
+				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 121,
+				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 121,
+				"parent" : 3
 			}
 		]
 	},
@@ -369,10 +405,10 @@
 			"destination" : "/usr/local",
 			"paths" : 
 			[
-				"appLearningSystem-Felgo4.run"
+				"libappLearningSystem-Felgo4_x86_64.so"
 			],
 			"targetId" : "appLearningSystem-Felgo4::@6890427a1f51a3e7e1df",
-			"targetIndex" : 5,
+			"targetIndex" : 9,
 			"type" : "target"
 		},
 		{
@@ -691,7 +727,7 @@
 			"destination" : "qml/pages",
 			"paths" : 
 			[
-				"qml/pages/ExercisesPage.qml"
+				"qml/pages/ExamCQRectangle.qml"
 			],
 			"type" : "file"
 		},
@@ -701,7 +737,7 @@
 			"destination" : "qml/pages",
 			"paths" : 
 			[
-				"qml/pages/FillInTheBlanksQuestionRectangle.qml"
+				"qml/pages/ExamFQRectangle.qml"
 			],
 			"type" : "file"
 		},
@@ -711,7 +747,7 @@
 			"destination" : "qml/pages",
 			"paths" : 
 			[
-				"qml/pages/ForumPage.qml"
+				"qml/pages/ExamTQRectangle.qml"
 			],
 			"type" : "file"
 		},
@@ -721,7 +757,7 @@
 			"destination" : "qml/pages",
 			"paths" : 
 			[
-				"qml/pages/ImagePage.qml"
+				"qml/pages/ExercisesPage.qml"
 			],
 			"type" : "file"
 		},
@@ -731,7 +767,7 @@
 			"destination" : "qml/pages",
 			"paths" : 
 			[
-				"qml/pages/IndexPage.qml"
+				"qml/pages/FillInTheBlanksQuestionRectangle.qml"
 			],
 			"type" : "file"
 		},
@@ -741,7 +777,7 @@
 			"destination" : "qml/pages",
 			"paths" : 
 			[
-				"qml/pages/MediaPage.qml"
+				"qml/pages/ForumPage.qml"
 			],
 			"type" : "file"
 		},
@@ -751,7 +787,7 @@
 			"destination" : "qml/pages",
 			"paths" : 
 			[
-				"qml/pages/PdfPage.qml"
+				"qml/pages/HistoryWrongQuestionsPage.qml"
 			],
 			"type" : "file"
 		},
@@ -761,7 +797,7 @@
 			"destination" : "qml/pages",
 			"paths" : 
 			[
-				"qml/pages/PostDetailPage.qml"
+				"qml/pages/ImagePage.qml"
 			],
 			"type" : "file"
 		},
@@ -771,7 +807,7 @@
 			"destination" : "qml/pages",
 			"paths" : 
 			[
-				"qml/pages/PostingPage.qml"
+				"qml/pages/IndexPage.qml"
 			],
 			"type" : "file"
 		},
@@ -781,7 +817,7 @@
 			"destination" : "qml/pages",
 			"paths" : 
 			[
-				"qml/pages/PostsPage.qml"
+				"qml/pages/MediaPage.qml"
 			],
 			"type" : "file"
 		},
@@ -791,7 +827,7 @@
 			"destination" : "qml/pages",
 			"paths" : 
 			[
-				"qml/pages/PracticePage.qml"
+				"qml/pages/PdfPage.qml"
 			],
 			"type" : "file"
 		},
@@ -801,7 +837,7 @@
 			"destination" : "qml/pages",
 			"paths" : 
 			[
-				"qml/pages/QuestionPage.qml"
+				"qml/pages/PostDetailPage.qml"
 			],
 			"type" : "file"
 		},
@@ -811,7 +847,7 @@
 			"destination" : "qml/pages",
 			"paths" : 
 			[
-				"qml/pages/QuestionSwipeViewPage.qml"
+				"qml/pages/PostingPage.qml"
 			],
 			"type" : "file"
 		},
@@ -821,7 +857,7 @@
 			"destination" : "qml/pages",
 			"paths" : 
 			[
-				"qml/pages/ResourceListPage.qml"
+				"qml/pages/PostsPage.qml"
 			],
 			"type" : "file"
 		},
@@ -831,7 +867,7 @@
 			"destination" : "qml/pages",
 			"paths" : 
 			[
-				"qml/pages/SRMListPage.qml"
+				"qml/pages/PracticePage.qml"
 			],
 			"type" : "file"
 		},
@@ -841,7 +877,7 @@
 			"destination" : "qml/pages",
 			"paths" : 
 			[
-				"qml/pages/StudyPage.qml"
+				"qml/pages/QuestionPage.qml"
 			],
 			"type" : "file"
 		},
@@ -851,7 +887,7 @@
 			"destination" : "qml/pages",
 			"paths" : 
 			[
-				"qml/pages/TrueOrFalseQuestionRectangle.qml"
+				"qml/pages/QuestionSwipeViewPage.qml"
 			],
 			"type" : "file"
 		},
@@ -861,7 +897,7 @@
 			"destination" : "qml/pages",
 			"paths" : 
 			[
-				"qml/pages/UserResourcesListPage.qml"
+				"qml/pages/ResourceListPage.qml"
 			],
 			"type" : "file"
 		},
@@ -871,7 +907,7 @@
 			"destination" : "qml/pages",
 			"paths" : 
 			[
-				"qml/pages/WebPage.qml"
+				"qml/pages/SRMListPage.qml"
 			],
 			"type" : "file"
 		},
@@ -881,12 +917,62 @@
 			"destination" : "qml/pages",
 			"paths" : 
 			[
-				"qml/pages/XxtWebPage.qml"
+				"qml/pages/StudyPage.qml"
 			],
 			"type" : "file"
 		},
 		{
 			"backtrace" : 55,
+			"component" : "Unspecified",
+			"destination" : "qml/pages",
+			"paths" : 
+			[
+				"qml/pages/TrueOrFalseQuestionRectangle.qml"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 56,
+			"component" : "Unspecified",
+			"destination" : "qml/pages",
+			"paths" : 
+			[
+				"qml/pages/UserResourcesListPage.qml"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 57,
+			"component" : "Unspecified",
+			"destination" : "qml/pages",
+			"paths" : 
+			[
+				"qml/pages/VirtualExamPage.qml"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 58,
+			"component" : "Unspecified",
+			"destination" : "qml/pages",
+			"paths" : 
+			[
+				"qml/pages/WebPage.qml"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 59,
+			"component" : "Unspecified",
+			"destination" : "qml/pages",
+			"paths" : 
+			[
+				"qml/pages/XxtWebPage.qml"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 60,
 			"component" : "Unspecified",
 			"destination" : "assets",
 			"paths" : 
@@ -896,7 +982,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 56,
+			"backtrace" : 61,
 			"component" : "Unspecified",
 			"destination" : "qml",
 			"paths" : 
@@ -906,7 +992,17 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 57,
+			"backtrace" : 62,
+			"component" : "Unspecified",
+			"destination" : "qml/logic",
+			"paths" : 
+			[
+				"qml/logic/UserLogic.qml.autosave"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 63,
 			"component" : "Unspecified",
 			"destination" : "qml/logic",
 			"paths" : 

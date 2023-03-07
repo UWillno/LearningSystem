@@ -5,7 +5,7 @@ Rectangle {
 
     property var question
     property bool answer : question["answer"]
-
+    property int type: 1
     property var answerDisplay: answer? "√" : "×"
     //    title: "选择题"
 

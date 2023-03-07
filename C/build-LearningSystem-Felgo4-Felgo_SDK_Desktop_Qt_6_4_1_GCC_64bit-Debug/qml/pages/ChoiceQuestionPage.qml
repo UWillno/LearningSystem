@@ -12,6 +12,7 @@ AppPage {
     property var option2 : question["option2"]
     property var option3 : question["option3"]
     property var option4 : question["option4"]
+    property int type: 0
     title: "选择题"
 
 

@@ -47,7 +47,7 @@ AppPage {
                             userLogic.getResourcesByType(index)
                             }
                             if(index === 4){
-                                var p = Qt.createComponent("WebPage.qml").createObject(parent,{title:"学习通",url:"https://mooc1.chaoxing.com/course/phone/courselisthead?passed=1"})
+                                var p = Qt.createComponent("XxtWebPage.qml").createObject(parent,{title:"学习通",url:"https://mooc1.chaoxing.com/course/phone/courselisthead?passed=1"})
                                 studyStack.push(p)
                             }
 
@@ -126,28 +126,4 @@ AppPage {
 
     }
 
-    //    DownloadableResource {
-    //        id: pdfResource
-    //        source: "http://www.orimi.com/pdf-test.pdf"
-    //        storageLocation: FileUtils.DocumentsLocation
-    //        storageName: "pdf-test.pdf"
-    //        extractAsPackage: false
-    //        // if the download is competed, available will be set to true
-    //        onAvailableChanged: if(available) openPdf()
-    //    }
-    //    function openPdf() {
-    //        // you can also open files with nativeUtils.openUrl() now (for paths starting with "file://")
-    //        //nativeUtils.openUrl(pdfResource.storagePath)
-    //        // with V-Play 2.17.0 you can also use fileUtils.openFile()
-    //        fileUtils.openFile(pdfResource.storagePath)
-    //    }
-    //    WebView {
-    //        id:webview
-    //        anchors.fill: parent
-
-    //        url:  "https://www.baidu.com"
-    //        Component.onCompleted: {
-    //            webview.url="https://www.baidu.com"
-    //        }
-    //    }
 }

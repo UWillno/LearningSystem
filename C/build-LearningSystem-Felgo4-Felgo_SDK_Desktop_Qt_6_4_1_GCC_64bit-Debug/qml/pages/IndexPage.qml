@@ -39,10 +39,12 @@ AppPage {
                         text:"当前题库版本:" + version
                     }
                     AppButton {
+//                        icon: IconType.upload
+                        iconType: IconType.refresh
                         anchors.horizontalCenter: parent.horizontalCenter
                         text:"下载/更新"
                         onClicked: {
-//                            questionResource.download()
+                            //                            questionResource.download()
                             userLogic.getQuestionsDB()
                         }
                     }
@@ -64,13 +66,18 @@ AppPage {
                         spacing:dp(10)
                         AppButton {
                             text: "上传"
-
+                            iconType: IconType.upload
                             onClicked: {
-//                                NativeUtils.displayFilePicker("asdasd");
+                                settings.saveQuestions()
+                                //                                NativeUtils.displayFilePicker("asdasd");
                             }
                         }
                         AppButton {
+                             iconType: IconType.download
                             text: "下载"
+                            onClicked: {
+                                console.log(logic.getDate())
+                            }
                         }
                     }
 
@@ -85,23 +92,30 @@ AppPage {
     Connections{
         target: userLogic
         onGetQuestionsDBSucceed: questionsDB =>{
-            settings.questionsDB = questionsDB
-//            console.log(questionsDB)
-        }
+                                     if(settings.questionsDB["version"] === questionsDB["version"] )
+                                     {
+                                        toastManager.show("题库已是最新版！",1000)
+                                     }
+                                     else{
+                                         settings.questionsDB = questionsDB
+                                         toastManager.show("下载/更新成功！",1000)
+                                     }
+                                     //            console.log(questionsDB)
+                                 }
     }
 
-//    Connections {
-//        target: NativeUtils
-//        onFilePickerFinished:(accepted,files)=>{
-//                                 if(accepted)
-////                                 console.log(files[0])
-//                                 qm.upload(files[0])
-//                             }
+    //    Connections {
+    //        target: NativeUtils
+    //        onFilePickerFinished:(accepted,files)=>{
+    //                                 if(accepted)
+    ////                                 console.log(files[0])
+    //                                 qm.upload(files[0])
+    //                             }
 
 
 
 
-//    }
+    //    }
 
 }
 

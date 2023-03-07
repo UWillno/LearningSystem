@@ -66,6 +66,7 @@ qt_add_qml_module(appLearningSystem-Felgo4
     NO_RESOURCE_TARGET_PATH
 )
 
+
 # NOTE: for PUBLISHING, perform the following steps:
 # 1. comment the deploy_resources line above, to avoid shipping your qml files with the application (instead they get compiled to the app binary)
 # 2. uncomment the QML_FILES and RESOURCES above; this compiles your qml files and js files to the app binary and protects your source code

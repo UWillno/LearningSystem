@@ -189,6 +189,11 @@
             "signals": [
                 {
                     "access": "public",
+                    "name": "changed",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
                     "name": "usernameChanged",
                     "returnType": "void"
                 },
@@ -317,6 +322,21 @@
                         }
                     ],
                     "name": "isRight",
+                    "returnType": "bool"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "id",
+                            "type": "qint32"
+                        },
+                        {
+                            "name": "type",
+                            "type": "qint32"
+                        }
+                    ],
+                    "name": "removeW",
                     "returnType": "bool"
                 }
             ],

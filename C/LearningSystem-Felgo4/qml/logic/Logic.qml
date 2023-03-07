@@ -76,6 +76,35 @@ Item {
         return JSON.parse(xhr.responseText)
     }
 
+    function toJson(object){
+        return JSON.parse(JSON.stringify(object))
+    }
 
+    function getDate(){
+        var d = new Date(); //获取系统当前时间
+        var year = d.getFullYear(); //获取年份
+        var month = d.getMonth() + 1; //获取月份，注意要加1
+        var date = d.getDate(); //获取日期
+        var hour = d.getHours(); //获取小时
+        var minute = d.getMinutes(); //获取分钟
+        var second = d.getSeconds(); //获取秒
+        //如果月份、日期、小时、分钟、秒小于10，就在前面加0
+        if (month < 10) {
+          month = "0" + month;
+        }
+        if (date < 10) {
+          date = "0" + date;
+        }
+        if (hour < 10) {
+          hour = "0" + hour;
+        }
+        if (minute < 10) {
+          minute = "0" + minute;
+        }
+        if (second < 10) {
+          second = "0" + second;
+        }
+        return year + "-" + month + "-" + date + " " + hour + ":" + minute + ":" + second
+    }
 
 }

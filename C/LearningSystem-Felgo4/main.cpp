@@ -36,7 +36,6 @@ int main(int argc, char *argv[])
     Settings settings;
     engine.rootContext()->setContextProperty("qm",&qmlMediator);
     engine.rootContext()->setContextProperty("ss",&settings);
-
     //    qmlRegisterType<QmlMediator>("Uwillno.qm",1,0,"QmlMediator");
     //    qmlRegisterType<Settings>("UWillno.ss",1,0,"Settings");
     felgo.initialize(&engine);

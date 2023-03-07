@@ -18,14 +18,14 @@ AppPage {
         model: [
             {
                 text: "发帖",
-                detailText: "Immerse Oneself In Exercises",
-                iconType: IconType.apple
+                detailText: "To Post",
+                icon: IconType.send
             },
 
             {
                 text: "看贴",
-                detailText: "Historical Mistakes",
-                iconType: IconType.beer
+                detailText: "To Reply",
+                icon: IconType.weibo
             },
         ]
     }

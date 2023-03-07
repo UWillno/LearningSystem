@@ -5,22 +5,21 @@ AppListItem {
 
     property string answer
     property alias myanswer : blankInput.text
-    property alias result: resultIcon.visible
+    property alias resultDisplay: resultIcon.visible
+    property bool result: (answer === myanswer)
     leftItem: AppTextInput{
         id:blankInput
         placeholderText: "填空"
-        width: dp(200)
-        onTextChanged: {
-            console.log(answer)
-            console.log(myanswer)
-            console.log(answer === myanswer)
-        }
+        width: dp(250)
+        height: parent.height
+        clip: true
     }
 
     rightItem: AppIcon {
         id:resultIcon
+        height: parent.height
         visible: false
-        iconType: (answer === myanswer) ? IconType.check : IconType.remove
-        color: (iconType === "check") ? "green" : "red"
+        iconType: result ? IconType.check : IconType.remove
+        color: result ? "green" : "red"
     }
 }
