@@ -285,6 +285,81 @@ bool Settings::removeW(qint32 id, qint32 type)
     return false;
 }
 
+void Settings::clear()
+{
+    resetCookie();
+    resetCxid();
+    resetUsername();
+    resetPassword();
+    resetPhone();
+//    resetRightCQ();
+//    resetRightFQ();
+//    resetRightTQ();
+//    resetWrongCQ();
+//    resetWrongFQ();
+//    resetWrongTQ();
+}
+
+void Settings::resetRightFQ()
+{
+    setRightFQ({}); // TODO: Adapt to use your actual default value
+}
+
+void Settings::resetRightTQ()
+{
+    setRightTQ({}); // TODO: Adapt to use your actual default value
+}
+
+void Settings::resetRightCQ()
+{
+    setRightCQ({}); // TODO: Adapt to use your actual default value
+}
+
+void Settings::resetWrongFQ()
+{
+    setWrongFQ({}); // TODO: Adapt to use your actual default value
+}
+
+void Settings::resetWrongTQ()
+{
+    setWrongTQ({}); // TODO: Adapt to use your actual default value
+}
+
+void Settings::resetWrongCQ()
+{
+    setWrongCQ({}); // TODO: Adapt to use your actual default value
+}
+
+void Settings::resetFileName()
+{
+    setFileName({}); // TODO: Adapt to use your actual default value
+}
+
+void Settings::resetCookie()
+{
+    setCookie({}); // TODO: Adapt to use your actual default value
+}
+
+void Settings::resetPassword()
+{
+    setPassword({}); // TODO: Adapt to use your actual default value
+}
+
+void Settings::resetPhone()
+{
+    setPhone({}); // TODO: Adapt to use your actual default value
+}
+
+void Settings::resetCxid()
+{
+    setCxid({}); // TODO: Adapt to use your actual default value
+}
+
+void Settings::resetUsername()
+{
+    setUsername({}); // TODO: Adapt to use your actual default value
+}
+
 QSet<qint32> Settings::rightFQ() const
 {
     return m_rightFQ;

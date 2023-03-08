@@ -26,7 +26,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 namespace {
 struct qt_meta_stringdata_SqlOperator_t {
-    uint offsetsAndSizes[82];
+    uint offsetsAndSizes[102];
     char stringdata0[12];
     char stringdata1[15];
     char stringdata2[1];
@@ -57,17 +57,27 @@ struct qt_meta_stringdata_SqlOperator_t {
     char stringdata27[7];
     char stringdata28[11];
     char stringdata29[15];
-    char stringdata30[5];
-    char stringdata31[14];
-    char stringdata32[9];
-    char stringdata33[8];
-    char stringdata34[20];
-    char stringdata35[15];
-    char stringdata36[10];
-    char stringdata37[4];
-    char stringdata38[19];
-    char stringdata39[15];
+    char stringdata30[14];
+    char stringdata31[5];
+    char stringdata32[14];
+    char stringdata33[9];
+    char stringdata34[8];
+    char stringdata35[20];
+    char stringdata36[15];
+    char stringdata37[10];
+    char stringdata38[4];
+    char stringdata39[19];
     char stringdata40[15];
+    char stringdata41[15];
+    char stringdata42[16];
+    char stringdata43[6];
+    char stringdata44[5];
+    char stringdata45[11];
+    char stringdata46[6];
+    char stringdata47[5];
+    char stringdata48[11];
+    char stringdata49[15];
+    char stringdata50[12];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_SqlOperator_t::offsetsAndSizes) + ofs), len 
@@ -103,17 +113,27 @@ Q_CONSTINIT static const qt_meta_stringdata_SqlOperator_t qt_meta_stringdata_Sql
         QT_MOC_LITERAL(390, 6),  // "postId"
         QT_MOC_LITERAL(397, 10),  // "deletePost"
         QT_MOC_LITERAL(408, 14),  // "deleteComments"
-        QT_MOC_LITERAL(423, 4),  // "page"
-        QT_MOC_LITERAL(428, 13),  // "insertComment"
-        QT_MOC_LITERAL(442, 8),  // "Comment&"
-        QT_MOC_LITERAL(451, 7),  // "comment"
-        QT_MOC_LITERAL(459, 19),  // "selectCommentsCount"
-        QT_MOC_LITERAL(479, 14),  // "insertResource"
-        QT_MOC_LITERAL(494, 9),  // "Resource&"
-        QT_MOC_LITERAL(504, 3),  // "res"
-        QT_MOC_LITERAL(508, 18),  // "selectAllResources"
-        QT_MOC_LITERAL(527, 14),  // "updateResource"
-        QT_MOC_LITERAL(542, 14)   // "deleteResource"
+        QT_MOC_LITERAL(423, 13),  // "deleteComment"
+        QT_MOC_LITERAL(437, 4),  // "page"
+        QT_MOC_LITERAL(442, 13),  // "insertComment"
+        QT_MOC_LITERAL(456, 8),  // "Comment&"
+        QT_MOC_LITERAL(465, 7),  // "comment"
+        QT_MOC_LITERAL(473, 19),  // "selectCommentsCount"
+        QT_MOC_LITERAL(493, 14),  // "insertResource"
+        QT_MOC_LITERAL(508, 9),  // "Resource&"
+        QT_MOC_LITERAL(518, 3),  // "res"
+        QT_MOC_LITERAL(522, 18),  // "selectAllResources"
+        QT_MOC_LITERAL(541, 14),  // "updateResource"
+        QT_MOC_LITERAL(556, 14),  // "deleteResource"
+        QT_MOC_LITERAL(571, 15),  // "selectResources"
+        QT_MOC_LITERAL(587, 5),  // "Post&"
+        QT_MOC_LITERAL(593, 4),  // "post"
+        QT_MOC_LITERAL(598, 10),  // "createUser"
+        QT_MOC_LITERAL(609, 5),  // "User&"
+        QT_MOC_LITERAL(615, 4),  // "user"
+        QT_MOC_LITERAL(620, 10),  // "userExists"
+        QT_MOC_LITERAL(631, 14),  // "updateUserData"
+        QT_MOC_LITERAL(646, 11)   // "getUserData"
     },
     "SqlOperator",
     "insertQuestion",
@@ -145,6 +165,7 @@ Q_CONSTINIT static const qt_meta_stringdata_SqlOperator_t qt_meta_stringdata_Sql
     "postId",
     "deletePost",
     "deleteComments",
+    "deleteComment",
     "page",
     "insertComment",
     "Comment&",
@@ -155,7 +176,16 @@ Q_CONSTINIT static const qt_meta_stringdata_SqlOperator_t qt_meta_stringdata_Sql
     "res",
     "selectAllResources",
     "updateResource",
-    "deleteResource"
+    "deleteResource",
+    "selectResources",
+    "Post&",
+    "post",
+    "createUser",
+    "User&",
+    "user",
+    "userExists",
+    "updateUserData",
+    "getUserData"
 };
 #undef QT_MOC_LITERAL
 } // unnamed namespace
@@ -166,7 +196,7 @@ Q_CONSTINIT static const uint qt_meta_data_SqlOperator[] = {
       10,       // revision
        0,       // classname
        0,    0, // classinfo
-      21,   14, // methods
+      28,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -174,27 +204,34 @@ Q_CONSTINIT static const uint qt_meta_data_SqlOperator[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    1,  140,    2, 0x0a,    1 /* Public */,
-       5,    0,  143,    2, 0x0a,    3 /* Public */,
-       6,    1,  144,    2, 0x0a,    4 /* Public */,
-       7,    2,  147,    2, 0x0a,    6 /* Public */,
-      12,    0,  152,    2, 0x0a,    9 /* Public */,
-      14,    0,  153,    2, 0x0a,   10 /* Public */,
-      16,    0,  154,    2, 0x0a,   11 /* Public */,
-      18,    0,  155,    2, 0x0a,   12 /* Public */,
-      19,    5,  156,    2, 0x0a,   13 /* Public */,
-      25,    0,  167,    2, 0x0a,   19 /* Public */,
-      26,    1,  168,    2, 0x0a,   20 /* Public */,
-      28,    1,  171,    2, 0x0a,   22 /* Public */,
-      29,    1,  174,    2, 0x0a,   24 /* Public */,
-      25,    1,  177,    2, 0x0a,   26 /* Public */,
-      31,    1,  180,    2, 0x0a,   28 /* Public */,
-      26,    2,  183,    2, 0x0a,   30 /* Public */,
-      34,    1,  188,    2, 0x0a,   33 /* Public */,
-      35,    1,  191,    2, 0x0a,   35 /* Public */,
-      38,    0,  194,    2, 0x0a,   37 /* Public */,
-      39,    1,  195,    2, 0x0a,   38 /* Public */,
-      40,    1,  198,    2, 0x0a,   40 /* Public */,
+       1,    1,  182,    2, 0x0a,    1 /* Public */,
+       5,    0,  185,    2, 0x0a,    3 /* Public */,
+       6,    1,  186,    2, 0x0a,    4 /* Public */,
+       7,    2,  189,    2, 0x0a,    6 /* Public */,
+      12,    0,  194,    2, 0x0a,    9 /* Public */,
+      14,    0,  195,    2, 0x0a,   10 /* Public */,
+      16,    0,  196,    2, 0x0a,   11 /* Public */,
+      18,    0,  197,    2, 0x0a,   12 /* Public */,
+      19,    5,  198,    2, 0x0a,   13 /* Public */,
+      25,    0,  209,    2, 0x0a,   19 /* Public */,
+      26,    1,  210,    2, 0x0a,   20 /* Public */,
+      28,    1,  213,    2, 0x0a,   22 /* Public */,
+      29,    1,  216,    2, 0x0a,   24 /* Public */,
+      30,    1,  219,    2, 0x0a,   26 /* Public */,
+      25,    1,  222,    2, 0x0a,   28 /* Public */,
+      32,    1,  225,    2, 0x0a,   30 /* Public */,
+      26,    2,  228,    2, 0x0a,   32 /* Public */,
+      35,    1,  233,    2, 0x0a,   35 /* Public */,
+      36,    1,  236,    2, 0x0a,   37 /* Public */,
+      39,    0,  239,    2, 0x0a,   39 /* Public */,
+      40,    1,  240,    2, 0x0a,   40 /* Public */,
+      41,    1,  243,    2, 0x0a,   42 /* Public */,
+      42,    1,  246,    2, 0x0a,   44 /* Public */,
+      19,    1,  249,    2, 0x0a,   46 /* Public */,
+      45,    1,  252,    2, 0x0a,   48 /* Public */,
+      48,    1,  255,    2, 0x0a,   50 /* Public */,
+      49,    1,  258,    2, 0x0a,   52 /* Public */,
+      50,    1,  261,    2, 0x0a,   54 /* Public */,
 
  // slots: parameters
     QMetaType::Bool, 0x80000000 | 3,    4,
@@ -210,14 +247,21 @@ Q_CONSTINIT static const uint qt_meta_data_SqlOperator[] = {
     QMetaType::QJsonArray, 0x80000000 | 8,   27,
     QMetaType::Bool, 0x80000000 | 8,    9,
     QMetaType::Bool, 0x80000000 | 8,    9,
-    QMetaType::QJsonArray, 0x80000000 | 8,   30,
-    QMetaType::Bool, 0x80000000 | 32,   33,
-    QMetaType::QJsonArray, 0x80000000 | 8, QMetaType::Int,   27,   30,
-    QMetaType::Int, 0x80000000 | 8,   27,
-    QMetaType::Bool, 0x80000000 | 36,   37,
-    QMetaType::QJsonArray,
-    QMetaType::Bool, 0x80000000 | 36,   37,
     QMetaType::Bool, 0x80000000 | 8,    9,
+    QMetaType::QJsonArray, 0x80000000 | 8,   31,
+    QMetaType::Bool, 0x80000000 | 33,   34,
+    QMetaType::QJsonArray, 0x80000000 | 8, QMetaType::Int,   27,   31,
+    QMetaType::Int, 0x80000000 | 8,   27,
+    QMetaType::Bool, 0x80000000 | 37,   38,
+    QMetaType::QJsonArray,
+    QMetaType::Bool, 0x80000000 | 37,   38,
+    QMetaType::Bool, 0x80000000 | 8,    9,
+    QMetaType::QJsonArray, 0x80000000 | 8,   11,
+    QMetaType::Bool, 0x80000000 | 43,   44,
+    QMetaType::Bool, 0x80000000 | 46,   47,
+    QMetaType::Bool, QMetaType::Int,   23,
+    QMetaType::Bool, 0x80000000 | 46,   47,
+    QMetaType::QJsonObject, QMetaType::Int,   23,
 
        0        // eod
 };
@@ -269,6 +313,9 @@ Q_CONSTINIT const QMetaObject SqlOperator::staticMetaObject = { {
         // method 'deleteComments'
         QtPrivate::TypeAndForceComplete<bool, std::false_type>,
         QtPrivate::TypeAndForceComplete<qint32 &, std::false_type>,
+        // method 'deleteComment'
+        QtPrivate::TypeAndForceComplete<bool, std::false_type>,
+        QtPrivate::TypeAndForceComplete<qint32 &, std::false_type>,
         // method 'selectPosts'
         QtPrivate::TypeAndForceComplete<QJsonArray, std::false_type>,
         QtPrivate::TypeAndForceComplete<qint32 &, std::false_type>,
@@ -292,7 +339,25 @@ Q_CONSTINIT const QMetaObject SqlOperator::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<Resource &, std::false_type>,
         // method 'deleteResource'
         QtPrivate::TypeAndForceComplete<bool, std::false_type>,
-        QtPrivate::TypeAndForceComplete<qint32 &, std::false_type>
+        QtPrivate::TypeAndForceComplete<qint32 &, std::false_type>,
+        // method 'selectResources'
+        QtPrivate::TypeAndForceComplete<QJsonArray, std::false_type>,
+        QtPrivate::TypeAndForceComplete<qint32 &, std::false_type>,
+        // method 'submitPost'
+        QtPrivate::TypeAndForceComplete<bool, std::false_type>,
+        QtPrivate::TypeAndForceComplete<Post &, std::false_type>,
+        // method 'createUser'
+        QtPrivate::TypeAndForceComplete<bool, std::false_type>,
+        QtPrivate::TypeAndForceComplete<User &, std::false_type>,
+        // method 'userExists'
+        QtPrivate::TypeAndForceComplete<bool, std::false_type>,
+        QtPrivate::TypeAndForceComplete<const qint32 &, std::false_type>,
+        // method 'updateUserData'
+        QtPrivate::TypeAndForceComplete<bool, std::false_type>,
+        QtPrivate::TypeAndForceComplete<User &, std::false_type>,
+        // method 'getUserData'
+        QtPrivate::TypeAndForceComplete<QJsonObject, std::false_type>,
+        QtPrivate::TypeAndForceComplete<const qint32 &, std::false_type>
     >,
     nullptr
 } };
@@ -327,22 +392,36 @@ void SqlOperator::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
             if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
         case 12: { bool _r = _t->deleteComments((*reinterpret_cast< std::add_pointer_t<qint32&>>(_a[1])));
             if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
-        case 13: { QJsonArray _r = _t->selectPosts((*reinterpret_cast< std::add_pointer_t<qint32&>>(_a[1])));
-            if (_a[0]) *reinterpret_cast< QJsonArray*>(_a[0]) = std::move(_r); }  break;
-        case 14: { bool _r = _t->insertComment((*reinterpret_cast< std::add_pointer_t<Comment&>>(_a[1])));
+        case 13: { bool _r = _t->deleteComment((*reinterpret_cast< std::add_pointer_t<qint32&>>(_a[1])));
             if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
-        case 15: { QJsonArray _r = _t->selectComments((*reinterpret_cast< std::add_pointer_t<qint32&>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<qint32>>(_a[2])));
+        case 14: { QJsonArray _r = _t->selectPosts((*reinterpret_cast< std::add_pointer_t<qint32&>>(_a[1])));
             if (_a[0]) *reinterpret_cast< QJsonArray*>(_a[0]) = std::move(_r); }  break;
-        case 16: { qint32 _r = _t->selectCommentsCount((*reinterpret_cast< std::add_pointer_t<qint32&>>(_a[1])));
+        case 15: { bool _r = _t->insertComment((*reinterpret_cast< std::add_pointer_t<Comment&>>(_a[1])));
+            if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
+        case 16: { QJsonArray _r = _t->selectComments((*reinterpret_cast< std::add_pointer_t<qint32&>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<qint32>>(_a[2])));
+            if (_a[0]) *reinterpret_cast< QJsonArray*>(_a[0]) = std::move(_r); }  break;
+        case 17: { qint32 _r = _t->selectCommentsCount((*reinterpret_cast< std::add_pointer_t<qint32&>>(_a[1])));
             if (_a[0]) *reinterpret_cast< qint32*>(_a[0]) = std::move(_r); }  break;
-        case 17: { bool _r = _t->insertResource((*reinterpret_cast< std::add_pointer_t<Resource&>>(_a[1])));
+        case 18: { bool _r = _t->insertResource((*reinterpret_cast< std::add_pointer_t<Resource&>>(_a[1])));
             if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
-        case 18: { QJsonArray _r = _t->selectAllResources();
+        case 19: { QJsonArray _r = _t->selectAllResources();
             if (_a[0]) *reinterpret_cast< QJsonArray*>(_a[0]) = std::move(_r); }  break;
-        case 19: { bool _r = _t->updateResource((*reinterpret_cast< std::add_pointer_t<Resource&>>(_a[1])));
+        case 20: { bool _r = _t->updateResource((*reinterpret_cast< std::add_pointer_t<Resource&>>(_a[1])));
             if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
-        case 20: { bool _r = _t->deleteResource((*reinterpret_cast< std::add_pointer_t<qint32&>>(_a[1])));
+        case 21: { bool _r = _t->deleteResource((*reinterpret_cast< std::add_pointer_t<qint32&>>(_a[1])));
             if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
+        case 22: { QJsonArray _r = _t->selectResources((*reinterpret_cast< std::add_pointer_t<qint32&>>(_a[1])));
+            if (_a[0]) *reinterpret_cast< QJsonArray*>(_a[0]) = std::move(_r); }  break;
+        case 23: { bool _r = _t->submitPost((*reinterpret_cast< std::add_pointer_t<Post&>>(_a[1])));
+            if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
+        case 24: { bool _r = _t->createUser((*reinterpret_cast< std::add_pointer_t<User&>>(_a[1])));
+            if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
+        case 25: { bool _r = _t->userExists((*reinterpret_cast< std::add_pointer_t<qint32>>(_a[1])));
+            if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
+        case 26: { bool _r = _t->updateUserData((*reinterpret_cast< std::add_pointer_t<User&>>(_a[1])));
+            if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
+        case 27: { QJsonObject _r = _t->getUserData((*reinterpret_cast< std::add_pointer_t<qint32>>(_a[1])));
+            if (_a[0]) *reinterpret_cast< QJsonObject*>(_a[0]) = std::move(_r); }  break;
         default: ;
         }
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
@@ -385,13 +464,13 @@ int SqlOperator::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 21)
+        if (_id < 28)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 21;
+        _id -= 28;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 21)
+        if (_id < 28)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 21;
+        _id -= 28;
     }
     return _id;
 }

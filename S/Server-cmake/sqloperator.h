@@ -20,6 +20,7 @@
 #include "post.h"
 #include "comment.h"
 #include "resource.h"
+#include "user.h"
 
 //#include "
 class SqlOperator : public QObject
@@ -54,14 +55,18 @@ public slots:
 
     void commitQuestions();
 
+    // 弃用
     bool submitPost(QString &title, QString &text, qint32 &cxid, QString &username,qint32 &type);
 
     QJsonArray selectPosts();
+
     QJsonArray selectComments(qint32 &postId);
 
     bool deletePost(qint32 &id);
 
     bool deleteComments(qint32 &id);
+
+    bool deleteComment(qint32 &id);
 
     QJsonArray selectPosts(qint32 &page);
 
@@ -78,6 +83,18 @@ public slots:
     bool updateResource(Resource &res);
 
     bool deleteResource(qint32 &id);
+
+    QJsonArray selectResources(qint32 &type);
+
+    bool submitPost(Post &post);
+
+    bool createUser(User &user);
+
+    bool userExists(const qint32 &cxid);
+
+    bool updateUserData(User &user);
+
+    QJsonObject getUserData(const qint32 &cxid);
 
 private:
     QSqlDatabase m_db;

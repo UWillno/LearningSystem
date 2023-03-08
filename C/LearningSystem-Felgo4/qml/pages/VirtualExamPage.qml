@@ -70,6 +70,8 @@ AppPage {
                     text:"交卷"
                     anchors.horizontalCenter:  parent.horizontalCenter
                     onClicked: {
+                        enabled = false
+                        visible = false
                         var wrong = []
                         var right = []
                         questionComponents.forEach(function(obj,i){
@@ -83,9 +85,9 @@ AppPage {
                                 wrong.push(i)
                                 //                                userLogic.addWQ(obj.question.id,obj.type)
                             }
-//                            console.log(JSON.stringify(exam))
-//                            console.log(obj.question.id)
-//                            console.log(obj.type)
+                            //                            console.log(JSON.stringify(exam))
+                            //                            console.log(obj.question.id)
+                            //                            console.log(obj.type)
                             //                            console.log(i)
                         })
                         const exam = {
@@ -97,14 +99,23 @@ AppPage {
                             point:rect.points,
                             date: logic.getDate()
                         }
-                        console.log(JSON.stringify(exam))
+                        settings.saveExams(exam)
+
+                        //                        console.log(JSON.stringify(exam))
+                        //                        console.log(JSON.stringify(settings.exams))
                         pointText.visible = true
+
                     }
                 }
 
                 AppText{
                     id:pointText
                     visible: false
+                    //                    font.family: "Helvetica"
+                    anchors.centerIn: parent
+                    font.pointSize: 24
+                    color: rect.points >= 60 ? "blue" : "red"
+
                     text: "得分:" + rect.points
                 }
             }

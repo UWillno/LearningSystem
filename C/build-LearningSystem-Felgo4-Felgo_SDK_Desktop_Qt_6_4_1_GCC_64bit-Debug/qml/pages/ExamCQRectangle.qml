@@ -44,6 +44,13 @@ Rectangle {
                     radio1.toggle()
                 }
             }
+            rightItem: AppIcon {
+                id:resultIconA
+                height: parent.height
+                visible: false
+                iconType: isRight ? IconType.check : IconType.remove
+                color: isRight ? "green" : "red"
+            }
         }
         AppListItem {
             id: itemB
@@ -58,6 +65,13 @@ Rectangle {
                 if(!radio2.checked){
                     radio2.toggle()
                 }
+            }
+            rightItem: AppIcon {
+                id:resultIconB
+                height: parent.height
+                visible: false
+                iconType: isRight ? IconType.check : IconType.remove
+                color: isRight ? "green" : "red"
             }
         }
         AppListItem {
@@ -74,6 +88,13 @@ Rectangle {
                     radio3.toggle()
                 }
             }
+            rightItem: AppIcon {
+                id:resultIconC
+                height: parent.height
+                visible: false
+                iconType: isRight ? IconType.check : IconType.remove
+                color: isRight ? "green" : "red"
+            }
         }
         AppListItem {
             id: itemD
@@ -89,12 +110,57 @@ Rectangle {
                     radio4.toggle()
                 }
             }
+            rightItem: AppIcon {
+                id:resultIconD
+                height: parent.height
+                visible: false
+                iconType: isRight ? IconType.check : IconType.remove
+                color: isRight ? "green" : "red"
+            }
         }
 
         AppListItem {
             visible:finished
             text : "正确答案:"+answer
             textColor: "green"
+        }
+    }
+
+    onFinishedChanged: {
+        if(isRight){
+            if(radio1.checked){
+                resultIconA.visible = true
+                itemA.textColor = "green"
+            }
+            if(radio2.checked){
+                resultIconB.visible = true
+                itemB.textColor = "green"
+            }
+            if(radio3.checked){
+                resultIconC.visible = true
+                itemC.textColor = "green"
+            }
+            if(radio4.checked){
+                resultIconD.visible = true
+                itemD.textColor = "green"
+            }
+        }else {
+            if(radio1.checked){
+                resultIconA.visible = true
+                itemA.textColor = "red"
+            }
+            if(radio2.checked){
+                resultIconB.visible = true
+                itemB.textColor = "red"
+            }
+            if(radio3.checked){
+                resultIconC.visible = true
+                itemC.textColor = "red"
+            }
+            if(radio4.checked){
+                resultIconD.visible = true
+                itemD.textColor = "red"
+            }
         }
     }
 }

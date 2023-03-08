@@ -28,12 +28,12 @@ public:
     QString fileName() const;
     void setFileName(const QString &newFileName);
 
-    Q_PROPERTY(QString username READ username WRITE setUsername NOTIFY usernameChanged)
-    Q_PROPERTY(qint32 cxid READ cxid WRITE setCxid NOTIFY cxidChanged)
-    Q_PROPERTY(qint64 phone READ phone WRITE setPhone NOTIFY phoneChanged)
-    Q_PROPERTY(QString password READ password WRITE setPassword NOTIFY passwordChanged)
-    Q_PROPERTY(QString cookie READ cookie WRITE setCookie NOTIFY cookieChanged)
-    Q_PROPERTY(QString fileName READ fileName WRITE setFileName NOTIFY fileNameChanged)
+    //    Q_PROPERTY(QString username READ username WRITE setUsername NOTIFY usernameChanged)
+    //    Q_PROPERTY(qint32 cxid READ cxid WRITE setCxid NOTIFY cxidChanged)
+    //    Q_PROPERTY(qint64 phone READ phone WRITE setPhone NOTIFY phoneChanged)
+    //    Q_PROPERTY(QString password READ password WRITE setPassword NOTIFY passwordChanged)
+    //    Q_PROPERTY(QString cookie READ cookie WRITE setCookie NOTIFY cookieChanged)
+    //    Q_PROPERTY(QString fileName READ fileName WRITE setFileName NOTIFY fileNameChanged)
 
 
     QSet<qint32> wrongCQ() const;
@@ -54,12 +54,48 @@ public:
     QSet<qint32> rightFQ() const;
     void setRightFQ(const QSet<qint32> &newRightFQ);
 
-    Q_PROPERTY(QSet<qint32> wrongCQ READ wrongCQ WRITE setWrongCQ NOTIFY wrongCQChanged)
-    Q_PROPERTY(QSet<qint32> wrongTQ READ wrongTQ WRITE setWrongTQ NOTIFY wrongTQChanged)
-    Q_PROPERTY(QSet<qint32> wrongFQ READ wrongFQ WRITE setWrongFQ NOTIFY wrongFQChanged)
-    Q_PROPERTY(QSet<qint32> rightCQ READ rightCQ WRITE setRightCQ NOTIFY rightCQChanged)
-    Q_PROPERTY(QSet<qint32> rightTQ READ rightTQ WRITE setRightTQ NOTIFY rightTQChanged)
-    Q_PROPERTY(QSet<qint32> rightFQ READ rightFQ WRITE setRightFQ NOTIFY rightFQChanged)
+    //    Q_PROPERTY(QSet<qint32> wrongCQ READ wrongCQ WRITE setWrongCQ NOTIFY wrongCQChanged)
+    //    Q_PROPERTY(QSet<qint32> wrongTQ READ wrongTQ WRITE setWrongTQ NOTIFY wrongTQChanged)
+    //    Q_PROPERTY(QSet<qint32> wrongFQ READ wrongFQ WRITE setWrongFQ NOTIFY wrongFQChanged)
+    //    Q_PROPERTY(QSet<qint32> rightCQ READ rightCQ WRITE setRightCQ NOTIFY rightCQChanged)
+    //    Q_PROPERTY(QSet<qint32> rightTQ READ rightTQ WRITE setRightTQ NOTIFY rightTQChanged)
+    //    Q_PROPERTY(QSet<qint32> rightFQ READ rightFQ WRITE setRightFQ NOTIFY rightFQChanged)
+    Q_PROPERTY(QString username READ username WRITE setUsername RESET resetUsername NOTIFY usernameChanged)
+    Q_PROPERTY(qint32 cxid READ cxid WRITE setCxid RESET resetCxid NOTIFY cxidChanged)
+    Q_PROPERTY(qint64 phone READ phone WRITE setPhone RESET resetPhone NOTIFY phoneChanged)
+    Q_PROPERTY(QString password READ password WRITE setPassword RESET resetPassword NOTIFY passwordChanged)
+    Q_PROPERTY(QString cookie READ cookie WRITE setCookie RESET resetCookie NOTIFY cookieChanged)
+    Q_PROPERTY(QString fileName READ fileName WRITE setFileName RESET resetFileName NOTIFY fileNameChanged)
+    Q_PROPERTY(QSet<qint32> wrongCQ READ wrongCQ WRITE setWrongCQ RESET resetWrongCQ NOTIFY wrongCQChanged)
+    Q_PROPERTY(QSet<qint32> wrongTQ READ wrongTQ WRITE setWrongTQ RESET resetWrongTQ NOTIFY wrongTQChanged)
+    Q_PROPERTY(QSet<qint32> wrongFQ READ wrongFQ WRITE setWrongFQ RESET resetWrongFQ NOTIFY wrongFQChanged)
+    Q_PROPERTY(QSet<qint32> rightCQ READ rightCQ WRITE setRightCQ RESET resetRightCQ NOTIFY rightCQChanged)
+    Q_PROPERTY(QSet<qint32> rightTQ READ rightTQ WRITE setRightTQ RESET resetRightTQ NOTIFY rightTQChanged)
+    Q_PROPERTY(QSet<qint32> rightFQ READ rightFQ WRITE setRightFQ RESET resetRightFQ NOTIFY rightFQChanged)
+
+    void resetUsername();
+
+    void resetCxid();
+
+    void resetPhone();
+
+    void resetPassword();
+
+    void resetCookie();
+
+    void resetFileName();
+
+    void resetWrongCQ();
+
+    void resetWrongTQ();
+
+    void resetWrongFQ();
+
+    void resetRightCQ();
+
+    void resetRightTQ();
+
+    void resetRightFQ();
 
 signals:
 
@@ -99,6 +135,8 @@ public slots:
     bool isRight(qint32 id,qint32 type);
 
     bool removeW(qint32 id,qint32 type);
+
+    void clear();
 
 private:
     QSettings *m_settings;

@@ -29,7 +29,7 @@ Rectangle {
             id: itemA
             leftItem: AppRadio {
                 id: trueRadio
-//                icon: IconType
+                //                icon: IconType
                 value: true
                 anchors.verticalCenter: parent.verticalCenter
             }
@@ -38,6 +38,13 @@ Rectangle {
                 if(!trueRadio.checked){
                     trueRadio.toggle()
                 }
+            }
+            rightItem: AppIcon {
+                id:resultIconT
+                height: parent.height
+                visible: false
+                iconType: isRight ? IconType.check : IconType.remove
+                color: isRight ? "green" : "red"
             }
         }
         AppListItem {
@@ -54,6 +61,13 @@ Rectangle {
                     falseRadio.toggle()
                 }
             }
+            rightItem: AppIcon {
+                id:resultIconF
+                height: parent.height
+                visible: false
+                iconType: isRight ? IconType.check : IconType.remove
+                color: isRight ? "green" : "red"
+            }
         }
 
         AppListItem {
@@ -61,6 +75,26 @@ Rectangle {
             text : "正确答案:"+ answerDisplay
             textColor: "green"
         }
+    }
+
+    onFinishedChanged: {
+            if(isRight){
+                if(trueRadio.checked){
+                    resultIconT.visible = true
+                    itemA.textColor = "green"
+                }else{
+                    resultIconF.visible = true
+                    itemB.textColor = "green"
+                }
+            }else{
+                if(trueRadio.checked){
+                    resultIconT.visible = true
+                    itemA.textColor = "red"
+                }else{
+                    resultIconF.visible = true
+                    itemB.textColor = "red"
+                }
+            }
     }
 
     Component.onCompleted:{

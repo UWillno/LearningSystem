@@ -4,7 +4,7 @@ import Felgo
 
 Item {
 
-    id: logic
+    id: userLogic
     //    property string httpserver: "http://192.168.1.12/"
     //    http://192.168.1.12/
     //    property string localhost : "http://127.0.0.1/"
@@ -18,6 +18,7 @@ Item {
     signal userLoginSucceed()
     signal newUserLogined()
     signal postingSucceed()
+    signal logoutSucceed()
 
     signal oldUserLogined()
 
@@ -40,6 +41,7 @@ Item {
                 getUserInfo()
 
             }else{
+                toastManager.show("账号或密码错误？？",1000)
                 console.log("登录失败或接口失效")
                 //                return false
             }
@@ -224,13 +226,61 @@ Item {
         return arr;
     }
 
-    function upload(){
+    function uploadUserData(){
+        if(ss.cxid){
 
-
+            const xhr = new XMLHttpRequest()
+            xhr.open("POST",qhttpserver + "uploadUserData",true);
+            xhr.send(JSON.stringify({cxid:ss.cxid,questions:settings.questions,exams:settings.exams}))
+            xhr.onload = function (e) {
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 200) {
+                        if(xhr.responseText === "success"){
+                            toastManager.show("数据上传成功！",1000);
+                            settings.syncTime = logic.getDate()
+                        }
+                    } else {
+                        console.error(xhr.statusText);
+                    }
+                }
+            };
+        }
 
     }
 
+    function logout(){
+        ss.clear()
+        //        settings.clear()
+    }
 
+    function downloadUserData(){
+        if(ss.cxid){
+            const xhr = new XMLHttpRequest()
+            xhr.open("POST",qhttpserver + "userData/"+ss.cxid,true);
+            xhr.send(null)
+            xhr.onload = function (e) {
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 200) {
+                        console.log(xhr.responseText)
+                        const data = JSON.parse(xhr.responseText)
+                        settings.exams = data["exams"]
+                        settings.questions = data["questions"]
+                        ss.wrongCQ = data["questions"]["wrongCQ"]
+                        ss.wrongFQ = data["questions"]["wrongFQ"]
+                        ss.wrongTQ = data["questions"]["wrongTQ"]
+                        ss.rightCQ = data["questions"]["rightCQ"]
+                        ss.rightTQ = data["questions"]["rightTQ"]
+                        ss.rightFQ = data["questions"]["rightFQ"]
+                        toastManager.show("下载完成！",1000)
+                        settings.syncTime = logic.getDate()
+                    } else {
+                        console.error(xhr.statusText);
+                    }
+                }
+            };
+        }
+
+    }
 
     //    function addWQ(id,type){
     //        switch(type){

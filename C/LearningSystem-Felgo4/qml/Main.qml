@@ -34,6 +34,8 @@ App {
 
     Settings {
         id: settings
+
+//        signal loadquestionsDBFinished()
         property var questionsDB
         //        property var wrongCQ: JSON.parse(JSON.stringify(ss.wrongCQ))
         //        //        property var exams
@@ -46,30 +48,58 @@ App {
 
         property var questions
         property var exams
+        property bool autoSync
+        property string syncTime
 
         function saveQuestions(){
 
-            questions = {questions:[
-                        {   wrongCQ:ss.wrongCQ},
-                        {   wrongTQ:ss.wrongTQ},
-                        {   wrongFQ:ss.wrongFQ},
-                        {   rightCQ:ss.rightCQ},
-                        {   rightTQ:ss.rightTQ},
-                        {   rightFQ:ss.rightFQ},
-                ]}
+            questions = {
+                wrongCQ:ss.wrongCQ,
+                wrongTQ:ss.wrongTQ,
+                wrongFQ:ss.wrongFQ,
+                rightCQ:ss.rightCQ,
+                rightTQ:ss.rightTQ,
+                rightFQ:ss.rightFQ
+            }
+
 
             console.log(questions)
             console.log(JSON.stringify(questions))
 
         }
 
-        function saveExams(){
-
+        function saveExams(exam){
+            if(typeof(exams)==="undefined"){
+                var arr = []
+                arr.push(exam)
+                exams = arr
+            }else{
+                var a = exams
+                a.push(exam)
+                exams = a
+            }
+        }
+        function clear(){
+            questions = []
+            exams = []
+        }
+        Component.onCompleted:{
+            //            saveQuestions()
+            console.log(JSON.stringify(questions))
+            console.log(JSON.stringify(exams))
         }
 
 
-        Component.onCompleted:{
 
+        onAutoSyncChanged: {
+            console.log(autoSync)
+        }
+
+        onQuestionsDBChanged:  {
+//            loadquestionsDBFinished()
+        }
+        onExamsChanged: {
+            console.log(settings.exams.length)
         }
     }
 

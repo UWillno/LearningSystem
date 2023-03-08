@@ -292,7 +292,7 @@ QList<QSharedPointer<FillInTheBlanksQuestion>> SqlOperator::selectAllFQuestion()
 void SqlOperator::commitQuestions()
 {
     qInfo("tcp sql to http here !");
-    QString version = QString::number(QDateTime::currentMSecsSinceEpoch());
+    QString version = QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss");
     //    QFile file("currentQuestions.txt");
     QDir httpdir("/srv/http/");
     QFile file(httpdir.filePath("currentQuestions.json"));
@@ -475,6 +475,15 @@ bool SqlOperator::deleteComments(qint32 &id)
 {
     QSqlQuery query(m_db);
     query.prepare("DELETE FROM comment WHERE post_id = :id;");
+    query.bindValue(":id",id);
+    query.exec();
+    return commitDB(&query);
+}
+
+bool SqlOperator::deleteComment(qint32 &id)
+{
+    QSqlQuery query(m_db);
+    query.prepare("DELETE FROM comment WHERE id = :id;");
     query.bindValue(":id",id);
     query.exec();
     return commitDB(&query);
@@ -663,6 +672,140 @@ bool SqlOperator::deleteResource(qint32 &id)
     query.bindValue(":id",id);
     query.exec();
     return commitDB(&query);
+}
+
+QJsonArray SqlOperator::selectResources(qint32 &type)
+{
+    QJsonArray json;
+    QSqlQuery query(m_db);
+    query.prepare("SELECT * from resource where type = :type;");
+    query.bindValue(":type",type);
+    query.exec();
+
+    while(query.next()){
+        Resource res;
+        QJsonObject object;
+        res.id = query.value(0).toInt();
+        res.name = query.value(1).toString();
+        res.info = query.value(2).toString();
+        res.url = query.value(3).toString();
+        res.type = query.value(4).toInt();
+        //        qInfo() << query.value(0);
+        object.insert("id",res.id);
+        object.insert("name",res.name);
+        object.insert("info",res.info);
+        object.insert("url",res.url);
+        object.insert("type",res.type);
+        switch(res.type){
+        case 0:{
+            object.insert("typeText","文档资源");
+            break;
+        }
+        case 1:{
+            object.insert("typeText","图片资源");
+            break;
+        }
+        case 2:{
+            object.insert("typeText","视频资源");
+            break;
+        }
+        case 3:{
+            object.insert("typeText","WEB资源");
+            break;
+        }
+        }
+
+        json.append(object);
+    }
+
+    return json;
+
+}
+
+bool SqlOperator::submitPost(Post &post)
+{
+    if(post.cxid==0) return false;
+    QSqlQuery query(m_db);
+    switch (post.type) {
+    case 0:{
+        query.prepare("INSERT INTO post VALUES(NULL,:cxid,:username,:title,:text,NOW(),0);");
+
+        break;
+    }
+    case 1:{
+        query.prepare("INSERT INTO post VALUES(NULL,:cxid,:username,:title,:text,NOW(),1);");
+
+        break;
+    }
+    case 2:{
+        query.prepare("INSERT INTO post VALUES(NULL,:cxid,:username,:title,:text,NOW(),2);");
+
+        break;
+    }
+    default:{
+        return false;
+        break;
+    }
+    }
+    query.bindValue(":cxid",post.cxid);
+    query.bindValue(":username",post.username);
+    query.bindValue(":title",post.title);
+    query.bindValue(":text",post.text);
+    query.exec();
+
+    return commitDB(&query);
+}
+
+bool SqlOperator::createUser(User &user)
+{
+    QSqlQuery query(m_db);
+    query.prepare("INSERT INTO `user` VALUES (:cxid,:username,NULL,NULL);");
+    query.bindValue(":cxid",user.cxid);
+    query.bindValue(":username",user.username);
+    query.exec();
+    return commitDB(&query);
+}
+
+bool SqlOperator::userExists(const qint32 &cxid)
+{
+    QSqlQuery query(m_db);
+    query.prepare("SELECT EXISTS(SELECT * FROM `user` WHERE cxid = :cxid);");
+    query.bindValue(":cxid",cxid);
+    query.exec();
+    while(query.next()){
+        return query.value(0).toBool();
+    }
+    return false;
+}
+
+bool SqlOperator::updateUserData(User &user)
+{
+    QSqlQuery query(m_db);
+    query.prepare("UPDATE `user` SET questions = :questions, exams = :exams where cxid = :cxid ;");
+
+    query.bindValue(":questions",QString::fromUtf8(QJsonDocument(user.questions).toJson(QJsonDocument::Compact)));
+    query.bindValue(":exams",QString::fromUtf8(QJsonDocument(user.exams).toJson(QJsonDocument::Compact)));
+
+    //    query.bindValue(":questions",user.questions);
+    //    query.bindValue(":exams",user.exams);
+    query.bindValue(":cxid",user.cxid);
+    query.exec();
+    return commitDB(&query);
+}
+
+QJsonObject SqlOperator::getUserData(const qint32 &cxid)
+{
+    QSqlQuery query(m_db);
+    query.prepare("SELECT questions,exams FROM `user` WHERE cxid = :cxid;");
+    query.bindValue(":cxid",cxid);
+    query.exec();
+    QJsonObject object;
+    while(query.next()){
+        object.insert("questions",QJsonDocument::fromJson(query.value(0).toByteArray()).object());
+        object.insert("exams",QJsonDocument::fromJson(query.value(1).toByteArray()).array());
+        return object;
+    }
+    return object;
 }
 
 

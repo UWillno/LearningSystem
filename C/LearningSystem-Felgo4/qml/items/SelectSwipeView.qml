@@ -20,7 +20,15 @@ QuickControls2.SwipeView {
 
     Rectangle {
         AppListView {
-//            showSearch: true
+
+            showSearch : true
+
+            onSearch: {
+//                model.filterRole = "1"
+
+
+            }
+
             id:choiceView
             anchors.fill: parent
             //                        model: model1

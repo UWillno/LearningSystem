@@ -3,6 +3,7 @@
 
 #include <QObject>
 #include <QJsonArray>
+#include <QJsonObject>
 
 class User : public QObject
 {
@@ -13,7 +14,7 @@ public:
     QString username;
     qint32 cxid;
     // 错题
-    QJsonArray questions;
+    QJsonObject questions;
     // 考试
     QJsonArray exams;
 

@@ -19,6 +19,12 @@ HttpServer::HttpServer(QObject *parent)
     routeGetAllResources();
     routeUpdateResource();
     routeDeleteResource();
+    routeGetResourcesByType();
+    routeDeleteComment();
+    routeSubmitPost();
+    routeCreateUser();
+    routeGetUserData();
+    routeUpdateUserData();
     //    http://127.0.0.1:4444/test/1
     //    server.route("/test/", [] (const int page, const int sd) {
     //        qInfo()<< page;
@@ -203,6 +209,118 @@ void HttpServer::routeDeleteResource()
             return "error";
         }
 
+        return "error";
+    });
+}
+
+void HttpServer::routeGetResourcesByType()
+{
+    server.route("/getResourcesByType/",[](const qint32 type){ return QtConcurrent::run([](qint32 type){return Singleton<SqlOperator>::GetInstance().selectResources(type);},type).result();});
+}
+
+void HttpServer::routeDeleteComment()
+{
+    server.route("/deleteComment",[](const QHttpServerRequest &request){
+        if (request.method() == QHttpServerRequest::Method::Post){
+            QJsonObject object = QJsonDocument::fromJson(request.body()).object();
+            qInfo() << object;
+            bool ok =  QtConcurrent::run([&](){
+                qint32 id = object.value("id").toInt();
+                return (Singleton<SqlOperator>::GetInstance().deleteComment(id));
+            }).result();
+
+            return ok ?   "success" :  "error";
+
+        }else{
+            return "error";
+        }
+
+        return "error";
+    });
+}
+
+void HttpServer::routeSubmitPost()
+{
+    server.route("/submitPost",[](const QHttpServerRequest &request){
+
+        if(request.method() == QHttpServerRequest::Method::Post){
+            //            qInfo() << request.body();
+            QJsonObject object = QJsonDocument::fromJson(request.body()).object();
+            qInfo() << object;
+            //            title,text,ss.cxid,ss.username,type
+            bool ok =  QtConcurrent::run([&](){
+                Post post;
+                post.title = object.value("title").toString();
+                post.text = object.value("text").toString();
+                post.cxid = object.value("cxid").toInt();
+                post.username = object.value("username").toString();
+                post.type = object.value("type").toInt();
+                return (Singleton<SqlOperator>::GetInstance().submitPost(post));
+            }).result();
+
+            return ok ?   "success" :  "error";
+        }
+        return "error";
+    });
+}
+
+void HttpServer::routeCreateUser()
+{
+    server.route("/userExists/",[](const qint32 cxid){
+        return QtConcurrent::run([&]{return Singleton<SqlOperator>::GetInstance().userExists(cxid);}).result() ? "exist" : "new";
+    });
+
+    server.route("/createUser",[](const QHttpServerRequest &request){
+
+        if(request.method() == QHttpServerRequest::Method::Post){
+            //            qInfo() << request.body();
+            QJsonObject object = QJsonDocument::fromJson(request.body()).object();
+            qInfo() << object;
+            //            title,text,ss.cxid,ss.username,type
+            //            bool ok = false;
+            bool ok =  QtConcurrent::run([&](){
+                User user;
+                user.cxid = object.value("cxid").toInt();
+                user.username = object.value("username").toString();
+                return (Singleton<SqlOperator>::GetInstance().createUser(user));
+            }).result();
+
+            return ok ?   "success" :  "error";
+        }
+        return "error";
+    });
+}
+
+void HttpServer::routeGetUserData()
+{
+    server.route("/userData/",[](const qint32 cxid){
+        return QtConcurrent::run([&]{return Singleton<SqlOperator>::GetInstance().getUserData(cxid);}).result();
+    });
+}
+
+void HttpServer::routeUpdateUserData()
+{
+    server.route("/uploadUserData",[](const QHttpServerRequest &request){
+
+        if(request.method() == QHttpServerRequest::Method::Post){
+            //            qInfo() << request.body();
+            QJsonObject object = QJsonDocument::fromJson(request.body()).object();
+            qInfo() << object;
+            if(object.value("cxid").isNull()) return "error";
+            if(!object.value("questions").isObject() || !object.value("exams").isArray()){
+                return "error";
+            }
+
+            bool ok = QtConcurrent::run([&]{
+                User user;
+                user.cxid = object.value("cxid").toInt();
+                user.questions = object.value("questions").toObject();
+                user.exams = object.value("exams").toArray();
+                return (Singleton<SqlOperator>::GetInstance().updateUserData(user));
+            }).result();
+
+            return ok ?   "success" :  "error";
+        }
         return "error";
     });
 }

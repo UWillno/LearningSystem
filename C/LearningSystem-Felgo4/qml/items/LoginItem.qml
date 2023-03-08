@@ -13,7 +13,7 @@ Rectangle {
     radius: dp(20)
     //    anchors.verticalCenter: parent
     property string dialogtitle: "学习通登陆"
-    property string currentstatus: "游客模式"
+    property string currentstatus: ss.cxid ? "超星模式" : "游客模式"
     property int administrator: 0
     property int chaoxingUser: 1
     property int  times: 0
@@ -78,7 +78,7 @@ Rectangle {
             //                visible: false
             //            Column {
             AppText {
-                visible: false
+                visible: ss.cxid ? true : false
                 id: nameText
                 width: dp(200)
                 //                fontSize: 14
@@ -89,14 +89,14 @@ Rectangle {
                 width: dp(200)
                 //                fontSize: 14
                 text: "ID:" + ss.cxid
-                visible: false
+                visible: ss.cxid ? true : false
             }
             AppText {
                 id: phoneText
                 width: dp(200)
                 //                fontSize: 14
                 text: "当前账号:" + ss.phone
-                visible: false
+                visible: ss.cxid ? true : false
             }
             //                }
             //            }
@@ -168,8 +168,6 @@ Rectangle {
         }
         //        state:
     }
-
-
     Connections {
         target: qm
         onLoginSucceeded:{
@@ -192,11 +190,11 @@ Rectangle {
     Connections {
         target: userLogic
         onUserLoginSucceed: {
-            currentstatus = "超星模式"
+            //            currentstatus = "超星模式"
             toastManager.show("登录成功！",1000)
-            cxidText.visible = true
-            nameText.visible = true
-            phoneText.visible = true
+            //            cxidText.visible = true
+            //            nameText.visible = true
+            //            phoneText.visible = true
 
         }
         //        onNewUserLogined: {
@@ -210,16 +208,16 @@ Rectangle {
 
 
     Component.onCompleted: {
-        console.log("asdasdasd")
-        if(ss.phone && ss.password ){
-            //            userLogic.login(ss.phone,ss.password)
-            //            userLogic.userLoginSucceed()
-            currentstatus = "超星模式"
-            console.log(ss.cxid)
-            cxidText.visible = true
-            nameText.visible = true
-            phoneText.visible = true
-        }
+        //        console.log("asdasdasd")
+        //        if(ss.phone && ss.password ){
+        //            userLogic.login(ss.phone,ss.password)
+        //            userLogic.userLoginSucceed()
+        //            currentstatus = "超星模式"
+        //            console.log(ss.cxid)
+        //            cxidText.visible = true
+        //            nameText.visible = true
+        //            phoneText.visible = true
+        //        }
     }
 
 

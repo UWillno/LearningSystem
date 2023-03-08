@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 9.0.0, 2023-03-07T14:52:51. -->
+<!-- Written by QtCreator 9.0.0, 2023-03-08T23:37:53. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -398,8 +398,8 @@
   <variable>ProjectExplorer.Project.Target.1</variable>
   <valuemap type="QVariantMap">
    <value type="QString" key="DeviceType">Android.Device.Type</value>
-   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">安卓 Qt 6.4.1 Clang x86</value>
-   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">安卓 Qt 6.4.1 Clang x86</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Replacement for &quot;安卓 Qt 6.4.1 Clang x86&quot;</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Replacement for &quot;安卓 Qt 6.4.1 Clang x86&quot;</value>
    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">{62a97e10-70e7-48cb-b86c-b6f927a6be5a}</value>
    <value type="qlonglong" key="ProjectExplorer.Target.ActiveBuildConfiguration">0</value>
    <value type="qlonglong" key="ProjectExplorer.Target.ActiveDeployConfiguration">0</value>
@@ -781,8 +781,8 @@
   <variable>ProjectExplorer.Project.Target.2</variable>
   <valuemap type="QVariantMap">
    <value type="QString" key="DeviceType">Android.Device.Type</value>
-   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">安卓 Qt 6.4.1 Clang x86_64</value>
-   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">安卓 Qt 6.4.1 Clang x86_64</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Replacement for &quot;安卓 Qt 6.4.1 Clang x86_64&quot;</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Replacement for &quot;安卓 Qt 6.4.1 Clang x86_64&quot;</value>
    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">{8513cb56-f2a4-4fcc-b5d7-6dc705afc4f2}</value>
    <value type="qlonglong" key="ProjectExplorer.Target.ActiveBuildConfiguration">0</value>
    <value type="qlonglong" key="ProjectExplorer.Target.ActiveDeployConfiguration">0</value>
@@ -1180,7 +1180,6 @@
     <valuelist type="QVariantList" key="CustomOutputParsers"/>
     <value type="int" key="PE.EnvironmentAspect.Base">0</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">appLearningSystem-Felgo4</value>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.AndroidRunConfiguration:appLearningSystem-Felgo4</value>
     <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">appLearningSystem-Felgo4</value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>

@@ -44,6 +44,19 @@ private :
     void routeUpdateResource();
     // 删除资源
     void routeDeleteResource();
+    // 根据类型获取资源
+    void routeGetResourcesByType();
+    // 删除评论
+    void routeDeleteComment();
+    // 发帖
+    void routeSubmitPost();
+    // 创建用户
+    void routeCreateUser();
+    // 获取历史数据
+    void routeGetUserData();
+    // 更新用户数据
+    void routeUpdateUserData();
+
 
 };
 
