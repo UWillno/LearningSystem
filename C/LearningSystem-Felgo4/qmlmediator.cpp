@@ -148,7 +148,7 @@ void QmlMediator::getQuestionsByTcp()
         return;
     }
     emit selectSuceeded();
-    qInfo() << m_tcpQuestions;
+//    qInfo() << m_tcpQuestions;
     //    p->deleteLater();
 
 }

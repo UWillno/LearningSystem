@@ -35,7 +35,7 @@ App {
     Settings {
         id: settings
 
-//        signal loadquestionsDBFinished()
+        //        signal loadquestionsDBFinished()
         property var questionsDB
         //        property var wrongCQ: JSON.parse(JSON.stringify(ss.wrongCQ))
         //        //        property var exams
@@ -96,7 +96,7 @@ App {
         }
 
         onQuestionsDBChanged:  {
-//            loadquestionsDBFinished()
+            //            loadquestionsDBFinished()
         }
         onExamsChanged: {
             console.log(settings.exams.length)
@@ -152,7 +152,12 @@ App {
                 id:practiceStack
                 anchors.fill: parent
                 splitView: tablet
-
+                onPopped: {
+                    if(settings.autoSync){
+                        settings.saveQuestions()
+                        userLogic.uploadUserData()
+                    }
+                }
                 PracticePage {
 
                 }
@@ -241,4 +246,7 @@ App {
     //    Component.onCompleted: {
     //        adminLogic.insertChoiceQuestion.connect(qm.sendChoiceQuestion)
     //    }
+
+
+
 }

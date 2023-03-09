@@ -48,10 +48,6 @@ AppPage {
             break
         }
         case 1: {
-            //            loaderItem.show()
-            //？？？？？会很卡
-//            qm.getQuestionsByTcp()
-
             component = Qt.createComponent("../items/SelectSwipeView.qml").createObject(swipeRect)
 
             break
@@ -61,6 +57,27 @@ AppPage {
         }
         currentSwipeView = component
 
+    }
+
+    Connections {
+        id:con
+        target: qm
+
+        onDeleteSuceeded:{
+            toastManager.show("删除成功！",1000)
+            loaderItem.close()
+            rootStack.pop()
+        }
+
+        onUpdateSucceeded:{
+            toastManager.show("保存成功！",1000)
+            rootStack.pop()
+        }
+
+    }
+
+    onPopped:  {
+        destroy()
     }
 
 }

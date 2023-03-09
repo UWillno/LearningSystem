@@ -384,10 +384,10 @@ QList<QJsonArray> TcpClient::getQuestionsJson()
         p->write(byte);
         if(p->waitForBytesWritten()){
             if(p->waitForReadyRead()){
-                qint32 time=0;
+//                qint32 time=0;
                 forever {
-                    qInfo() << time;
-                    time++;
+//                    qInfo() << time;
+//                    time++;
                     if(p->waitForReadyRead()){
                         QByteArray temp = p->readAll();
                         data.append(temp);

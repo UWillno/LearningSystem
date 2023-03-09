@@ -9,6 +9,7 @@ AppPage {
     id: indexPage
     title: "Learning System"
     property string version : settings.questionsDB['version']
+//    property alias autoSyncSwitch: autoSyncSwitch.checked
 
     Rectangle {
         id: rectangle
@@ -46,7 +47,7 @@ AppPage {
                             axisY:ValuesAxis {
                                 id:vaxisy
                                 min:0
-//                                tickCount: 10
+                                //                                tickCount: 10
                                 max:100
                                 labelFormat: "%d"
                                 tickType: ValueAxis.TicksFixed
@@ -177,10 +178,15 @@ AppPage {
                             id: autoSyncSwitch
                             visible: ss.cxid ? true : false
                             anchors.horizontalCenter: parent.horizontalCenter
-                            //                        text:"下载"
+                            checked: settings.autoSync
                             onCheckedChanged: {
                                 settings.autoSync = autoSyncSwitch.checked
                             }
+//                            Component.onCompleted:{
+//                                autoSyncSwitch.checked = settings.autoSync
+//                            }
+
+                            //                        text:"下载"
 
                         }
                         AppText {
@@ -279,6 +285,7 @@ AppPage {
 
 
     //    }
+
 
 }
 

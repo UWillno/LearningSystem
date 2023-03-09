@@ -134,6 +134,6 @@ ListPage {
         }
     }
     onPopped: {
-        destroyed()
+        destroy()
     }
 }
