@@ -21,6 +21,33 @@
                         ],
                         "name": "getFilenameSucceed",
                         "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "objectId",
+                                "type": "QString"
+                            }
+                        ],
+                        "name": "uploadXxtSucceed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "url",
+                                "type": "QString"
+                            }
+                        ],
+                        "name": "decodeSucceed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "decodeFailed",
+                        "returnType": "void"
                     }
                 ],
                 "slots": [
@@ -39,11 +66,33 @@
                         "access": "public",
                         "arguments": [
                             {
+                                "name": "path",
+                                "type": "QUrl&"
+                            }
+                        ],
+                        "name": "uploadXxt",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
                                 "name": "r",
                                 "type": "QNetworkReply*"
                             }
                         ],
                         "name": "getFilename",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "path",
+                                "type": "QUrl&"
+                            }
+                        ],
+                        "name": "uploadQrCode",
                         "returnType": "void"
                     }
                 ],
@@ -153,11 +202,60 @@
                         "access": "public",
                         "arguments": [
                             {
+                                "name": "path",
+                                "type": "QUrl&"
+                            }
+                        ],
+                        "name": "uploadXxt",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
                                 "name": "url",
                                 "type": "QString"
                             }
                         ],
                         "name": "uploadResourceSucceed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "objectId",
+                                "type": "QString"
+                            }
+                        ],
+                        "name": "uploadXxtSucceed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "path",
+                                "type": "QUrl&"
+                            }
+                        ],
+                        "name": "uploadQr",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "url",
+                                "type": "QString"
+                            }
+                        ],
+                        "name": "decodeSucceed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "decodeFailed",
                         "returnType": "void"
                     }
                 ],
@@ -360,6 +458,28 @@
                     {
                         "access": "public",
                         "name": "selectPosts",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "path",
+                                "type": "QUrl"
+                            }
+                        ],
+                        "name": "uploadPhotoToXxt",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "path",
+                                "type": "QUrl"
+                            }
+                        ],
+                        "name": "uploadQrPhoto",
                         "returnType": "void"
                     }
                 ],

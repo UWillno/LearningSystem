@@ -30,8 +30,6 @@ int main(int argc, char *argv[])
     QtWebView::initialize();
     QQmlApplicationEngine engine;
 
-
-
     QmlMediator qmlMediator;
     Settings settings;
     engine.rootContext()->setContextProperty("qm",&qmlMediator);

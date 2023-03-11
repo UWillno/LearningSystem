@@ -282,6 +282,9 @@ Item {
 
     }
 
+
+
+
     //    function addWQ(id,type){
     //        switch(type){
     //        case 0:{

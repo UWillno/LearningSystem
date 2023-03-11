@@ -58,8 +58,31 @@ CMAKE_CXX_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 //Flags used by the CXX compiler during RELWITHDEBINFO builds.
 CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
-//No help, variable specified on the command line.
-CMAKE_C_COMPILER:FILEPATH=/usr/bin/gcc
+//C compiler
+CMAKE_C_COMPILER:STRING=/usr/bin/gcc
+
+//A wrapper around 'ar' adding the appropriate '--plugin' option
+// for the GCC compiler
+CMAKE_C_COMPILER_AR:FILEPATH=/usr/bin/gcc-ar
+
+//A wrapper around 'ranlib' adding the appropriate '--plugin' option
+// for the GCC compiler
+CMAKE_C_COMPILER_RANLIB:FILEPATH=/usr/bin/gcc-ranlib
+
+//Flags used by the C compiler during all build types.
+CMAKE_C_FLAGS:STRING=
+
+//Flags used by the C compiler during DEBUG builds.
+CMAKE_C_FLAGS_DEBUG:STRING=-g
+
+//Flags used by the C compiler during MINSIZEREL builds.
+CMAKE_C_FLAGS_MINSIZEREL:STRING=-Os -DNDEBUG
+
+//Flags used by the C compiler during RELEASE builds.
+CMAKE_C_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
+
+//Flags used by the C compiler during RELWITHDEBINFO builds.
+CMAKE_C_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
 //Path to a program.
 CMAKE_DLLTOOL:FILEPATH=CMAKE_DLLTOOL-NOTFOUND
@@ -330,8 +353,53 @@ QT_ADDITIONAL_HOST_PACKAGES_PREFIX_PATH:STRING=
 //Additional directories where find(Qt6 ...) components are searched
 QT_ADDITIONAL_PACKAGES_PREFIX_PATH:STRING=
 
+//The directory containing a CMake configuration file for QT.
+QT_DIR:PATH=/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6
+
 //No help, variable specified on the command line.
 QT_QMAKE_EXECUTABLE:FILEPATH=/home/uwillno/Felgo/Felgo/gcc_64/bin/qmake
+
+//Value Computed by CMake
+QZXing_BINARY_DIR:STATIC=/home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/qzxing
+
+//Value Computed by CMake
+QZXing_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+QZXing_SOURCE_DIR:STATIC=/home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/qzxing
+
+//The directory containing a CMake configuration file for Qt5Core.
+Qt5Core_DIR:PATH=/usr/lib64/cmake/Qt5Core
+
+//The directory containing a CMake configuration file for Qt5Gui.
+Qt5Gui_DIR:PATH=/usr/lib64/cmake/Qt5Gui
+
+//The directory containing a CMake configuration file for Qt5Multimedia.
+Qt5Multimedia_DIR:PATH=/usr/lib64/cmake/Qt5Multimedia
+
+//The directory containing a CMake configuration file for Qt5Network.
+Qt5Network_DIR:PATH=/usr/lib64/cmake/Qt5Network
+
+//The directory containing a CMake configuration file for Qt5QmlModels.
+Qt5QmlModels_DIR:PATH=/usr/lib64/cmake/Qt5QmlModels
+
+//The directory containing a CMake configuration file for Qt5Qml.
+Qt5Qml_DIR:PATH=/usr/lib64/cmake/Qt5Qml
+
+//The directory containing a CMake configuration file for Qt5QuickControls2.
+Qt5QuickControls2_DIR:PATH=/usr/lib64/cmake/Qt5QuickControls2
+
+//The directory containing a CMake configuration file for Qt5Quick.
+Qt5Quick_DIR:PATH=/usr/lib64/cmake/Qt5Quick
+
+//The directory containing a CMake configuration file for Qt5Svg.
+Qt5Svg_DIR:PATH=/usr/lib64/cmake/Qt5Svg
+
+//The directory containing a CMake configuration file for Qt5Widgets.
+Qt5Widgets_DIR:PATH=/usr/lib64/cmake/Qt5Widgets
+
+//The directory containing a CMake configuration file for Qt5.
+Qt5_DIR:PATH=/usr/lib64/cmake/Qt5
 
 //The directory containing a CMake configuration file for Qt6Bluetooth.
 Qt6Bluetooth_DIR:PATH=/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6Bluetooth
@@ -369,9 +437,6 @@ Qt6Network_DIR:PATH=/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6Network
 //The directory containing a CMake configuration file for Qt6OpenGL.
 Qt6OpenGL_DIR:PATH=/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6OpenGL
 
-//The directory containing a CMake configuration file for Qt6Pdf.
-Qt6Pdf_DIR:PATH=/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6Pdf
-
 //The directory containing a CMake configuration file for Qt6QmlCompilerPlusPrivate.
 Qt6QmlCompilerPlusPrivate_DIR:PATH=Qt6QmlCompilerPlusPrivate_DIR-NOTFOUND
 
@@ -392,9 +457,6 @@ Qt6QuickControls2_DIR:PATH=/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6QuickCo
 
 //The directory containing a CMake configuration file for Qt6QuickTemplates2.
 Qt6QuickTemplates2_DIR:PATH=/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6QuickTemplates2
-
-//The directory containing a CMake configuration file for Qt6QuickWidgets.
-Qt6QuickWidgets_DIR:PATH=/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6QuickWidgets
 
 //The directory containing a CMake configuration file for Qt6Quick.
 Qt6Quick_DIR:PATH=/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6Quick
@@ -438,6 +500,9 @@ XKB_LIBRARY:FILEPATH=/usr/lib/libxkbcommon.so
 //Path to a library.
 pkgcfg_lib_PKG_XKB_xkbcommon:FILEPATH=/usr/lib/libxkbcommon.so
 
+//Dependencies for the target
+qzxing_LIB_DEPENDS:STATIC=general;Qt5::Core;general;Qt5::Gui;
+
 
 ########################
 # INTERNAL cache entries
@@ -477,6 +542,22 @@ CMAKE_CXX_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
 CMAKE_CXX_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_CXX_FLAGS_RELWITHDEBINFO
 CMAKE_CXX_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_C_COMPILER
+CMAKE_C_COMPILER-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_C_COMPILER_AR
+CMAKE_C_COMPILER_AR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_C_COMPILER_RANLIB
+CMAKE_C_COMPILER_RANLIB-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_C_FLAGS
+CMAKE_C_FLAGS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_C_FLAGS_DEBUG
+CMAKE_C_FLAGS_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_C_FLAGS_MINSIZEREL
+CMAKE_C_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_C_FLAGS_RELEASE
+CMAKE_C_FLAGS_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_C_FLAGS_RELWITHDEBINFO
+CMAKE_C_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_DLLTOOL
 CMAKE_DLLTOOL-ADVANCED:INTERNAL=1
 //Path to cache edit program executable.
@@ -557,7 +638,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=1
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=4
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -1157,22 +1238,6 @@ QT_FEATURE_openvg:INTERNAL=OFF
 QT_FEATURE_pcre2:INTERNAL=ON
 //Qt feature: pdf (from target Qt6::Gui)
 QT_FEATURE_pdf:INTERNAL=ON
-//Qt feature: pdf_bitcode (from target Qt6::Pdf)
-QT_FEATURE_pdf_bitcode:INTERNAL=OFF
-//Qt feature: pdf_static_runtime (from target Qt6::Pdf)
-QT_FEATURE_pdf_static_runtime:INTERNAL=OFF
-//Qt feature: pdf_v8 (from target Qt6::Pdf)
-QT_FEATURE_pdf_v8:INTERNAL=OFF
-//Qt feature: pdf_xfa (from target Qt6::Pdf)
-QT_FEATURE_pdf_xfa:INTERNAL=OFF
-//Qt feature: pdf_xfa_bmp (from target Qt6::Pdf)
-QT_FEATURE_pdf_xfa_bmp:INTERNAL=OFF
-//Qt feature: pdf_xfa_gif (from target Qt6::Pdf)
-QT_FEATURE_pdf_xfa_gif:INTERNAL=OFF
-//Qt feature: pdf_xfa_png (from target Qt6::Pdf)
-QT_FEATURE_pdf_xfa_png:INTERNAL=OFF
-//Qt feature: pdf_xfa_tiff (from target Qt6::Pdf)
-QT_FEATURE_pdf_xfa_tiff:INTERNAL=OFF
 //Qt feature: picture (from target Qt6::Gui)
 QT_FEATURE_picture:INTERNAL=ON
 //Qt feature: pkg_config (from target Qt6::Core)

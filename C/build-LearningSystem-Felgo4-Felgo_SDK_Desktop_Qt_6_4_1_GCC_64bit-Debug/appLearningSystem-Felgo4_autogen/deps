@@ -1,16 +1,18 @@
 appLearningSystem-Felgo4_autogen/timestamp: \
 	/home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/CMakeLists.txt \
+	/home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/httpclient.cpp \
+	/home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/httpclient.h \
 	/home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/main.cpp \
+	/home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/qmlmediator.cpp \
+	/home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/qmlmediator.h \
+	/home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/settings.cpp \
+	/home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/settings.h \
+	/home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/singleton.h \
+	/home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/tcpclient.cpp \
+	/home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4/tcpclient.h \
 	/home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/CMakeFiles/3.24.2/CMakeCXXCompiler.cmake \
 	/home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/CMakeFiles/3.24.2/CMakeSystem.cmake \
 	/home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/appLearningSystem-Felgo4_autogen/moc_predefs.h \
-	/home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/assets/qmlmediator.cpp \
-	/home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/assets/qmlmediator.h \
-	/home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/assets/settings.cpp \
-	/home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/assets/settings.h \
-	/home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/assets/singleton.h \
-	/home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/assets/tcpclient.cpp \
-	/home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/assets/tcpclient.h \
 	/home/uwillno/Felgo/Felgo/gcc_64/include/QtConcurrent/QtConcurrent \
 	/home/uwillno/Felgo/Felgo/gcc_64/include/QtConcurrent/QtConcurrentDepends \
 	/home/uwillno/Felgo/Felgo/gcc_64/include/QtConcurrent/qtaskbuilder.h \
@@ -31,22 +33,29 @@ appLearningSystem-Felgo4_autogen/timestamp: \
 	/home/uwillno/Felgo/Felgo/gcc_64/include/QtConcurrent/qtconcurrenttask.h \
 	/home/uwillno/Felgo/Felgo/gcc_64/include/QtConcurrent/qtconcurrentthreadengine.h \
 	/home/uwillno/Felgo/Felgo/gcc_64/include/QtConcurrent/qtconcurrentversion.h \
+	/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/QByteArray \
 	/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/QCryptographicHash \
 	/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/QDataStream \
 	/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/QDeadlineTimer \
 	/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/QDebug \
+	/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/QFile \
+	/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/QFlags \
 	/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/QFuture \
 	/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/QHash \
+	/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/QIODevice \
 	/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/QJsonArray \
 	/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/QJsonObject \
 	/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/QList \
 	/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/QMap \
+	/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/QMetaType \
 	/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/QMutex \
 	/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/QObject \
 	/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/QScopedPointer \
 	/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/QSettings \
+	/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/QSharedDataPointer \
 	/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/QString \
 	/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/QStringList \
+	/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/QUrl \
 	/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/QVariant \
 	/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/QtCore \
 	/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/QtCoreDepends \
@@ -273,9 +282,25 @@ appLearningSystem-Felgo4_autogen/timestamp: \
 	/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qxmlstream.h \
 	/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/qxpfunctional.h \
 	/home/uwillno/Felgo/Felgo/gcc_64/include/QtNetwork/QAbstractSocket \
+	/home/uwillno/Felgo/Felgo/gcc_64/include/QtNetwork/QHttpMultiPart \
+	/home/uwillno/Felgo/Felgo/gcc_64/include/QtNetwork/QNetworkAccessManager \
+	/home/uwillno/Felgo/Felgo/gcc_64/include/QtNetwork/QNetworkReply \
+	/home/uwillno/Felgo/Felgo/gcc_64/include/QtNetwork/QNetworkRequest \
+	/home/uwillno/Felgo/Felgo/gcc_64/include/QtNetwork/QSslConfiguration \
+	/home/uwillno/Felgo/Felgo/gcc_64/include/QtNetwork/QSslPreSharedKeyAuthenticator \
 	/home/uwillno/Felgo/Felgo/gcc_64/include/QtNetwork/QTcpSocket \
 	/home/uwillno/Felgo/Felgo/gcc_64/include/QtNetwork/qabstractsocket.h \
 	/home/uwillno/Felgo/Felgo/gcc_64/include/QtNetwork/qhostaddress.h \
+	/home/uwillno/Felgo/Felgo/gcc_64/include/QtNetwork/qhttpmultipart.h \
+	/home/uwillno/Felgo/Felgo/gcc_64/include/QtNetwork/qnetworkaccessmanager.h \
+	/home/uwillno/Felgo/Felgo/gcc_64/include/QtNetwork/qnetworkreply.h \
+	/home/uwillno/Felgo/Felgo/gcc_64/include/QtNetwork/qnetworkrequest.h \
+	/home/uwillno/Felgo/Felgo/gcc_64/include/QtNetwork/qssl.h \
+	/home/uwillno/Felgo/Felgo/gcc_64/include/QtNetwork/qsslcertificate.h \
+	/home/uwillno/Felgo/Felgo/gcc_64/include/QtNetwork/qsslconfiguration.h \
+	/home/uwillno/Felgo/Felgo/gcc_64/include/QtNetwork/qsslerror.h \
+	/home/uwillno/Felgo/Felgo/gcc_64/include/QtNetwork/qsslpresharedkeyauthenticator.h \
+	/home/uwillno/Felgo/Felgo/gcc_64/include/QtNetwork/qsslsocket.h \
 	/home/uwillno/Felgo/Felgo/gcc_64/include/QtNetwork/qtcpsocket.h \
 	/home/uwillno/Felgo/Felgo/gcc_64/include/QtNetwork/qtnetwork-config.h \
 	/home/uwillno/Felgo/Felgo/gcc_64/include/QtNetwork/qtnetworkexports.h \
@@ -573,27 +598,6 @@ appLearningSystem-Felgo4_autogen/timestamp: \
 	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6OpenGL/Qt6OpenGLTargets-relwithdebinfo.cmake \
 	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6OpenGL/Qt6OpenGLTargets.cmake \
 	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6OpenGL/Qt6OpenGLVersionlessTargets.cmake \
-	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6Positioning/Qt6PositioningAdditionalTargetInfo.cmake \
-	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6Positioning/Qt6PositioningConfig.cmake \
-	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6Positioning/Qt6PositioningConfigVersion.cmake \
-	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6Positioning/Qt6PositioningConfigVersionImpl.cmake \
-	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6Positioning/Qt6PositioningDependencies.cmake \
-	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6Positioning/Qt6PositioningPlugins.cmake \
-	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6Positioning/Qt6PositioningTargets-relwithdebinfo.cmake \
-	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6Positioning/Qt6PositioningTargets.cmake \
-	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6Positioning/Qt6PositioningVersionlessTargets.cmake \
-	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6Positioning/Qt6QGeoPositionInfoSourceFactoryGeoclue2PluginAdditionalTargetInfo.cmake \
-	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6Positioning/Qt6QGeoPositionInfoSourceFactoryGeoclue2PluginConfig.cmake \
-	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6Positioning/Qt6QGeoPositionInfoSourceFactoryGeoclue2PluginTargets-relwithdebinfo.cmake \
-	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6Positioning/Qt6QGeoPositionInfoSourceFactoryGeoclue2PluginTargets.cmake \
-	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6Positioning/Qt6QGeoPositionInfoSourceFactoryNmeaPluginAdditionalTargetInfo.cmake \
-	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6Positioning/Qt6QGeoPositionInfoSourceFactoryNmeaPluginConfig.cmake \
-	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6Positioning/Qt6QGeoPositionInfoSourceFactoryNmeaPluginTargets-relwithdebinfo.cmake \
-	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6Positioning/Qt6QGeoPositionInfoSourceFactoryNmeaPluginTargets.cmake \
-	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6Positioning/Qt6QGeoPositionInfoSourceFactoryPollPluginAdditionalTargetInfo.cmake \
-	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6Positioning/Qt6QGeoPositionInfoSourceFactoryPollPluginConfig.cmake \
-	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6Positioning/Qt6QGeoPositionInfoSourceFactoryPollPluginTargets-relwithdebinfo.cmake \
-	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6Positioning/Qt6QGeoPositionInfoSourceFactoryPollPluginTargets.cmake \
 	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6Qml/QmlPlugins/Qt6DataVisualizationQmlpluginAdditionalTargetInfo.cmake \
 	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6Qml/QmlPlugins/Qt6DataVisualizationQmlpluginConfig.cmake \
 	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6Qml/QmlPlugins/Qt6DataVisualizationQmlpluginTargets-relwithdebinfo.cmake \
@@ -1106,39 +1110,6 @@ appLearningSystem-Felgo4_autogen/timestamp: \
 	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6Sql/Qt6SqlTargets-relwithdebinfo.cmake \
 	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6Sql/Qt6SqlTargets.cmake \
 	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6Sql/Qt6SqlVersionlessTargets.cmake \
-	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6WebChannel/Qt6WebChannelAdditionalTargetInfo.cmake \
-	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6WebChannel/Qt6WebChannelConfig.cmake \
-	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6WebChannel/Qt6WebChannelConfigVersion.cmake \
-	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6WebChannel/Qt6WebChannelConfigVersionImpl.cmake \
-	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6WebChannel/Qt6WebChannelDependencies.cmake \
-	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6WebChannel/Qt6WebChannelTargets-relwithdebinfo.cmake \
-	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6WebChannel/Qt6WebChannelTargets.cmake \
-	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6WebChannel/Qt6WebChannelVersionlessTargets.cmake \
-	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6WebEngineCore/Qt6WebEngineCoreAdditionalTargetInfo.cmake \
-	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6WebEngineCore/Qt6WebEngineCoreConfig.cmake \
-	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6WebEngineCore/Qt6WebEngineCoreConfigVersion.cmake \
-	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6WebEngineCore/Qt6WebEngineCoreConfigVersionImpl.cmake \
-	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6WebEngineCore/Qt6WebEngineCoreDependencies.cmake \
-	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6WebEngineCore/Qt6WebEngineCoreMacros.cmake \
-	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6WebEngineCore/Qt6WebEngineCoreTargets-relwithdebinfo.cmake \
-	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6WebEngineCore/Qt6WebEngineCoreTargets.cmake \
-	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6WebEngineCore/Qt6WebEngineCoreVersionlessTargets.cmake \
-	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6WebEngineCoreTools/Qt6WebEngineCoreToolsAdditionalTargetInfo.cmake \
-	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6WebEngineCoreTools/Qt6WebEngineCoreToolsConfig.cmake \
-	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6WebEngineCoreTools/Qt6WebEngineCoreToolsConfigVersion.cmake \
-	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6WebEngineCoreTools/Qt6WebEngineCoreToolsConfigVersionImpl.cmake \
-	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6WebEngineCoreTools/Qt6WebEngineCoreToolsDependencies.cmake \
-	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6WebEngineCoreTools/Qt6WebEngineCoreToolsTargets-relwithdebinfo.cmake \
-	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6WebEngineCoreTools/Qt6WebEngineCoreToolsTargets.cmake \
-	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6WebEngineCoreTools/Qt6WebEngineCoreToolsVersionlessTargets.cmake \
-	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6WebEngineQuick/Qt6WebEngineQuickAdditionalTargetInfo.cmake \
-	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6WebEngineQuick/Qt6WebEngineQuickConfig.cmake \
-	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6WebEngineQuick/Qt6WebEngineQuickConfigVersion.cmake \
-	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6WebEngineQuick/Qt6WebEngineQuickConfigVersionImpl.cmake \
-	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6WebEngineQuick/Qt6WebEngineQuickDependencies.cmake \
-	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6WebEngineQuick/Qt6WebEngineQuickTargets-relwithdebinfo.cmake \
-	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6WebEngineQuick/Qt6WebEngineQuickTargets.cmake \
-	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6WebEngineQuick/Qt6WebEngineQuickVersionlessTargets.cmake \
 	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6WebSockets/Qt6WebSocketsAdditionalTargetInfo.cmake \
 	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6WebSockets/Qt6WebSocketsConfig.cmake \
 	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6WebSockets/Qt6WebSocketsConfigVersion.cmake \
@@ -1147,6 +1118,19 @@ appLearningSystem-Felgo4_autogen/timestamp: \
 	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6WebSockets/Qt6WebSocketsTargets-relwithdebinfo.cmake \
 	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6WebSockets/Qt6WebSocketsTargets.cmake \
 	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6WebSockets/Qt6WebSocketsVersionlessTargets.cmake \
+	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6WebView/Qt6QWebEngineWebViewPluginAdditionalTargetInfo.cmake \
+	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6WebView/Qt6QWebEngineWebViewPluginConfig.cmake \
+	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6WebView/Qt6QWebEngineWebViewPluginTargets-relwithdebinfo.cmake \
+	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6WebView/Qt6QWebEngineWebViewPluginTargets.cmake \
+	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6WebView/Qt6WebViewAdditionalTargetInfo.cmake \
+	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6WebView/Qt6WebViewConfig.cmake \
+	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6WebView/Qt6WebViewConfigVersion.cmake \
+	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6WebView/Qt6WebViewConfigVersionImpl.cmake \
+	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6WebView/Qt6WebViewDependencies.cmake \
+	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6WebView/Qt6WebViewPlugins.cmake \
+	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6WebView/Qt6WebViewTargets-relwithdebinfo.cmake \
+	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6WebView/Qt6WebViewTargets.cmake \
+	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6WebView/Qt6WebViewVersionlessTargets.cmake \
 	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6Widgets/Qt6WidgetsAdditionalTargetInfo.cmake \
 	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake \
 	/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfigVersion.cmake \

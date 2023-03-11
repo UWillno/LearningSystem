@@ -83,6 +83,25 @@ target_link_libraries(appLearningSystem-Felgo4 PRIVATE Felgo)
 #target_link_libraries(appLearningSystem-Felgo4 PRIVATE Qt6::Concurrent Qt6::Network Qt6::WebEngineQuick)
 target_link_libraries(appLearningSystem-Felgo4 PRIVATE Qt6::Concurrent Qt6::Network Qt6::Qml Qt6::WebView)
 
+#add_subdirectory(./qzxing)
+#target_link_libraries(appLearningSystem-Felgo4 PRIVATE QZXing)
+
+#SET(QZXING_MULTIMEDIA ON)
+#SET(QZXING_USE_DECODER_1D_BARCODES ON)
+#SET(QZXING_USE_DECODER_QR_CODE ON)
+
+
+#find_package(QT NAMES Qt6 Qt5 COMPONENTS ${QT_COMPONENTS} REQUIRED)
+#find_package(Qt${QT_VERSION_MAJOR} COMPONENTS ${QT_COMPONENTS} REQUIRED)
+#if (NOT DEFINED QT_VERSION_MAJOR)
+#    find_package(QT NAMES Qt6 Qt5 COMPONENTS ${QT_COMPONENTS} REQUIRED)
+#endif()
+#find_package(Qt${QT_VERSION_MAJOR} COMPONENTS ${QT_COMPONENTS} REQUIRED)
+#SET(QZXING_USE_ENCODER ON)
+#SET(QZXING_MULTIMEDIA ON)
+#SET(QZXING_USE_DECODER_1D_BARCODES ON)
+#SET(QZXING_USE_DECODER_QR_CODE ON)
+#find_package(QZXing REQUIRED qzxing_qml)
 # uncomment this line to add the Live Client Module and use live reloading with your custom C++ code
 # for the remaining steps to build a custom Live Code Reload app see here: https://felgo.com/custom-code-reload-app/
 #find_package(FelgoLive REQUIRED)

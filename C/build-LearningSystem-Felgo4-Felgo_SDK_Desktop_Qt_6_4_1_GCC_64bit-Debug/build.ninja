@@ -929,7 +929,7 @@ build .qt_plugins/Qt6_QmlPlugins_Imports_appLearningSystem-Felgo4.cmake | ${cmak
 #############################################
 # Phony custom command for CMakeFiles/appLearningSystem-Felgo4_autogen_timestamp_deps
 
-build CMakeFiles/appLearningSystem-Felgo4_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/appLearningSystem-Felgo4_autogen_timestamp_deps: phony /home/uwillno/Felgo/Felgo/gcc_64/lib/libFelgo.a /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Core.so.6.4.1 /home/uwillno/Felgo/Felgo/gcc_64/./libexec/moc /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Network.so.6.4.1 /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Concurrent.so.6.4.1 /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6WebView.so.6.4.1
+build CMakeFiles/appLearningSystem-Felgo4_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/appLearningSystem-Felgo4_autogen_timestamp_deps: phony /home/uwillno/Felgo/Felgo/gcc_64/lib/libFelgo.a /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Core.so.6.4.1 /home/uwillno/Felgo/Felgo/gcc_64/./libexec/moc /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Concurrent.so.6.4.1 /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Network.so.6.4.1 /home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6WebView.so.6.4.1
 
 
 #############################################

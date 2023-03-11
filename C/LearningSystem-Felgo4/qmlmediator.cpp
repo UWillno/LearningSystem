@@ -11,6 +11,18 @@ QmlMediator::QmlMediator(QObject *parent)
         qInfo() << url;
         emit uploadResourceSucceed(url);
     });
+    QObject::connect(this,&QmlMediator::uploadXxt,httpclient,&HttpClient::uploadXxt);
+    QObject::connect(this,&QmlMediator::uploadQr,httpclient,&HttpClient::uploadQrCode);
+    QObject::connect(httpclient,&HttpClient::uploadXxtSucceed,this,[this](QString objectId){
+        qInfo() << objectId;
+        emit uploadXxtSucceed(objectId);
+    });
+    QObject::connect(httpclient,&HttpClient::decodeSucceed,this,[this](QString url){
+        emit decodeSucceed(url);
+    });
+    QObject::connect(httpclient,&HttpClient::decodeFailed,this,[this]{
+        emit decodeFailed();
+    });
     //    connect(this,QmlMediator::commitSignal(),&Singleton<TcpClient>::GetInstance(),TcpClient::);
 }
 
@@ -37,7 +49,7 @@ void QmlMediator::adminLogin(QString username, QString password)
 void QmlMediator::tcpclientInit()
 {
     //    Singleton<TcpClient>::GetInstance().init("192.168.1.12",9444);
-//    Singleton<TcpClient>::GetInstance().init("127.0.0.1",9444);
+    //    Singleton<TcpClient>::GetInstance().init("127.0.0.1",9444);
     Singleton<TcpClient>::GetInstance().init("192.168.1.244",9444);
 }
 
@@ -148,7 +160,7 @@ void QmlMediator::getQuestionsByTcp()
         return;
     }
     emit selectSuceeded();
-//    qInfo() << m_tcpQuestions;
+    //    qInfo() << m_tcpQuestions;
     //    p->deleteLater();
 
 }
@@ -255,6 +267,19 @@ void QmlMediator::submitPost(QString title, QString text, qint32 cxid, QString u
 void QmlMediator::selectPosts()
 {
     auto *p = &Singleton<TcpClient>::GetInstance();
+}
+
+void QmlMediator::uploadPhotoToXxt(QUrl path)
+{
+    qInfo() << path;
+
+    emit uploadXxt(path);
+    //    qInfo() <<"uploadResource信号发射";
+}
+
+void QmlMediator::uploadQrPhoto(QUrl path)
+{
+    emit uploadQr(path);
 }
 
 const QList<QJsonArray> &QmlMediator::tcpQuestions() const

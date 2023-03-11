@@ -1,3 +1,4 @@
-/home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/appLearningSystem-Felgo4_autogen/include/../Z7ZOQCYUWF/moc_qmlmediator.cpp.json
-/home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/appLearningSystem-Felgo4_autogen/include/../Z7ZOQCYUWF/moc_settings.cpp.json
-/home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/appLearningSystem-Felgo4_autogen/include/../Z7ZOQCYUWF/moc_tcpclient.cpp.json
+/home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/appLearningSystem-Felgo4_autogen/include/../EWIEGA46WW/moc_httpclient.cpp.json
+/home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/appLearningSystem-Felgo4_autogen/include/../EWIEGA46WW/moc_qmlmediator.cpp.json
+/home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/appLearningSystem-Felgo4_autogen/include/../EWIEGA46WW/moc_settings.cpp.json
+/home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/appLearningSystem-Felgo4_autogen/include/../EWIEGA46WW/moc_tcpclient.cpp.json

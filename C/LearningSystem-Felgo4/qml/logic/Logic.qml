@@ -3,7 +3,7 @@ import Felgo
 
 Item {
     //    property var data
-//    property string qhttpserver: "http://127.0.0.1:4444/"
+    //    property string qhttpserver: "http://127.0.0.1:4444/"
     property string qhttpserver: "http://192.168.1.244:4444/"
     id: item
     property var postsdata
@@ -90,21 +90,22 @@ Item {
         var second = d.getSeconds(); //获取秒
         //如果月份、日期、小时、分钟、秒小于10，就在前面加0
         if (month < 10) {
-          month = "0" + month;
+            month = "0" + month;
         }
         if (date < 10) {
-          date = "0" + date;
+            date = "0" + date;
         }
         if (hour < 10) {
-          hour = "0" + hour;
+            hour = "0" + hour;
         }
         if (minute < 10) {
-          minute = "0" + minute;
+            minute = "0" + minute;
         }
         if (second < 10) {
-          second = "0" + second;
+            second = "0" + second;
         }
         return year + "-" + month + "-" + date + " " + hour + ":" + minute + ":" + second
     }
+
 
 }

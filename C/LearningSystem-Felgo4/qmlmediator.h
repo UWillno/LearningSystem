@@ -37,8 +37,14 @@ signals:
     void updateSucceeded();
     void updateFailed();
     void uploadResource(QUrl &path);
+    void uploadXxt(QUrl &path);
     //    void commitSignal();
     void uploadResourceSucceed(QString url);
+    void uploadXxtSucceed(QString objectId);
+    void uploadQr(QUrl &path);
+
+    void decodeSucceed(QString url);
+    void decodeFailed();
 
 public slots:
     // 登录
@@ -78,7 +84,11 @@ public slots:
     //管理员用帖子列表
     void selectPosts();
 
+    //上传图片到学习通
+    void uploadPhotoToXxt(QUrl path);
 
+    // qr
+    void uploadQrPhoto(QUrl path);
 
 
 private:
