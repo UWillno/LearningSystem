@@ -13,6 +13,7 @@ AppPage {
     property var classId
     property var activeId
     property var courseId
+    property bool canPop : false
 
 
 
@@ -24,9 +25,14 @@ AppPage {
         }
     }
 
+
+
+
+
+
     Rectangle {
         id:xxtRect
-//        anchors.fill: parent
+        //        anchors.fill: parent
         height: parent.height /2
         width: parent.width
         z:-1
@@ -51,7 +57,7 @@ AppPage {
     }
 
     Row {
-//        z:1
+        //        z:1
         anchors.top: xxtRect.bottom
         width:parent.width
         AppButton{
@@ -419,9 +425,12 @@ AppPage {
         }
     }
     onWillPop: {
-        NativeDialog.confirm("确认", "确定退出?", function(ok) {
-            event.accepted = ok
-        })
+        event.accepted = canPop
+        if(!canPop){
+            NativeDialog.confirm("确认", "确定退出?", function(ok) {
+                canPop = ok
+                popped()
+            })}
     }
 
     onPopped: {
