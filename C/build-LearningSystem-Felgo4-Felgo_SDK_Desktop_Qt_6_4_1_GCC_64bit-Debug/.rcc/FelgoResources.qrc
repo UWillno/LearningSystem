@@ -1,6 +1,0 @@
-<RCC>
-  <qresource prefix="/FelgoLicense/">
-    <file alias="felgo_license.key">/home/uwillno/Felgo/Felgo/felgo_license.key</file>
-  </qresource>
-</RCC>
-
