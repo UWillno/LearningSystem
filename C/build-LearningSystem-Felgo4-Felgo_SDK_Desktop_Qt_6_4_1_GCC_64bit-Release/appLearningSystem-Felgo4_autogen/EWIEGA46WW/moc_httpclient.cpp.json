@@ -1,0 +1,108 @@
+{
+    "classes": [
+        {
+            "className": "HttpClient",
+            "object": true,
+            "qualifiedClassName": "HttpClient",
+            "signals": [
+                {
+                    "access": "public",
+                    "name": "getFilenameFailed",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "url",
+                            "type": "QString"
+                        }
+                    ],
+                    "name": "getFilenameSucceed",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "objectId",
+                            "type": "QString"
+                        }
+                    ],
+                    "name": "uploadXxtSucceed",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "url",
+                            "type": "QString"
+                        }
+                    ],
+                    "name": "decodeSucceed",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "decodeFailed",
+                    "returnType": "void"
+                }
+            ],
+            "slots": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "path",
+                            "type": "QUrl&"
+                        }
+                    ],
+                    "name": "uploadFile",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "path",
+                            "type": "QUrl&"
+                        }
+                    ],
+                    "name": "uploadXxt",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "r",
+                            "type": "QNetworkReply*"
+                        }
+                    ],
+                    "name": "getFilename",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "path",
+                            "type": "QUrl&"
+                        }
+                    ],
+                    "name": "uploadQrCode",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "httpclient.h",
+    "outputRevision": 68
+}

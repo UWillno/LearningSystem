@@ -1,0 +1,6 @@
+-keep class org.qtproject.qt.* { *; }
+-keep class android.support.* { *; }
+-keep class com.google.android.gms.* { *; }
+-keep class com.google.android.material.* { *; }
+-keep class androidx.appcompat.* { *; }
+-keep class androidx.constraintlayout.* { *; }

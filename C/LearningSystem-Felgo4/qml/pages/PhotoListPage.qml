@@ -41,13 +41,16 @@ ListPage {
                 text: model.name
             }
 
-            Image {
+            AppImage {
                 id: image
                 anchors.horizontalCenter: parent.horizontalCenter
                 width: parent.width -dp(20)
                 height:dp(300)
                 fillMode: Image.PreserveAspectCrop
-                source: imageResource.storagePath
+                source: imageResource.available ? imageResource.storagePath :""
+                Component.onCompleted:{
+                    imageResource.download()
+                }
                 //                activeFocus:
                 MouseArea {
                     anchors.fill: parent
@@ -85,9 +88,9 @@ ListPage {
                 extractAsPackage: false
                 //                storageLocation: FileUtils.TempLocation
                 source:  "https://p.ananas.chaoxing.com/star3/origin/"+model.title+".jpg"
-                Component.onCompleted: {
-                    download()
-                }
+//                Component.onCompleted: {
+//                    download()
+//                }
             }
 
 

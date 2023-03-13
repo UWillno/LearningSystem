@@ -1,0 +1,122 @@
+{
+	"backtrace" : 4,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"_qt_internal_qml_type_registration",
+			"qt6_add_qml_module",
+			"qt_add_qml_module"
+		],
+		"files" : 
+		[
+			"/home/uwillno/Felgo/Felgo/gcc_64/lib/cmake/Qt6Qml/Qt6QmlMacros.cmake",
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 60,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 670,
+				"parent" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 517,
+				"parent" : 2
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 2483,
+				"parent" : 3
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"id" : "appLearningSystem-Felgo4_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
+		}
+	],
+	"id" : "appLearningSystem-Felgo4_qmltyperegistration::@6890427a1f51a3e7e1df",
+	"name" : "appLearningSystem-Felgo4_qmltyperegistration",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1,
+				2,
+				3,
+				4,
+				5
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 4,
+			"isGenerated" : true,
+			"path" : "/home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Release/CMakeFiles/appLearningSystem-Felgo4_qmltyperegistration",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Release/CMakeFiles/appLearningSystem-Felgo4_qmltyperegistration.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Release/applearningsystem-felgo4_qmltyperegistrations.cpp.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Release/meta_types/qt6applearningsystem-felgo4_release_metatypes.json.gen.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Release/meta_types/appLearningSystem-Felgo4_json_file_list.txt.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Release/appLearningSystem-Felgo4_autogen/timestamp.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

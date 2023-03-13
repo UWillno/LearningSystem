@@ -23,8 +23,12 @@ AppPage {
         }
     }
 
-    AppFlickable {
-        anchors.fill: parent
+    Rectangle {
+        id:xxtRect
+//        anchors.fill: parent
+        height: parent.height - dp(80)
+        width: parent.width
+        z:-1
 
         WebView {
             id:webview
@@ -46,7 +50,7 @@ AppPage {
     }
 
     Row {
-        anchors.bottom: parent.bottom
+        anchors.top: xxtRect.bottom
         width:parent.width
         AppButton{
             id:signBtn
@@ -76,7 +80,8 @@ AppPage {
             }
         }
     }
-    Menu {
+    Popup {
+        anchors.centerIn: parent
         id: signContextMenu
         width: encAction.width
         Action{
@@ -200,6 +205,7 @@ AppPage {
     Menu {
         id: extraContextMenu
         width: signBtn.width
+        anchors.centerIn: parent
         Action{
             text: "查看测验答案"
             onTriggered: {

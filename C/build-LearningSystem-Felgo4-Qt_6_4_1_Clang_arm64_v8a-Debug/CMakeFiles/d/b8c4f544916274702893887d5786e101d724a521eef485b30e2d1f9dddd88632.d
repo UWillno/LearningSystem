@@ -199,6 +199,7 @@ appLearningSystem-Felgo4_autogen/timestamp: \
   /home/uwillno/Felgo/Felgo/android_arm64_v8a/include/QtConcurrent/qtconcurrenttask.h \
   /home/uwillno/Felgo/Felgo/android_arm64_v8a/include/QtConcurrent/qtconcurrentthreadengine.h \
   /home/uwillno/Felgo/Felgo/android_arm64_v8a/include/QtConcurrent/qtconcurrentversion.h \
+  /home/uwillno/Felgo/Felgo/android_arm64_v8a/include/QtCore/QByteArray \
   /home/uwillno/Felgo/Felgo/android_arm64_v8a/include/QtCore/QCryptographicHash \
   /home/uwillno/Felgo/Felgo/android_arm64_v8a/include/QtCore/QDataStream \
   /home/uwillno/Felgo/Felgo/android_arm64_v8a/include/QtCore/QDeadlineTimer \
@@ -446,6 +447,7 @@ appLearningSystem-Felgo4_autogen/timestamp: \
   /home/uwillno/Felgo/Felgo/android_arm64_v8a/include/QtCore/qxmlstream.h \
   /home/uwillno/Felgo/Felgo/android_arm64_v8a/include/QtCore/qxpfunctional.h \
   /home/uwillno/Felgo/Felgo/android_arm64_v8a/include/QtNetwork/QAbstractSocket \
+  /home/uwillno/Felgo/Felgo/android_arm64_v8a/include/QtNetwork/QHttpMultiPart \
   /home/uwillno/Felgo/Felgo/android_arm64_v8a/include/QtNetwork/QNetworkAccessManager \
   /home/uwillno/Felgo/Felgo/android_arm64_v8a/include/QtNetwork/QNetworkReply \
   /home/uwillno/Felgo/Felgo/android_arm64_v8a/include/QtNetwork/QNetworkRequest \
@@ -454,6 +456,7 @@ appLearningSystem-Felgo4_autogen/timestamp: \
   /home/uwillno/Felgo/Felgo/android_arm64_v8a/include/QtNetwork/QTcpSocket \
   /home/uwillno/Felgo/Felgo/android_arm64_v8a/include/QtNetwork/qabstractsocket.h \
   /home/uwillno/Felgo/Felgo/android_arm64_v8a/include/QtNetwork/qhostaddress.h \
+  /home/uwillno/Felgo/Felgo/android_arm64_v8a/include/QtNetwork/qhttpmultipart.h \
   /home/uwillno/Felgo/Felgo/android_arm64_v8a/include/QtNetwork/qnetworkaccessmanager.h \
   /home/uwillno/Felgo/Felgo/android_arm64_v8a/include/QtNetwork/qnetworkreply.h \
   /home/uwillno/Felgo/Felgo/android_arm64_v8a/include/QtNetwork/qnetworkrequest.h \

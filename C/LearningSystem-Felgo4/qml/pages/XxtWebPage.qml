@@ -7,6 +7,7 @@ import QtQuick.Controls
 
 AppPage {
 
+    id:xxtPage
     property alias url : webview.url
     property var ourl
     property var classId
@@ -23,8 +24,12 @@ AppPage {
         }
     }
 
-    AppFlickable {
-        anchors.fill: parent
+    Rectangle {
+        id:xxtRect
+//        anchors.fill: parent
+        height: parent.height /2
+        width: parent.width
+        z:-1
 
         WebView {
             id:webview
@@ -46,20 +51,23 @@ AppPage {
     }
 
     Row {
-        anchors.bottom: parent.bottom
+//        z:1
+        anchors.top: xxtRect.bottom
         width:parent.width
         AppButton{
             id:signBtn
             text: "签到"
             onClicked: {
-                signContextMenu.popup()
+                signContextMenu.open(signBtn.x, signBtn.y + signBtn.height)
 
             }
+
         }
         AppButton{
+            id:exBtn
             text: "额外"
             onClicked:{
-                extraContextMenu.popup()
+                extraContextMenu.open(exBtn.x, exBtn.y + exBtn.height)
             }
             onPressAndHold: {
                 viewSignPhotos()
@@ -79,6 +87,7 @@ AppPage {
     Menu {
         id: signContextMenu
         width: encAction.width
+        parent: signBtn
         Action{
             text: "静态签到"
             onTriggered: {
@@ -200,6 +209,7 @@ AppPage {
     Menu {
         id: extraContextMenu
         width: signBtn.width
+        parent: exBtn
         Action{
             text: "查看测验答案"
             onTriggered: {

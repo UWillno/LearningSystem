@@ -106,3 +106,7 @@ target_link_libraries(appLearningSystem-Felgo4 PRIVATE Qt6::Concurrent Qt6::Netw
 # for the remaining steps to build a custom Live Code Reload app see here: https://felgo.com/custom-code-reload-app/
 #find_package(FelgoLive REQUIRED)
 #target_link_libraries(appLearningSystem-Felgo4 PRIVATE FelgoLive)
+if(ANDROID)
+set(PROGUARD_RULES ${CMAKE_CURRENT_SOURCE_DIR}/proguard-rules.pro)
+set(PROGUARD_OUTPUT_DIR ${CMAKE_CURRENT_BINARY_DIR}/proguard-output)
+endif()
