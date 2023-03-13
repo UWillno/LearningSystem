@@ -1,9 +1,0 @@
-/home/uwillno/Desktop/BYSJ/S/build-Server-cmake-Desktop_Qt_6_4_2_GCC_64bit-Debug/CMakeFiles/Server-cmake.dir
-/home/uwillno/Desktop/BYSJ/S/build-Server-cmake-Desktop_Qt_6_4_2_GCC_64bit-Debug/CMakeFiles/edit_cache.dir
-/home/uwillno/Desktop/BYSJ/S/build-Server-cmake-Desktop_Qt_6_4_2_GCC_64bit-Debug/CMakeFiles/rebuild_cache.dir
-/home/uwillno/Desktop/BYSJ/S/build-Server-cmake-Desktop_Qt_6_4_2_GCC_64bit-Debug/CMakeFiles/list_install_components.dir
-/home/uwillno/Desktop/BYSJ/S/build-Server-cmake-Desktop_Qt_6_4_2_GCC_64bit-Debug/CMakeFiles/install.dir
-/home/uwillno/Desktop/BYSJ/S/build-Server-cmake-Desktop_Qt_6_4_2_GCC_64bit-Debug/CMakeFiles/install/local.dir
-/home/uwillno/Desktop/BYSJ/S/build-Server-cmake-Desktop_Qt_6_4_2_GCC_64bit-Debug/CMakeFiles/install/strip.dir
-/home/uwillno/Desktop/BYSJ/S/build-Server-cmake-Desktop_Qt_6_4_2_GCC_64bit-Debug/CMakeFiles/Server-cmake_autogen_timestamp_deps.dir
-/home/uwillno/Desktop/BYSJ/S/build-Server-cmake-Desktop_Qt_6_4_2_GCC_64bit-Debug/CMakeFiles/Server-cmake_autogen.dir
