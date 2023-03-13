@@ -34,6 +34,9 @@ add_executable(Server-cmake
     comment.h comment.cpp
     post.h post.cpp
     httpserver.h httpserver.cpp
+    resource.h resource.cpp
+    #    interface/resource.h interface/resource.cpp
+    resource.h resource.cpp
 )
 target_link_libraries(Server-cmake Qt${QT_VERSION_MAJOR}::Core Qt${QT_VERSION_MAJOR}::Sql Qt${QT_VERSION_MAJOR}::Network Qt${QT_VERSION_MAJOR}::Concurrent Qt${QT_VERSION_MAJOR}::HttpServer)
 

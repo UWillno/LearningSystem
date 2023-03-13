@@ -54,6 +54,8 @@ void TcpServer::sendQuestions(QTcpSocket *s)
 
 }
 
+
+
 void TcpServer::sendQuestionsJson(QTcpSocket *s)
 {
     QList<QSharedPointer<ChoiceQuestion>> cQuestions = Singleton<SqlOperator>::GetInstance().selectAllCQuestion();
@@ -93,8 +95,31 @@ void TcpServer::sendQuestionsJson(QTcpSocket *s)
     }
 
     stream << cJsonArray << tJsonArray << fJsonArray;
-    s->write(byte);
-    s->waitForBytesWritten();
+    qInfo() << fJsonArray;
+    //数据过大可能需要分块传，直接传本机测试可以，局域网虚拟机测试可能收不到数据？？
+    qint64 size = byte.size();
+//    qInfo()<<size;
+    //即使分块了，还是有概率收不到...可能是校园网不太行？？
+    qint64 send = 0;
+    qint64 chunk = 4096;
+    qint32 time=0;
+    forever{
+        qInfo() << time;
+        time++;
+        qInfo()<<"全部" << size <<"已发"<< send;
+        if(size <= (send + chunk)){
+            s->write(byte.sliced(send));
+            s->waitForBytesWritten();
+            qInfo() << "发完";
+            break;
+        }
+        s->write(byte.sliced(send,chunk),chunk);
+        s->waitForBytesWritten();
+        send += chunk;
+
+    }
+//    s->write("finished");
+//    s->waitForBytesWritten();
 
 }
 
@@ -111,6 +136,34 @@ void TcpServer::toLogin(QStringList *list,QTcpSocket *s)
     }
     s->waitForBytesWritten();
 }
+
+void TcpServer::uploadPicture(QTcpSocket *s, QDataStream &stream)
+{
+
+    qInfo() << "图片上传";
+    QString filename;
+    stream >> filename;
+    qint64 size;
+    stream >> size;
+    if(size > 0 ){
+        s->flush();
+        s->write("ready!!");
+        s->waitForBytesWritten();
+        QFile file("/srv/http/images/"+filename);
+        if (file.open(QIODevice::WriteOnly)) {
+            forever {
+                if(s->waitForReadyRead())
+                    file.write(s->readAll());
+                else{
+                    break;
+                }
+            }
+            file.close();
+        }
+    }
+}
+
+
 
 void TcpServer::handleClient(qintptr &handle)
 {
@@ -282,10 +335,29 @@ void TcpServer::handleClient(qintptr &handle)
         p->waitForBytesWritten();
         break;
     }
+    case uploadP: {
+        uploadPicture(p.data(),stream);
+        break;
+    }
+    case submitP:{
+        QString title,text,username;
+        qint32 cxid,type;
+        stream >>title >> text >>cxid >>username >> type;
+        if(Singleton<SqlOperator>::GetInstance().submitPost(title,text,cxid,username,type)){
+            qInfo() <<"发帖成功";
+            p->write("ok");
+            p->waitForBytesWritten();
+        }else{
+            qInfo() << "发帖失败";
+            p->write("error");
+            p->waitForBytesWritten();
+        }
+
+        break;
+    }
     default:
         break;
     }
-
 
     p->close();
 }
@@ -309,6 +381,5 @@ void TcpServer::createUserDir(User &user)
         }
         file.close();
     }
-
 }
 

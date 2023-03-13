@@ -1,4 +1,4 @@
-﻿#ifndef TCPSERVER_H
+#ifndef TCPSERVER_H
 #define TCPSERVER_H
 
 #include <QObject>
@@ -11,6 +11,7 @@
 #include "questionfactory.h"
 #include "interface/iQuestion.h"
 #include "user.h"
+#include <QUuid>
 
 #include <QFile>
 #include <QDir>
@@ -34,11 +35,14 @@ protected:
 private slots:
 
     void handleClient(qintptr &handle);
+
+    // 弃用
     void createUserDir(User &user);
 
 
+
 private:
-//    QList<QSharedPointer<QTcpSocket>> m_clients;
+    //    QList<QSharedPointer<QTcpSocket>> m_clients;
     // old way to send questions , use sendQuestionsJson will be more simple
     void sendQuestions(QTcpSocket *s);
 
@@ -46,8 +50,9 @@ private:
     void toLogin(QStringList *list,QTcpSocket *s);
     enum m_task{
         login,insertC,insertT,insertF,getQuestions,unUse,deleteQ,updateC,updateT,updateF,commitQ
-        ,isNewUser
+        ,isNewUser,uploadP,submitP
     };
+    void uploadPicture(QTcpSocket *s,QDataStream &stream);
     qint64 m_date;
     QuestionFactory factory;
 };

@@ -18,7 +18,8 @@ int main(int argc, char *argv[])
     //    Singleton<SqlOperator>::GetInstance().login("UWillno","44910244");
     HttpServer httpsever;
     TcpServer server;
-    //    Singleton<SqlOperator>::GetInstance().selectPosts();
+
+    //    Singleton<SqlOperator>::GetInstance().userExists(0);
     if(!server.listen(QHostAddress::Any, 9444))
     {
         qCritical() << server.errorString();
@@ -28,10 +29,6 @@ int main(int argc, char *argv[])
         //        qInfo() <<
         qInfo() << "服务启动!";
     }
-    //        QTcpSocket s;
-    //        server.sendQuestionsJson(&s);
-    //        test();
-
 
     return a.exec();
 }
