@@ -157,12 +157,6 @@
 				"parent" : 0
 			},
 			{
-				"command" : 6,
-				"file" : 1,
-				"line" : 87,
-				"parent" : 0
-			},
-			{
 				"command" : 13,
 				"file" : 1,
 				"line" : 8,
@@ -170,147 +164,147 @@
 			},
 			{
 				"file" : 2,
-				"parent" : 16
+				"parent" : 15
 			},
 			{
 				"command" : 12,
 				"file" : 2,
 				"line" : 38,
-				"parent" : 17
+				"parent" : 16
 			},
 			{
 				"command" : 12,
 				"file" : 2,
 				"line" : 46,
-				"parent" : 17
+				"parent" : 16
 			},
 			{
 				"command" : 12,
 				"file" : 2,
 				"line" : 51,
-				"parent" : 17
+				"parent" : 16
 			},
 			{
 				"command" : 13,
 				"file" : 2,
 				"line" : 32,
-				"parent" : 17
+				"parent" : 16
 			},
 			{
 				"file" : 11,
-				"parent" : 21
+				"parent" : 20
 			},
 			{
 				"command" : 13,
 				"file" : 11,
 				"line" : 157,
+				"parent" : 21
+			},
+			{
+				"file" : 10,
 				"parent" : 22
 			},
 			{
+				"command" : 15,
 				"file" : 10,
+				"line" : 40,
 				"parent" : 23
 			},
 			{
-				"command" : 15,
-				"file" : 10,
-				"line" : 40,
+				"file" : 9,
 				"parent" : 24
 			},
 			{
-				"file" : 9,
-				"parent" : 25
-			},
-			{
 				"command" : 17,
 				"file" : 9,
 				"line" : 39,
-				"parent" : 26
+				"parent" : 25
 			},
 			{
 				"command" : 16,
 				"file" : 6,
 				"line" : 108,
-				"parent" : 27
+				"parent" : 26
 			},
 			{
 				"command" : 13,
 				"file" : 5,
 				"line" : 47,
-				"parent" : 28
+				"parent" : 27
 			},
 			{
 				"file" : 8,
-				"parent" : 29
+				"parent" : 28
 			},
 			{
 				"command" : 15,
 				"file" : 8,
 				"line" : 40,
-				"parent" : 30
+				"parent" : 29
 			},
 			{
 				"file" : 7,
-				"parent" : 31
+				"parent" : 30
 			},
 			{
 				"command" : 17,
 				"file" : 7,
 				"line" : 39,
-				"parent" : 32
+				"parent" : 31
 			},
 			{
 				"command" : 16,
 				"file" : 6,
 				"line" : 108,
-				"parent" : 33
+				"parent" : 32
 			},
 			{
 				"command" : 13,
 				"file" : 5,
 				"line" : 47,
-				"parent" : 34
+				"parent" : 33
 			},
 			{
 				"file" : 4,
-				"parent" : 35
+				"parent" : 34
 			},
 			{
 				"command" : 15,
 				"file" : 4,
 				"line" : 55,
-				"parent" : 36
+				"parent" : 35
 			},
 			{
 				"file" : 3,
-				"parent" : 37
+				"parent" : 36
 			},
 			{
 				"command" : 14,
 				"file" : 3,
 				"line" : 56,
-				"parent" : 38
+				"parent" : 37
 			},
 			{
 				"command" : 12,
 				"file" : 2,
 				"line" : 57,
-				"parent" : 17
+				"parent" : 16
 			},
 			{
 				"command" : 15,
 				"file" : 10,
 				"line" : 52,
-				"parent" : 24
+				"parent" : 23
 			},
 			{
 				"file" : 12,
-				"parent" : 41
+				"parent" : 40
 			},
 			{
 				"command" : 14,
 				"file" : 12,
 				"line" : 56,
-				"parent" : 42
+				"parent" : 41
 			},
 			{
 				"command" : 19,
@@ -322,71 +316,71 @@
 				"command" : 18,
 				"file" : 13,
 				"line" : 670,
-				"parent" : 44
+				"parent" : 43
 			},
 			{
 				"command" : 6,
 				"file" : 13,
 				"line" : 388,
-				"parent" : 45
+				"parent" : 44
 			},
 			{
 				"command" : 16,
 				"file" : 6,
 				"line" : 108,
-				"parent" : 27
+				"parent" : 26
 			},
 			{
 				"command" : 13,
 				"file" : 5,
 				"line" : 47,
-				"parent" : 47
+				"parent" : 46
 			},
 			{
 				"file" : 15,
-				"parent" : 48
+				"parent" : 47
 			},
 			{
 				"command" : 15,
 				"file" : 15,
 				"line" : 55,
-				"parent" : 49
+				"parent" : 48
 			},
 			{
 				"file" : 14,
-				"parent" : 50
+				"parent" : 49
 			},
 			{
 				"command" : 14,
 				"file" : 14,
 				"line" : 56,
-				"parent" : 51
+				"parent" : 50
 			},
 			{
 				"command" : 13,
 				"file" : 11,
 				"line" : 157,
-				"parent" : 22
+				"parent" : 21
 			},
 			{
 				"file" : 17,
-				"parent" : 53
+				"parent" : 52
 			},
 			{
 				"command" : 15,
 				"file" : 17,
 				"line" : 52,
-				"parent" : 54
+				"parent" : 53
 			},
 			{
 				"file" : 16,
-				"parent" : 55
+				"parent" : 54
 			},
 			{
 				"command" : 14,
 				"file" : 16,
 				"line" : 56,
-				"parent" : 56
+				"parent" : 55
 			},
 			{
 				"command" : 6,
@@ -398,45 +392,45 @@
 				"command" : 20,
 				"file" : 7,
 				"line" : 30,
-				"parent" : 32
+				"parent" : 31
 			},
 			{
 				"command" : 16,
 				"file" : 6,
 				"line" : 33,
-				"parent" : 59
+				"parent" : 58
 			},
 			{
 				"command" : 13,
 				"file" : 5,
 				"line" : 47,
-				"parent" : 60
+				"parent" : 59
 			},
 			{
 				"file" : 19,
-				"parent" : 61
+				"parent" : 60
 			},
 			{
 				"command" : 13,
 				"file" : 19,
 				"line" : 10,
-				"parent" : 62
+				"parent" : 61
 			},
 			{
 				"file" : 18,
-				"parent" : 63
+				"parent" : 62
 			},
 			{
 				"command" : 12,
 				"file" : 18,
 				"line" : 512,
-				"parent" : 64
+				"parent" : 63
 			},
 			{
 				"command" : 14,
 				"file" : 18,
 				"line" : 510,
-				"parent" : 64
+				"parent" : 63
 			},
 			{
 				"file" : 1,
@@ -447,37 +441,37 @@
 				"command" : 26,
 				"file" : 20,
 				"line" : 1,
-				"parent" : 67
+				"parent" : 66
 			},
 			{
 				"command" : 25,
 				"file" : 0,
 				"line" : 705,
-				"parent" : 68
+				"parent" : 67
 			},
 			{
 				"command" : 24,
 				"file" : 0,
 				"line" : 640,
-				"parent" : 69
+				"parent" : 68
 			},
 			{
 				"command" : 23,
 				"file" : 0,
 				"line" : 640,
-				"parent" : 70
+				"parent" : 69
 			},
 			{
 				"command" : 22,
 				"file" : 13,
 				"line" : 2870,
-				"parent" : 71
+				"parent" : 70
 			},
 			{
 				"command" : 21,
 				"file" : 13,
 				"line" : 2723,
-				"parent" : 72
+				"parent" : 71
 			},
 			{
 				"command" : 27,
@@ -489,19 +483,19 @@
 				"command" : 29,
 				"file" : 13,
 				"line" : 517,
-				"parent" : 45
+				"parent" : 44
 			},
 			{
 				"command" : 28,
 				"file" : 13,
 				"line" : 2515,
-				"parent" : 75
+				"parent" : 74
 			},
 			{
 				"command" : 28,
 				"file" : 13,
 				"line" : 2540,
-				"parent" : 75
+				"parent" : 74
 			},
 			{
 				"command" : 30,
@@ -519,67 +513,67 @@
 				"command" : 31,
 				"file" : 13,
 				"line" : 2322,
-				"parent" : 75
+				"parent" : 74
 			},
 			{
 				"command" : 30,
 				"file" : 0,
 				"line" : 1077,
-				"parent" : 80
+				"parent" : 79
 			},
 			{
 				"command" : 30,
 				"file" : 13,
 				"line" : 2506,
-				"parent" : 75
+				"parent" : 74
 			},
 			{
 				"command" : 10,
 				"file" : 13,
 				"line" : 561,
-				"parent" : 45
+				"parent" : 44
 			},
 			{
 				"command" : 9,
 				"file" : 0,
 				"line" : 342,
+				"parent" : 82
+			},
+			{
+				"command" : 8,
+				"file" : 0,
+				"line" : 1810,
 				"parent" : 83
 			},
 			{
-				"command" : 8,
-				"file" : 0,
-				"line" : 1810,
-				"parent" : 84
-			},
-			{
 				"command" : 30,
 				"file" : 0,
 				"line" : 1574,
-				"parent" : 85
+				"parent" : 84
 			},
 			{
 				"command" : 10,
 				"file" : 13,
 				"line" : 561,
-				"parent" : 45
+				"parent" : 44
 			},
 			{
 				"command" : 9,
 				"file" : 0,
 				"line" : 342,
-				"parent" : 87
+				"parent" : 86
 			},
 			{
 				"command" : 8,
 				"file" : 0,
 				"line" : 1810,
-				"parent" : 88
+				"parent" : 87
 			},
 			{
 				"command" : 30,
 				"file" : 0,
 				"line" : 1574,
-				"parent" : 89
+				"parent" : 88
 			}
 		]
 	},
@@ -592,7 +586,7 @@
 					"fragment" : "-DQT_QML_DEBUG -g"
 				},
 				{
-					"backtrace" : 58,
+					"backtrace" : 57,
 					"fragment" : "-fPIC"
 				}
 			],
@@ -611,7 +605,7 @@
 					"define" : "QT_CORE5COMPAT_LIB"
 				},
 				{
-					"backtrace" : 58,
+					"backtrace" : 57,
 					"define" : "QT_CORE_LIB"
 				},
 				{
@@ -627,7 +621,7 @@
 					"define" : "QT_MULTIMEDIA_LIB"
 				},
 				{
-					"backtrace" : 46,
+					"backtrace" : 45,
 					"define" : "QT_NETWORK_LIB"
 				},
 				{
@@ -635,7 +629,7 @@
 					"define" : "QT_OPENGL_LIB"
 				},
 				{
-					"backtrace" : 46,
+					"backtrace" : 45,
 					"define" : "QT_QMLINTEGRATION_LIB"
 				},
 				{
@@ -643,11 +637,11 @@
 					"define" : "QT_QMLMODELS_LIB"
 				},
 				{
-					"backtrace" : 74,
+					"backtrace" : 73,
 					"define" : "QT_QML_DEBUG"
 				},
 				{
-					"backtrace" : 46,
+					"backtrace" : 45,
 					"define" : "QT_QML_LIB"
 				},
 				{
@@ -682,52 +676,52 @@
 					"path" : "/home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/appLearningSystem-Felgo4_autogen/include"
 				},
 				{
-					"backtrace" : 76,
+					"backtrace" : 75,
 					"path" : "/home/uwillno/Desktop/BYSJ/C/LearningSystem-Felgo4"
 				},
 				{
-					"backtrace" : 77,
+					"backtrace" : 76,
 					"path" : "/home/uwillno/Felgo/Felgo/gcc_64/include/QtQml/6.4.1"
 				},
 				{
-					"backtrace" : 77,
+					"backtrace" : 76,
 					"path" : "/home/uwillno/Felgo/Felgo/gcc_64/include/QtQml/6.4.1/QtQml"
 				},
 				{
-					"backtrace" : 77,
+					"backtrace" : 76,
 					"path" : "/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/6.4.1"
 				},
 				{
-					"backtrace" : 77,
+					"backtrace" : 76,
 					"path" : "/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore/6.4.1/QtCore"
 				},
 				{
-					"backtrace" : 77,
+					"backtrace" : 76,
 					"isSystem" : true,
 					"path" : "/home/uwillno/Felgo/Felgo/gcc_64/include/QtCore"
 				},
 				{
-					"backtrace" : 77,
+					"backtrace" : 76,
 					"isSystem" : true,
 					"path" : "/home/uwillno/Felgo/Felgo/gcc_64/include"
 				},
 				{
-					"backtrace" : 77,
+					"backtrace" : 76,
 					"isSystem" : true,
 					"path" : "/home/uwillno/Felgo/Felgo/gcc_64/mkspecs/linux-g++"
 				},
 				{
-					"backtrace" : 77,
+					"backtrace" : 76,
 					"isSystem" : true,
 					"path" : "/home/uwillno/Felgo/Felgo/gcc_64/include/QtQml"
 				},
 				{
-					"backtrace" : 77,
+					"backtrace" : 76,
 					"isSystem" : true,
 					"path" : "/home/uwillno/Felgo/Felgo/gcc_64/include/QtQmlIntegration"
 				},
 				{
-					"backtrace" : 77,
+					"backtrace" : 76,
 					"isSystem" : true,
 					"path" : "/home/uwillno/Felgo/Felgo/gcc_64/include/QtNetwork"
 				},
@@ -816,9 +810,9 @@
 				7,
 				8,
 				10,
-				74,
-				75,
-				76
+				79,
+				80,
+				81
 			]
 		}
 	],
@@ -829,7 +823,7 @@
 			"id" : "Felgo_resources_1::@6890427a1f51a3e7e1df"
 		},
 		{
-			"backtrace" : 73,
+			"backtrace" : 72,
 			"id" : "appLearningSystem-Felgo4_qmlimportscan::@6890427a1f51a3e7e1df"
 		},
 		{
@@ -892,67 +886,62 @@
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 15,
-				"fragment" : "-lQZXing",
-				"role" : "libraries"
-			},
-			{
-				"backtrace" : 18,
+				"backtrace" : 17,
 				"fragment" : "/home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Widgets.so.6.4.1",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 18,
+				"backtrace" : 17,
 				"fragment" : "/home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Multimedia.so.6.4.1",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 18,
+				"backtrace" : 17,
 				"fragment" : "/home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Sql.so.6.4.1",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 18,
+				"backtrace" : 17,
 				"fragment" : "/home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6WebSockets.so.6.4.1",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 19,
+				"backtrace" : 18,
 				"fragment" : "-lz",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 20,
+				"backtrace" : 19,
 				"fragment" : "/home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Bluetooth.so.6.4.1",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 39,
+				"backtrace" : 38,
 				"fragment" : "/home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6DBus.so.6.4.1",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 20,
+				"backtrace" : 19,
 				"fragment" : "/home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Core5Compat.so.6.4.1",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 40,
+				"backtrace" : 39,
 				"fragment" : "/home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6QuickControls2.so.6.4.1",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 18,
+				"backtrace" : 17,
 				"fragment" : "/home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Quick.so.6.4.1",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 43,
+				"backtrace" : 42,
 				"fragment" : "/home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6QmlModels.so.6.4.1",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 46,
+				"backtrace" : 45,
 				"fragment" : "/home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Qml.so.6.4.1",
 				"role" : "libraries"
 			},
@@ -962,27 +951,27 @@
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 52,
+				"backtrace" : 51,
 				"fragment" : "/home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6OpenGL.so.6.4.1",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 57,
+				"backtrace" : 56,
 				"fragment" : "/home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Gui.so.6.4.1",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 58,
+				"backtrace" : 57,
 				"fragment" : "/home/uwillno/Felgo/Felgo/gcc_64/lib/libQt6Core.so.6.4.1",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 65,
+				"backtrace" : 64,
 				"fragment" : "/usr/lib/libGLX.so",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 66,
+				"backtrace" : 65,
 				"fragment" : "/usr/lib/libOpenGL.so",
 				"role" : "libraries"
 			}
@@ -1008,10 +997,10 @@
 				7,
 				8,
 				10,
-				72,
-				74,
-				75,
-				76
+				77,
+				79,
+				80,
+				81
 			]
 		},
 		{
@@ -1086,16 +1075,16 @@
 				65,
 				66,
 				67,
+				68,
 				69,
 				70,
 				71,
-				73,
-				77,
-				84,
-				85,
-				86,
-				87,
-				88,
+				72,
+				74,
+				75,
+				76,
+				78,
+				82,
 				89,
 				90,
 				91,
@@ -1107,26 +1096,31 @@
 				97,
 				98,
 				99,
-				100
+				100,
+				101,
+				102,
+				103,
+				104,
+				105
 			]
 		},
 		{
 			"name" : "Resources",
 			"sourceIndexes" : 
 			[
-				68
+				73
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				78,
-				79,
-				80,
-				81,
-				82,
-				83
+				83,
+				84,
+				85,
+				86,
+				87,
+				88
 			]
 		}
 	],
@@ -1236,6 +1230,16 @@
 		},
 		{
 			"backtrace" : 4,
+			"path" : "qml/items/MemberAnswerItem.qml",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "qml/items/MemberPictureItem.qml",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
 			"path" : "qml/items/ModifyQuestionPage.qml",
 			"sourceGroupIndex" : 2
 		},
@@ -1267,6 +1271,11 @@
 		{
 			"backtrace" : 4,
 			"path" : "qml/items/ResourceRow.qml",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "qml/items/RightAnswerAppListItem.qml",
 			"sourceGroupIndex" : 2
 		},
 		{
@@ -1476,6 +1485,16 @@
 		},
 		{
 			"backtrace" : 4,
+			"path" : "qml/pages/XxtEAPage.qml",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "qml/pages/XxtIntegralStatisticsPage.qml",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
 			"path" : "qml/pages/XxtWebPage.qml",
 			"sourceGroupIndex" : 2
 		},
@@ -1495,37 +1514,37 @@
 			"sourceGroupIndex" : 2
 		},
 		{
-			"backtrace" : 78,
+			"backtrace" : 77,
 			"path" : "macx/app_icon.icns",
 			"sourceGroupIndex" : 2
 		},
 		{
-			"backtrace" : 79,
+			"backtrace" : 78,
 			"path" : "win/app_icon.rc",
 			"sourceGroupIndex" : 0
 		},
 		{
-			"backtrace" : 81,
+			"backtrace" : 80,
 			"isGenerated" : true,
 			"path" : "/home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/meta_types/qt6applearningsystem-felgo4_debug_metatypes.json.gen",
 			"sourceGroupIndex" : 2
 		},
 		{
-			"backtrace" : 82,
+			"backtrace" : 81,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
 			"path" : "/home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/applearningsystem-felgo4_qmltyperegistrations.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
-			"backtrace" : 86,
+			"backtrace" : 85,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
 			"path" : "/home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/.rcc/qrc_qmake_LearningSystem-Felgo4.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
-			"backtrace" : 90,
+			"backtrace" : 89,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
 			"path" : "/home/uwillno/Desktop/BYSJ/C/build-LearningSystem-Felgo4-Felgo_SDK_Desktop_Qt_6_4_1_GCC_64bit-Debug/.rcc/qrc_qmake_LearningSystem-Felgo4_copy.cpp",
@@ -1574,17 +1593,17 @@
 			"sourceGroupIndex" : 4
 		},
 		{
-			"backtrace" : 58,
+			"backtrace" : 57,
 			"path" : "/home/uwillno/Felgo/Felgo/gcc_64/lib/metatypes/qt6core_relwithdebinfo_metatypes.json",
 			"sourceGroupIndex" : 2
 		},
 		{
-			"backtrace" : 46,
+			"backtrace" : 45,
 			"path" : "/home/uwillno/Felgo/Felgo/gcc_64/lib/metatypes/qt6qml_relwithdebinfo_metatypes.json",
 			"sourceGroupIndex" : 2
 		},
 		{
-			"backtrace" : 46,
+			"backtrace" : 45,
 			"path" : "/home/uwillno/Felgo/Felgo/gcc_64/lib/metatypes/qt6network_relwithdebinfo_metatypes.json",
 			"sourceGroupIndex" : 2
 		},

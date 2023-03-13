@@ -810,9 +810,9 @@
 				7,
 				8,
 				10,
-				74,
-				75,
-				76
+				80,
+				81,
+				82
 			]
 		}
 	],
@@ -997,10 +997,10 @@
 				7,
 				8,
 				10,
-				72,
-				74,
-				75,
-				76
+				78,
+				80,
+				81,
+				82
 			]
 		},
 		{
@@ -1075,17 +1075,17 @@
 				65,
 				66,
 				67,
+				68,
 				69,
 				70,
 				71,
+				72,
 				73,
+				75,
+				76,
 				77,
-				84,
-				85,
-				86,
-				87,
-				88,
-				89,
+				79,
+				83,
 				90,
 				91,
 				92,
@@ -1096,26 +1096,32 @@
 				97,
 				98,
 				99,
-				100
+				100,
+				101,
+				102,
+				103,
+				104,
+				105,
+				106
 			]
 		},
 		{
 			"name" : "Resources",
 			"sourceIndexes" : 
 			[
-				68
+				74
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				78,
-				79,
-				80,
-				81,
-				82,
-				83
+				84,
+				85,
+				86,
+				87,
+				88,
+				89
 			]
 		}
 	],
@@ -1225,6 +1231,16 @@
 		},
 		{
 			"backtrace" : 4,
+			"path" : "qml/items/MemberAnswerItem.qml",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "qml/items/MemberPictureItem.qml",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
 			"path" : "qml/items/ModifyQuestionPage.qml",
 			"sourceGroupIndex" : 2
 		},
@@ -1256,6 +1272,11 @@
 		{
 			"backtrace" : 4,
 			"path" : "qml/items/ResourceRow.qml",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "qml/items/RightAnswerAppListItem.qml",
 			"sourceGroupIndex" : 2
 		},
 		{
@@ -1465,7 +1486,22 @@
 		},
 		{
 			"backtrace" : 4,
+			"path" : "qml/pages/XxtEAPage.qml",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "qml/pages/XxtIntegralStatisticsPage.qml",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
 			"path" : "qml/pages/XxtWebPage.qml",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "qml/pages/XxtWorkStastics.qml",
 			"sourceGroupIndex" : 2
 		},
 		{

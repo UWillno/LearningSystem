@@ -6,12 +6,8 @@
 			[
 				{
 					"build" : ".",
-					"childIndexes" : 
-					[
-						1
-					],
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-Debug-83113ecbdad2b87f64a5.json",
+					"jsonFile" : "directory-.-Debug-7759d4991a5c6c4ee942.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.16"
@@ -32,60 +28,12 @@
 						9,
 						10
 					]
-				},
-				{
-					"build" : "qzxing",
-					"childIndexes" : 
-					[
-						2,
-						3
-					],
-					"jsonFile" : "directory-qzxing-Debug-05c3609cdfdc2a5948d8.json",
-					"minimumCMakeVersion" : 
-					{
-						"string" : "3.3"
-					},
-					"parentIndex" : 0,
-					"projectIndex" : 1,
-					"source" : "qzxing",
-					"targetIndexes" : 
-					[
-						11,
-						12,
-						13
-					]
-				},
-				{
-					"build" : "qzxing/zxing/bigint",
-					"jsonFile" : "directory-qzxing.zxing.bigint-Debug-dff69baa4e1e99e205ce.json",
-					"minimumCMakeVersion" : 
-					{
-						"string" : "3.3"
-					},
-					"parentIndex" : 1,
-					"projectIndex" : 1,
-					"source" : "qzxing/zxing/bigint"
-				},
-				{
-					"build" : "qzxing/zxing/zxing",
-					"jsonFile" : "directory-qzxing.zxing.zxing-Debug-c09d378a7b1da9ace911.json",
-					"minimumCMakeVersion" : 
-					{
-						"string" : "3.3"
-					},
-					"parentIndex" : 1,
-					"projectIndex" : 1,
-					"source" : "qzxing/zxing/zxing"
 				}
 			],
 			"name" : "Debug",
 			"projects" : 
 			[
 				{
-					"childIndexes" : 
-					[
-						1
-					],
 					"directoryIndexes" : 
 					[
 						0
@@ -104,22 +52,6 @@
 						8,
 						9,
 						10
-					]
-				},
-				{
-					"directoryIndexes" : 
-					[
-						1,
-						2,
-						3
-					],
-					"name" : "QZXing",
-					"parentIndex" : 0,
-					"targetIndexes" : 
-					[
-						11,
-						12,
-						13
 					]
 				}
 			],
@@ -163,7 +95,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "appLearningSystem-Felgo4::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-appLearningSystem-Felgo4-Debug-db6c0e9e6cf0430bd75c.json",
+					"jsonFile" : "target-appLearningSystem-Felgo4-Debug-9f7000b5b05a2cef232d.json",
 					"name" : "appLearningSystem-Felgo4",
 					"projectIndex" : 0
 				},
@@ -201,27 +133,6 @@
 					"jsonFile" : "target-appLearningSystem-Felgo4_qmltyperegistration-Debug-6708b48fea8121dcf402.json",
 					"name" : "appLearningSystem-Felgo4_qmltyperegistration",
 					"projectIndex" : 0
-				},
-				{
-					"directoryIndex" : 1,
-					"id" : "qzxing::@543357b078b9b53ea562",
-					"jsonFile" : "target-qzxing-Debug-1612fc2b60384d5bfa2c.json",
-					"name" : "qzxing",
-					"projectIndex" : 1
-				},
-				{
-					"directoryIndex" : 1,
-					"id" : "qzxing_autogen::@543357b078b9b53ea562",
-					"jsonFile" : "target-qzxing_autogen-Debug-8dce3c25247e0ad226f1.json",
-					"name" : "qzxing_autogen",
-					"projectIndex" : 1
-				},
-				{
-					"directoryIndex" : 1,
-					"id" : "qzxing_autogen_timestamp_deps::@543357b078b9b53ea562",
-					"jsonFile" : "target-qzxing_autogen_timestamp_deps-Debug-d4eb3cf93eba3c28c09b.json",
-					"name" : "qzxing_autogen_timestamp_deps",
-					"projectIndex" : 1
 				}
 			]
 		}

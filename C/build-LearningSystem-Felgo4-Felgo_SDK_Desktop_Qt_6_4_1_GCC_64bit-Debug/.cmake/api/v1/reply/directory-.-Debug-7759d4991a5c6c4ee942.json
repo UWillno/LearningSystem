@@ -394,6 +394,42 @@
 				"file" : 0,
 				"line" : 121,
 				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 121,
+				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 121,
+				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 121,
+				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 121,
+				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 121,
+				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 121,
+				"parent" : 3
 			}
 		]
 	},
@@ -497,7 +533,7 @@
 			"destination" : "qml/items",
 			"paths" : 
 			[
-				"qml/items/ModifyQuestionPage.qml"
+				"qml/items/MemberAnswerItem.qml"
 			],
 			"type" : "file"
 		},
@@ -507,7 +543,7 @@
 			"destination" : "qml/items",
 			"paths" : 
 			[
-				"qml/items/PostItem.qml"
+				"qml/items/MemberPictureItem.qml"
 			],
 			"type" : "file"
 		},
@@ -517,7 +553,7 @@
 			"destination" : "qml/items",
 			"paths" : 
 			[
-				"qml/items/PostRow.qml"
+				"qml/items/ModifyQuestionPage.qml"
 			],
 			"type" : "file"
 		},
@@ -527,7 +563,7 @@
 			"destination" : "qml/items",
 			"paths" : 
 			[
-				"qml/items/PostsPage.qml"
+				"qml/items/PostItem.qml"
 			],
 			"type" : "file"
 		},
@@ -537,7 +573,7 @@
 			"destination" : "qml/items",
 			"paths" : 
 			[
-				"qml/items/QGridView.qml"
+				"qml/items/PostRow.qml"
 			],
 			"type" : "file"
 		},
@@ -547,7 +583,7 @@
 			"destination" : "qml/items",
 			"paths" : 
 			[
-				"qml/items/QuestionRect.qml"
+				"qml/items/PostsPage.qml"
 			],
 			"type" : "file"
 		},
@@ -557,7 +593,7 @@
 			"destination" : "qml/items",
 			"paths" : 
 			[
-				"qml/items/ResourceRow.qml"
+				"qml/items/QGridView.qml"
 			],
 			"type" : "file"
 		},
@@ -567,7 +603,7 @@
 			"destination" : "qml/items",
 			"paths" : 
 			[
-				"qml/items/SelectSwipeView.qml"
+				"qml/items/QuestionRect.qml"
 			],
 			"type" : "file"
 		},
@@ -577,12 +613,42 @@
 			"destination" : "qml/items",
 			"paths" : 
 			[
-				"qml/items/TrueOrFalseQuestionItem.qml"
+				"qml/items/ResourceRow.qml"
 			],
 			"type" : "file"
 		},
 		{
 			"backtrace" : 21,
+			"component" : "Unspecified",
+			"destination" : "qml/items",
+			"paths" : 
+			[
+				"qml/items/RightAnswerAppListItem.qml"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 22,
+			"component" : "Unspecified",
+			"destination" : "qml/items",
+			"paths" : 
+			[
+				"qml/items/SelectSwipeView.qml"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 23,
+			"component" : "Unspecified",
+			"destination" : "qml/items",
+			"paths" : 
+			[
+				"qml/items/TrueOrFalseQuestionItem.qml"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 24,
 			"component" : "Unspecified",
 			"destination" : "qml/items/loader",
 			"paths" : 
@@ -592,7 +658,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 22,
+			"backtrace" : 25,
 			"component" : "Unspecified",
 			"destination" : "qml/items/practice",
 			"paths" : 
@@ -602,7 +668,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 23,
+			"backtrace" : 26,
 			"component" : "Unspecified",
 			"destination" : "qml/items/template",
 			"paths" : 
@@ -612,7 +678,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 24,
+			"backtrace" : 27,
 			"component" : "Unspecified",
 			"destination" : "qml/items/template",
 			"paths" : 
@@ -622,7 +688,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 25,
+			"backtrace" : 28,
 			"component" : "Unspecified",
 			"destination" : "qml/items/toast",
 			"paths" : 
@@ -632,7 +698,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 26,
+			"backtrace" : 29,
 			"component" : "Unspecified",
 			"destination" : "qml/items/toast",
 			"paths" : 
@@ -642,7 +708,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 27,
+			"backtrace" : 30,
 			"component" : "Unspecified",
 			"destination" : "qml/items/toast",
 			"paths" : 
@@ -652,7 +718,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 28,
+			"backtrace" : 31,
 			"component" : "Unspecified",
 			"destination" : "qml/logic",
 			"paths" : 
@@ -662,7 +728,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 29,
+			"backtrace" : 32,
 			"component" : "Unspecified",
 			"destination" : "qml/logic",
 			"paths" : 
@@ -672,7 +738,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 30,
+			"backtrace" : 33,
 			"component" : "Unspecified",
 			"destination" : "qml/logic",
 			"paths" : 
@@ -682,7 +748,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 31,
+			"backtrace" : 34,
 			"component" : "Unspecified",
 			"destination" : "qml/pages",
 			"paths" : 
@@ -692,7 +758,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 32,
+			"backtrace" : 35,
 			"component" : "Unspecified",
 			"destination" : "qml/pages",
 			"paths" : 
@@ -702,7 +768,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 33,
+			"backtrace" : 36,
 			"component" : "Unspecified",
 			"destination" : "qml/pages",
 			"paths" : 
@@ -712,7 +778,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 34,
+			"backtrace" : 37,
 			"component" : "Unspecified",
 			"destination" : "qml/pages",
 			"paths" : 
@@ -722,7 +788,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 35,
+			"backtrace" : 38,
 			"component" : "Unspecified",
 			"destination" : "qml/pages",
 			"paths" : 
@@ -732,7 +798,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 36,
+			"backtrace" : 39,
 			"component" : "Unspecified",
 			"destination" : "qml/pages",
 			"paths" : 
@@ -742,7 +808,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 37,
+			"backtrace" : 40,
 			"component" : "Unspecified",
 			"destination" : "qml/pages",
 			"paths" : 
@@ -752,7 +818,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 38,
+			"backtrace" : 41,
 			"component" : "Unspecified",
 			"destination" : "qml/pages",
 			"paths" : 
@@ -762,7 +828,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 39,
+			"backtrace" : 42,
 			"component" : "Unspecified",
 			"destination" : "qml/pages",
 			"paths" : 
@@ -772,7 +838,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 40,
+			"backtrace" : 43,
 			"component" : "Unspecified",
 			"destination" : "qml/pages",
 			"paths" : 
@@ -782,7 +848,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 41,
+			"backtrace" : 44,
 			"component" : "Unspecified",
 			"destination" : "qml/pages",
 			"paths" : 
@@ -792,7 +858,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 42,
+			"backtrace" : 45,
 			"component" : "Unspecified",
 			"destination" : "qml/pages",
 			"paths" : 
@@ -802,7 +868,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 43,
+			"backtrace" : 46,
 			"component" : "Unspecified",
 			"destination" : "qml/pages",
 			"paths" : 
@@ -812,7 +878,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 44,
+			"backtrace" : 47,
 			"component" : "Unspecified",
 			"destination" : "qml/pages",
 			"paths" : 
@@ -822,7 +888,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 45,
+			"backtrace" : 48,
 			"component" : "Unspecified",
 			"destination" : "qml/pages",
 			"paths" : 
@@ -832,7 +898,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 46,
+			"backtrace" : 49,
 			"component" : "Unspecified",
 			"destination" : "qml/pages",
 			"paths" : 
@@ -842,7 +908,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 47,
+			"backtrace" : 50,
 			"component" : "Unspecified",
 			"destination" : "qml/pages",
 			"paths" : 
@@ -852,7 +918,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 48,
+			"backtrace" : 51,
 			"component" : "Unspecified",
 			"destination" : "qml/pages",
 			"paths" : 
@@ -862,7 +928,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 49,
+			"backtrace" : 52,
 			"component" : "Unspecified",
 			"destination" : "qml/pages",
 			"paths" : 
@@ -872,7 +938,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 50,
+			"backtrace" : 53,
 			"component" : "Unspecified",
 			"destination" : "qml/pages",
 			"paths" : 
@@ -882,7 +948,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 51,
+			"backtrace" : 54,
 			"component" : "Unspecified",
 			"destination" : "qml/pages",
 			"paths" : 
@@ -892,7 +958,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 52,
+			"backtrace" : 55,
 			"component" : "Unspecified",
 			"destination" : "qml/pages",
 			"paths" : 
@@ -902,7 +968,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 53,
+			"backtrace" : 56,
 			"component" : "Unspecified",
 			"destination" : "qml/pages",
 			"paths" : 
@@ -912,7 +978,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 54,
+			"backtrace" : 57,
 			"component" : "Unspecified",
 			"destination" : "qml/pages",
 			"paths" : 
@@ -922,7 +988,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 55,
+			"backtrace" : 58,
 			"component" : "Unspecified",
 			"destination" : "qml/pages",
 			"paths" : 
@@ -932,7 +998,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 56,
+			"backtrace" : 59,
 			"component" : "Unspecified",
 			"destination" : "qml/pages",
 			"paths" : 
@@ -942,7 +1008,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 57,
+			"backtrace" : 60,
 			"component" : "Unspecified",
 			"destination" : "qml/pages",
 			"paths" : 
@@ -952,7 +1018,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 58,
+			"backtrace" : 61,
 			"component" : "Unspecified",
 			"destination" : "qml/pages",
 			"paths" : 
@@ -962,7 +1028,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 59,
+			"backtrace" : 62,
 			"component" : "Unspecified",
 			"destination" : "qml/pages",
 			"paths" : 
@@ -972,7 +1038,27 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 60,
+			"backtrace" : 63,
+			"component" : "Unspecified",
+			"destination" : "qml/pages",
+			"paths" : 
+			[
+				"qml/pages/XxtEAPage.qml"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 64,
+			"component" : "Unspecified",
+			"destination" : "qml/pages",
+			"paths" : 
+			[
+				"qml/pages/XxtIntegralStatisticsPage.qml"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 65,
 			"component" : "Unspecified",
 			"destination" : "qml/pages",
 			"paths" : 
@@ -982,7 +1068,17 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 61,
+			"backtrace" : 66,
+			"component" : "Unspecified",
+			"destination" : "qml/pages",
+			"paths" : 
+			[
+				"qml/pages/XxtWorkStastics.qml"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 67,
 			"component" : "Unspecified",
 			"destination" : "assets",
 			"paths" : 
@@ -992,7 +1088,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 62,
+			"backtrace" : 68,
 			"component" : "Unspecified",
 			"destination" : "qml",
 			"paths" : 
@@ -1002,7 +1098,7 @@
 			"type" : "file"
 		},
 		{
-			"backtrace" : 63,
+			"backtrace" : 69,
 			"component" : "Unspecified",
 			"destination" : "qml/logic",
 			"paths" : 

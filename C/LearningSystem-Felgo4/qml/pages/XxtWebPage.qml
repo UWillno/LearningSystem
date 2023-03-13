@@ -61,6 +61,9 @@ AppPage {
             onClicked:{
                 extraContextMenu.popup()
             }
+            onPressAndHold: {
+                viewSignPhotos()
+            }
         }
 
         AppButton{
@@ -199,19 +202,102 @@ AppPage {
         width: signBtn.width
         Action{
             text: "查看测验答案"
+            onTriggered: {
+                getExercisesAnswers()
+                toastManager.show("页面加载中",4000)
+            }
         }
         Action{
             text: "课程作业统计"
+            onTriggered: {
+                workStastics()
+                toastManager.show("页面加载中",2000)
+            }
         }
         Action{
             text: "课程积分统计"
+            onTriggered: {
+                intergralStatistics()
+                toastManager.show("页面加载中",2000)
+            }
         }
         Action{
             text: "签到照片查看"
             onTriggered: {
-                viewSignPhotos()
+                toastManager.show("??????",1000)
             }
         }
+
+    }
+
+
+    function workStastics(){
+        const url = "https://stat2-ans.chaoxing.com/work-stastics/student-works?clazzid="+classId+"&courseid="+courseId+"&page=1&pageSize=200"
+        const xhr = new XMLHttpRequest()
+        xhr.open("GET",url,true);
+        xhr.setRequestHeader("Cookie",ss.cookie)
+        xhr.send(null)
+        xhr.onload = function (e) {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+                    //                    console.log()
+                    const p =  Qt.createComponent("XxtWorkStastics.qml").createObject(parent,{body:JSON.parse(xhr.responseText)});
+                    studyStack.push(p)
+                }
+            }
+        };
+
+
+
+
+    }
+
+    function intergralStatistics(){
+        const url ="https://mobilelearn.chaoxing.com/v2/apis/integral/getIntegralList?DB_STRATEGY=COURSEID&STRATEGY_PARA=courseId&pageSize=200&page=1&classId="+classId+"&courseId="+courseId
+        const xhr = new XMLHttpRequest()
+        xhr.open("GET",url,true);
+        xhr.setRequestHeader("Cookie",ss.cookie)
+        xhr.send(null)
+        xhr.onload = function (e) {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+                    //                    console.log()
+                    const p =  Qt.createComponent("XxtIntegralStatisticsPage.qml").createObject(parent,{body:JSON.parse(xhr.responseText)});
+                    studyStack.push(p)
+                }
+            }
+        };
+    }
+
+
+
+
+    function getExercisesAnswers(){
+        console.log("wudka")
+        const url ="https://mobilelearn.chaoxing.com/v2/apis/quiz/getStatisticsData?activeId="+activeId
+        //        HttpRequest.get(url).timeout(50000).then(function(res){
+        //            console.log(JSON.stringify(res.body()))
+
+        //            //            var p =  Qt.createComponent("XxtEAPage.qml").createObject(parent,{data:});
+        //            //            studyStack.push(p)
+        //        }
+        //        ).catch(function(err) {
+        //            console.log(err.code)
+        //          })
+        const xhr = new XMLHttpRequest()
+        xhr.open("GET",url,true);
+        xhr.setRequestHeader("Cookie",ss.cookie)
+        xhr.send(null)
+        xhr.onload = function (e) {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+                    //                    console.log()
+                    const p =  Qt.createComponent("XxtEAPage.qml").createObject(parent,{body:JSON.parse(xhr.responseText)});
+                    studyStack.push(p)
+                }
+            }
+        };
+
 
     }
 
@@ -220,6 +306,7 @@ AppPage {
         .then(function(res){
             if(JSON.parse(res.body)["status"] === true){
                 console.log("登录成功！")
+                ss.cookie = HttpRequest.cookie
             }
         }
         )
@@ -302,6 +389,7 @@ AppPage {
     Component.onCompleted:{
         navMode = 4
         if(String(url).includes("chaoxing")){
+            httprequestGetCookie()
             //            httprequestGetCookie()
             ourl = url
             url = "https://passport2-api.chaoxing.com/v11/loginregister?cx_xxt_passport=json&uname="+ss.phone+"&code="+ss.password
