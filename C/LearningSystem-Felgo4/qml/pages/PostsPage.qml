@@ -5,17 +5,156 @@ import QtQml.Models
 import "../items"
 AppPage {
     id:postsPage
-//    property var dmodel
+    //    property var dmodel
     property bool admin: false
     title: "帖子列表"
+    ListModel{
+        id:postListModel
+    }
+    rightBarItem: IconButtonBarItem {
+        id:rightBar
+        visible: true
+        iconType:IconType.filter
+        onClicked: {
+            filterMenu.popup()
+        }
+
+    }
+
+    Menu {
+        id:filterMenu
+        parent:rightBar
+        //            visible: !postList.showSearch
+        AppRadio{
+            id:radio0
+            text: "学习心得"
+            value: 0
+            onCheckedChanged: {
+                if(checked){
+                    filterByType.value = 0
+                    filterByType.enabled = true
+                    postList.model = sortFilterModel
+                }
+            }
+        }
+        AppRadio{
+            id:radio1
+            value: 1
+            text:"考试技巧"
+            onCheckedChanged: {
+                if(checked){
+                    filterByType.value = 1
+                    filterByType.enabled = true
+                    postList.model = sortFilterModel
+                }
+            }
+        }
+        AppRadio{
+            id:radio2
+            value: 2
+            text:"提问"
+            onCheckedChanged: {
+                if(checked){
+                    filterByType.value = 2
+                    filterByType.enabled = true
+                    postList.model = sortFilterModel
+                }
+            }
+        }
+        AppRadio{
+            id:radio3
+            //                value:
+            text:"全部"
+            checked: true
+            onCheckedChanged: {
+                if(checked){
+                    filterByType.enabled = false
+                }
+            }
+        }
+
+    }
+
     AppListView {
+        showSearch : true
+        onSearch: term => {
+                      //                      console.log(term)
+                      //                      choiceModel.clear()
+                      //                      if(term === ""){
+                      //                          choiceModel.source = qm.tcpQuestions[0]
+                      //                      }
+                      //                      else {
+                      //                          var choiceSearchModel = []
+                      //                          qm.tcpQuestions[0].forEach(function(q){
+                      //                              //                                  searchModel.push()
+                      //                              if(JSON.stringify(q).includes(String(term))){
+                      //                                  choiceSearchModel.push(q)
+                      //                                  console.log(JSON.stringify(q))
+                      //                              }
+                      //                          })
+                      //                          choiceModel.source = choiceSearchModel
+                      //                      }
+
+                  }
+
+        //        header: Row {
+        //            visible: !postList.showSearch
+        //            AppRadio{
+        //                id:radio0
+        //                text: "学习心得"
+        //                value: 0
+        //                onCheckedChanged: {
+        //                    if(checked){
+        //                        filterByType.value = 0
+        //                        filterByType.enabled = true
+        //                        postList.model = sortFilterModel
+        //                    }
+        //                }
+        //            }
+        //            AppRadio{
+        //                id:radio1
+        //                value: 1
+        //                text:"考试技巧"
+        //                onCheckedChanged: {
+        //                    if(checked){
+        //                        filterByType.value = 1
+        //                        filterByType.enabled = true
+        //                        postList.model = sortFilterModel
+        //                    }
+        //                }
+        //            }
+        //            AppRadio{
+        //                id:radio2
+        //                value: 2
+        //                text:"提问"
+        //                onCheckedChanged: {
+        //                    if(checked){
+        //                        filterByType.value = 2
+        //                        filterByType.enabled = true
+        //                        postList.model = sortFilterModel
+        //                    }
+        //                }
+        //            }
+        //            AppRadio{
+        //                id:radio3
+        ////                value:
+        //                text:"全部"
+        //                checked: true
+        //                onCheckedChanged: {
+        //                    if(checked){
+        //                        filterByType.enabled = false
+        //                    }
+        //                }
+        //            }
+        //        }
+
 
         property int page: 1
         backgroundColor: "white"
         id:postList
         delegate: admin ? adminItem : userItem
         //        model: dmodel
-        model: ListModel{}
+        model: postListModel
         scrollsToTop : true
 
         function refresh(){
@@ -25,19 +164,19 @@ AppPage {
             var m = logic.getPosts(page)
             //            console.
             m.forEach(function(element) {
-                postList.model.append(element);
+                postListModel.append(element);
             });
         }
         PullToRefreshHandler {
             onRefresh: {
-                postList.model.clear()
+                postListModel.clear()
                 postList.refresh()
                 toastManager.show("刷新成功",1000)
             }
         }
         footer: VisibilityRefreshHandler {
             id:refreshHandler
-//            animation
+            //            animation
             defaultAppActivityIndicatorVisible:false
             canRefresh: true
             onRefresh: {
@@ -50,7 +189,7 @@ AppPage {
                     toastManager.show("已经到底了！！",1000)
                 }else{
                     arr.forEach(function(obj) {
-                        postList.model.append(obj);
+                        postListModel.append(obj);
                     })
                 }
             }
@@ -58,8 +197,24 @@ AppPage {
         Component.onCompleted: {
             refresh()
         }
+
+        SortFilterProxyModel {
+            id:sortFilterModel
+            sourceModel:postListModel
+
+            filters: [
+                ValueFilter {
+                    id:filterByType
+                    roleName: "type"
+                }
+            ]
+        }
     }
     //    }
+
+
+
+
 
 
 
@@ -80,10 +235,10 @@ AppPage {
     Connections {
         target: adminLogic
         onDeleteSucceed: index =>{
-            var pos = postList.getScrollPosition()
-            postList.model.remove(index,1)
-            postList.restoreScrollPosition(pos)
-        }
+                             var pos = postList.getScrollPosition()
+                             postList.model.remove(index,1)
+                             postList.restoreScrollPosition(pos)
+                         }
     }
 
     onPopped: {
