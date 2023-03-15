@@ -21,14 +21,14 @@ AppPage {
 
     }
 
-    Menu {
+   Menu {
         id:filterMenu
-        parent:rightBar
-        //            visible: !postList.showSearch
-        y: parent.y + parent.height
+        modal: true
+        opacity: 0.7
+        parent:postsPage
+        anchors.centerIn: postsPage
         AppRadio{
             id:radio4
-            //                value:
             text:"我的帖子"
 //            checked: true
             onCheckedChanged: {
