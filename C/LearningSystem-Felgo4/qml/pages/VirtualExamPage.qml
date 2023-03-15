@@ -6,27 +6,32 @@ AppPage {
 
     title: "模拟考试"
     property var questionsDB: settings.questionsDB
-    property var cQArray : userLogic.getUniqueRandomNum(0, questionsDB["C"].length-1, 2)
-    property var tQArray : userLogic.getUniqueRandomNum(0, questionsDB["T"].length-1, 2)
-    property var fQArray : userLogic.getUniqueRandomNum(0, questionsDB["F"].length-1, 1)
+    property int cCount : 2
+    property int tCount : 2
+    property int fCount : 1
+    property var cQArray : userLogic.getUniqueRandomNum(0, questionsDB["C"].length-1, cCount)
+    property var tQArray : userLogic.getUniqueRandomNum(0, questionsDB["T"].length-1, tCount)
+    property var fQArray : userLogic.getUniqueRandomNum(0, questionsDB["F"].length-1, fCount)
     property var questionComponents: []
+    property bool canPop: false
     SwipeView {
         id: questionSwipeView
         anchors.fill: parent
     }
     onWillPop: {
-        NativeDialog.confirm("确认", "考试进度将丢失?", function(ok) {
-            if(ok) {
-                //                popped()
-                event.accepted = true
-            }else{
-                event.accepted = false
-            }
-        })
+        event.accepted = canPop
+        if(!canPop)
+            NativeDialog.confirm("确认", "考试进度将不会保存?", function(ok) {
+                if(ok) {
+                   canPop = ok
+                   popped()
+                }
+            })
     }
 
     onPopped: {
         navMode = 3
+        destroy()
     }
     Component.onCompleted:{
         navMode = 4

@@ -25,6 +25,22 @@ AppPage {
         id:filterMenu
         parent:rightBar
         //            visible: !postList.showSearch
+        y: parent.y + parent.height
+        AppRadio{
+            id:radio4
+            //                value:
+            text:"我的帖子"
+//            checked: true
+            onCheckedChanged: {
+                if(checked){
+                    filterByType.enabled = false
+                    filterByCxid.value = ss.cxid
+                    filterByCxid.enabled = true
+                }else {
+                     filterByCxid.enabled = false
+                }
+            }
+        }
         AppRadio{
             id:radio0
             text: "学习心得"
@@ -61,6 +77,7 @@ AppPage {
                 }
             }
         }
+
         AppRadio{
             id:radio3
             //                value:
@@ -191,6 +208,10 @@ AppPage {
                 ValueFilter {
                     id:filterByType
                     roleName: "type"
+                },
+                ValueFilter {
+                    id:filterByCxid
+                    roleName: "cxid"
                 },
                 RegExpFilter {
                     id:filterByRegExp

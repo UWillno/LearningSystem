@@ -50,6 +50,7 @@ qt_add_executable(appLearningSystem-Felgo4
     ${AssetsFiles}
 )
 
+
 felgo_configure_executable(appLearningSystem-Felgo4)
 
 # Deploy resources to build folder/package directly

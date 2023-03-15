@@ -13,6 +13,7 @@ AppPage {
                             switch(index){
                                 case 0:{
                                     p = Qt.createComponent("ExercisesPage.qml").createObject(parent)
+
                                     break;
                                 }
                                 case 1:{
@@ -20,10 +21,14 @@ AppPage {
                                     break
                                 }
                                 case 2:{
-                                    p = Qt.createComponent("VirtualExamPage.qml").createObject(parent)
+
+                                    examDialog.open()
+
+                                    //                                    p = Qt.createComponent("VirtualExamPage.qml").createObject(parent)
                                     break
                                 }
                             }
+                            if(p)
                             practiceStack.push(p)
                         }
         }
@@ -45,6 +50,57 @@ AppPage {
                 icon: IconType.pencil
             }
         ]
+
+    }
+
+    Dialog {
+        id: examDialog
+        z:10
+        title: "题量设置"
+        positiveActionLabel: "确定"
+        negativeActionLabel: "取消"
+        onCanceled: close()
+        onAccepted: {
+            const  p = Qt.createComponent("VirtualExamPage.qml").createObject(parent,{cCount:choiceSlider.value,tCount:trueOrFalseSlider.value,cCount:fillSlider.value})
+            practiceStack.push(p)
+            close()
+        }
+
+        Column {
+            anchors.centerIn: parent
+            AppText {
+                text:"选择题:"+choiceSlider.value
+            }
+            AppSlider {
+                id:choiceSlider
+                from: 1
+                value: 2
+                stepSize : 1
+                to: 50
+            }
+            AppText {
+                text:"判断题:"+trueOrFalseSlider.value
+            }
+            AppSlider {
+                id:trueOrFalseSlider
+                from: 1
+                value: 2
+                stepSize : 1
+                to: 30
+            }
+            AppText {
+                text:"填空题:"+fillSlider.value
+            }
+            AppSlider {
+                id:fillSlider
+                from: 1
+                value: 1
+                to: 50
+                stepSize : 1
+            }
+        }
+
+
 
     }
 }

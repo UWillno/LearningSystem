@@ -428,8 +428,10 @@ AppPage {
         event.accepted = canPop
         if(!canPop){
             NativeDialog.confirm("确认", "确定退出?", function(ok) {
-                canPop = ok
-                popped()
+                if(ok){
+                    canPop = ok
+                    popped()
+                }
             })}
     }
 

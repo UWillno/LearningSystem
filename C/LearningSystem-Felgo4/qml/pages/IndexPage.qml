@@ -34,7 +34,9 @@ AppPage {
                         title: "<b>考试情况</b>"
                         titleColor: "blue"
                         anchors.fill: parent
+                        animationOptions:ChartView.AllAnimations
                         antialiasing: true
+
                         LineSeries {
                             id:pointLineSeries
                             name: "成绩变化"
@@ -52,6 +54,7 @@ AppPage {
                                 labelFormat: "%d"
                                 tickType: ValueAxis.TicksFixed
                             }
+
                         }
 
                         function reload(){
