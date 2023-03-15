@@ -21,38 +21,49 @@ SwipeView {
 
 
     Rectangle {
+        SortFilterProxyModel {
+            id:choiceFilterModel
+            sourceModel: choiceModel
+            filters: RegExpFilter {
+                id:choiceFilterByRegExp
+                roleName: "question"
+            }
+        }
+        JsonListModel {
+            id:choiceModel
+            source : qm.tcpQuestions[0]
+        }
 
         AppListView {
             showSearch : true
             onSearch: term => {
-                          console.log(term)
-                          choiceModel.clear()
-                          if(term === ""){
-                              choiceModel.source = qm.tcpQuestions[0]
-                          }
-                          else {
-                              var choiceSearchModel = []
-                              qm.tcpQuestions[0].forEach(function(q){
-                                  //                                  searchModel.push()
-                                  if(JSON.stringify(q).includes(String(term))){
-                                      choiceSearchModel.push(q)
-                                      console.log(JSON.stringify(q))
-                                  }
-                              })
-                              choiceModel.source = choiceSearchModel
-                          }
+                          choiceFilterByRegExp.enabled = !(term === "")
+                          choiceFilterByRegExp.pattern = term
+                          //                        choiceFilterByRegExp  term === "" ?
+
+                          //                          console.log(term)
+                          //                          choiceModel.clear()
+                          //                          if(term === ""){
+                          //                              choiceModel.source = qm.tcpQuestions[0]
+                          //                          }
+                          //                          else {
+                          //                              var choiceSearchModel = []
+                          //                              qm.tcpQuestions[0].forEach(function(q){
+                          //                                  //                                  searchModel.push()
+                          //                                  if(JSON.stringify(q).includes(String(term))){
+                          //                                      choiceSearchModel.push(q)
+                          //                                      console.log(JSON.stringify(q))
+                          //                                  }
+                          //                              })
+                          //                              choiceModel.source = choiceSearchModel
+                          //                          }
 
                       }
 
             id:choiceView
             anchors.fill: parent
             //                        model: model1
-            model:JsonListModel {
-                id:choiceModel
-                source : qm.tcpQuestions[0]
-
-            }
-
+            model:choiceFilterModel
 
             delegate: SimpleRow { text : index+1 + "." + model.question
                 onSelected: {
@@ -62,35 +73,45 @@ SwipeView {
         }
     }
     Rectangle {
+        SortFilterProxyModel {
+            id:trueOrFalseFilterModel
+            sourceModel: trueOrFalseModel
+            filters: RegExpFilter {
+                id:trueOrFalseFilterByRegExp
+                roleName: "question"
+            }
+        }
+        JsonListModel {
+                        id:trueOrFalseModel
+                        source: qm.tcpQuestions[1]
+                    }
         AppListView {
             showSearch : true
             onSearch: term => {
-                          console.log(term)
-                          trueOrFalseModel.clear()
-                          if(term === ""){
-                              trueOrFalseModel.source = qm.tcpQuestions[1]
-                          }
-                          else {
-                              var trueOrFalseSearchModel = []
-                              qm.tcpQuestions[1].forEach(function(q){
-                                  //                                  searchModel.push()
-                                  if(JSON.stringify(q).includes(String(term))){
-                                      trueOrFalseSearchModel.push(q)
-                                  }
-                              })
-                              trueOrFalseModel.source = trueOrFalseSearchModel
-                          }
+                          trueOrFalseFilterByRegExp.enabled = !(term === "")
+                          trueOrFalseFilterByRegExp.pattern = term
+//                          console.log(term)
+//                          trueOrFalseModel.clear()
+//                          if(term === ""){
+//                              trueOrFalseModel.source = qm.tcpQuestions[1]
+//                          }
+//                          else {
+//                              var trueOrFalseSearchModel = []
+//                              qm.tcpQuestions[1].forEach(function(q){
+//                                  //                                  searchModel.push()
+//                                  if(JSON.stringify(q).includes(String(term))){
+//                                      trueOrFalseSearchModel.push(q)
+//                                  }
+//                              })
+//                              trueOrFalseModel.source = trueOrFalseSearchModel
+//                          }
 
                       }
 
             id:trueOrfalseView
             anchors.fill: parent
             //            model: qm.tcpQuestions[1]
-            model: JsonListModel {
-                id:trueOrFalseModel
-                source: qm.tcpQuestions[1]
-
-            }
+            model: trueOrFalseFilterModel
 
             delegate: SimpleRow { text : index+1 +"." + model.question
                 onSelected: {
@@ -101,33 +122,43 @@ SwipeView {
         }
     }
     Rectangle {
-
+        SortFilterProxyModel {
+            id:fillFilterModel
+            sourceModel: fillModel
+            filters: RegExpFilter {
+                id:fillFilterByRegExp
+                roleName: "question"
+            }
+        }
+        JsonListModel {
+                        id:fillModel
+                        source: qm.tcpQuestions[2]
+                    }
         AppListView {
             showSearch : true
             onSearch: term => {
-                          console.log(term)
-                          fillModel.clear()
-                          if(term === ""){
-                              fillModel.source = qm.tcpQuestions[2]
-                          }
-                          else {
-                              var fillSeachModel = []
-                              qm.tcpQuestions[2].forEach(function(q){
-                                  if(JSON.stringify(q).includes(String(term))){
-                                      fillSeachModel.push(q)
-                                  }
-                              })
-                              fillModel.source = fillSeachModel
-                          }
+                          fillFilterByRegExp.enabled = !(term === "")
+                          fillFilterByRegExp.pattern = term
+//                          console.log(term)
+//                          fillModel.clear()
+//                          if(term === ""){
+//                              fillModel.source = qm.tcpQuestions[2]
+//                          }
+//                          else {
+//                              var fillSeachModel = []
+//                              qm.tcpQuestions[2].forEach(function(q){
+//                                  if(JSON.stringify(q).includes(String(term))){
+//                                      fillSeachModel.push(q)
+//                                  }
+//                              })
+//                              fillModel.source = fillSeachModel
+//                          }
                       }
 
             id:fillView
             anchors.fill: parent
             //            model: qm.tcpQuestions[2]
-            model: JsonListModel {
-                id:fillModel
-                source: qm.tcpQuestions[2]
-            }
+            model: fillFilterModel
             delegate: SimpleRow { text : index+1 +"." + model.question
                 onSelected: {
                     //                    console.log(model)

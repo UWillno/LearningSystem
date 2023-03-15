@@ -33,7 +33,7 @@ AppPage {
                 if(checked){
                     filterByType.value = 0
                     filterByType.enabled = true
-                    postList.model = sortFilterModel
+                    //                    postList.model = sortFilterModel
                 }
             }
         }
@@ -45,7 +45,7 @@ AppPage {
                 if(checked){
                     filterByType.value = 1
                     filterByType.enabled = true
-                    postList.model = sortFilterModel
+                    //                    postList.model = sortFilterModel
                 }
             }
         }
@@ -57,7 +57,7 @@ AppPage {
                 if(checked){
                     filterByType.value = 2
                     filterByType.enabled = true
-                    postList.model = sortFilterModel
+                    //                    postList.model = sortFilterModel
                 }
             }
         }
@@ -78,23 +78,8 @@ AppPage {
     AppListView {
         showSearch : true
         onSearch: term => {
-                      //                      console.log(term)
-                      //                      choiceModel.clear()
-                      //                      if(term === ""){
-                      //                          choiceModel.source = qm.tcpQuestions[0]
-                      //                      }
-                      //                      else {
-                      //                          var choiceSearchModel = []
-                      //                          qm.tcpQuestions[0].forEach(function(q){
-                      //                              //                                  searchModel.push()
-                      //                              if(JSON.stringify(q).includes(String(term))){
-                      //                                  choiceSearchModel.push(q)
-                      //                                  console.log(JSON.stringify(q))
-                      //                              }
-                      //                          })
-                      //                          choiceModel.source = choiceSearchModel
-                      //                      }
-
+                      filterByRegExp.enabled = term===""? false : true
+                      filterByRegExp.pattern = term
                   }
 
         //        header: Row {
@@ -154,7 +139,7 @@ AppPage {
         id:postList
         delegate: admin ? adminItem : userItem
         //        model: dmodel
-        model: postListModel
+        model: sortFilterModel
         scrollsToTop : true
 
         function refresh(){
@@ -206,6 +191,11 @@ AppPage {
                 ValueFilter {
                     id:filterByType
                     roleName: "type"
+                },
+                RegExpFilter {
+                    id:filterByRegExp
+                    roleName: "title"
+                    //                        pattern:
                 }
             ]
         }
