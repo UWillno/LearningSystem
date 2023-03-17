@@ -138,6 +138,8 @@ public slots:
 
     void clear();
 
+    void questionsClear();
+
 private:
     QSettings *m_settings;
     QString m_username;

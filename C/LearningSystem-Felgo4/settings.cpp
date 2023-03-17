@@ -297,7 +297,18 @@ void Settings::clear()
 //    resetRightTQ();
 //    resetWrongCQ();
 //    resetWrongFQ();
-//    resetWrongTQ();
+    //    resetWrongTQ();
+}
+
+void Settings::questionsClear()
+{
+    resetRightCQ();
+    resetRightFQ();
+    resetRightTQ();
+    resetWrongCQ();
+    resetWrongFQ();
+    resetWrongTQ();
+
 }
 
 void Settings::resetRightFQ()

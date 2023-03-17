@@ -168,18 +168,18 @@ AppPage {
                             }
                         }
                         AppText {
-                            visible: ss.cxid ? true : false
+                            visible: ss.cxid
                             anchors.horizontalCenter: parent.horizontalCenter
                             text:"上次同步时间:" + settings.syncTime
                         }
                         AppText {
-                            visible: ss.cxid ? true : false
+                            visible: ss.cxid
                             anchors.horizontalCenter: parent.horizontalCenter
                             text:"自动同步状态:" + autoSyncSwitch.checked
                         }
                         AppSwitch {
                             id: autoSyncSwitch
-                            visible: ss.cxid ? true : false
+                            visible: ss.cxid
                             anchors.horizontalCenter: parent.horizontalCenter
                             checked: settings.autoSync
                             onCheckedChanged: {
@@ -193,12 +193,12 @@ AppPage {
 
                         }
                         AppText {
-                            visible: ss.cxid ? true : false
+                            visible: ss.cxid
                             anchors.horizontalCenter: parent.horizontalCenter
                             text:"手动同步:"
                         }
                         Row {
-                            visible: ss.cxid ? true : false
+                            visible: ss.cxid
                             //                        anchors.verticalCenter: parent.verticalCenter
                             anchors.horizontalCenter: parent.horizontalCenter
                             spacing:dp(10)
@@ -219,7 +219,7 @@ AppPage {
                                 }
                             }
                             AppButton {
-                                visible: ss.cxid ? true : false
+                                visible: ss.cxid
                                 iconType: IconType.download
                                 text: "下载"
                                 onClicked: {
@@ -235,7 +235,7 @@ AppPage {
                             }
                         }
                         AppButton {
-                            visible: ss.cxid ? true : false
+                            visible: ss.cxid
                             anchors.horizontalCenter: parent.horizontalCenter
                             //                         iconType: IconType
                             text: "登出"
@@ -246,7 +246,25 @@ AppPage {
                                 //                            console.log(logic.getDate())
                             }
                         }
+                        AppButton {
+//                            visible: ss.cxid
+                            anchors.horizontalCenter: parent.horizontalCenter
+                            //                         iconType: IconType
+                            text: "清空考试信息"
+                            onClicked: {
+                                settings.exams = []
+                            }
+                        }
+                        AppButton {
+//                            visible: ss.cxid
+                            anchors.horizontalCenter: parent.horizontalCenter
+                            //                         iconType: IconType
+                            text: "清空做题信息"
 
+                            onClicked: {
+                                ss.questionsClear()
+                            }
+                        }
                         AppButton {
                             visible: false
                             text: "测试"
