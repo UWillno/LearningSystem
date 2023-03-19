@@ -5,6 +5,8 @@ import QtQuick.Controls
 
 Rectangle {
 
+    id:root
+
     property var question
     property string answer : question["answer"]
     property int count: JSON.parse(answer).length
@@ -21,6 +23,7 @@ Rectangle {
         anchors.fill: parent
 
         AppListItem {
+            id:quesitonItem
             text: (index+1)+"." + question["question"]
         }
 
@@ -28,11 +31,11 @@ Rectangle {
 
     Component.onCompleted:{
 
-         console.log(JSON.stringify(question))
+        console.log(JSON.stringify(question))
         for(var i =0 ; i<count;i++){
             var com = Qt.createComponent("../items/BlankItem.qml").createObject(questionCol,{answer:answerJSON[i]})
             blanksItems.push(com)
-//            console.log(answerJSON[i])
+            //            console.log(answerJSON[i])
 
         }
 
@@ -57,6 +60,18 @@ Rectangle {
         }
         c2.createObject(questionCol)
     }
+
+
+
+    states:  [
+        State {
+            name: "view"
+            PropertyChanges {
+                target: quesitonItem
+                textColor : isRight ? "green" : "red"
+            }
+        }
+    ]
 
 
 }

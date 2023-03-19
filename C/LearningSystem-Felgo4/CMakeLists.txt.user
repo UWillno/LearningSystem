@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 9.0.0, 2023-03-17T15:27:44. -->
+<!-- Written by QtCreator 9.0.0, 2023-03-19T15:27:55. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -399,8 +399,8 @@
   <variable>ProjectExplorer.Project.Target.1</variable>
   <valuemap type="QVariantMap">
    <value type="QString" key="DeviceType">Android.Device.Type</value>
-   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">安卓 Qt 6.4.1 Clang x86_64</value>
-   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">安卓 Qt 6.4.1 Clang x86_64</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Replacement for &quot;安卓 Qt 6.4.1 Clang x86_64&quot;</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Replacement for &quot;安卓 Qt 6.4.1 Clang x86_64&quot;</value>
    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">{e4b09f81-7185-4bfd-9288-366e44018aa3}</value>
    <value type="qlonglong" key="ProjectExplorer.Target.ActiveBuildConfiguration">0</value>
    <value type="qlonglong" key="ProjectExplorer.Target.ActiveDeployConfiguration">0</value>

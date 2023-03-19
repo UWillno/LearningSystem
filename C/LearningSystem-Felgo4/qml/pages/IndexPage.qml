@@ -29,58 +29,69 @@ AppPage {
                 width: parent.width - dp(10)
                 z:-1
                 Rectangle {
-                    ChartView {
-                        id:examsChart
-                        title: "<b>考试情况</b>"
-                        titleColor: "blue"
-                        anchors.fill: parent
-                        animationOptions:ChartView.AllAnimations
-                        antialiasing: true
+                        ChartView {
+                            id:examsChart
+                            title: "<b>考试情况</b>"
+                            titleColor: "blue"
+                            anchors.fill: parent
+                            animationOptions:ChartView.AllAnimations
+                            antialiasing: true
 
-                        LineSeries {
-                            id:pointLineSeries
-                            name: "成绩变化"
-                            axisX:ValuesAxis {
-                                id:vaxisx
-                                min:1
-                                labelFormat: "%d"
-                                tickType:ValueAxis.TicksDynamic
+                            LineSeries {
+                                id:pointLineSeries
+                                name: "成绩变化"
+                                axisX:ValuesAxis {
+                                    id:vaxisx
+                                    min:1
+                                    labelFormat: "%d"
+                                    tickType:ValueAxis.TicksDynamic
+                                }
+                                axisY:ValuesAxis {
+                                    id:vaxisy
+                                    min:0
+                                    //                                tickCount: 10
+                                    max:100
+                                    labelFormat: "%d"
+                                    tickType: ValueAxis.TicksFixed
+                                }
+
                             }
-                            axisY:ValuesAxis {
-                                id:vaxisy
-                                min:0
-                                //                                tickCount: 10
-                                max:100
-                                labelFormat: "%d"
-                                tickType: ValueAxis.TicksFixed
+
+                            MouseArea{
+                                anchors.fill: parent
+                                onPressAndHold: {
+                                    const p = Qt.createComponent("ExamsListPage.qml").createObject(parent);
+                                    rootStack.push(p)
+                                }
                             }
 
-                        }
+                            function reload(){
+                                pointLineSeries.clear()
+                                const times = settings.exams.length
+                                vaxisx.max = times
+                                vaxisx.tickCount = times
+                                settings.exams.forEach(function(e,i){
+                                    console.log("x"+i+"y"+e.point);
+                                    pointLineSeries.append(i,e.point)
+                                })
+                            }
 
-                        function reload(){
-                            pointLineSeries.clear()
-                            const times = settings.exams.length
-                            vaxisx.max = times
-                            vaxisx.tickCount = times
-                            settings.exams.forEach(function(e,i){
-                                console.log("x"+i+"y"+e.point);
-                                pointLineSeries.append(i,e.point)
-                            })
-                        }
+                            Connections {
+                                target: settings
+                                onExamsChanged:{
+                                    console.log(settings.exams.length)
+                                    console.log(settings.exams)
+                                    examsChart.reload()
+                                }
+                            }
 
-                        Connections {
-                            target: settings
-                            onExamsChanged:{
-                                console.log(settings.exams.length)
-                                console.log(settings.exams)
-                                examsChart.reload()
+                            Component.onCompleted:{
+                                //                            console.log(settings.exams.length)
                             }
                         }
 
-                        Component.onCompleted:{
-                            //                            console.log(settings.exams.length)
-                        }
-                    }
+
+
                 }
                 Rectangle {
                     id:re
@@ -247,7 +258,7 @@ AppPage {
                             }
                         }
                         AppButton {
-//                            visible: ss.cxid
+                            //                            visible: ss.cxid
                             anchors.horizontalCenter: parent.horizontalCenter
                             //                         iconType: IconType
                             text: "清空考试信息"
@@ -256,7 +267,7 @@ AppPage {
                             }
                         }
                         AppButton {
-//                            visible: ss.cxid
+                            //                            visible: ss.cxid
                             anchors.horizontalCenter: parent.horizontalCenter
                             //                         iconType: IconType
                             text: "清空做题信息"

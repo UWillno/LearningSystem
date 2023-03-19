@@ -23,6 +23,7 @@ Rectangle {
         anchors.fill: parent
 
         AppListItem {
+            id:quesitonItem
             text: (index+1)+"." + question["question"]
         }
         AppListItem {
@@ -100,4 +101,22 @@ Rectangle {
     Component.onCompleted:{
 
     }
+
+    states:  [
+        State {
+            name: "view"
+            PropertyChanges {
+                target: quesitonItem
+                textColor : isRight ? "green" : "red"
+            }
+            PropertyChanges {
+                target: itemA
+                visible: false
+            }
+            PropertyChanges {
+                target: itemB
+                visible: false
+            }
+        }
+    ]
 }
