@@ -12,7 +12,7 @@
 
 5. 为什么用Felgo？省代码、QML热重载、有原生风格主题…
 
-   <img src="/home/uwillno/Projects/LearningSystem/readmeResources/Felgo-Desktop.png" style="zoom: 25%;" /><img src="/home/uwillno/Projects/LearningSystem/readmeResources/Felgo-Android.png" style="zoom:25%;" /><img src="/home/uwillno/Projects/LearningSystem/readmeResources/Felgo-Desktop.png" style="zoom:25%;" />
+   <img src="./readmeResources/Felgo-Desktop.png" style="zoom: 25%;" /><img src="./readmeResources/Felgo-Android.png" style="zoom:25%;" /><img src="./readmeResources/Felgo-Desktop.png" style="zoom:25%;" />
 
    
 
