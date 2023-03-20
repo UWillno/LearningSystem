@@ -8,6 +8,8 @@ Item {
     signal deleteSucceed(int index)
     // 删评
     signal deleteCSucceed(int index)
+    //删多级评论
+    signal deleteCCsucceed(int index)
 
     //    property var postsdata
     id: adminLogic
@@ -39,7 +41,7 @@ Item {
     }
     function updateQuestion(model,type){
         //        console.log("asdasdasd")
-//        console.log(model)
+        //        console.log(model)
         console.log(JSON.stringify(model))
         qm.updateQuestion(model,type)
     }
@@ -64,14 +66,14 @@ Item {
         //        id:con
         target: qm
 
-//        onDeleteFailed:{
-//            toastManager.show("删除失败！",1000)
-//            loaderItem.close()
-//        }
-//        onUpdateFailed:{
-//            toastManager.show("保存失败！",1000)
-//            rootStack.pop()
-//        }
+        //        onDeleteFailed:{
+        //            toastManager.show("删除失败！",1000)
+        //            loaderItem.close()
+        //        }
+        //        onUpdateFailed:{
+        //            toastManager.show("保存失败！",1000)
+        //            rootStack.pop()
+        //        }
         onSubmitSucceeded:{
             toastManager.show("插入成功！",1000)
             loaderItem.close()
@@ -97,14 +99,19 @@ Item {
         });
     }
 
-    function deleteComment(id,index){
+    function deleteComment(id,index,isCC=false){
         HttpRequest
         .post(qhttpserver+"deleteComment")
         .set('Content-Type', 'application/json')
         .send({ id: id, v: "" })
         .then(function(res) {
             if(res.body === "success"){
-                deleteCSucceed(index)
+                if(isCC){
+                    deleteCSucceed(index)
+                }
+                else{
+                    deleteCCsucceed(index)
+                }
             }
         })
         .catch(function(err) {

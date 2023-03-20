@@ -38,7 +38,7 @@ Item {
         return JSON.parse(xhr.responseText)
     }
 
-    function submitComment(postId,text){
+    function submitComment(postId,text,replyId=0){
 
         if(typeof ss.cxid == "undefined"){
             toastManager.show("未登录!",1000);
@@ -46,7 +46,7 @@ Item {
             const xhr = new XMLHttpRequest();
             xhr.open("POST",qhttpserver + "submitComment",false);
             xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
-            xhr.send(JSON.stringify({cxid:ss.cxid,username:ss.username,postId:postId,text:text}))
+            xhr.send(JSON.stringify({cxid:ss.cxid,username:ss.username,postId:postId,text:text,replyId:replyId}))
             if(xhr.responseText == "success"){
                 return true
             }
@@ -54,10 +54,13 @@ Item {
         return false
     }
 
+
+
     function getComments(postId,page){
         const xhr = new XMLHttpRequest();
         xhr.open("GET",qhttpserver + "getComments/"+postId+"/"+page,false);
         xhr.send(null)
+        console.log(JSON.stringify(xhr.responseText))
         return JSON.parse(xhr.responseText)
     }
     function getAllResources(){

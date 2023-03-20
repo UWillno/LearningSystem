@@ -12,6 +12,8 @@ AppPage {
     //    height: parent.height
     property bool admin: false
     property var postModel
+    property int commentId
+
     AppTabBar {
         id: appTabBar
         contentContainer: swipeView
@@ -135,7 +137,7 @@ AppPage {
                         Layout.fillHeight: true
                         Layout.alignment: Qt.AlignTop
                         height: contentHeight
-//                        clip: true
+                        //                        clip: true
                         onLinkActivated: link => {
                                              //              Qt.openUrlExternally(link)
                                              PictureViewer.show(app,link)
@@ -161,25 +163,36 @@ AppPage {
                 property int page: 1
                 anchors.fill: parent
                 id:commentList
-                model: postModel.comments
-                delegate: CommentRow{
-                    admin:postDetailPage.admin
+//                model: postModel.comments
+                model: JsonListModel {
+                    id: commentModel
                 }
+
+                delegate: CommentRow{
+                    id:commentRow
+                    admin:postDetailPage.admin
+                    onReply:model => replyComment(model)
+                }
+
+
 
                 function refresh(){
                     page = 1
                     console.log(postModel.id)
-                    var m = logic.getComments(postModel.id,1)
-                    //            console.
-                    m.forEach(function(element) {
-                        commentList.model.append(element);
-                    });
+//                    var m = logic.getComments(postModel.id,1)
+//                    //            console.
+//                    m.forEach(function(element) {
+//                        commentList.model.append(element);
+//                    });
+
+                    commentModel.source = logic.getComments(postModel.id,1)
                 }
 
                 PullToRefreshHandler {
                     onRefresh: {
-                        id:pullToRefreshHandler
-                        commentList.model.clear()
+                        //                        id:pullToRefreshHandler
+//                        commentList.model.clear()
+                        commentModel.clear()
                         commentList.refresh()
                         toastManager.show("刷新成功",1000)
                     }
@@ -198,25 +211,58 @@ AppPage {
                             toastManager.show("已经到底了！！",1000)
                         }else{
                             arr.forEach(function(obj) {
-                                commentList.model.append(obj);
+//                                commentList.model.append(obj);
+                                commentModel.append(obj)
                             })
                         }
                     }
                 }
+
+                Component.onCompleted:{
+                    commentList.refresh()
+                }
+
                 //                footer:VisibilityRefreshHandler
             }
         }
         //        }
     }
 
-
+    function replyComment(model){
+        rowlayout.state = "replyComment"
+        atText.text = "@"+model.username
+        commentId = model.id
+    }
 
 
     RowLayout {
+        opacity: 0.8
         id:rowlayout
         x: dp(10)
         width: parent.width - 2 * x
         height: dp(40)
+
+        states: [
+            State {
+                name: "replyComment"
+                PropertyChanges {
+                    target: r1
+                    visible:false
+                }
+            },
+            State {
+                name: "replyPost"
+                PropertyChanges {
+                    target: r1
+                    visible: true
+                }
+                PropertyChanges {
+                    target: atText
+                    text:""
+                }
+
+            }
+        ]
         Rectangle {
             id:r1
             //            width: dp(10)
@@ -232,12 +278,40 @@ AppPage {
         }
 
         Rectangle {
+            id:r0
+            visible: !r1.visible
+            //            width: dp(10)
+            //                        Layout.fillWidth: true
+            Layout.fillHeight: true
+            Layout.preferredHeight:r1.height
+            Layout.preferredWidth:atText.width
+            Layout.alignment: Qt.AlignTop
+            AppText {
+                id:atText
+                color: Theme.secondaryTextColor
+            }
+            clip: true
+            //            color: "blue"
+
+            MouseArea {
+                anchors.fill: parent
+                onPressAndHold: {
+                    rowlayout.state = "replyPost"
+
+                }
+            }
+        }
+
+
+
+        Rectangle {
+
             id:r2
             //            Layout.fillWidth: true
             Layout.preferredHeight:dp(25)
             //            Layout.fillHeight: true
             Layout.alignment:  Qt.AlignTop
-            Layout.preferredWidth:parent.width*2/3
+            Layout.preferredWidth:r1.visible ? parent.width -sendBtn.width - r1.width : parent.width - sendBtn.width-r0.width
 
             radius: width
             color: "#f5f5f5"
@@ -255,23 +329,39 @@ AppPage {
         }
 
         AppButton {
+            id:sendBtn
             radius: width
             Layout.alignment:  Qt.AlignTop
             iconType: IconType.send
             //            Layout.preferredWidth:
             //            Layout.fillWidth: true
             Layout.preferredHeight:dp(20)
-            Layout.preferredWidth: parent.width - r1.width - r2.width
+            Layout.preferredWidth: parent.width / 4
             //            text:"发送"
             onClicked: {
                 console.log("评论发送")
-                if(logic.submitComment(postModel.id,textEdit.text)){
-                    textEdit.text = ""
-                    commentList.model.clear()
-                    commentList.refresh()
-                    toastManager.show("发送成功!",1000);
+                var pos = commentList.getScrollPosition()
+                if(rowlayout.state === "replyComment"){
+                    if(logic.submitComment(postModel.id,textEdit.text,commentId)){
+                        textEdit.text = ""
+                        commentList.model.clear()
 
+                        commentList.refresh()
+                        commentList.restoreScrollPosition(pos)
+                        toastManager.show("发送成功!",1000);
+
+                    }
+                }else{
+                    if(logic.submitComment(postModel.id,textEdit.text)){
+                        textEdit.text = ""
+                        commentList.model.clear()
+
+                        commentList.refresh()
+                        commentList.restoreScrollPosition(pos)
+                        toastManager.show("发送成功!",1000);
+                    }
                 }
+
             }
         }
         anchors.bottom: parent.bottom

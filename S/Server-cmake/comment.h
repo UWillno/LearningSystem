@@ -15,6 +15,7 @@ public:
     QString username;
     QString text;
     QDateTime datetime;
+    qint32 replyId;
 
 signals:
 

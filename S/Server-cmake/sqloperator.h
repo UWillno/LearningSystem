@@ -72,6 +72,10 @@ public slots:
 
     bool insertComment(Comment &comment);
 
+    //查询评论的评论
+    QJsonArray select2Comments(qint32 &replyId);
+
+
     QJsonArray selectComments(qint32 &postId,const qint32 &page);
 
     qint32 selectCommentsCount(qint32 &postId);

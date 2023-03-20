@@ -91,6 +91,7 @@ void HttpServer::routeSubmitComment()
                 comment.cxid = object.value("cxid").toInt();
                 comment.username = object.value("username").toString();
                 comment.text = object.value("text").toString();
+                comment.replyId = object.value("replyId").toInt();
                 return (Singleton<SqlOperator>::GetInstance().insertComment(comment));
             }).result();
 
