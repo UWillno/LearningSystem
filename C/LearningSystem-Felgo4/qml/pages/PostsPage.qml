@@ -247,7 +247,8 @@ AppPage {
         target: adminLogic
         onDeleteSucceed: index =>{
                              var pos = postList.getScrollPosition()
-                             postList.model.remove(index,1)
+//                             postList.model.remove(index,1)
+                             postListModel.remove(index,1)
                              postList.restoreScrollPosition(pos)
                          }
     }

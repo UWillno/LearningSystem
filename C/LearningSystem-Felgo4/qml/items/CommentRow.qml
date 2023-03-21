@@ -12,7 +12,7 @@ Rectangle {
     height: innerGrid.height
     property bool admin: false
 
-    signal reply(var model)
+    signal reply(var model,var username)
 
 
 
@@ -75,7 +75,7 @@ Rectangle {
             Layout.fillWidth: true
             verticalAlignment: Text.AlignBottom
             Layout.preferredWidth: parent.width
-            text:model.datetime + "\t第" + (model.index+1) + "楼"
+            text:model.datetime + "\t" + (model.index+1) + "楼"
             //            font.bold: true
         }
         AppText {
@@ -88,7 +88,7 @@ Rectangle {
             lineHeight: 1.15
             text: model.text
             wrapMode: Text.WordWrap
-            Layout.columnSpan: 3
+            Layout.columnSpan: 4
             Layout.fillWidth: true
             Layout.fillHeight: true
             Layout.alignment: Qt.AlignTop
@@ -102,18 +102,40 @@ Rectangle {
             MouseArea{
                 anchors.fill: parent
                 onClicked: {
-                    //                    adminLogic.deleteComment(model.id,index);
-                    reply(model)
+                    reply(model,"")
                 }
             }
 
 
         }
+
+
+
         AppIcon {
-            //                horizontalItemAlignment:horizontalCenter
+            id:displayIcon
             Layout.fillWidth: true
             Layout.fillHeight: true
-            //            height: parent.height
+            Layout.columnSpan: 2
+            Layout.alignment: Qt.AlignLeft
+            //            width: parent.width
+            iconType: !ccListView.visible ? IconType.angledown : IconType.angleup
+            color: "gray"
+            //            visible:
+            visible: model.comments2.length > 0 ? true : false
+            MouseArea {
+                anchors.fill: parent
+                onClicked:{
+                    //                    comments2Col.visible = !comments2Col.visible
+                    ccListView.visible = !ccListView.visible
+                }
+            }
+        }
+
+        AppIcon {
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+            Layout.columnSpan: 2
+            Layout.alignment: Qt.AlignRight
             iconType: IconType.remove
             color: "red"
             visible: if(admin || (ss.cxid === model.cxid )) {
@@ -124,29 +146,8 @@ Rectangle {
             MouseArea{
                 anchors.fill: parent
                 onClicked: {
+                    console.log("click!!")
                     adminLogic.deleteComment(model.id,index);
-                }
-            }
-        }
-
-
-        AppIcon {
-            id:displayIcon
-            //                horizontalItemAlignment:horizontalCenter
-            Layout.fillWidth: true
-            Layout.fillHeight: true
-            Layout.columnSpan: 3
-            Layout.alignment: Qt.AlignHCenter
-            width: parent.width
-            iconType: IconType.angledown
-            color: "gray"
-            //            visible:
-            visible: model.comments2 ? true : false
-            MouseArea {
-                anchors.fill: parent
-                onClicked:{
-                    //                    comments2Col.visible = !comments2Col.visible
-                    ccListView.visible = !ccListView.visible
                 }
             }
         }
@@ -167,14 +168,16 @@ Rectangle {
         AppListView {
             Layout.fillWidth: true
             Layout.fillHeight: true
-            Layout.columnSpan: 3
-            height: contentHeight > dp(400) ? dp(400) : contentHeight
+            Layout.columnSpan: 4
+            height: (contentHeight > dp(400))? dp(400) : contentHeight
             visible: false
             id:ccListView
             //                anchors.fill: parent
 
             model:ccModel
             delegate: Comment2Row {
+
+
             }
             //                //                console.log(model.comments2)
 
@@ -233,6 +236,7 @@ Rectangle {
     Component.onCompleted:{
         //        console.log("Crow" + admin)
         //        console.log("二级评论" + )
+        //        console.log(JSON.stringify(model))
     }
 
 

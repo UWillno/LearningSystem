@@ -86,7 +86,7 @@ AppPage {
                 from: 1
                 value: 2
                 stepSize : 1
-                to: 30
+                to: 50
             }
             AppText {
                 text:"填空题:"+fillSlider.value
@@ -95,7 +95,7 @@ AppPage {
                 id:fillSlider
                 from: 1
                 value: 1
-                to: 50
+                to: 30
                 stepSize : 1
             }
         }

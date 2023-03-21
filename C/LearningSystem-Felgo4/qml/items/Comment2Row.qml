@@ -12,7 +12,7 @@ Rectangle {
     height: innerGrid.height
     property bool admin: false
 
-    //        signal reply(var model)
+    //    signal reply2(var model)
 
     GridLayout {
         id: innerGrid
@@ -38,8 +38,8 @@ Rectangle {
         RoundedImage {
             id: avatarImage
             radius: width
-            Layout.preferredWidth: dp(50)
-            Layout.preferredHeight: dp(50)
+            Layout.preferredWidth: dp(30)
+            Layout.preferredHeight: dp(30)
             Layout.rowSpan: 3
             Layout.alignment: Qt.AlignTop
             source: userImageResource.available ? userImageResource.storagePath :""
@@ -48,13 +48,13 @@ Rectangle {
             id:usernameText
             elide: Text.ElideRight
             text:model.username
-
+            textFormat: "RichText"
             Layout.columnSpan: 3
             maximumLineCount: 1
             color: Theme.textColor
             //            font.family: Theme.normalFont.name
             //            font.bold: true
-            font.pixelSize: dp(17)
+            font.pixelSize: dp(15)
             lineHeight: dp(16)
             lineHeightMode: Text.FixedHeight
         }
@@ -66,7 +66,7 @@ Rectangle {
             //            Layout.columnSpan: 3
             color: Theme.secondaryTextColor
             //            font.family: Theme.normalFont.name
-            font.pixelSize: dp(14)
+            font.pixelSize: dp(12)
             lineHeight: dp(16)
             lineHeightMode: Text.FixedHeight
 
@@ -90,28 +90,19 @@ Rectangle {
             Layout.fillWidth: true
             Layout.fillHeight: true
             Layout.alignment: Qt.AlignTop
-            height: (contentHeight > dp(400))? dp(400):contentHeight
+            height: contentHeight
             //            clip: true
             onLinkActivated: link => {
                                  //              Qt.openUrlExternally(link)
                                  PictureViewer.show(app,link)
                              }
 
-            MouseArea{
-                anchors.fill: parent
-                onClicked: {
-                    //                    adminLogic.deleteComment(model.id,index);
-                    //                    reply(model)
-                }
-            }
         }
 
         Item {
             id: bottomSpacer
-
             width: parent.width
             height: dp(6)
-
             Layout.columnSpan: parent.columns
             Layout.fillWidth: true
         }
@@ -137,16 +128,16 @@ Rectangle {
     MouseArea{
         anchors.fill: parent
         onClicked: {
-
+            reply(model,model.username)
         }
         onPressAndHold: {
             //            console.log(model.cxid)
             //            console.log(ss.cxid)
-            if(model.cxid === ss.cxid){
+            if(model.cxid === ss.cxid || admin ){
                 NativeDialog.confirm("确认","删除该回复？",function(ok){
                     if(ok){
                         deleteCon.enabled = true
-                        adminLogic.deleteComment(model.id);
+                        adminLogic.deleteComment(model.id,index,true);
                     }
                 })
             }
@@ -157,9 +148,10 @@ Rectangle {
         id:deleteCon
         enabled: false
         target: adminLogic
-        onDeleteCCsucceed : index => {
+        onDeleteCcSucceed : index => {
+                                enabled = false
                                 ccModel.remove(index,1)
-                                destroy()
+//                                destroy()
                             }
     }
 

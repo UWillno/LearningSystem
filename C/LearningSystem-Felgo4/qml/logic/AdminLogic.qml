@@ -9,7 +9,7 @@ Item {
     // 删评
     signal deleteCSucceed(int index)
     //删多级评论
-    signal deleteCCsucceed(int index)
+    signal deleteCcSucceed(int index)
 
     //    property var postsdata
     id: adminLogic
@@ -107,10 +107,10 @@ Item {
         .then(function(res) {
             if(res.body === "success"){
                 if(isCC){
-                    deleteCSucceed(index)
+                    deleteCcSucceed(index)
                 }
                 else{
-                    deleteCCsucceed(index)
+                    deleteCSucceed(index)
                 }
             }
         })

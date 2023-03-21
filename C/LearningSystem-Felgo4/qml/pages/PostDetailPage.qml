@@ -13,6 +13,7 @@ AppPage {
     property bool admin: false
     property var postModel
     property int commentId
+    property string atUsername : ""
 
     AppTabBar {
         id: appTabBar
@@ -163,35 +164,26 @@ AppPage {
                 property int page: 1
                 anchors.fill: parent
                 id:commentList
-//                model: postModel.comments
+                //                model: postModel.comments
                 model: JsonListModel {
                     id: commentModel
                 }
 
+
                 delegate: CommentRow{
                     id:commentRow
                     admin:postDetailPage.admin
-                    onReply:model => replyComment(model)
+                    onReply:function(model,username){ replyComment(model,username)}
                 }
-
-
 
                 function refresh(){
                     page = 1
-                    console.log(postModel.id)
-//                    var m = logic.getComments(postModel.id,1)
-//                    //            console.
-//                    m.forEach(function(element) {
-//                        commentList.model.append(element);
-//                    });
-
-                    commentModel.source = logic.getComments(postModel.id,1)
+                    commentModel.clear()
+                    commentModel.source = logic.getComments(postModel.id,page)
                 }
 
                 PullToRefreshHandler {
                     onRefresh: {
-                        //                        id:pullToRefreshHandler
-//                        commentList.model.clear()
                         commentModel.clear()
                         commentList.refresh()
                         toastManager.show("刷新成功",1000)
@@ -205,13 +197,12 @@ AppPage {
                         commentList.page++
                         console.log(postList.page)
                         var arr = logic.getComments(postModel.id,commentList.page)
-
                         if(arr.length === 0)
                         {
                             toastManager.show("已经到底了！！",1000)
                         }else{
                             arr.forEach(function(obj) {
-//                                commentList.model.append(obj);
+                                //                                commentList.model.append(obj);
                                 commentModel.append(obj)
                             })
                         }
@@ -228,10 +219,21 @@ AppPage {
         //        }
     }
 
-    function replyComment(model){
+    function replyComment(model,username){
+        atUsername=""
         rowlayout.state = "replyComment"
-        atText.text = "@"+model.username
-        commentId = model.id
+        if(username!==""){
+            console.log("评论的回复")
+            atUsername = username.split("<")[0]
+            atText.text = "@"+atUsername
+            commentId = model.replyId
+        }else {
+            //            atUsername = model.username
+            atText.text = "@"+model.username
+            commentId = model.id
+        }
+
+
     }
 
 
@@ -342,20 +344,19 @@ AppPage {
                 console.log("评论发送")
                 var pos = commentList.getScrollPosition()
                 if(rowlayout.state === "replyComment"){
-                    if(logic.submitComment(postModel.id,textEdit.text,commentId)){
+                    if(logic.submitComment(postModel.id,textEdit.text,commentId,atUsername)){
                         textEdit.text = ""
-                        commentList.model.clear()
-
+                        atUsername = ""
+                        commentModel.clear()
                         commentList.refresh()
                         commentList.restoreScrollPosition(pos)
                         toastManager.show("发送成功!",1000);
-
+                        rowlayout.state = "replyPost"
                     }
                 }else{
                     if(logic.submitComment(postModel.id,textEdit.text)){
                         textEdit.text = ""
-                        commentList.model.clear()
-
+                        commentModel.clear()
                         commentList.refresh()
                         commentList.restoreScrollPosition(pos)
                         toastManager.show("发送成功!",1000);
@@ -390,7 +391,9 @@ AppPage {
     Connections {
         target: adminLogic
         onDeleteCSucceed : index => {
-                               commentList.model.remove(index,1)
+                               console.log("index"+index)
+                               //                               commentList.model.remove(index,1)
+                               commentModel.remove(index,1)
                            }
     }
     onPopped: {

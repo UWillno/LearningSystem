@@ -494,10 +494,10 @@ QJsonArray SqlOperator::selectPosts(qint32 &page)
     QJsonArray json;
     QSqlQuery query(m_db);
     if(page==1){
-        query.prepare("SELECT * FROM post ORDER BY id DESC LIMIT 0, 10;");
+        query.prepare("SELECT * FROM post where type != 4  ORDER BY id DESC LIMIT 0, 10;");
     }else{
 
-        query.prepare("SELECT * FROM post ORDER BY id DESC LIMIT "+ QString::number(10*(page-1)) +", 10;");
+        query.prepare("SELECT * FROM post  where type != 4 ORDER BY id DESC LIMIT "+ QString::number(10*(page-1)) +", 10;");
     }
     query.exec();
 
@@ -564,6 +564,7 @@ QJsonArray SqlOperator::select2Comments(qint32 &replyId)
         comment.username = query.value(3).toString();
         comment.text = query.value(4).toString();
         comment.datetime = query.value(5).toDateTime();
+        comment.replyId = query.value(6).toInt();
         //        qInfo() << query.value(0);
         object.insert("id",comment.id);
         object.insert("postId",comment.postId);
@@ -571,6 +572,7 @@ QJsonArray SqlOperator::select2Comments(qint32 &replyId)
         object.insert("username",comment.username);
         object.insert("text",comment.text);
         object.insert("datetime",comment.datetime.toString("yyyy-MM-dd hh:mm:ss"));
+        object.insert("replyId", comment.replyId);
         json.append(object);
     }
     qInfo() << json;
@@ -612,9 +614,9 @@ QJsonArray SqlOperator::selectComments(qint32 &postId,const qint32 &page)
         object.insert("username",comment.username);
         object.insert("text",comment.text);
         object.insert("datetime",comment.datetime.toString("yyyy-MM-dd hh:mm:ss"));
-        if(!comments2.isEmpty()){
-            object.insert("comments2",comments2);
-        }
+        //        if(!comments2.isEmpty()){
+        object.insert("comments2",comments2);
+        //        }
 
 
 
