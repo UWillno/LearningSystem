@@ -108,6 +108,9 @@ void HttpServer::routeGetComments()
 
         return QtConcurrent::run([&](qint32 postId,qint32 page){ return Singleton<SqlOperator>::GetInstance().selectComments(postId,page);},postId,page).result();
     });
+    server.route("/getComments/<arg>",[](const qint32 page,const QHttpServerRequest &request){
+        return QtConcurrent::run([&](){ return Singleton<SqlOperator>::GetInstance().selectCommentsA2(page);}).result();
+    });
 }
 
 void HttpServer::routeUpload()

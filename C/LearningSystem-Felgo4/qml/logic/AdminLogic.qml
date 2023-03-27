@@ -11,6 +11,8 @@ Item {
     //删多级评论
     signal deleteCcSucceed(int index)
 
+    signal deleteCorCCSucceed()
+
     //    property var postsdata
     id: adminLogic
     function insertChoiceQuestion(question,option1, option2,option3,option4,answer){
@@ -112,6 +114,22 @@ Item {
                 else{
                     deleteCSucceed(index)
                 }
+            }
+        })
+        .catch(function(err) {
+            console.log(err.code)
+        });
+    }
+
+    function deleteCommentAComment2(id){
+        HttpRequest
+        .post(qhttpserver+"deleteComment")
+        .set('Content-Type', 'application/json')
+        .send({ id: id, v: "" })
+        .then(function(res) {
+            if(res.body === "success"){
+                console.log("删除成功")
+                deleteCorCCSucceed()
             }
         })
         .catch(function(err) {

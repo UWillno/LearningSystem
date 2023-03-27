@@ -59,7 +59,13 @@ Item {
         return false
     }
 
-
+    function getCommentsA2(page){
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET",qhttpserver + "getComments/"+page,false);
+        xhr.send(null)
+        console.log("getComments:"+JSON.stringify(xhr.responseText))
+        return JSON.parse(xhr.responseText)
+    }
 
     function getComments(postId,page){
         const xhr = new XMLHttpRequest();

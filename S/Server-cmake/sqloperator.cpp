@@ -435,6 +435,7 @@ QJsonArray SqlOperator::selectComments(qint32 &postId)
     query.bindValue(":postId",postId);
     query.exec();
     while(query.next()){
+
         Comment comment;
         QJsonObject object;
         comment.id = query.value(0).toInt();
@@ -444,12 +445,14 @@ QJsonArray SqlOperator::selectComments(qint32 &postId)
         comment.text = query.value(4).toString();
         comment.datetime = query.value(5).toDateTime();
         //        qInfo() << query.value(0);
+        QJsonArray comments2 =  QtConcurrent::run([&](){return select2Comments(comment.id);}).result();
         object.insert("id",comment.id);
         object.insert("postId",comment.postId);
         object.insert("cxid",comment.cxid);
         object.insert("username",comment.username);
         object.insert("text",comment.text);
         object.insert("datetime",comment.datetime.toString("yyyy-MM-dd hh:mm:ss"));
+        object.insert("comments2",comments2);
         json.append(object);
     }
     qInfo() << json;
@@ -579,6 +582,38 @@ QJsonArray SqlOperator::select2Comments(qint32 &replyId)
     return json;
 }
 
+QJsonArray SqlOperator::select2CommentsForAdmin(qint32 &replyId)
+{
+    QJsonArray json;
+    QSqlQuery query(m_db);
+    qInfo()<<"分页查询评论Admin";
+    query.prepare("SELECT * FROM `comment` WHERE reply_id = :replyId;");
+    query.bindValue(":replyId",replyId);
+    query.exec();
+    while(query.next()){
+        Comment comment;
+        QJsonObject object;
+        comment.id = query.value(0).toInt();
+//        comment.postId = query.value(1).toInt();
+//        comment.cxid = query.value(2).toInt();
+//        comment.username = query.value(3).toString();
+        comment.text = query.value(4).toString();
+//        comment.datetime = query.value(5).toDateTime();
+//        comment.replyId = query.value(6).toInt();
+        //        qInfo() << query.value(0);
+        object.insert("id",comment.id);
+//        object.insert("postId",comment.postId);
+//        object.insert("cxid",comment.cxid);
+//        object.insert("username",comment.username);
+        object.insert("text",comment.text);
+//        object.insert("datetime",comment.datetime.toString("yyyy-MM-dd hh:mm:ss"));
+//        object.insert("replyId", comment.replyId);
+        json.append(object);
+    }
+    qInfo() << json;
+    return json;
+}
+
 
 QJsonArray SqlOperator::selectComments(qint32 &postId,const qint32 &page)
 {
@@ -622,6 +657,52 @@ QJsonArray SqlOperator::selectComments(qint32 &postId,const qint32 &page)
 
 
 
+
+        json.append(object);
+    }
+    qInfo() << json;
+    return json;
+}
+
+QJsonArray SqlOperator::selectCommentsA2(const qint32 &page)
+{
+    QJsonArray json;
+    QSqlQuery query(m_db);
+    qInfo()<<"分页查询评论";
+    if(page==1){
+        //        query.prepare("SELECT * FROM `comment` WHERE post_id = :postId ORDER BY id DESC LIMIT 0, 20;");
+        query.prepare("SELECT * FROM `comment` WHERE reply_id = 0 ORDER BY id ASC LIMIT 0, 100 ");
+    }else{
+        //        query.prepare("SELECT * FROM `comment` WHERE post_id = :postId ORDER BY id DESC LIMIT "+ QString::number(10*(page-1)) +", 20;");
+        query.prepare("SELECT * FROM `comment` WHERE reply_id = 0 ORDER BY id ASC LIMIT "+ QString::number(50*(page-1)) +", 20;");
+    }
+    query.exec();
+
+    while(query.next()){
+        Comment comment;
+        QJsonObject object;
+        comment.id = query.value(0).toInt();
+
+        QJsonArray comments2 =  QtConcurrent::run([&](){return select2CommentsForAdmin(comment.id);}).result();
+
+        comment.postId = query.value(1).toInt();
+//        comment.cxid = query.value(2).toInt();
+//        comment.username = query.value(3).toString();
+        comment.text = query.value(4).toString();
+//        comment.datetime = query.value(5).toDateTime();
+        //        qInfo() << query.value(0);
+        object.insert("id",comment.id);
+//        object.insert("postId",comment.postId);
+//        object.insert("cxid",comment.cxid);
+//        object.insert("username",comment.username);
+        object.insert("text",comment.text);
+//        object.insert("datetime",comment.datetime.toString("yyyy-MM-dd hh:mm:ss"));
+        //        if(!comments2.isEmpty()){
+        object.insert("comments2",comments2);
+        QJsonDocument doc;
+        doc.setArray(comments2);
+         //客户端查询用
+        object.insert("filter",comment.text + QString::fromUtf8(doc.toJson(QJsonDocument::Compact)));
 
         json.append(object);
     }

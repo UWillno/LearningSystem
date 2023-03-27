@@ -43,7 +43,7 @@ signals:
 
 public slots:
     bool insertQuestion(iQuestion * question);
-//    QList<iQuestion*> selectAllQuestion();
+    //    QList<iQuestion*> selectAllQuestion();
     void selectAllQuestion();
 
     bool updateQuestion(iQuestion * question);
@@ -60,6 +60,7 @@ public slots:
 
     QJsonArray selectPosts();
 
+    //查询帖子所有评论
     QJsonArray selectComments(qint32 &postId);
 
     bool deletePost(qint32 &id);
@@ -68,15 +69,22 @@ public slots:
 
     bool deleteComment(qint32 &id);
 
+
     QJsonArray selectPosts(qint32 &page);
 
     bool insertComment(Comment &comment);
 
     //查询评论的评论
     QJsonArray select2Comments(qint32 &replyId);
+    //简化评论信息
+    QJsonArray select2CommentsForAdmin(qint32 &replyId);
 
-
+    // 按帖子分页查询评论
     QJsonArray selectComments(qint32 &postId,const qint32 &page);
+
+
+    // 只查询评论与二级评论
+    QJsonArray selectCommentsA2(const qint32 &page);
 
     qint32 selectCommentsCount(qint32 &postId);
 

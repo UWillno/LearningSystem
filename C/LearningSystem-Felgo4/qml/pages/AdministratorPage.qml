@@ -14,7 +14,6 @@ AppPage {
             detailText: "Add Question",
             //            icon: IconType.apple
         },
-
         {
             text: "查看题目",
             detailText: "Select & Update Questions",
@@ -24,12 +23,16 @@ AppPage {
             detailText: "Commit Questions to Users",
         },
         {
-            text: "删帖/删评",
-            detailText: "Delete Post Or Comment",
+            text: "帖子管理",
+            detailText: "Posts or Comments Management",
         },
         {
             text: "学习资源管理",
             detailText: "Resources Management",
+        },
+        {
+            text: "评论管理",
+            detailText: "Comments Management",
         }
 
     ]
@@ -48,7 +51,11 @@ AppPage {
                             createPostsPage()
                             if(index === 4)
                             {
-                                var p = Qt.createComponent("SRMListPage.qml").createObject(parent)
+                                const p = Qt.createComponent("SRMListPage.qml").createObject(parent)
+                                rootStack.push(p)
+                            }
+                            if(index === 5){
+                                const p = Qt.createComponent("CommentsPage.qml").createObject(parent)
                                 rootStack.push(p)
                             }
 
