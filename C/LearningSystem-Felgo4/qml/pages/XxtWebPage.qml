@@ -33,7 +33,8 @@ AppPage {
     Rectangle {
         id:xxtRect
         //        anchors.fill: parent
-        height: parent.height /2
+        //        height: parent.height /2
+        height: parent.height - row.height
         width: parent.width
         z:-1
 
@@ -57,14 +58,19 @@ AppPage {
     }
 
     Row {
+        id:row
         //        z:1
-        anchors.top: xxtRect.bottom
+        //        anchors.top: xxtRect.bottom
+        anchors.bottom: parent.bottom
+        height: signBtn.height
         width:parent.width
         AppButton{
             id:signBtn
             text: "签到"
             onClicked: {
-                signContextMenu.open(signBtn.x, signBtn.y + signBtn.height)
+                //                signContextMenu.open(signBtn.x, signBtn.y + signBtn.height)
+                signContextMenu.open()
+                xxtRect.height = xxtPage.height - signContextMenu.height
 
             }
 
@@ -73,7 +79,10 @@ AppPage {
             id:exBtn
             text: "额外"
             onClicked:{
-                extraContextMenu.open(exBtn.x, exBtn.y + exBtn.height)
+                //                extraContextMenu.open(exBtn.x, exBtn.y + exBtn.height)
+                extraContextMenu.open()
+                xxtRect.height = xxtPage.height - extraContextMenu.height
+
             }
             onPressAndHold: {
                 viewSignPhotos()
@@ -92,7 +101,11 @@ AppPage {
     }
     Menu {
         id: signContextMenu
-        width: encAction.width
+        width: xxtPage.width
+        onClosed: {
+            xxtRect.height = xxtPage.height - row.height
+        }
+
         parent: signBtn
         Action{
             text: "静态签到"
@@ -214,8 +227,12 @@ AppPage {
     }
     Menu {
         id: extraContextMenu
-        width: signBtn.width
+        width: xxtPage.width
         parent: exBtn
+        onClosed: {
+            xxtRect.height = xxtPage.height - row.height
+        }
+
         Action{
             text: "查看测验答案"
             onTriggered: {
@@ -330,6 +347,7 @@ AppPage {
     Connections{
         target: qm
         onUploadXxtSucceed:objectId=>{
+                               preSign()
                                console.log('objectId'+objectId)
                                console.log('activeId' + activeId)
                                const url = "https://mobilelearn.chaoxing.com/pptSign/stuSignajax?activeId="+activeId+"&objectId="+objectId
