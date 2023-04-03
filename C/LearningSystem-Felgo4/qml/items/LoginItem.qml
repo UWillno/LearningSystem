@@ -12,19 +12,23 @@ Rectangle {
     implicitHeight: roundedImage.height + dp(20)
     radius: dp(20)
     //    anchors.verticalCenter: parent
-    property string dialogtitle: "学习通登陆"
+    property string dialogtitle: "学习通登录"
     property string currentstatus: ss.cxid ? "超星模式" : "游客模式"
     property int administrator: 0
     property int chaoxingUser: 1
     property int  times: 0
-
+    //    clip: true
     Row {
+        id:row
         spacing: dp(5)
         //        anchors.horizontalCenter: parent.horizontalCenter
         anchors.centerIn: parent
+
         RoundedImage {
             id: roundedImage
             //            width: root.width - simpleInfo.width - dp(5)
+            //            width: dp(100)
+//            width: simpleInfo.height
             width: dp(100)
             height: width
 
@@ -38,13 +42,13 @@ Rectangle {
                 anchors.fill:parent
                 onClicked:{
                     console.log("clicked!!")
-                    dialogtitle = "用户登陆"
+                    dialogtitle = "用户登录"
                     loginDialog.open()
 
                     //测试用
                     //                    loaderItem.show();
                     //                     adminLogic.loading(rootStack)
-                    //                    toastManager.show("登陆成功!",1000)
+                    //                    toastManager.show("登录成功!",1000)
 
                     //                    loginDialog.open()
                     //                    rootStack.push(adminComponent)
@@ -52,11 +56,11 @@ Rectangle {
                 }
                 onPressAndHold: {
                     console.log("hold")
-                    var adminComponent = Qt.createComponent("../pages/AdministratorPage.qml").createObject()
-                    rootStack.push(adminComponent)
-                    //                    dialogtitle = "管理员登陆"
+                                        var adminComponent = Qt.createComponent("../pages/AdministratorPage.qml").createObject()
+                                        rootStack.push(adminComponent)
+//                    dialogtitle = "管理员登录"
 
-                    //                    loginDialog.open()
+//                    loginDialog.open()
                 }
 
             }
@@ -64,11 +68,10 @@ Rectangle {
         }
         Column {
             id: simpleInfo
-            //            anchors.centerIn: parent
-            //            spacing: dp(5)
+
             AppText {
                 id: currentStatus
-                width: dp(200)
+                //                width: root.width/2
                 //                fontSize: 14
                 text: "当前状态:" + currentstatus
             }
@@ -80,20 +83,23 @@ Rectangle {
             AppText {
                 visible: ss.cxid ? true : false
                 id: nameText
-                width: dp(200)
+                //                 width: root.width/2
+                //                width: parent.width
                 //                fontSize: 14
                 text: "昵称:" + ss.username
             }
             AppText {
                 id: cxidText
-                width: dp(200)
+                //                 width: root.width/2
+                //                width: parent.width
                 //                fontSize: 14
                 text: "ID:" + ss.cxid
                 visible: ss.cxid ? true : false
             }
             AppText {
                 id: phoneText
-                width: dp(200)
+                //                width: root.width/2
+                //                width: parent.width
                 //                fontSize: 14
                 text: "当前账号:" + ss.phone
                 visible: ss.cxid ? true : false
@@ -123,7 +129,7 @@ Rectangle {
     Dialog {
         id: loginDialog
         title:dialogtitle
-        positiveActionLabel: "登陆"
+        positiveActionLabel: "登录"
         negativeActionLabel: "返回"
         onClosed: {
             usernameInput.text=""
@@ -136,7 +142,7 @@ Rectangle {
 
         onAccepted: {
             //            console.log(usernameInput.text.trim()+"#"+passwordInput.text.trim())
-            if(title ===  "管理员登陆"){
+            if(title ===  "管理员登录"){
                 qm.tologin(usernameInput.text.trim(),passwordInput.text.trim(),administrator)
                 close()
             }
@@ -173,16 +179,16 @@ Rectangle {
         onLoginSucceeded:{
             userImageResource.remove()
             userImageResource.download()
-            console.log("登陆成功！！")
+            console.log("登录成功！！")
             toastManager.show("登录成功！",1000)
             var adminComponent = Qt.createComponent("../pages/AdministratorPage.qml").createObject()
-            if(dialogtitle === "管理员登陆"){
+            if(dialogtitle === "管理员登录"){
                 rootStack.push(adminComponent)
             }
 
         }
         onLoginFailed:{
-            console.log("登陆失败！！")
+            console.log("登录失败！！")
             toastManager.show("登录失败！",1000)
         }
     }

@@ -40,7 +40,7 @@ bool SqlOperator::login(QString username, QString password)
 
 bool SqlOperator::connect(QString hostname,int port,QString databasename,QString username,QString password)
 {
-    m_db=QSqlDatabase::addDatabase("QMYSQL");
+    m_db=QSqlDatabase::addDatabase("QMYSQL","uwillno");
     m_db.setHostName(hostname);
     m_db.setPort(port);
     m_db.setDatabaseName(databasename);

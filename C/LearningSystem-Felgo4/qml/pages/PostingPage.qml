@@ -38,7 +38,7 @@ AppPage {
             }
             AppRadio {
                 id:r2
-                text:"考试心得"
+                text:"考试技巧"
             }
             AppRadio {
                 id:r3
