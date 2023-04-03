@@ -56,31 +56,31 @@
 
 ​	点击触发，这里目前是用的XXT的账号登录，所以不提供注册功能。
 
-<img src="/home/uwillno/Projects/LearningSystem/readmeResources/用户登录.png" alt="点击头像" width="200" />
+<img src="./readmeResources/用户登录.png" alt="点击头像" width="200" />
 
 #### 管理员登录
 
 ​	长按触发。
 
-<img src="/home/uwillno/Projects/LearningSystem/readmeResources/管理员登录.png" alt="点击头像" width="200" />
+<img src="./readmeResources/管理员登录.png" alt="点击头像" width="200" />
 
 ### 管理员功能
 
 #### 功能列表
 
-<img src="/home/uwillno/Projects/LearningSystem/readmeResources/管理员功能列表.png" width="200" />
+<img src="./readmeResources/管理员功能列表.png" width="200" />
 
 #### 添加题目
 
 ​	目前只支持3种题型。
 
-<img src="/home/uwillno/Projects/LearningSystem/readmeResources/选择题录入.png"  width="200" /><img src="/home/uwillno/Projects/LearningSystem/readmeResources/判断题录入.png"  width="200" /><img src="/home/uwillno/Projects/LearningSystem/readmeResources/填空题录入.png" width="200" />
+<img src="./readmeResources/选择题录入.png"  width="200" /><img src="./readmeResources/判断题录入.png"  width="200" /><img src="./readmeResources/填空题录入.png" width="200" />
 
 #### 查看、检索、编辑题目
 
 
 
-<img src="/home/uwillno/Projects/LearningSystem/readmeResources/查看题目.png"  width="200" /><img src="/home/uwillno/Projects/LearningSystem/readmeResources/题目检索.png"  width="200" /><img src="/home/uwillno/Projects/LearningSystem/readmeResources/题目编辑.png"  width="200" />
+<img src="./readmeResources/查看题目.png"  width="200" /><img src="./readmeResources/题目检索.png"  width="200" /><img src="./readmeResources/题目编辑.png"  width="200" />
 
 #### 题库更新
 
@@ -94,7 +94,7 @@
 
 ​	原本没打算写这个功能的...这里面的查看和学习不同，是直接打开浏览器查看……
 
-<img src="/home/uwillno/Projects/LearningSystem/readmeResources/学习资源管理功能列表.png"  width="200" /><img src="/home/uwillno/Projects/LearningSystem/readmeResources/资源录入.png"  width="200" /><img src="/home/uwillno/Projects/LearningSystem/readmeResources/资源录入2.png"  width="200" /><img src="/home/uwillno/Projects/LearningSystem/readmeResources/资源管理列表.png"  width="200" />
+<img src="./readmeResources/学习资源管理功能列表.png"  width="200" /><img src="./readmeResources/资源录入.png"  width="200" /><img src="./readmeResources/资源录入2.png"  width="200" /><img src="./readmeResources/资源管理列表.png"  width="200" />
 
 #### 评论管理
 
@@ -102,7 +102,7 @@
 
 ​	而评论是分多级的，可以展开与收缩，可以单独操作，右上角可以一键操作，长按进行删除操作，检索可以检索多级的。
 
-<img src="/home/uwillno/Projects/LearningSystem/readmeResources/查看评论.png"  width="200" /><img src="/home/uwillno/Projects/LearningSystem/readmeResources/查看评论展开.png"  width="200" />
+<img src="./readmeResources/查看评论.png"  width="200" /><img src="./readmeResources/查看评论展开.png"  width="200" />
 
 
 
@@ -112,17 +112,17 @@
 
 ​	其中文档是外部打开，图片、视频、WEB可以选择外部打开或者内部打开，都可以进行保存。最后一项内部打开，具体功能理论上zz全部功能，并且更好用一些，不过实测某个功能有些人可能用不了，但我测试多次仍未排查出问题。
 
-<img src="/home/uwillno/Projects/LearningSystem/readmeResources/课程学习功能列表.png"  width="200" />
+<img src="./readmeResources/课程学习功能列表.png"  width="200" />
 
 #### 文档学习
 
 ​	学习时会直接外部打开。
 
-<img src="/home/uwillno/Projects/LearningSystem/readmeResources/文档资源列表.png"  width="200" />
+<img src="./readmeResources/文档资源列表.png"  width="200" />
 
 #### 图片学习
 
-<img src="/home/uwillno/Projects/LearningSystem/readmeResources/图片资源列表.png"  width="200" /><img src="/home/uwillno/Projects/LearningSystem/readmeResources/图片学习.png"  width="200" /><img src="/home/uwillno/Projects/LearningSystem/readmeResources/图片点击打开.png"  width="200" />
+<img src="./readmeResources/图片资源列表.png"  width="200" /><img src="./readmeResources/图片学习.png"  width="200" /><img src="./readmeResources/图片点击打开.png"  width="200" />
 
 #### 视频学习
 
@@ -132,13 +132,13 @@
 
 ​	PC端视频可能碰到不能直接解码的情况，`yay -S gstreamer gst-libav gst-plugins-good gst-plugins-bad gst-plugins-ugly`
 
-<img src="/home/uwillno/Projects/LearningSystem/readmeResources/视频资源列表.png"  width="200" /><img src="/home/uwillno/Projects/LearningSystem/readmeResources/视频学习竖屏.png"  width="200" />
+<img src="./readmeResources/视频资源列表.png"  width="200" /><img src="./readmeResources/视频学习竖屏.png"  width="200" />
 
-<img src="/home/uwillno/Projects/LearningSystem/readmeResources/视频学习.png"  width="600" />
+<img src="./readmeResources/视频学习.png"  width="600" />
 
 #### WEB学习
 
-<img src="/home/uwillno/Projects/LearningSystem/readmeResources/web资源列表.png"  width="200" /><img src="/home/uwillno/Projects/LearningSystem/readmeResources/web学习-内部打开.png"  width="200" />
+<img src="./readmeResources/web资源列表.png"  width="200" /><img src="./readmeResources/web学习-内部打开.png"  width="200" />
 
 #### XXT学习
 
@@ -150,47 +150,47 @@
 
 #### 功能列表
 
-<img src="/home/uwillno/Projects/LearningSystem/readmeResources/练习功能列表.png"  width="200" />
+<img src="./readmeResources/练习功能列表.png"  width="200" />
 
 #### 刷题
 
-<img src="/home/uwillno/Projects/LearningSystem/readmeResources/刷题记录.png"  width="200" /><img src="/home/uwillno/Projects/LearningSystem/readmeResources/刷题正确.png"  width="200" /><img src="/home/uwillno/Projects/LearningSystem/readmeResources/刷题错误.png"  width="200" /><img src="/home/uwillno/Projects/LearningSystem/readmeResources/主页2.png"  width="200" />
+<img src="./readmeResources/刷题记录.png"  width="200" /><img src="./readmeResources/刷题正确.png"  width="200" /><img src="./readmeResources/刷题错误.png"  width="200" /><img src="./readmeResources/主页2.png"  width="200" />
 
 #### 历史错题
 
 ​	列表与刷题差不多，不过只收录了错题。错题的右上角点击后可以移出历史错题列。
 
-<img src="/home/uwillno/Projects/LearningSystem/readmeResources/错题可移出.png"  width="200" />
+<img src="./readmeResources/错题可移出.png"  width="200" />
 
 #### 模拟考试
 
-<img src="/home/uwillno/Projects/LearningSystem/readmeResources/模拟考试题量设置.png"  height="330" /><img src="/home/uwillno/Projects/LearningSystem/readmeResources/交卷界面.png"  width="200" /><img src="/home/uwillno/Projects/LearningSystem/readmeResources/得分界面.png"  width="200" /><img src="/home/uwillno/Projects/LearningSystem/readmeResources/主页1.png"  width="200" />
+<img src="./readmeResources/模拟考试题量设置.png"  height="330" /><img src="./readmeResources/交卷界面.png"  width="200" /><img src="./readmeResources/得分界面.png"  width="200" /><img src="./readmeResources/主页1.png"  width="200" />
 
-<img src="/home/uwillno/Projects/LearningSystem/readmeResources/考试记录.png"  width="200" /><img src="/home/uwillno/Projects/LearningSystem/readmeResources/浏览考试情况-对题.png"  width="200" /><img src="/home/uwillno/Projects/LearningSystem/readmeResources/浏览考试情况-错题.png"  width="200" />
+<img src="./readmeResources/考试记录.png"  width="200" /><img src="./readmeResources/浏览考试情况-对题.png"  width="200" /><img src="./readmeResources/浏览考试情况-错题.png"  width="200" />
 
 ### 论坛
 
 #### 功能列表
 
-<img src="/home/uwillno/Projects/LearningSystem/readmeResources/论坛功能列表.png"  width="200" />
+<img src="./readmeResources/论坛功能列表.png"  width="200" />
 
 #### 发帖
 
 ​	帖子支持富文本，评论不支持富文本。
 
-<img src="/home/uwillno/Projects/LearningSystem/readmeResources/发帖.png"  width="200" />
+<img src="./readmeResources/发帖.png"  width="200" />
 
 #### 看贴
 
-<img src="/home/uwillno/Projects/LearningSystem/readmeResources/帖子列表1.png"  width="200" /><img src="/home/uwillno/Projects/LearningSystem/readmeResources/帖子列表2.png"  width="200" /><img src="/home/uwillno/Projects/LearningSystem/readmeResources/帖子筛选.png"  width="200" /><img src="/home/uwillno/Projects/LearningSystem/readmeResources/帖子检索.png"  width="200" />
+<img src="./readmeResources/帖子列表1.png"  width="200" /><img src="./readmeResources/帖子列表2.png"  width="200" /><img src="./readmeResources/帖子筛选.png"  width="200" /><img src="./readmeResources/帖子检索.png"  width="200" />
 
 #### 详情、回帖
 
-<img src="/home/uwillno/Projects/LearningSystem/readmeResources/评论界面.png"  width="200" />
+<img src="./readmeResources/评论界面.png"  width="200" />
 
 ### 同步功能
 
-<img src="/home/uwillno/Projects/LearningSystem/readmeResources/主页3.png"  width="200" />
+<img src="./readmeResources/主页3.png"  width="200" />
 
 ### 其他
 
