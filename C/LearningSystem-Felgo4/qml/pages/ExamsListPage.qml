@@ -19,7 +19,7 @@ ListPage {
     delegate: SimpleRow {
         text:model.date  + "\t得分:" +  model.point
 //        color:"red"
-        detailText: "正确率："+model.right.length / (model.wrong.length+model.right.length) *100 +"%\t题目总数："+model.wrong.length+model.right.length
+        detailText: "正确率："+(model.right.length / (model.wrong.length+model.right.length) *100).toFixed(4) +"%\t题目总数："+(model.wrong.length+model.right.length)
 
 
         onSelected: {
@@ -33,7 +33,7 @@ ListPage {
 
 
     Component.onCompleted:{
-        //        console.log(JSON.stringify(settings.exams))
+                console.log(JSON.stringify(settings.exams))
     }
 
 }
