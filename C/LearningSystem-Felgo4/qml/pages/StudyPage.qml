@@ -36,19 +36,40 @@ AppPage {
                 text: "学习通学习",
                 detailText: "Study By ChaoXing",
                 icon: IconType.star
+            },
+            {
+                text: "文本编辑学习",
+                detailText: "Study with a rich text editor",
+                icon: IconType.edit
             }
         ]
         delegate: SimpleRow {
 
             onSelected: index=>{
                             console.log(index)
-                            if(index !== 4){
-                            var page
-                            userLogic.getResourcesByType(index)
+                            if(index < 4){
+                                var page
+                                userLogic.getResourcesByType(index)
                             }
                             if(index === 4){
-                                var p = Qt.createComponent("XxtWebPage.qml").createObject(parent,{title:"学习通",url:"https://mooc1.chaoxing.com/course/phone/courselisthead?passed=1"})
+                                const p = Qt.createComponent("XxtWebPage.qml").createObject(parent,{title:"学习通",url:"https://mooc1.chaoxing.com/course/phone/courselisthead?passed=1"})
                                 studyStack.push(p)
+                            }
+                            if(index === 5 ){
+                                //                                    qm.openWordWindow(ppage.width/2,ppage.height/2);
+                                //                                    Qt.createComponent("../texteditor.qml").createObject(parent);
+                                //                                    console.log(
+                                if(Qt.platform.os === "linux" || Qt.platform.os === "windows" || Qt.platform.os === "macos" )
+                                {
+                                    //                                       Qt.createComponent("../texteditor.qml").createObject(parent)
+                                    Qt.createComponent("../texteditor.qml").createObject(parent)
+                                    //                                        p = Qt.createComponent("../TextEditorPage.qml").createObject()
+
+
+                                }else {
+                                    const   p = Qt.createComponent("../TextEditorPage.qml").createObject()
+                                    studyStack.push(p)
+                                }
                             }
 
                             //                            switch(index){
@@ -119,8 +140,8 @@ AppPage {
             }
             }
             if(t){
-                 var p =Qt.createComponent("UserResourcesListPage.qml").createObject(parent,{title:t,data:json})
-                 studyStack.push(p)
+                var p =Qt.createComponent("UserResourcesListPage.qml").createObject(parent,{title:t,data:json})
+                studyStack.push(p)
             }
         }
 

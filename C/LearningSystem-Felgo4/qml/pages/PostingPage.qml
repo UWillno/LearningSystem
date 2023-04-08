@@ -59,6 +59,15 @@ AppPage {
             anchors.horizontalCenter: parent.horizontalCenter
             id: buttonsRow
             height: dp(10)
+
+            Switch {
+//                    text: "PlainText"
+                text:  checked ? "纯文本" : "富文本"
+                onCheckedChanged: {
+                    postEdit.textFormat = checked ? Qt.PlainText :  Qt.RichText
+                }
+            }
+
             AppButton {
                 id:addPictureBtn
                 text: "上传图片"

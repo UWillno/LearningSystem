@@ -5,6 +5,7 @@ import QtWebView
 AppPage {
 
     title: "练习"
+    id:ppage
 
     AppListView {
         delegate: SimpleRow {
@@ -48,7 +49,7 @@ AppPage {
                 text: "模拟考试",
                 detailText: "Virtual Exams",
                 icon: IconType.pencil
-            }
+            },
         ]
 
     }

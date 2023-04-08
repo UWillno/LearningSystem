@@ -9,6 +9,8 @@
 #include <QtConcurrent>
 #include <QFuture>
 #include <QJsonArray>
+#include <QQmlApplicationEngine>
+#include <QFileDialog>
 class QmlMediator : public QObject
 {
     Q_OBJECT
@@ -22,7 +24,7 @@ public:
     void setTcpQuestions(const QList<QJsonArray> &newTcpQuestions);
     void resetTcpQuestions();
     Q_PROPERTY(QList<QJsonArray> tcpQuestions READ tcpQuestions WRITE setTcpQuestions RESET resetTcpQuestions NOTIFY tcpQuestionsChanged)
-
+    QQmlApplicationEngine *engine;
 
 signals:
     void loginSucceeded();
@@ -90,12 +92,18 @@ public slots:
     // qr
     void uploadQrPhoto(QUrl path);
 
+    //    void openWordWindow(const qint32 w,const qint32 h);
+
+//    void createNewWin();
+
+//    void getFile();
 
 private:
     enum m_task{
         login,insertC,insertT,insertF,getQuestions,modifyC,modifyT,modifyF,deleteC,deleteT,deleteF
     };
     QList<QJsonArray> m_tcpQuestions;
+
 
 };
 

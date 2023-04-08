@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 
+
 project(LearningSystem-Felgo4 VERSION 0.1 LANGUAGES CXX)
 
 set(CMAKE_AUTOMOC ON)
@@ -7,8 +8,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(Felgo REQUIRED)
 #find_package(Qt6 REQUIRED COMPONENTS Concurrent Network WebEngineQuick)
-find_package(Qt6 REQUIRED COMPONENTS Concurrent Network Qml WebView)
-
+find_package(Qt6 REQUIRED COMPONENTS Concurrent Network Qml WebView Widgets)
 
 # Project identifier and version
 # More information: https://felgo.com/doc/felgo-publishing/#project-configuration
@@ -35,7 +35,7 @@ file(GLOB_RECURSE QmlFiles RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} qml/*.qml qml/*.
 # Find all non-QML/JS files in the qml and assets folder to add as resources:
 file(GLOB_RECURSE AssetsFiles RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} assets/* qml/*)
 list(REMOVE_ITEM AssetsFiles ${QmlFiles})
-
+qt_standard_project_setup()
 qt_add_executable(appLearningSystem-Felgo4
     main.cpp
     singleton.h
@@ -46,6 +46,8 @@ qt_add_executable(appLearningSystem-Felgo4
     tcpclient.cpp
     qmlmediator.cpp
     httpclient.h httpclient.cpp
+    documenthandler.cpp
+    documenthandler.h
     ${QmlFiles}
     ${AssetsFiles}
 )
@@ -65,8 +67,14 @@ qt_add_qml_module(appLearningSystem-Felgo4
     #    QML_FILES ${QmlFiles}
     #    RESOURCES ${AssetsFiles}
     NO_RESOURCE_TARGET_PATH
+    RESOURCES
+          "texteditor.html"
+#          "+touch/texteditor.html"
+          "fonts/fontello.ttf"
+          "images/qt-logo.png"
+          "texteditor.qml"
+          "fonts/fontello1.ttf"
 )
-
 
 # NOTE: for PUBLISHING, perform the following steps:
 # 1. comment the deploy_resources line above, to avoid shipping your qml files with the application (instead they get compiled to the app binary)
@@ -82,7 +90,7 @@ target_compile_definitions(appLearningSystem-Felgo4
 
 target_link_libraries(appLearningSystem-Felgo4 PRIVATE Felgo)
 #target_link_libraries(appLearningSystem-Felgo4 PRIVATE Qt6::Concurrent Qt6::Network Qt6::WebEngineQuick)
-target_link_libraries(appLearningSystem-Felgo4 PRIVATE Qt6::Concurrent Qt6::Network Qt6::Qml Qt6::WebView)
+target_link_libraries(appLearningSystem-Felgo4 PRIVATE Qt6::Concurrent Qt6::Network Qt6::Qml Qt6::WebView Qt6::Widgets)
 
 #add_subdirectory(./qzxing)
 #target_link_libraries(appLearningSystem-Felgo4 PRIVATE QZXing)

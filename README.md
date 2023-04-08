@@ -130,7 +130,9 @@
 
 ​	可以倍速、拖进度条、暂停、长按保存操作。最近换用Wayland，Genymotion模拟器窗口显示有些问题。
 
-​	PC端视频可能碰到不能直接解码的情况，`yay -S gstreamer gst-libav gst-plugins-good gst-plugins-bad gst-plugins-ugly`
+​	PC端视频可能碰到不能直接解码的情况，
+
+​	`yay -S gstreamer gst-libav gst-plugins-good gst-plugins-bad gst-plugins-ugly`
 
 <img src="./readmeResources/视频资源列表.png"  width="200" /><img src="./readmeResources/视频学习竖屏.png"  width="200" />
 
@@ -142,7 +144,19 @@
 
 #### XXT学习
 
-功能见Uwzz
+​	功能见[Uwzz](https://gitee.com/uwillno/uwzz)，不方便上图，避免滥用。
+
+#### 文本编辑学习
+
+​	加入文本编辑器，可以进行文本操作方面的学习。这是Qt官方的例子，仅仅有一些小的改动。
+
+​	Android和Linux上界面和功能会有所不同，因为有些Dialog并不支持Android平台，随着Android版本的提升，文件也不能任意位置保存。并将Android端的`ApplicationWindow`换成了Felgo的`AppPage`，因为没能找到很好的方法在Android端进行加载出来，补上了几个Android上能够实现的功能。加上了一个`RichText`互相转换`PlainText`的开关，便于标签学习。发帖界面也加上了该开关。
+
+​	<img src="./readmeResources/文本编辑PC.png"  width="550" /><img src="./readmeResources/文本编辑touch.png"  width="200" />
+
+​		
+
+
 
 ### 练习
 
@@ -176,7 +190,7 @@
 
 #### 发帖
 
-​	帖子支持富文本，评论不支持富文本。
+​	帖子支持富文本，评论不支持富文本。这里加了个纯文本到富文本的切换开关，所以第三方图片链接其实也是可以加载的，如果会html的话。
 
 <img src="./readmeResources/发帖.png"  width="200" />
 
@@ -191,10 +205,4 @@
 ### 同步功能
 
 <img src="./readmeResources/主页3.png"  width="200" />
-
-### 其他
-
-可能要大改？感觉功能有点少，但又不知道加什么。
-
-
 

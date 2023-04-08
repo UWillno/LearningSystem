@@ -1,4 +1,5 @@
 ﻿#include "qmlmediator.h"
+#include <QQmlApplicationEngine>
 
 QmlMediator::QmlMediator(QObject *parent)
     : QObject{parent}
@@ -281,6 +282,28 @@ void QmlMediator::uploadQrPhoto(QUrl path)
 {
     emit uploadQr(path);
 }
+
+//void QmlMediator::getFile()
+//{
+//  QString  fileName = QFileDialog::getOpenFileName(NULL,
+//        tr("Open Image"), "/home/jana", tr("Image Files (*.png *.jpg *.bmp)"));
+//  qInfo() <<"qm1234" <<fileName;
+
+//}
+
+//void QmlMediator::createNewWin()
+//{
+////    QQmlApplicationEngine *engine = new QQmlApplicationEngine(this);
+//    engine->load(QUrl("qrc:/texteditor.qml"));
+//}
+
+//void QmlMediator::openWordWindow(const qint32 w,const qint32 h)
+//{
+//    WordWindow *win = new WordWindow();
+//    win->setGeometry(200,200,w,h);
+//    win->show();
+////    win.show();
+//}
 
 const QList<QJsonArray> &QmlMediator::tcpQuestions() const
 {
