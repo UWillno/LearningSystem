@@ -8,15 +8,17 @@
 
 3. Qt、C++、Felgo都是自学的，有些部分还是边学边写，代码质量可能不太行或者不太规范，代码变化过大，中途还碰到了Felgo 3/Qt5/Qmake 到 Felgo 4/Qt6/Cmake的迁移。
 
-5. 为什么用Felgo？省代码、QML热重载、有原生风格主题…
+5. 为什么用Felgo？省代码、QML热重载、有原生风格主题（如下图）……
 
    <img src="./readmeResources/Felgo-Desktop.png" width="200" /><img src="./readmeResources/Felgo-Android.png" width="200" /><img src="./readmeResources/Felgo-IOS.png" width="200" />
 
    
 
+5. 简单说下开发的思路：服务端开2个HttpServer（Qt，Apache )，1个TcpServer。`QTcpServer`和并发模块处理客户端的`QTcpSocket`，Apache HTTP目录就放一些“静态”资源。**其实是可以只用`QHttpServer`的，不需要`QTcpServer`，客户端全用QML进行请求，能省大量C++代码，只是最早开发时服务端程序为了与客户端Felgo3所用Qt版本相近，用的Qt5，官方还没这个类，才用的TCP，代码也就复杂了很多。**
+
+5. [代码行数统计](./count.txt)，仅供参考，随便拿shell统计的。
+
    
-
-
 
 ## 构建/部署
 
@@ -34,7 +36,7 @@
 
    `update 表名 set 字段名 = replace(字段名,'192.168.244','新IP地址');`
 
-3. 建表，验收后会传`.sql`文件上来，因为表结构可能会随着开发、测试进行来进行变动与完善。也可以按照服务端的实体类的属性类型进行建表。
+3. 建表，验收后会传`.sql`文件上来，因为表结构可能会随着开发、测试来进行变动与完善。也可以按照服务端的实体类的属性类型进行建表。执行`.sql`文件后请先看清某些触发器的作用，**不要乱动不该动的触发器或者行。  **~~有些设计看起来可能很蠢很奇怪，但一定是有用的，虽然我现在可能都不记得当时的用意:joy:。~~
 
 4. 服务器端一定要使用Qt6.4以上，`QHttpServer`是自从6.4以后官方才提供的，且此模块处于"技术预览"状态。之前Qt5时，服务端与客户端一直使用的`QTcpServer`和`QTcpSocket`进行数据传输，迁移到Qt6后，后期大多数功能都使用了`QHttpServer`，编码起来也更加方便。
 
@@ -110,7 +112,7 @@
 
 #### 功能列表
 
-​	其中文档是外部打开，图片、视频、WEB可以选择外部打开或者内部打开，都可以进行保存。最后一项内部打开，具体功能理论上zz全部功能，并且更好用一些，不过实测某个功能有些人可能用不了，但我测试多次仍未排查出问题。
+​	其中文档是外部打开，图片、视频、WEB可以选择外部打开或者内部打开，都可以进行保存操作。
 
 <img src="./readmeResources/课程学习功能列表.png"  width="200" />
 
@@ -126,9 +128,9 @@
 
 #### 视频学习
 
-​	手机横屏时自动全屏，Qt应用似乎不受锁定方向影响？
+​	手机横屏时自动"全屏"，Qt应用似乎不受锁定方向影响？
 
-​	可以倍速、拖进度条、暂停、长按保存操作。最近换用Wayland，Genymotion模拟器窗口显示有些问题。
+​	可以倍速、拖进度条、暂停、长按保存操作。安卓端截图时在用Wayland，Genymotion模拟器窗口显示有些问题。
 
 ​	PC端视频可能碰到不能直接解码的情况，
 
@@ -144,13 +146,13 @@
 
 #### XXT学习
 
-​	功能见[Uwzz](https://gitee.com/uwillno/uwzz)，不方便上图，避免滥用。
+​	**功能见[Uwzz](https://gitee.com/uwillno/uwzz)，不上图，避免滥用，到时候官方变动都用不了了。**
 
 #### 文本编辑学习
 
-​	加入文本编辑器，可以进行文本操作方面的学习。这是Qt官方的例子，仅仅有一些小的改动。
+​	加入文本编辑器，可以进行文本操作方面的学习。改自Qt Creator 内置的、官方的例子 [Qt Quick Controls - Text Editor](http://doc.qt.io/qt-6/qtquickcontrols-texteditor-example.html)。
 
-​	Android和Linux上界面和功能会有所不同，因为有些Dialog并不支持Android平台，随着Android版本的提升，文件也不能任意位置保存。并将Android端的`ApplicationWindow`换成了Felgo的`AppPage`，因为没能找到很好的方法在Android端进行加载出来，补上了几个Android上能够实现的功能。加上了一个`RichText`互相转换`PlainText`的开关，便于标签学习。发帖界面也加上了该开关。
+​	Android和Linux上界面和功能会有所不同，因为有些Dialog并不支持Android平台，随着Android版本的提升，文件也不能任意位置保存。并将Android端的`ApplicationWindow`换成了Felgo的`AppPage`，因为没能找到很好的方法在Android端进行加载出来，补上了几个Android上能够实现的功能。加上了一个`RichText`、`PlainText`互相转换的开关，便于标签学习。发帖界面也加上了该开关。
 
 ​	<img src="./readmeResources/文本编辑PC.png"  width="550" /><img src="./readmeResources/文本编辑touch.png"  width="200" />
 
@@ -204,5 +206,9 @@
 
 ### 同步功能
 
+​	因为该系统是可以不登录，进行题库下载、刷题、学习与考试的，所以同步功能尽量都手动操作。避免因自动同步，导致数据丢失或覆盖。开启自动同步后，每次数据变更后都会自动上传到服务器端然后存入数据库。
+
 <img src="./readmeResources/主页3.png"  width="200" />
+
+
 
