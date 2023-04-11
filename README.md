@@ -16,7 +16,7 @@
 
 5. 简单说下开发的思路：服务端开2个HttpServer（Qt，Apache )，1个TcpServer。`QTcpServer`和并发模块处理客户端的`QTcpSocket`，Apache HTTP目录就放一些“静态”资源。**其实是可以只用`QHttpServer`的，不需要`QTcpServer`，客户端全用QML进行请求，能省大量C++代码，只是最早开发时服务端程序为了与客户端Felgo3所用Qt版本相近，用的Qt5，官方还没这个类，才用的TCP，代码也就复杂了很多。**
 
-5. [代码行数统计](./count.txt)，仅供参考，随便拿shell统计的。
+5. [代码行数统计](./count.txt)，仅供参考，随便拿[sh](./count.sh)统计的。
 
    
 

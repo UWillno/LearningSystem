@@ -9,6 +9,7 @@
      7 S/Server-cmake/resource.cpp
      7 S/Server-cmake/user.cpp
      8 C/LearningSystem-Felgo4/qml/items/toast/SelectSwipeView.qml
+    10 C/LearningSystem-Felgo4/resources.qrc
     16 S/Server-cmake/client.h
     16 S/Server-cmake/interface/iQuestionFactory.h
     16 S/Server-cmake/interface/post.h
@@ -38,6 +39,7 @@
     39 C/LearningSystem-Felgo4/qml/pages/ExamsListPage.qml
     41 C/LearningSystem-Felgo4/qml/items/BlankComponent.qml
     41 C/LearningSystem-Felgo4/qml/pages/ImagePage.qml
+    43 C/LearningSystem-Felgo4/texteditor.html
     45 C/LearningSystem-Felgo4/qml/items/MemberAnswerItem.qml
     47 C/LearningSystem-Felgo4/qml/items/template/UWAppTextEdit.qml
     49 C/LearningSystem-Felgo4/httpclient.h
@@ -112,4 +114,5 @@
    462 C/LearningSystem-Felgo4/qml/pages/XxtWebPage.qml
    509 C/LearningSystem-Felgo4/qml/texteditor.qml
    940 S/Server-cmake/sqloperator.cpp
- 14019 总计
+ 14072 总计
+ 去除空白行总计: 12399
