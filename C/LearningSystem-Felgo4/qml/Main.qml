@@ -14,6 +14,12 @@ App {
     id:app
     dpScale: 1
 
+    onInitTheme: {
+//        Theme.navigationAppDrawer.itemBackgroundColor = "#98FB98"
+//        Theme.navigationBar.titleColor = "green"
+
+    }
+
     property alias navMode: navigation.navigationMode
 
     property alias settings: settings

@@ -14,10 +14,14 @@ AppPage {
     Rectangle {
         id: rectangle
         anchors.fill: parent
+
+
         color: "#F5F5F5"
         Column {
             spacing: dp(20)
             anchors.fill: parent
+            //            width: parent.width
+            //            height: parent.height
             anchors.topMargin: dp(10)
             LoginItem {
                 id:logitem
@@ -27,74 +31,98 @@ AppPage {
                 id:indexSwipeView
                 height: parent.height - logitem.height
                 width: parent.width - dp(10)
+
+                // 平板模式第二个页面会
+                //超出SwipeView显示出来！必须clip或者 visible: indexSwipeView.currentItem == rect1
+
+                clip: true
+
+                currentIndex: 0
+               //确保位于登录弹窗之下
                 z:-1
+
+
+
+
                 Rectangle {
-                        ChartView {
-                            id:examsChart
-                            title: "<b>考试情况</b>"
-                            titleColor: "blue"
+                    id:rect1
+                    //                    visible: indexSwipeView.currentItem == rect1
+
+                    //                    Connections {
+                    //                        target: indexSwipeView
+
+
+
+                    //                    }
+
+                    ChartView {
+                        id:examsChart
+                        title: "<b>考试情况</b>"
+                        titleColor: "blue"
+                        anchors.fill: parent
+                        animationOptions:ChartView.AllAnimations
+                        antialiasing: true
+
+                        LineSeries {
+                            id:pointLineSeries
+                            name: "成绩变化"
+                            axisX:ValuesAxis {
+                                id:vaxisx
+                                min:1
+                                labelFormat: "%d"
+                                tickType:ValueAxis.TicksDynamic
+                            }
+                            axisY:ValuesAxis {
+                                id:vaxisy
+                                min:0
+                                //                                tickCount: 10
+                                max:100
+                                labelFormat: "%d"
+                                tickType: ValueAxis.TicksFixed
+                            }
+
+                        }
+
+                        MouseArea{
                             anchors.fill: parent
-                            animationOptions:ChartView.AllAnimations
-                            antialiasing: true
-
-                            LineSeries {
-                                id:pointLineSeries
-                                name: "成绩变化"
-                                axisX:ValuesAxis {
-                                    id:vaxisx
-                                    min:1
-                                    labelFormat: "%d"
-                                    tickType:ValueAxis.TicksDynamic
-                                }
-                                axisY:ValuesAxis {
-                                    id:vaxisy
-                                    min:0
-                                    //                                tickCount: 10
-                                    max:100
-                                    labelFormat: "%d"
-                                    tickType: ValueAxis.TicksFixed
-                                }
-
-                            }
-
-                            MouseArea{
-                                anchors.fill: parent
-                                onPressAndHold: {
-                                    const p = Qt.createComponent("ExamsListPage.qml").createObject(parent);
-                                    rootStack.push(p)
-                                }
-                            }
-
-                            function reload(){
-                                pointLineSeries.clear()
-                                const times = settings.exams.length
-                                vaxisx.max = times
-                                vaxisx.tickCount = times
-                                settings.exams.forEach(function(e,i){
-                                    console.log("x"+i+"y"+e.point);
-                                    pointLineSeries.append(i,e.point)
-                                })
-                            }
-
-                            Connections {
-                                target: settings
-                                onExamsChanged:{
-                                    console.log(settings.exams.length)
-                                    console.log(settings.exams)
-                                    examsChart.reload()
-                                }
-                            }
-
-                            Component.onCompleted:{
-                                //                            console.log(settings.exams.length)
+                            onPressAndHold: {
+                                const p = Qt.createComponent("ExamsListPage.qml").createObject(parent);
+                                rootStack.push(p)
                             }
                         }
+
+                        function reload(){
+                            pointLineSeries.clear()
+                            const times = settings.exams.length
+                            vaxisx.max = times
+                            vaxisx.tickCount = times
+                            settings.exams.forEach(function(e,i){
+                                console.log("x"+i+"y"+e.point);
+                                pointLineSeries.append(i,e.point)
+                            })
+                        }
+
+                        Connections {
+                            target: settings
+                            onExamsChanged:{
+                                console.log(settings.exams.length)
+                                console.log(settings.exams)
+                                examsChart.reload()
+                            }
+                        }
+
+                        Component.onCompleted:{
+                            //                            console.log(settings.exams.length)
+                        }
+                    }
 
 
 
                 }
                 Rectangle {
                     id:re
+                    //                   visible: indexSwipeView.currentItem == re
+
 
                     ChartView {
                         id:questionsChart
@@ -152,6 +180,9 @@ AppPage {
 
 
                 Rectangle {
+                    id:rect3
+                    //                    visible: false
+                    //                    visible: indexSwipeView.currentItem == rect3
 
                     //                    height: parent.height
                     radius: dp(20)

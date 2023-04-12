@@ -17,7 +17,7 @@ Rectangle {
     property int administrator: 0
     property int chaoxingUser: 1
     property int  times: 0
-    //    clip: true
+    //    clip: true // 开启后弹窗也会被裁剪，导致无法显示！！
     Row {
         id:row
         spacing: dp(5)

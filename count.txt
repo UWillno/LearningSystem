@@ -97,22 +97,22 @@
    223 C/LearningSystem-Felgo4/qml/pages/TestPage.qml
    233 C/LearningSystem-Felgo4/qml/items/LoginItem.qml
    244 C/LearningSystem-Felgo4/qml/items/CommentRow.qml
-   252 C/LearningSystem-Felgo4/qml/Main.qml
    257 C/LearningSystem-Felgo4/qml/pages/AddResourcePage.qml
    258 C/LearningSystem-Felgo4/qml/items/PostItem.qml
+   258 C/LearningSystem-Felgo4/qml/Main.qml
    260 C/LearningSystem-Felgo4/qml/pages/PostsPage.qml
    267 C/LearningSystem-Felgo4/qml/TextEditorPage.qml
    327 C/LearningSystem-Felgo4/qmlmediator.cpp
    330 S/Server-cmake/httpserver.cpp
    335 C/LearningSystem-Felgo4/qml/logic/UserLogic.qml
    350 C/LearningSystem-Felgo4/documenthandler.cpp
-   356 C/LearningSystem-Felgo4/qml/pages/IndexPage.qml
    385 S/Server-cmake/tcpserver.cpp
+   387 C/LearningSystem-Felgo4/qml/pages/IndexPage.qml
    402 C/LearningSystem-Felgo4/qml/pages/PostDetailPage.qml
    429 C/LearningSystem-Felgo4/tcpclient.cpp
    450 C/LearningSystem-Felgo4/settings.cpp
    462 C/LearningSystem-Felgo4/qml/pages/XxtWebPage.qml
    509 C/LearningSystem-Felgo4/qml/texteditor.qml
    940 S/Server-cmake/sqloperator.cpp
- 14072 总计
- 去除空白行总计: 12399
+ 14109 总计
+ 去除空白行总计: 12419
