@@ -18,6 +18,10 @@
 
 5. [代码行数统计](./count.txt)，仅供参考，随便拿[sh](./count.sh)统计的。
 
+5. **毕设完全搞完后再开放所有仓库功能，因为不一定达到毕设要求，可能会有大变动？**
+
+8. **感谢某些开发者，`Toast`和`Loader`（虽然几乎没用上）代码是网上搜索后完全照搬的，虽然也不是写不了，当时刚开始使用QML开发，折腾小细节就很浪费时间。**
+
    
 
 ## 构建/部署
@@ -42,6 +46,8 @@
 
 5. 如果构建安卓应用，运行直接崩溃，报错有关`__emutls_get_address`，更换`NDK r23b`。
 
+5. 虽然Qt官方版本升了6.5LTS，我的开发环境还没有更新，避免变动太大，临近毕业，暂不折腾，如果跑不通建议还是用6.4.2。
+
 ## 主要功能
 
 ​	1. 功能验收/写毕业论文后再完善了，目前就瞎写点... 
@@ -51,6 +57,12 @@
 ​	**3. 考虑到数据会比较多，和论坛相关的所有功能列表都做了下拉刷新和触底加载，因此数据全部都是灌水的，毕竟要测试。**
 
 ​	**4. 测试用的号是我同学的，截图内出现的信息不是我的，不要骚扰他**，只是他的密码比较好记，大四了也不怎么用该平台，之前Uwzz开发时也一直用的他的号。
+
+### 接入ChatGPT
+
+​	需要`OPENAI_API_KEY`，默认用`gpt-3.5-turbo`，这里可以自己切换`model`，目前仅用于刷题时的题目解析。
+
+<img src="./readmeResources/chatgptmodel.png"  height="600" />
 
 ### 登录
 
@@ -171,6 +183,14 @@
 #### 刷题
 
 <img src="./readmeResources/刷题记录.png"  width="200" /><img src="./readmeResources/刷题正确.png"  width="200" /><img src="./readmeResources/刷题错误.png"  width="200" /><img src="./readmeResources/主页2.png"  width="200" />
+
+​	题目解析，调用OpenAI的ChatGPT的API，速度可能会有点慢。
+
+<img src="./readmeResources/题目解析1.png"  height="600" /><img src="./readmeResources/题目解析2.png"  height="600" />
+
+
+
+
 
 #### 历史错题
 

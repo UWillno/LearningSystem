@@ -8,6 +8,7 @@ Item {
     id: item
     property var postsdata
     signal postsGot()
+    signal chatReply(var text)
     function getQuestion(){
         HttpRequest.get("http://192.168.1.244/currentQuestions.json").timeout(50000).then(function(res){
             console.log(res.body)
@@ -119,6 +120,36 @@ Item {
             second = "0" + second;
         }
         return year + "-" + month + "-" + date + " " + hour + ":" + minute + ":" + second
+    }
+
+    function toChatGPT(text){
+        //        {
+        //             "model": "gpt-3.5-turbo",
+        //             "messages": [{"role": "user", "content": "Say this is a test!"}],
+        //             "temperature": 0.7
+        //           }
+        //        console.log({ model: settings.model, messages: [{role: "user", content: text}],temperature:0.7})
+        //        console.log(JSON.stringify({ model: settings.model, messages: [{role: "user", content: text}],temperature:0.7}))
+        HttpRequest
+        .post("https://api.openai.com/v1/chat/completions")
+        .set('Content-Type', 'application/json')
+        .set('Authorization','Bearer '+settings.key)
+        .send({ model: settings.model, messages: [{role: "user", content: text}],temperature:0.7})
+        .then(function(res) {
+            console.log(res.status);
+//            console.log(JSON.stringify(res.body));
+            var data = res.body
+            console.log(data.choices[0].message.content)
+            chatReply(data.choices[0].message.content)
+        })
+        .catch(function(err) {
+            console.log(err.code)
+             chatReply("error")
+        });
+//        {"choices":[{"finish_reason":"stop","index":0,"message":{"content":"作为AI语言模型，我无法直接接收消息。但是，API测试通常会返回响应消息，包括请求是否成功、响应的状态码、响应的数据等。测试人员可以通过查看响应消息来判断API是否正常工作，从而进行测试和调试。","role":"assistant"}}],"created":1681458887,"id":"chatcmpl-758YZY6GQUtA0pUDKSQKRwrUQjNB6","model":"gpt-3.5-turbo-0301","object":"chat.completion","usage":{"completion_tokens":81,"prompt_tokens":17,"total_tokens":98}}
+        ////       const xhr = new  XMLHttpRequest()
+//        var body = {"choices":[{"finish_reason":"stop","index":0,"message":{"content":"作为AI语言模型，我无法直接接收消息。但是，API测试通常会返回响应消息，包括请求是否成功、响应的状态码、响应的数据等。测试人员可以通过查看响应消息来判断API是否正常工作，从而进行测试和调试。","role":"assistant"}}],"created":1681458887,"id":"chatcmpl-758YZY6GQUtA0pUDKSQKRwrUQjNB6","model":"gpt-3.5-turbo-0301","object":"chat.completion","usage":{"completion_tokens":81,"prompt_tokens":17,"total_tokens":98}}
+//        console.log(body.choices[0].message.content)
     }
 
 

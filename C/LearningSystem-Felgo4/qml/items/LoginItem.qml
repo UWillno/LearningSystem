@@ -28,7 +28,7 @@ Rectangle {
             id: roundedImage
             //            width: root.width - simpleInfo.width - dp(5)
             //            width: dp(100)
-//            width: simpleInfo.height
+            //            width: simpleInfo.height
             width: dp(100)
             height: width
 
@@ -56,11 +56,11 @@ Rectangle {
                 }
                 onPressAndHold: {
                     console.log("hold")
-                                        var adminComponent = Qt.createComponent("../pages/AdministratorPage.qml").createObject()
-                                        rootStack.push(adminComponent)
-//                    dialogtitle = "管理员登录"
+                    var adminComponent = Qt.createComponent("../pages/AdministratorPage.qml").createObject()
+                    rootStack.push(adminComponent)
+                    //                    dialogtitle = "管理员登录"
 
-//                    loginDialog.open()
+                    //                    loginDialog.open()
                 }
 
             }
@@ -104,9 +104,21 @@ Rectangle {
                 text: "当前账号:" + ss.phone
                 visible: ss.cxid ? true : false
             }
-            //                }
-            //            }
-            //            Loader {}
+
+            AppText {
+                id:modelText
+                visible: settings.key
+                text: "model:" + settings.model
+                TapHandler {
+                    onDoubleTapped: {
+                        NativeDialog.inputText("Model设置","请输入Model","gpt-3.5-turbo", "", function(ok, text) {
+                            if(ok) {
+                                    settings.model = text
+                            }
+                          })
+                    }
+                }
+            }
         }
     }
 

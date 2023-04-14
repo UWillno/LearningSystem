@@ -7,6 +7,7 @@ Rectangle {
     property bool answer : question["answer"]
     property int type: 1
     property var answerDisplay: answer? "√" : "×"
+    property var rightOption : answer? "正确的":"错误的"
     //    title: "选择题"
 
     ButtonGroup {
@@ -69,13 +70,59 @@ Rectangle {
         }
 
         AppListItem {
+            id:answerItem
             visible:optionGroup.checkState == Qt.PartiallyChecked
             text : "正确答案:"+ answerDisplay
             textColor: "green"
         }
+        AppListItem {
+            id:analyzeItem
+            visible:answerItem.visible && settings.key
+            leftItem: Text {
+                anchors.verticalCenter: parent.verticalCenter
+                text: "<b>OpenAI</b>"
+
+            }
+            textColor: "blue"
+            text: "题目解析"
+            detailText: "by ChatGPT"
+            //            MouseArea {
+            //            anchors.fill: parent
+            //            onClicked: console.log("abababab")
+            //            }
+            onSelected: {
+                analyzeItem.visible = false
+                toastManager.show("请求中……",4000)
+                //                const rightOption =
+                //                                console.log(question["question"] + rightOption)
+                //                const qu = question["question"]
+
+                const text = `为什么判断题“${question["question"]}”的答案是“${rightOption}”？`
+                console.log(text)
+                con.enabled = true
+                logic.toChatGPT(text)
+
+                //            console.log("abababa")
+            }
+
+        }
+    }
+
+    Connections {
+        id:con
+        enabled:false
+        target: logic
+        onChatReply:function(text){
+            toastManager.show("获取成功！",1000)
+            Qt.createComponent("../items/QuestionAnalyzeItem.qml").createObject(questionCol,{analyze:text})
+            enabled = false
+        }
     }
 
     Component.onCompleted:{
+//        console.log(answer)
+
+//        if(answer){}
         //        console.log(answer)
         //        console.log(JSON.stringify(settings.wCQ))
         //        console.log(question.id)

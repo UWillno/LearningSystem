@@ -15,8 +15,14 @@ App {
     dpScale: 1
 
     onInitTheme: {
-//        Theme.navigationAppDrawer.itemBackgroundColor = "#98FB98"
-//        Theme.navigationBar.titleColor = "green"
+
+//        Theme.colors.tintColor = "#1DA1F2"
+        Theme.colors.tintColor = "#23d1ae"
+        Theme.colors.backgroundColor = "#eee"
+        Theme.navigationBar.backgroundColor = Theme.tintColor
+        Theme.navigationBar.titleColor = "white"
+        Theme.navigationBar.itemColor = "white"
+        Theme.colors.statusBarStyle = Theme.colors.statusBarStyleWhite
 
     }
 
@@ -56,6 +62,9 @@ App {
         property var exams
         property bool autoSync
         property string syncTime
+        property string key
+        property string model
+
 
         function saveQuestions(){
 
@@ -186,6 +195,13 @@ App {
             }
 
         }
+
+        headerView: AppIcon {
+            width: parent.width
+            iconType: "android"
+        }
+
+
 
     }
 

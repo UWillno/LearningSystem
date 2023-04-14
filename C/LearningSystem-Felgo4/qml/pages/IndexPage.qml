@@ -4,6 +4,12 @@ import "../items"
 import QtQuick.Layouts
 import QtQuick.Controls
 import QtCharts
+
+import QtQuick.Dialogs as QDialog
+
+
+
+
 AppPage {
 
     id: indexPage
@@ -11,12 +17,26 @@ AppPage {
     property string version : settings.questionsDB['version']
     //    property alias autoSyncSwitch: autoSyncSwitch.checked
 
+    rightBarItem: IconButtonBarItem {
+        iconType: "<b>AI</b>"
+        onClicked: {
+            NativeDialog.inputText("API设置","请输入OPENAI_API_KEY",settings.key, "", function(ok, text) {
+                if(ok) {
+                        settings.key = text
+                        settings.model = "gpt-3.5-turbo"
+                }
+              })
+        }
+    }
+
+
     Rectangle {
         id: rectangle
         anchors.fill: parent
 
 
-        color: "#F5F5F5"
+        color: "#eee"
+
         Column {
             spacing: dp(20)
             anchors.fill: parent
@@ -309,6 +329,7 @@ AppPage {
                         }
                         AppButton {
                             visible: false
+//                            visible: true
                             text: "测试"
                             anchors.horizontalCenter: parent.horizontalCenter
                             onClicked: {
@@ -325,7 +346,7 @@ AppPage {
                                 //                                const p =  Qt.createComponent("XxtWorkStastics.qml").createObject(parent,{body:body})
                                 //                                rootStack.push(p)
 
-
+//                                logic.toChatGPT("Hello")
 
                             }
                         }
