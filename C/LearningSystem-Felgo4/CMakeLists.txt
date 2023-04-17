@@ -1,6 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
 
-
 project(LearningSystem-Felgo4 VERSION 0.1 LANGUAGES CXX)
 
 set(CMAKE_AUTOMOC ON)
@@ -74,6 +73,7 @@ qt_add_qml_module(appLearningSystem-Felgo4
           "images/qt-logo.png"
           "texteditor.qml"
           "fonts/fontello1.ttf"
+          "images/ChatGPT_logo.png"
 )
 
 # NOTE: for PUBLISHING, perform the following steps:

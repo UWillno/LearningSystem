@@ -160,7 +160,6 @@ Rectangle {
 
                 //            console.log("abababa")
             }
-
         }
     }
 

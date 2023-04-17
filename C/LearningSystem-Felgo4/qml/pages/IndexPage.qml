@@ -19,24 +19,32 @@ AppPage {
 
     rightBarItem: IconButtonBarItem {
         iconType: "<b>AI</b>"
-        onClicked: {
-            NativeDialog.inputText("API设置","请输入OPENAI_API_KEY",settings.key, "", function(ok, text) {
-                if(ok) {
+
+        MouseArea {
+            anchors.fill:parent
+            onPressAndHold:  {
+                const p = Qt.createComponent("ChatPage.qml").createObject(indexPage)
+                rootStack.push(p)
+            }
+
+            onClicked: {
+                NativeDialog.inputText("API设置","请输入OPENAI_API_KEY",settings.key, "", function(ok, text) {
+                    if(ok) {
                         settings.key = text
                         settings.model = "gpt-3.5-turbo"
-                }
-              })
+                    }
+                })
+            }
         }
+
+
     }
 
 
     Rectangle {
         id: rectangle
         anchors.fill: parent
-
-
         color: "#eee"
-
         Column {
             spacing: dp(20)
             anchors.fill: parent
@@ -58,7 +66,7 @@ AppPage {
                 clip: true
 
                 currentIndex: 0
-               //确保位于登录弹窗之下
+                //确保位于登录弹窗之下
                 z:-1
 
 
@@ -329,7 +337,7 @@ AppPage {
                         }
                         AppButton {
                             visible: false
-//                            visible: true
+                            //                            visible: true
                             text: "测试"
                             anchors.horizontalCenter: parent.horizontalCenter
                             onClicked: {
@@ -346,7 +354,7 @@ AppPage {
                                 //                                const p =  Qt.createComponent("XxtWorkStastics.qml").createObject(parent,{body:body})
                                 //                                rootStack.push(p)
 
-//                                logic.toChatGPT("Hello")
+                                //                                logic.toChatGPT("Hello")
 
                             }
                         }
