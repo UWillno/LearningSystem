@@ -75,7 +75,7 @@ Rectangle {
             Layout.fillWidth: true
             verticalAlignment: Text.AlignBottom
             Layout.preferredWidth: parent.width
-            text:model.datetime + "\t" + (model.index+1) + "楼"
+            text:model.datetime + "\t\t" + (model.index+1) + "楼"
             //            font.bold: true
         }
         AppText {

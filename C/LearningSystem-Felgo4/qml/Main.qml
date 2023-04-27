@@ -196,10 +196,10 @@ App {
 
         }
 
-        headerView: AppIcon {
-            width: parent.width
-            iconType: "android"
-        }
+//        headerView: AppIcon {
+//            width: parent.width
+//            iconType: "android"
+//        }
 
 
 

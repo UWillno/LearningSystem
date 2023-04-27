@@ -79,7 +79,7 @@ AppPage {
         //            }
         //        }
         UWAppTextEdit {
-//            radius: dp(20)
+            //            radius: dp(20)
             id: sendText
             width: parent.width  - sendBtn.width
             height: sendBtn.height
@@ -87,12 +87,12 @@ AppPage {
         }
 
         AppButton {
-//            radius: dp(10)
+            //            radius: dp(10)
             id:sendBtn
             width: dp(100)
             text: "发送"
             onClicked: {
-                if(sendText.text!=""){
+                if(sendText.text!==""){
                     console.log("click")
                     console.log(sendText.text)
                     console.log(sendings)
@@ -140,6 +140,8 @@ AppPage {
         Row {
             property string replyText
             property alias cEnabled: con.enabled
+            property alias textFormat: textReply.textFormat
+
             Component.onCompleted: {
                 if(replyText){
                     textReply.text = replyText
@@ -171,6 +173,7 @@ AppPage {
                 width: parent.width - gptImage.width - 20
                 text: "请求中……"
                 wrapMode: Text.WrapAnywhere
+                //                textFormat: Text.AutoText
             }
 
             Connections {
@@ -178,9 +181,13 @@ AppPage {
                 target: logic
                 enabled:false
                 onChatReply :function(text){
-                    //                    replyText = text
                     animation.restart()
-                    textReply.text =text
+                    if(hasdotdotdot(text)){
+                        textReply.textFormat = Text.RichText
+                        textReply.text = texttohtml(text)
+                    }else {
+                        textReply.text = text
+                    }
                     enabled = false
                     replies.push(text)
                     sync()
@@ -199,6 +206,40 @@ AppPage {
             }
         }
     }
+    function hasdotdotdot(text){
+        return (text.split("```").length - 1 >= 2)
+    }
+    function texttohtml(text){
+//        text = text.replace(/\n/g, "<br>");
+//        text = text.replace(/ /g, "&nbsp;&nbsp;");
+        var stext = text.split("```")
+        const length = stext.length - 1
+
+        var html ="<style>pre {
+                font-family: monospace;
+                white-space: pre-wrap;
+                word-wrap: break-word;
+        }</style>"
+
+        // 是否开始
+        //        var flag = 0
+        //        console.log(length)
+        console.log(stext)
+        for(var i = 0;i<= length ; i++ ){
+            if(i == 0){
+                html += stext[i]
+                continue
+            }
+            if(i % 2 != 0 ){
+                html +=  "<pre style=\"background-color:Black;color:MediumAquaMarine\">" + stext[i] +"</pre>"
+            }else {
+                html += stext[i]
+            }
+        }
+        console.log(html)
+        return html
+
+    }
 
     Component.onCompleted: {
         console.log(sendings)
@@ -210,7 +251,11 @@ AppPage {
         if(sendings && replies){
             for(var i=0;i<sendings.length;i++){
                 sendCom.createObject(column,{sendText:sendings[i]})
-                replyCom.createObject(column,{replyText:replies[i]})
+                if(hasdotdotdot(replies[i])){
+                    replyCom.createObject(column,{replyText:texttohtml(replies[i]),textFormat:Text.RichText})
+                }else{
+                    replyCom.createObject(column,{replyText:replies[i]})
+                }
             }
         }
         /*else{

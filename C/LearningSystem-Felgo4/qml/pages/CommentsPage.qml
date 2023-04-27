@@ -51,7 +51,8 @@ AppPage {
                     AppIcon {
                         id:a1
                         visible:  model.comments2.length === 0
-                        iconType: IconType.minus
+//                        iconType: IconType.minus
+                        iconType: "<b>-</b>"
                         //                        width: a2.width
                         anchors.verticalCenter: parent.verticalCenter
                     }

@@ -38,8 +38,8 @@ Rectangle {
         RoundedImage {
             id: avatarImage
             radius: width
-            Layout.preferredWidth: dp(30)
-            Layout.preferredHeight: dp(30)
+            Layout.preferredWidth: dp(40)
+            Layout.preferredHeight: dp(40)
             Layout.rowSpan: 3
             Layout.alignment: Qt.AlignTop
             source: userImageResource.available ? userImageResource.storagePath :""
@@ -49,6 +49,7 @@ Rectangle {
             elide: Text.ElideRight
             text:model.username
             textFormat: "RichText"
+            Layout.fillWidth: true
             Layout.columnSpan: 3
             maximumLineCount: 1
             color: Theme.textColor

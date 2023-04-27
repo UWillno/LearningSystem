@@ -5,6 +5,9 @@ project(LearningSystem-Felgo4 VERSION 0.1 LANGUAGES CXX)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+
+
+
 find_package(Felgo REQUIRED)
 #find_package(Qt6 REQUIRED COMPONENTS Concurrent Network WebEngineQuick)
 find_package(Qt6 REQUIRED COMPONENTS Concurrent Network Qml WebView Widgets)
@@ -76,6 +79,7 @@ qt_add_qml_module(appLearningSystem-Felgo4
           "images/ChatGPT_logo.png"
 )
 
+
 # NOTE: for PUBLISHING, perform the following steps:
 # 1. comment the deploy_resources line above, to avoid shipping your qml files with the application (instead they get compiled to the app binary)
 # 2. uncomment the QML_FILES and RESOURCES above; this compiles your qml files and js files to the app binary and protects your source code
@@ -119,3 +123,4 @@ target_link_libraries(appLearningSystem-Felgo4 PRIVATE Qt6::Concurrent Qt6::Netw
 #set(PROGUARD_RULES ${CMAKE_CURRENT_SOURCE_DIR}/proguard-rules.pro)
 #set(PROGUARD_OUTPUT_DIR ${CMAKE_CURRENT_BINARY_DIR}/proguard-output)
 #endif()
+

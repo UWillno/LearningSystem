@@ -671,10 +671,10 @@ QJsonArray SqlOperator::selectCommentsA2(const qint32 &page)
     qInfo()<<"分页查询评论";
     if(page==1){
         //        query.prepare("SELECT * FROM `comment` WHERE post_id = :postId ORDER BY id DESC LIMIT 0, 20;");
-        query.prepare("SELECT * FROM `comment` WHERE reply_id = 0 ORDER BY id ASC LIMIT 0, 100 ");
+        query.prepare("SELECT * FROM `comment` WHERE reply_id = 0 and id != 0 ORDER BY id ASC LIMIT 0, 100 ");
     }else{
         //        query.prepare("SELECT * FROM `comment` WHERE post_id = :postId ORDER BY id DESC LIMIT "+ QString::number(10*(page-1)) +", 20;");
-        query.prepare("SELECT * FROM `comment` WHERE reply_id = 0 ORDER BY id ASC LIMIT "+ QString::number(50*(page-1)) +", 20;");
+        query.prepare("SELECT * FROM `comment` WHERE reply_id = 0 and id != 0 ORDER BY id ASC LIMIT "+ QString::number(50*(page-1)) +", 20;");
     }
     query.exec();
 

@@ -307,7 +307,7 @@ AppPage {
 
 
         Rectangle {
-
+            z:10
             id:r2
             //            Layout.fillWidth: true
             Layout.preferredHeight:dp(25)
@@ -344,6 +344,7 @@ AppPage {
                 console.log("评论发送")
                 var pos = commentList.getScrollPosition()
                 if(rowlayout.state === "replyComment"){
+                    console.log(postModel.id+textEdit.text+commentId+atUsername)
                     if(logic.submitComment(postModel.id,textEdit.text,commentId,atUsername)){
                         textEdit.text = ""
                         atUsername = ""
