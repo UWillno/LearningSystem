@@ -19,7 +19,11 @@ ListPage {
     model: ListModel {}
 
     delegate: Rectangle {
-        property string status : resource.status
+        property string status : switch(resource.status){
+                                 case 0:{return "未下载！"}
+                                 case 1:{return "已下载！"}
+                                 case 2:{return "下载中..."}
+                                 }
         x:dp(10)
         width:parent.width - 2*x
         height: col.height

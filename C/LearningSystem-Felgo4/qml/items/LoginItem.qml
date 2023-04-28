@@ -56,11 +56,11 @@ Rectangle {
                 }
                 onPressAndHold: {
                     console.log("hold")
-                    var adminComponent = Qt.createComponent("../pages/AdministratorPage.qml").createObject()
-                    rootStack.push(adminComponent)
-                    //                    dialogtitle = "管理员登录"
+                    //                    var adminComponent = Qt.createComponent("../pages/AdministratorPage.qml").createObject()
+                    //                    rootStack.push(adminComponent)
+                    dialogtitle = "管理员登录"
 
-                    //                    loginDialog.open()
+                    loginDialog.open()
                 }
 
             }
@@ -74,6 +74,13 @@ Rectangle {
                 //                width: root.width/2
                 //                fontSize: 14
                 text: "当前状态:" + currentstatus
+                //仅测试用
+                MouseArea {
+                    anchors.fill: parent
+                    onPressAndHold: {
+                        var adminComponent = Qt.createComponent("../pages/AdministratorPage.qml").createObject()
+                        rootStack.push(adminComponent)}
+                }
             }
 
             //            Rectangle {
@@ -113,9 +120,9 @@ Rectangle {
                     onDoubleTapped: {
                         NativeDialog.inputText("Model设置","请输入Model","gpt-3.5-turbo", "", function(ok, text) {
                             if(ok) {
-                                    settings.model = text
+                                settings.model = text
                             }
-                          })
+                        })
                     }
                 }
             }

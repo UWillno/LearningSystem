@@ -13,7 +13,7 @@ import QtQuick.Dialogs as QDialog
 AppPage {
 
     id: indexPage
-    title: "Learning System"
+    title: "学习系统"
     property string version : settings.questionsDB['version']
     //    property alias autoSyncSwitch: autoSyncSwitch.checked
 

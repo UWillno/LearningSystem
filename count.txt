@@ -67,8 +67,8 @@
    104 C/LearningSystem-Felgo4/qml/items/loader/LoaderItem.qml
    104 C/LearningSystem-Felgo4/qml/pages/XxtWorkStastics.qml
    107 C/LearningSystem-Felgo4/qml/pages/PracticePage.qml
-   110 C/LearningSystem-Felgo4/qmlmediator.h
    110 C/LearningSystem-Felgo4/qml/pages/XxtEAPage.qml
+   110 C/LearningSystem-Felgo4/qmlmediator.h
    111 C/LearningSystem-Felgo4/qml/pages/ChoiceQuestionPage.qml
    117 S/Server-cmake/sqloperator.h
    119 C/LearningSystem-Felgo4/qml/pages/FillInTheBlanksQuestionRectangle.qml
@@ -82,7 +82,7 @@
    133 C/LearningSystem-Felgo4/qml/pages/AdministratorPage.qml
    138 C/LearningSystem-Felgo4/qml/pages/PostingPage.qml
    139 C/LearningSystem-Felgo4/qml/items/FillInTheBlanksQuestionItem.qml
-   139 C/LearningSystem-Felgo4/qml/pages/UserResourcesListPage.qml
+   143 C/LearningSystem-Felgo4/qml/pages/UserResourcesListPage.qml
    150 C/LearningSystem-Felgo4/qml/pages/StudyPage.qml
    156 C/LearningSystem-Felgo4/qml/logic/Logic.qml
    160 C/LearningSystem-Felgo4/qml/items/Comment2Row.qml
@@ -97,7 +97,7 @@
    217 C/LearningSystem-Felgo4/qml/items/SelectSwipeView.qml
    223 C/LearningSystem-Felgo4/qml/pages/TestPage.qml
    244 C/LearningSystem-Felgo4/qml/items/CommentRow.qml
-   245 C/LearningSystem-Felgo4/qml/items/LoginItem.qml
+   252 C/LearningSystem-Felgo4/qml/items/LoginItem.qml
    257 C/LearningSystem-Felgo4/qml/pages/AddResourcePage.qml
    258 C/LearningSystem-Felgo4/qml/items/PostItem.qml
    260 C/LearningSystem-Felgo4/qml/pages/PostsPage.qml
@@ -116,5 +116,5 @@
    462 C/LearningSystem-Felgo4/qml/pages/XxtWebPage.qml
    509 C/LearningSystem-Felgo4/qml/texteditor.qml
    940 S/Server-cmake/sqloperator.cpp
- 14696 总计
- 去除空白行总计: 12927
+ 14707 total
+ 去除空白行总计: 12938

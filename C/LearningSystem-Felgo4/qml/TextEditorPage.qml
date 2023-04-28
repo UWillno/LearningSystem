@@ -12,7 +12,7 @@ import Qt.labs.platform as Platform
 
 AppPage {
 
-    title: "Text Editor"
+    title: "文本编辑器"
     rightBarItem: IconButtonBarItem {
         property bool rich: true
         iconType: rich ?  IconType.html5 : IconType.undo
