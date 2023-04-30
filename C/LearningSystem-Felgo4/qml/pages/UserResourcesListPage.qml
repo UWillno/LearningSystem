@@ -13,7 +13,7 @@ UserResoucesListPage {
 */
 
 ListPage {
-
+    id:resoucesListPage
     property var data
     // TODO add your model
     model: ListModel {}
@@ -81,9 +81,23 @@ ListPage {
                     id:studyInApp
                     text: "内部打开"
                     visible: model.type === 3 ? true:false
-                    onClicked: {
-                        var p = Qt.createComponent("WebPage.qml").createObject(parent,{title:model.name,url:model.url})
-                        studyStack.push(p)
+                    //                    onClicked: {
+                    //Linux 上可以 Android上会卡死，经过排查似乎是AppButton的问题换成Button可以正常？
+                    //但是为了保证外观一致性，采用MouseArea进行覆盖
+                    //                        const p = Qt.createComponent("WebPage.qml").createObject(parent,{title:model.name,url:model.url})
+                    //                        studyStack.push(p)
+                    //                    }
+                    //Android上不含Webview的页面可以push
+                    //                    onClicked: {
+                    //                        const p = Qt.createComponent("TestPage.qml").createObject(parent)
+                    //                        studyStack.push(p)
+                    //                    }
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            const p = Qt.createComponent("WebPage.qml").createObject(parent,{title:model.name,url:model.url})
+                            studyStack.push(p)
+                        }
                     }
                 }
                 AppButton {
@@ -137,7 +151,7 @@ ListPage {
             })
         }
     }
-    onPopped: {
-        destroy()
-    }
+    //    onPopped: {
+    //        destroy()
+    //    }
 }

@@ -6,6 +6,7 @@ import "../items"
 ListPage {
     id:reslistPage
 
+    property alias origModel: jsonListModel
     title:"资源列表"
     model: proxyModel
     section.property: "typeText"

@@ -4,7 +4,7 @@ import QtWebView
 AppPage {
 
     title: "课程学习"
-
+    id:studyPage
     AppListView {
         //            showSearch: true
         id:studyoptions
@@ -41,7 +41,12 @@ AppPage {
                 text: "文本编辑学习",
                 detailText: "Study with a rich text editor",
                 icon: IconType.edit
-            }
+            },
+//            {
+//                text: "Cs",
+//                detailText: "Study with a rich text editor",
+//                icon: IconType.edit
+//            }
         ]
         delegate: SimpleRow {
 
@@ -71,6 +76,9 @@ AppPage {
                                     studyStack.push(p)
                                 }
                             }
+//                            if(index === 6){
+//                                pushWebPage("asdasdasd","https://www.baidu.com")
+//                            }
 
                             //                            switch(index){
                             //                                case 0:{
@@ -146,5 +154,12 @@ AppPage {
         }
 
     }
+
+//    function pushWebPage(title,url){
+//        const p = Qt.createComponent("WebPage.qml").createObject(parent,{title:title,url:url})
+//        studyStack.push(p)
+//    }
+
+
 
 }

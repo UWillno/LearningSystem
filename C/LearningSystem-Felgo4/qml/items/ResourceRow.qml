@@ -35,7 +35,8 @@ Rectangle {
                 text: "删除"
                 onClicked: {
                     if(adminLogic.deleteResource(model.id)){
-                        reslistPage.model.remove(index,1)
+//                        reslistPage.model.remove(index,1)
+                        reslistPage.origModel.remove(index,1)
                         toastManager.show("删除成功!",1000)
                     }
                 }

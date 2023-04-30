@@ -27,10 +27,10 @@
     26 C/LearningSystem-Felgo4/qml/items/QuestionAnalyzeItem.qml
     27 S/Server-cmake/post.h
     27 S/Server-cmake/questionfactory.h
-    28 C/LearningSystem-Felgo4/qml/pages/WebPage.qml
     28 S/Server-cmake/user.h
     30 C/LearningSystem-Felgo4/qml/items/InsertSwipeView.qml
     31 C/LearningSystem-Felgo4/qml/items/RightAnswerAppListItem.qml
+    34 C/LearningSystem-Felgo4/qml/pages/WebPage.qml
     34 S/Server-cmake/main.cpp
     34 S/Server-cmake/server.h
     36 C/LearningSystem-Felgo4/qml/items/QuestionRect.qml
@@ -51,10 +51,10 @@
     58 C/LearningSystem-Felgo4/tcpclient.h
     60 S/Server-cmake/tcpserver.h
     63 C/LearningSystem-Felgo4/qml/pages/ExamDetailPage.qml
-    63 C/LearningSystem-Felgo4/qml/pages/ResourceListPage.qml
+    64 C/LearningSystem-Felgo4/qml/pages/ResourceListPage.qml
     64 S/Server-cmake/httpserver.h
     65 C/LearningSystem-Felgo4/qml/pages/ExercisesPage.qml
-    72 C/LearningSystem-Felgo4/qml/items/ResourceRow.qml
+    73 C/LearningSystem-Felgo4/qml/items/ResourceRow.qml
     77 C/LearningSystem-Felgo4/qml/pages/ExamFQRectangle.qml
     80 C/LearningSystem-Felgo4/main.cpp
     83 C/LearningSystem-Felgo4/qml/pages/QuestionPage.qml
@@ -82,15 +82,15 @@
    133 C/LearningSystem-Felgo4/qml/pages/AdministratorPage.qml
    138 C/LearningSystem-Felgo4/qml/pages/PostingPage.qml
    139 C/LearningSystem-Felgo4/qml/items/FillInTheBlanksQuestionItem.qml
-   143 C/LearningSystem-Felgo4/qml/pages/UserResourcesListPage.qml
-   150 C/LearningSystem-Felgo4/qml/pages/StudyPage.qml
    156 C/LearningSystem-Felgo4/qml/logic/Logic.qml
+   157 C/LearningSystem-Felgo4/qml/pages/UserResourcesListPage.qml
    160 C/LearningSystem-Felgo4/qml/items/Comment2Row.qml
    164 C/LearningSystem-Felgo4/settings.h
+   165 C/LearningSystem-Felgo4/qml/pages/StudyPage.qml
    177 C/LearningSystem-Felgo4/qml/pages/ExamCQRectangle.qml
    180 C/LearningSystem-Felgo4/qml/logic/AdminLogic.qml
    189 C/LearningSystem-Felgo4/qml/items/ChoiceQuestionItem.qml
-   190 C/LearningSystem-Felgo4/qml/pages/MediaPage.qml
+   191 C/LearningSystem-Felgo4/qml/pages/MediaPage.qml
    194 C/LearningSystem-Felgo4/qml/pages/CommentsPage.qml
    206 C/LearningSystem-Felgo4/qml/pages/ChoiceQuestionRectangle.qml
    215 C/LearningSystem-Felgo4/texteditor.qml
@@ -105,7 +105,7 @@
    274 C/LearningSystem-Felgo4/qml/Main.qml
    282 C/LearningSystem-Felgo4/qml/pages/ChatPage.qml
    327 C/LearningSystem-Felgo4/qmlmediator.cpp
-   330 S/Server-cmake/httpserver.cpp
+   331 S/Server-cmake/httpserver.cpp
    335 C/LearningSystem-Felgo4/qml/logic/UserLogic.qml
    350 C/LearningSystem-Felgo4/documenthandler.cpp
    385 S/Server-cmake/tcpserver.cpp
@@ -116,5 +116,5 @@
    462 C/LearningSystem-Felgo4/qml/pages/XxtWebPage.qml
    509 C/LearningSystem-Felgo4/qml/texteditor.qml
    940 S/Server-cmake/sqloperator.cpp
- 14707 total
- 去除空白行总计: 12938
+ 14746 total
+ 去除空白行总计: 12983

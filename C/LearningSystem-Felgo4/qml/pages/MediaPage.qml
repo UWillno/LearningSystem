@@ -98,7 +98,9 @@ AppPage {
                 to: mediaplayer.duration
                 value: mediaplayer.position
                 onValueChanged: {
-                    mediaplayer.position = value
+                    //                    console.log(value)
+                    if(Math.abs(value - mediaplayer.position) >= (mediaplayer.position / 100))
+                        mediaplayer.position = value
                 }
             }
 
@@ -175,7 +177,7 @@ AppPage {
 
 
     Component.onCompleted: {
-                navMode = 4
+        navMode = 4
 
         mediaplayer.play()
     }
@@ -183,7 +185,6 @@ AppPage {
         //        destroy()
         navMode = 3
         mediaplayer.stop()
-
         //        destroy()
     }
 

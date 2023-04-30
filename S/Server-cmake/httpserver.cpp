@@ -299,6 +299,7 @@ void HttpServer::routeGetUserData()
 {
     server.route("/userData/",[](const qint32 cxid){
         return QtConcurrent::run([&]{return Singleton<SqlOperator>::GetInstance().getUserData(cxid);}).result();
+//        return Singleton<SqlOperator>::GetInstance().getUserData(cxid);
     });
 }
 
