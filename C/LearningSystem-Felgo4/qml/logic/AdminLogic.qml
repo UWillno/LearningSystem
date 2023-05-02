@@ -84,6 +84,16 @@ Item {
             toastManager.show("插入失败！",1000)
             loaderItem.close()
         }
+        onDeleteSuceeded:{
+            toastManager.show("删除成功！",1000)
+//            loaderItem.close()
+//            rootStack.pop()
+        }
+
+        onUpdateSucceeded:{
+            toastManager.show("保存成功！",1000)
+//            rootStack.pop()
+        }
     }
 
     function deletePost(id,index){

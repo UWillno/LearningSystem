@@ -64,13 +64,13 @@ AppPage {
         target: qm
 
         onDeleteSuceeded:{
-            toastManager.show("删除成功！",1000)
+//            toastManager.show("删除成功！",1000)
             loaderItem.close()
             rootStack.pop()
         }
 
         onUpdateSucceeded:{
-            toastManager.show("保存成功！",1000)
+//            toastManager.show("保存成功！",1000)
             rootStack.pop()
         }
 

@@ -62,7 +62,7 @@ AppPage {
         negativeActionLabel: "取消"
         onCanceled: close()
         onAccepted: {
-            const  p = Qt.createComponent("VirtualExamPage.qml").createObject(parent,{cCount:choiceSlider.value,tCount:trueOrFalseSlider.value,cCount:fillSlider.value})
+            const  p = Qt.createComponent("VirtualExamPage.qml").createObject(parent,{cCount:choiceSlider.value,tCount:trueOrFalseSlider.value,fCount:fillSlider.value})
             practiceStack.push(p)
             close()
         }

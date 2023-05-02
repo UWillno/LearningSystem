@@ -66,7 +66,7 @@ AppPage {
         id:lastRect
         Rectangle {
             id:rect
-            property int points
+            property double points
             Column {
 
                 anchors.fill: parent
@@ -83,7 +83,7 @@ AppPage {
 
                             obj.finished = true
                             if(obj.isRight){
-                                rect.points+=(100/questionComponents.length)
+                                rect.points+=(100.00/questionComponents.length)
                                 right.push(i)
                                 //                                userLogic.addRQ(obj.question.id,obj.type)
                             }else{
@@ -95,6 +95,7 @@ AppPage {
                             //                            console.log(obj.type)
                             //                            console.log(i)
                         })
+                       rect.points = Math.ceil(rect.points)
                         const exam = {
                             cQArray:cQArray,
                             tQArray:tQArray,
@@ -102,6 +103,7 @@ AppPage {
                             wrong:wrong,
                             right:right,
                             point:rect.points,
+//                            point:point,
                             date: logic.getDate()
                         }
                         settings.saveExams(exam)
@@ -109,6 +111,7 @@ AppPage {
                         //                        console.log(JSON.stringify(exam))
                         //                        console.log(JSON.stringify(settings.exams))
                         pointText.visible = true
+                        canPop = true
 
                     }
                 }
@@ -118,10 +121,12 @@ AppPage {
                     visible: false
                     //                    font.family: "Helvetica"
                     anchors.centerIn: parent
-                    font.pointSize: 24
+                    fontSize: 44
+
                     color: rect.points >= 60 ? "blue" : "red"
 
                     text: "得分:" + rect.points
+
                 }
             }
 

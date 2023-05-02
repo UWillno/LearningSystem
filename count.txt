@@ -78,8 +78,8 @@
    125 C/LearningSystem-Felgo4/qml/pages/PhotoListPage.qml
    127 C/LearningSystem-Felgo4/httpclient.cpp
    130 C/LearningSystem-Felgo4/qml/pages/TrueOrFalseQuestionRectangle.qml
-   130 C/LearningSystem-Felgo4/qml/pages/VirtualExamPage.qml
    133 C/LearningSystem-Felgo4/qml/pages/AdministratorPage.qml
+   135 C/LearningSystem-Felgo4/qml/pages/VirtualExamPage.qml
    138 C/LearningSystem-Felgo4/qml/pages/PostingPage.qml
    139 C/LearningSystem-Felgo4/qml/items/FillInTheBlanksQuestionItem.qml
    156 C/LearningSystem-Felgo4/qml/logic/Logic.qml
@@ -88,8 +88,8 @@
    164 C/LearningSystem-Felgo4/settings.h
    165 C/LearningSystem-Felgo4/qml/pages/StudyPage.qml
    177 C/LearningSystem-Felgo4/qml/pages/ExamCQRectangle.qml
-   180 C/LearningSystem-Felgo4/qml/logic/AdminLogic.qml
    189 C/LearningSystem-Felgo4/qml/items/ChoiceQuestionItem.qml
+   190 C/LearningSystem-Felgo4/qml/logic/AdminLogic.qml
    191 C/LearningSystem-Felgo4/qml/pages/MediaPage.qml
    194 C/LearningSystem-Felgo4/qml/pages/CommentsPage.qml
    206 C/LearningSystem-Felgo4/qml/pages/ChoiceQuestionRectangle.qml
@@ -116,5 +116,5 @@
    462 C/LearningSystem-Felgo4/qml/pages/XxtWebPage.qml
    509 C/LearningSystem-Felgo4/qml/texteditor.qml
    940 S/Server-cmake/sqloperator.cpp
- 14746 total
- 去除空白行总计: 12983
+ 14761 total
+ 去除空白行总计: 12996
