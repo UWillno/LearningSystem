@@ -61,7 +61,7 @@ AppPage {
             height: dp(10)
 
             Switch {
-//                    text: "PlainText"
+                //                    text: "PlainText"
                 text:  checked ? "纯文本" : "富文本"
                 onCheckedChanged: {
                     postEdit.textFormat = checked ? Qt.PlainText :  Qt.RichText
@@ -73,7 +73,7 @@ AppPage {
                 text: "上传图片"
                 iconType: IconType.upload
                 onClicked: {
-                    NativeUtils.displayImagePicker("test")
+                   ss.cxid ? NativeUtils.displayImagePicker("test") : toastManager.show("请先登录！")
                 }
             }
             AppButton {
@@ -81,13 +81,19 @@ AppPage {
                 text: "发帖"
                 iconType: IconType.send
                 onClicked: {
+                    if(!ss.cxid)
+                    {
+                        toastManager.show("请先登录！")
+                        return
+
+                    }
                     if(postEdit.text.trim()!=="" && titleInput.text.trim()!==""){
                         var type
                         if(r1.checked) type=0;
                         if(r2.checked) type=1;
                         if(r3.checked) type=2;
                         userLogic.submitPost(titleInput.text.trim(),postEdit.text.trim(),type)
-//                        forumStack.pop()
+                        //                        forumStack.pop()
                     }else{
                         toastManager.show("标题或内容不能为空",1000);
                     }
@@ -109,18 +115,40 @@ AppPage {
                                        if(filename === ""){
                                            toastManager.show("图片上传失败！",1000);
                                        }else{
-//                                           var httppath = "http://127.0.0.1/images/"+ filename
-                                           var httppath = "http://192.168.1.244/images/"+ filename
-                                           var ah = "<a href=\""+httppath+"\">"
-                                           var ae = "</a>"
-                                           var br =  "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>"
-                                           postEdit.text += br +ah+"<img src=\""+httppath+"\" width=\""+postEdit.width +"\" />" +ae+br
-                                           postEdit.appTextEdit.cursorPosition =postEdit.text.length
+                                           timer.filename = filename
+                                           timer.start()
+                                           //                                         var httppath = "http://127.0.0.1/images/"+ filename
+                                           //                                           var httppath = "http://192.168.1.244/images/"+ filename
+                                           //                                           var ah = "<a href=\""+httppath+"\">"
+                                           //                                           var ae = "</a>"
+                                           //                                           var br =  "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>"
+                                           //                                           postEdit.text += br +ah+"<img src=\""+httppath+"\" width=\""+postEdit.width +"\" />" +ae+br
+                                           //                                           postEdit.appTextEdit.cursorPosition =postEdit.text.length
 
                                        }
                                    }
                                }
     }
+    // 避免文件已到服务器程序，但还没完全存入静态资源而导致图片加载不完全？
+    Timer {
+        id:timer
+        property string filename
+        interval: 2000
+        running: false
+        repeat: false
+        onTriggered: addPicture(filename)
+
+    }
+
+    function addPicture(filename){
+        var httppath = "http://192.168.1.244/images/"+ filename
+        var ah = "<a href=\""+httppath+"\">"
+        var ae = "</a>"
+        var br =  "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>"
+        postEdit.text += br +ah+"<img src=\""+httppath+"\" width=\""+postEdit.width +"\" />" +ae+br
+        postEdit.appTextEdit.cursorPosition =postEdit.text.length
+    }
+
 
     Connections{
         target: userLogic

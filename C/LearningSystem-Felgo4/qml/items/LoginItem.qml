@@ -156,7 +156,6 @@ Rectangle {
         }
         onCanceled: {
             close()
-
         }
 
         onAccepted: {
@@ -169,6 +168,7 @@ Rectangle {
                 userLogic.login(usernameInput.text.trim(),passwordInput.text.trim())
                 close()
             }
+
         }
 
 

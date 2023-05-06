@@ -36,7 +36,8 @@ Rectangle {
                 onClicked: {
                     if(adminLogic.deleteResource(model.id)){
 //                        reslistPage.model.remove(index,1)
-                        reslistPage.origModel.remove(index,1)
+//                        reslistPage.origModel.remove(index,1)
+                        reslistPage.refresh()
                         toastManager.show("删除成功!",1000)
                     }
                 }
