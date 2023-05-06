@@ -25,6 +25,7 @@ Item {
     signal getResourcesSucceed(var json,int type)
     signal getQuestionsDBSucceed(var questionsDB)
     //17671056113
+    signal uploadPhotoSucceed(var filename)
 
     //    signal
 
@@ -330,6 +331,19 @@ Item {
     //        }
     //        }
     //    }
-
+    function uploadImage(path){
+        //        console.log(path.split('.').pop())
+        //        console.log()
+        const xhr = new XMLHttpRequest()
+        const hz = path.split('.').pop()
+        xhr.open("POST",qhttpserver + "userUploadImage",true);
+        xhr.setRequestHeader("Hz",hz)
+        xhr.send(FileUtils.readFileBytes(path))
+        xhr.onload = function (e) {
+            if(xhr.responseText!="error"){
+                uploadPhotoSucceed(xhr.responseText)
+            }
+        };
+    }
 
 }

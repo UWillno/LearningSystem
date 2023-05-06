@@ -266,11 +266,11 @@ QString TcpClient::uploadPicture(QUrl &path)
 
                     if(send + chunk >= size){
                         p->write(file.readAll());
-                        p->waitForBytesWritten();
+//                        p->waitForBytesWritten();
                         break;
                     }
                     p->write(file.read(chunk));
-                    p->waitForBytesWritten();
+//                    p->waitForBytesWritten();
                     send+=chunk;
 
                     //                    char buf[4*1024] = {0};
@@ -284,14 +284,11 @@ QString TcpClient::uploadPicture(QUrl &path)
                     //                    }
                 }
                 file.close();
-                p->disconnectFromHost();
+                //                p->disconnectFromHost();
                 p->close();
+                file.close();
                 return filename;
             }
-
-
-
-
         }
     }else{
         qInfo() << "文件不存在";
@@ -384,10 +381,10 @@ QList<QJsonArray> TcpClient::getQuestionsJson()
         p->write(byte);
         if(p->waitForBytesWritten()){
             if(p->waitForReadyRead()){
-//                qint32 time=0;
+                //                qint32 time=0;
                 forever {
-//                    qInfo() << time;
-//                    time++;
+                    //                    qInfo() << time;
+                    //                    time++;
                     if(p->waitForReadyRead()){
                         QByteArray temp = p->readAll();
                         data.append(temp);

@@ -56,6 +56,8 @@ private :
     void routeGetUserData();
     // 更新用户数据
     void routeUpdateUserData();
+    // 用户上传图片
+    void routeUserUploadImage();
 
 
 

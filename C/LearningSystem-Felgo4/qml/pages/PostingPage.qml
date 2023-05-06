@@ -73,7 +73,8 @@ AppPage {
                 text: "上传图片"
                 iconType: IconType.upload
                 onClicked: {
-                   ss.cxid ? NativeUtils.displayImagePicker("test") : toastManager.show("请先登录！")
+                    ss.cxid ? NativeUtils.displayImagePicker("test") : toastManager.show("请先登录！")
+                    //                    NativeUtils.displayImagePicker("test")
                 }
             }
             AppButton {
@@ -85,7 +86,6 @@ AppPage {
                     {
                         toastManager.show("请先登录！")
                         return
-
                     }
                     if(postEdit.text.trim()!=="" && titleInput.text.trim()!==""){
                         var type
@@ -110,26 +110,32 @@ AppPage {
         target: NativeUtils
         onImagePickerFinished: (accepted, path) => {
                                    if(accepted) {
-                                       toastManager.show("图片上传中！",5000);
-                                       var filename = qm.uploadPicture(path)
-                                       if(filename === ""){
-                                           toastManager.show("图片上传失败！",1000);
-                                       }else{
-                                           timer.filename = filename
-                                           timer.start()
-                                           //                                         var httppath = "http://127.0.0.1/images/"+ filename
-                                           //                                           var httppath = "http://192.168.1.244/images/"+ filename
-                                           //                                           var ah = "<a href=\""+httppath+"\">"
-                                           //                                           var ae = "</a>"
-                                           //                                           var br =  "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>"
-                                           //                                           postEdit.text += br +ah+"<img src=\""+httppath+"\" width=\""+postEdit.width +"\" />" +ae+br
-                                           //                                           postEdit.appTextEdit.cursorPosition =postEdit.text.length
+                                       toastManager.show("图片上传中！",1000);
+                                       userLogic.uploadImage(path)
+                                       //                                       console.log(path)
+                                       //                                       console.log(FileUtils.readFileBytes())
+                                       //                                       console.log(FileUtils.readFileBytes(path).byteLength)
 
-                                       }
+                                       //                                       var filename = qm.uploadPicture(path)
+                                       //                                       if(filename === ""){
+                                       //                                           toastManager.show("图片上传失败！",1000);
+                                       //                                       }else{
+                                       ////                                           timer.filename = filename
+                                       ////                                           timer.start()
+                                       //                                           //                                         var httppath = "http://127.0.0.1/images/"+ filename
+                                       //                                           //                                           var httppath = "http://192.168.1.244/images/"+ filename
+                                       //                                           //                                           var ah = "<a href=\""+httppath+"\">"
+                                       //                                           //                                           var ae = "</a>"
+                                       //                                           //                                           var br =  "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>"
+                                       //                                           //                                           postEdit.text += br +ah+"<img src=\""+httppath+"\" width=\""+postEdit.width +"\" />" +ae+br
+                                       //                                           //                                           postEdit.appTextEdit.cursorPosition =postEdit.text.length
+
+                                       //                                       }
                                    }
                                }
     }
     // 避免文件已到服务器程序，但还没完全存入静态资源而导致图片加载不完全？
+    //不一定有用？
     Timer {
         id:timer
         property string filename
@@ -141,7 +147,7 @@ AppPage {
     }
 
     function addPicture(filename){
-        var httppath = "http://192.168.1.244/images/"+ filename
+        var httppath = "http://192.168.1.244/images/"+filename
         var ah = "<a href=\""+httppath+"\">"
         var ae = "</a>"
         var br =  "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>"
@@ -150,11 +156,17 @@ AppPage {
     }
 
 
+
+
+
     Connections{
         target: userLogic
         onPostingSucceed :{
             toastManager.show("发布成功！",1000)
             popped()
+        }
+        onUploadPhotoSucceed: function(filename){
+            addPicture(filename)
         }
     }
 
