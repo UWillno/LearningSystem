@@ -50,6 +50,7 @@ Item {
 
     function commitQuestions(){
         qm.commitQuestons()
+        toastManager.show("更新成功！",1000);
     }
 
     function selectPosts(){
