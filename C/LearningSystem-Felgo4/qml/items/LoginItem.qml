@@ -138,9 +138,18 @@ Rectangle {
         extractAsPackage: false
         source:  ss.cxid ? "http://photo.chaoxing.com/p/"+ss.cxid+"_80" : "http://photo.chaoxing.com/photo_80.jpg"
 
-        Component.onCompleted: {
+
+                Component.onCompleted: {
+                    userImageResource.remove()
+                    download()
+                }
+    }
+
+    Connections {
+        target: ss
+        onCxidChanged:{
             userImageResource.remove()
-            download()
+            userImageResource.download()
         }
     }
 

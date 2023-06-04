@@ -9,8 +9,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 
 find_package(Felgo REQUIRED)
-#find_package(Qt6 REQUIRED COMPONENTS Concurrent Network WebEngineQuick)
-find_package(Qt6 REQUIRED COMPONENTS Concurrent Network Qml WebView Widgets)
+
+
 
 # Project identifier and version
 # More information: https://felgo.com/doc/felgo-publishing/#project-configuration
@@ -93,8 +93,14 @@ target_compile_definitions(appLearningSystem-Felgo4
     PRIVATE $<$<OR:$<CONFIG:Debug>,$<CONFIG:RelWithDebInfo>>:QT_QML_DEBUG>)
 
 target_link_libraries(appLearningSystem-Felgo4 PRIVATE Felgo)
-#target_link_libraries(appLearningSystem-Felgo4 PRIVATE Qt6::Concurrent Qt6::Network Qt6::WebEngineQuick)
-target_link_libraries(appLearningSystem-Felgo4 PRIVATE Qt6::Concurrent Qt6::Network Qt6::Qml Qt6::WebView Qt6::Widgets)
+if(ANDROID)
+    find_package(Qt6 REQUIRED COMPONENTS Concurrent Network Qml WebView)
+    target_link_libraries(appLearningSystem-Felgo4 PRIVATE Qt6::Concurrent Qt6::Network Qt6::Qml Qt6::WebView)
+else()
+    find_package(Qt6 REQUIRED COMPONENTS Concurrent Network WebEngineQuick)
+    target_link_libraries(appLearningSystem-Felgo4 PRIVATE Qt6::Concurrent Qt6::Network Qt6::WebEngineQuick)
+endif()
+
 
 #add_subdirectory(./qzxing)
 #target_link_libraries(appLearningSystem-Felgo4 PRIVATE QZXing)

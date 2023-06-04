@@ -29,7 +29,7 @@ public:
     void setFileName(const QString &newFileName);
 
     //    Q_PROPERTY(QString username READ username WRITE setUsername NOTIFY usernameChanged)
-    //    Q_PROPERTY(qint32 cxid READ cxid WRITE setCxid NOTIFY cxidChanged)
+    Q_PROPERTY(qint32 cxid READ cxid WRITE setCxid NOTIFY cxidChanged)
     //    Q_PROPERTY(qint64 phone READ phone WRITE setPhone NOTIFY phoneChanged)
     //    Q_PROPERTY(QString password READ password WRITE setPassword NOTIFY passwordChanged)
     //    Q_PROPERTY(QString cookie READ cookie WRITE setCookie NOTIFY cookieChanged)

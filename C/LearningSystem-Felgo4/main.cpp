@@ -12,10 +12,17 @@
 #include <QQmlApplicationEngine>
 //#include <QtWebEngineQuick>
 #include <QtQml>
+#ifdef __ANDROID__
+#include<QtWebView>
+#else
+#include <QtWebEngineQuick>
+#endif
+
 //#include <QQmlContext>
 #include "qmlmediator.h"
 #include "settings.h"
-#include <QtWebView>
+
+//#include <QtWebView>
 //#include <QDebug>
 #include "documenthandler.h"
 // uncomment this line to add the Live Client Module and use live reloading with your custom C++ code
@@ -24,7 +31,13 @@
 int main(int argc, char *argv[])
 {
 
+
     QApplication app(argc, argv);
+    #ifdef __ANDROID__
+         QtWebView::initialize();
+    #else
+         QtWebEngineQuick::initialize();
+     #endif
 
     app.setOrganizationName("UWillno");
     app.setOrganizationDomain("uwillno.icu");
@@ -38,10 +51,9 @@ int main(int argc, char *argv[])
 
     // Use platform-specific fonts instead of Felgo's default font
     felgo.setPreservePlatformFonts(true);
-    QtWebView::initialize();
+    //    QtWebView::initialize();
 
     QQmlApplicationEngine engine;
-
 
 
     QmlMediator qmlMediator;
